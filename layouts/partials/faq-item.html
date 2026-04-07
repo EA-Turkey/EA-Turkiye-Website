@@ -1,0 +1,10 @@
+{{ $id := printf "faq-%d" .index }}
+<article class="faq-item">
+  <button class="faq-item__toggle" type="button" data-faq-toggle aria-expanded="false" aria-controls="{{ $id }}">
+    <span>{{ .item.question }}</span>
+    <span aria-hidden="true">+</span>
+  </button>
+  <div class="faq-item__body" id="{{ $id }}">
+    <p>{{ .item.answer }}</p>
+  </div>
+</article>

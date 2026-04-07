@@ -1,0 +1,11 @@
+{{- $actualLang := cond (hasPrefix .RelPermalink "/en/") "en" "tr" -}}
+{{- $langSite := .Site -}}
+{{- range site.Sites -}}
+  {{- if eq .Language.Lang $actualLang -}}
+    {{- $langSite = . -}}
+  {{- end -}}
+{{- end -}}
+{{- .Scratch.Set "actualLang" $actualLang -}}
+{{- .Scratch.Set "isEN" (eq $actualLang "en") -}}
+{{- .Scratch.Set "langSite" $langSite -}}
+{{- .Scratch.Set "homeURL" (cond (eq $actualLang "en") "/en/" "/") -}}

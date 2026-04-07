@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 | EA Türkiye</title>
+    {{ $css := slice
+      (resources.Get "css/tokens.css")
+      (resources.Get "css/fonts.css")
+      (resources.Get "css/base.css")
+      (resources.Get "css/layout.css")
+      (resources.Get "css/components.css")
+      (resources.Get "css/utilities.css")
+      | resources.Concat "css/main.css" | minify | fingerprint
+    }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  </head>
+  <body>
+    <main class="section">
+      <div class="container--narrow final-cta">
+        <h1>{{ i18n "not_found_title" }}</h1>
+        <p class="text-muted">{{ i18n "not_found_text" }}</p>
+        {{ partial "button.html" (dict "url" "/" "label" (i18n "return_home") "variant" "primary" "size" "cta") }}
+      </div>
+    </main>
+  </body>
+</html>

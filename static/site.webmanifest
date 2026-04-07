@@ -1,0 +1,14 @@
+{
+  "name": "EA Turkiye",
+  "short_name": "EA Turkiye",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0f89a3",
+  "background_color": "#f7fafb",
+  "display": "standalone"
+}

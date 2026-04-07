@@ -1,0 +1,13 @@
+<div class="cause-grid" data-reveal>
+  {{ range . }}
+    {{ $accentKey := replace (.Params.accent | default "general") "-" "_" }}
+    <article class="cause-card">
+      <span class="cause-card__eyebrow">{{ i18n (printf "cause_%s" $accentKey) }}</span>
+      <div class="stack-md">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="text-muted">{{ .Params.card_excerpt | default .Params.description }}</p>
+        <div>{{ partial "button.html" (dict "url" .RelPermalink "label" (i18n "learn_more") "variant" "ghost") }}</div>
+      </div>
+    </article>
+  {{ end }}
+</div>

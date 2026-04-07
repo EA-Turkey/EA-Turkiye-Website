@@ -1,0 +1,13 @@
+.text-muted {
+  color: var(--color-ink-700);
+}
+
+.hidden-mobile {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none;
+  }
+}

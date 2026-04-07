@@ -1,0 +1,112 @@
+baseURL = "https://eaturkiye.org/"
+title = "EA Türkiye"
+defaultContentLanguage = "tr"
+defaultContentLanguageInSubdir = false
+disableAliases = true
+disableKinds = ["taxonomy", "term", "rss"]
+enableRobotsTXT = true
+disableHugoGeneratorInject = true
+cleanDestinationDir = true
+summaryLength = 40
+
+[pagination]
+  pagerSize = 12
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[imaging]
+  quality = 82
+  resampleFilter = "Lanczos"
+  anchor = "Smart"
+  hint = "photo"
+  bgColor = "#ffffff"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+[params]
+  default_og_image = "brand/og-default.jpg"
+
+  [params.organization]
+    name = "EA Türkiye"
+    name_en = "Effective Altruism Turkey"
+    email = "bilgi@eaturkiye.org"
+
+  [params.contact]
+    primary_email = "bilgi@eaturkiye.org"
+    whatsapp_url = ""
+
+  [params.social]
+    linkedin = ""
+    substack = ""
+    instagram = ""
+
+  [params.events]
+    luma_calendar_url = "https://luma.com/calendar/cal-mocaFiDctI8Om3c"
+    luma_embed_url = "https://luma.com/embed/calendar/cal-mocaFiDctI8Om3c/events"
+
+  [params.brand]
+    logo_header = "brand/logo-header-organizer-14-full.png"
+    logo_footer = "brand/logo-footer.png"
+    mark_icon = "brand/mark.svg"
+
+[languages]
+  [languages.tr]
+    languageCode = "tr-TR"
+    languageName = "Türkçe"
+    contentDir = "content/tr"
+    weight = 1
+
+    [languages.tr.params]
+      language_label = "TR"
+      locale = "tr_TR"
+
+    [[languages.tr.menus.main]]
+      name = "Hakkımızda"
+      pageRef = "/about"
+      weight = 10
+
+    [[languages.tr.menus.main]]
+      name = "Etkinlikler"
+      pageRef = "/events"
+      weight = 20
+
+    [[languages.tr.menus.main]]
+      name = "Blog"
+      pageRef = "/blog"
+      weight = 30
+
+  [languages.en]
+    languageCode = "en-US"
+    languageName = "English"
+    contentDir = "content/en"
+    weight = 2
+
+    [languages.en.params]
+      language_label = "EN"
+      locale = "en_US"
+
+    [[languages.en.menus.main]]
+      name = "About"
+      pageRef = "/about"
+      weight = 10
+
+    [[languages.en.menus.main]]
+      name = "Events"
+      pageRef = "/events"
+      weight = 20
+
+    [[languages.en.menus.main]]
+      name = "Blog"
+      pageRef = "/blog"
+      weight = 30

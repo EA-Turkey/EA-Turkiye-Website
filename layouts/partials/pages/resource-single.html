@@ -1,0 +1,47 @@
+{{ partial "hero.html" (dict
+  "page" .
+  "variant" "page"
+  "eyebrow" .Params.hero_eyebrow
+  "title" .Title
+  "lead" (.Params.summary | default .Params.description)
+) }}
+
+<section class="section">
+  <div class="container stack-lg">
+    <div class="meta-grid" data-reveal>
+      <div class="meta-panel">
+        <span>{{ i18n "resource_details" }}</span>
+        <p>{{ i18n (printf "resource_type_%s" (replace (.Params.resource_type | default "article") "-" "_")) }}</p>
+      </div>
+      {{ with .Params.publisher }}
+        <div class="meta-panel"><span>{{ i18n "publisher" }}</span><p>{{ . }}</p></div>
+      {{ end }}
+      {{ with .Params.cause_area }}
+        <div class="meta-panel"><span>{{ i18n "cause_area" }}</span><p>{{ i18n (printf "cause_%s" (replace . "-" "_")) }}</p></div>
+      {{ end }}
+      {{ with .Params.level }}
+        <div class="meta-panel"><span>{{ i18n "level" }}</span><p>{{ i18n (printf "level_%s" (replace . "-" "_")) }}</p></div>
+      {{ end }}
+    </div>
+
+    {{ with .Params.featured_image }}
+      <div class="featured-media" data-reveal>
+        {{ partial "picture.html" (dict
+          "src" .
+          "alt" $.Title
+          "class" ""
+          "variant" "hero"
+          "sizes" "(min-width: 72rem) 72rem, 100vw"
+        ) }}
+      </div>
+    {{ end }}
+
+    <div class="prose" data-reveal>{{ .Content }}</div>
+
+    {{ with .Params.external_url }}
+      <div data-reveal>
+        {{ partial "button.html" (dict "url" . "label" (i18n "view_resource") "variant" "primary" "external" true) }}
+      </div>
+    {{ end }}
+  </div>
+</section>

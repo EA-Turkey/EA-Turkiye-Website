@@ -1,0 +1,44 @@
+{{ partial "helpers/lang-context.html" . }}
+{{ $langSite := .Scratch.Get "langSite" }}
+{{ $homeURL := .Scratch.Get "homeURL" }}
+{{ $actualLang := .Scratch.Get "actualLang" }}
+{{ $orgName := cond (eq $actualLang "en") $langSite.Params.organization.name_en $langSite.Params.organization.name }}
+{{ $joinURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "get-involved") | strings.TrimSpace }}
+
+<header class="site-header">
+  <div class="container--wide header-inner">
+    <a class="site-logo" href="{{ $homeURL }}" aria-label="{{ $orgName }}">
+      <img src="/{{ $langSite.Params.brand.logo_header }}" alt="{{ $orgName }}">
+    </a>
+
+    <nav id="site-nav" class="site-nav" data-site-nav aria-label="{{ i18n "main_navigation" }}">
+      <ul class="site-nav__list">
+        {{ range $langSite.Menus.main }}
+          {{ $target := .URL }}
+          {{ $isActive := false }}
+          {{ if eq $target "/" }}
+            {{ $isActive = $.IsHome }}
+          {{ else }}
+            {{ $isActive = or (eq $.RelPermalink $target) (and (ne $target "/") (ne $target "/en/") (hasPrefix $.RelPermalink $target)) }}
+          {{ end }}
+          <li>
+            <a href="{{ $target }}" class="{{ if $isActive }}is-active{{ end }}" {{ if $isActive }}aria-current="page"{{ end }}>
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+
+      {{ partial "language-switcher.html" . }}
+
+      {{ partial "button.html" (dict "url" $joinURL "label" (i18n "join_us") "variant" "primary" "class" "button--header-cta") }}
+    </nav>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">{{ i18n "open_menu" }}</span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+  </div>
+</header>

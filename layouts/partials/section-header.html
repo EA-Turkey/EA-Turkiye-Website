@@ -1,0 +1,17 @@
+{{ $eyebrow := .eyebrow }}
+{{ $title := .title }}
+{{ $text := .text }}
+{{ $action := .action }}
+
+<div class="section-header" data-reveal>
+  <div class="stack-sm">
+    {{ with $eyebrow }}<span class="section-header__eyebrow">{{ . }}</span>{{ end }}
+    <h2 class="section-header__title">{{ $title }}</h2>
+  </div>
+  {{ if or $text $action }}
+    <div class="stack-sm">
+      {{ with $text }}<p class="section-header__text">{{ . }}</p>{{ end }}
+      {{ with $action }}{{ . }}{{ end }}
+    </div>
+  {{ end }}
+</div>

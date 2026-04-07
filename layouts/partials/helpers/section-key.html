@@ -1,0 +1,17 @@
+{{- if .IsHome -}}home
+{{- else -}}
+  {{- $path := .RelPermalink -}}
+  {{- if eq $path "" -}}
+    {{- with .File -}}
+      {{- $path = .Path -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if or (in $path "/hakkimizda/") (in $path "/about/") -}}about
+  {{- else if or (in $path "/etkinlikler/") (in $path "/events/") -}}events
+  {{- else if in $path "/blog/" -}}blog
+  {{- else if or (in $path "/katil/") (in $path "/get-involved/") -}}get-involved
+  {{- else if or (in $path "/odak-alanlari/") (in $path "/cause-areas/") -}}cause-areas
+  {{- else if or (in $path "/haberler/") (in $path "/news/") -}}news
+  {{- else -}}page
+  {{- end -}}
+{{- end -}}

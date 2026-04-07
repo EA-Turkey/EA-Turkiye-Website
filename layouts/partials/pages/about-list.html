@@ -1,0 +1,59 @@
+{{ partial "hero.html" (dict
+  "page" .
+  "variant" "page"
+  "eyebrow" .Params.hero_eyebrow
+  "title" (.Params.hero_title | default .Title)
+  "lead" (.Params.hero_lead | default .Params.description)
+) }}
+
+<section class="section">
+  <div class="container split grid-2">
+    <div class="stack-lg" data-reveal>
+      <div class="stack-sm">
+        <span class="section-header__eyebrow">{{ i18n "story_heading" }}</span>
+        <div class="prose">{{ .Content }}</div>
+      </div>
+    </div>
+
+    <div class="stack-md" data-reveal>
+      {{ with .Params.hero_image }}
+        {{ partial "picture.html" (dict
+          "src" .
+          "alt" $.Params.hero_image_alt
+          "class" ""
+          "variant" "hero"
+          "sizes" "(min-width: 64rem) 42rem, 100vw"
+        ) }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container stack-lg">
+    {{ partial "section-header.html" (dict "eyebrow" .Params.team_eyebrow "title" (i18n "meet_the_team") "text" .Params.team_text) }}
+    <div class="team-grid">
+      {{ range .Params.team_ids }}
+        {{ with index site.Data.team . }}
+          {{ partial "team-member.html" (dict "person" . "page" $) }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container stack-lg">
+    {{ partial "section-header.html" (dict "eyebrow" .Params.values_eyebrow "title" (i18n "our_values") "text" .Params.values_text) }}
+    <div class="grid-2">
+      {{ range .Params.values }}
+        <article class="action-card" data-reveal>
+          <div class="stack-sm">
+            <h3>{{ .title }}</h3>
+            <p class="text-muted">{{ .text }}</p>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

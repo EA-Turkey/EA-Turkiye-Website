@@ -1,0 +1,39 @@
+{{ $page := .page }}
+{{ $person := .person }}
+{{ partial "helpers/lang-context.html" $page }}
+{{ $lang := $page.Scratch.Get "actualLang" }}
+{{ $role := cond (eq $lang "en") $person.role.en $person.role.tr }}
+{{ $bio := cond (eq $lang "en") $person.bio.en $person.bio.tr }}
+
+<article class="team-card">
+  {{ with $person.photo }}
+    {{ $photo := resources.Get (printf "images/%s" .) }}
+    {{ if $photo }}
+      {{ $avatar := $photo.Fill "144x144 Center" }}
+      <img
+        class="team-card__avatar"
+        src="{{ $avatar.RelPermalink }}"
+        alt="{{ $person.name }}"
+        width="{{ $avatar.Width }}"
+        height="{{ $avatar.Height }}"
+        loading="lazy"
+        decoding="async"
+      >
+    {{ else }}
+      <div class="team-card__avatar">{{ $person.initials }}</div>
+    {{ end }}
+  {{ else }}
+    <div class="team-card__avatar">{{ $person.initials }}</div>
+  {{ end }}
+  <div class="stack-sm">
+    <div>
+      <h3>{{ $person.name }}</h3>
+      <p class="text-muted">{{ $role }}</p>
+    </div>
+    <p class="team-card__bio">{{ $bio }}</p>
+    <div class="cluster">
+      {{ with $person.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+      {{ with $person.linkedin }}<a href="{{ . }}" target="_blank" rel="noreferrer">{{ i18n "social_linkedin" }}</a>{{ end }}
+    </div>
+  </div>
+</article>

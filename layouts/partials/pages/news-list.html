@@ -1,0 +1,26 @@
+{{ partial "hero.html" (dict
+  "page" .
+  "variant" "page"
+  "eyebrow" .Params.hero_eyebrow
+  "title" (.Params.hero_title | default .Title)
+  "lead" (.Params.hero_lead | default .Params.description)
+) }}
+
+<section class="section">
+  <div class="container stack-lg">
+    <div class="list-shell">
+      {{ range sort .RegularPages "Date" "desc" }}
+        <article class="resource-row">
+          <div>
+            <span class="chip">{{ .Date | time.Format ":date_long" }}</span>
+          </div>
+          <div class="stack-sm">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="text-muted">{{ .Params.summary | default .Params.description }}</p>
+          </div>
+          <div>{{ partial "button.html" (dict "url" .RelPermalink "label" (i18n "read_more") "variant" "ghost") }}</div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

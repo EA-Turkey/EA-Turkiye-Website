@@ -1,0 +1,51 @@
+{{ partial "hero.html" (dict
+  "page" .
+  "variant" "page"
+  "eyebrow" .Params.hero_eyebrow
+  "title" (.Params.hero_title | default .Title)
+  "lead" (.Params.hero_lead | default .Params.description)
+) }}
+
+{{ partial "helpers/lang-context.html" . }}
+{{ $langSite := .Scratch.Get "langSite" }}
+{{ $resources := slice }}
+{{ range $langSite.RegularPages }}
+  {{ $item := . }}
+  {{ with .File }}
+    {{ if hasPrefix .Path "resources/" }}
+      {{ $resources = $resources | append $item }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $types := slice "article" "video" "course" }}
+
+<section class="section">
+  <div class="container stack-lg">
+    {{ $featured := where $resources ".Params.featured" true }}
+    {{ if gt (len $featured) 0 }}
+      <div class="list-shell" data-reveal>
+        <div class="stack-md">
+          <h2>{{ i18n "featured_resources" }}</h2>
+          {{ range $featured }}
+            {{ partial "resource-item.html" . }}
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    {{ range $types }}
+      {{ $type := . }}
+      {{ $matching := where $resources ".Params.resource_type" $type }}
+      {{ if gt (len $matching) 0 }}
+        <section class="resource-group" data-reveal>
+          <h2>{{ i18n (printf "resource_type_%s" (replace $type "-" "_")) }}</h2>
+          <div class="list-shell">
+            {{ range $matching }}
+              {{ partial "resource-item.html" . }}
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>

@@ -1,0 +1,338 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .site { font-family: 'DM Sans', sans-serif; color: var(--color-text-primary); background: var(--color-background-tertiary); }
+  .nav { background: var(--color-background-primary); border-bottom: 0.5px solid var(--color-border-tertiary); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 56px; position: sticky; top: 0; z-index: 10; }
+  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 18px; letter-spacing: -0.3px; display: flex; align-items: center; gap: 8px; }
+  .nav-logo-dot { width: 8px; height: 8px; background: #378ADD; border-radius: 50%; }
+  .nav-links { display: flex; gap: 2px; }
+  .nav-link { font-size: 13px; font-weight: 400; color: var(--color-text-secondary); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.15s; border: none; background: none; }
+  .nav-link:hover, .nav-link.active { background: var(--color-background-secondary); color: var(--color-text-primary); }
+  .nav-cta { font-size: 13px; font-weight: 500; background: #378ADD; color: white; border: none; padding: 7px 16px; border-radius: 8px; cursor: pointer; }
+  .page { display: none; animation: fadeIn 0.2s ease; }
+  .page.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  .hero { background: var(--color-background-primary); padding: 5rem 2rem 4rem; text-align: center; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .hero-tag { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: #185FA5; background: #E6F1FB; padding: 4px 10px; border-radius: 20px; margin-bottom: 1.5rem; text-transform: uppercase; }
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: 3rem; line-height: 1.15; letter-spacing: -0.5px; max-width: 640px; margin: 0 auto 1.25rem; }
+  .hero h1 em { font-style: italic; color: #378ADD; }
+  .hero p { font-size: 16px; color: var(--color-text-secondary); max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; }
+  .hero-btns { display: flex; gap: 10px; justify-content: center; }
+  .btn-primary { background: #378ADD; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; }
+  .btn-secondary { background: transparent; color: var(--color-text-primary); border: 0.5px solid var(--color-border-primary); padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; }
+  .section { padding: 3rem 2rem; max-width: 900px; margin: 0 auto; }
+  .section-title { font-family: 'DM Serif Display', serif; font-size: 1.75rem; margin-bottom: 0.5rem; letter-spacing: -0.3px; }
+  .section-sub { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 2rem; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 0; }
+  .event-tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-top: 6px; font-weight: 500; }
+  .tag-online { background: #E6F1FB; color: #185FA5; }
+  .tag-istanbul { background: #EEEDFE; color: #3C3489; }
+  .tag-ankara { background: #FAEEDA; color: #633806; }
+
+  /* Stats strip — white */
+  .stats-strip { background: var(--color-background-primary); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .stats-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+  .stat-item { text-align: center; padding: 0 1rem; border-right: 0.5px solid var(--color-border-tertiary); }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; color: #378ADD; line-height: 1; }
+  .stat-label { font-size: 12px; color: var(--color-text-secondary); margin-top: 6px; line-height: 1.4; }
+
+  .ea-explainer { background: var(--color-background-primary); border-top: 0.5px solid var(--color-border-tertiary); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .ea-explainer-inner { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+  .ea-explainer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+  .ea-explainer-text .label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: #185FA5; text-transform: uppercase; margin-bottom: 1rem; }
+  .ea-explainer-text h2 { font-family: 'DM Serif Display', serif; font-size: 2rem; line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 1rem; }
+  .ea-explainer-text h2 em { font-style: italic; color: #378ADD; }
+  .ea-explainer-text p { font-size: 14px; color: var(--color-text-secondary); line-height: 1.8; margin-bottom: 0.75rem; }
+  .ea-pillars { display: flex; flex-direction: column; gap: 10px; }
+  .ea-pillar { display: flex; gap: 14px; align-items: flex-start; background: var(--color-background-secondary); border-radius: 10px; padding: 1rem 1.25rem; }
+  .ea-pillar-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .ea-pillar-title { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
+  .ea-pillar-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; }
+  .causes-strip { background: var(--color-background-tertiary); }
+  .causes-inner { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+  .cause-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin-top: 1.5rem; }
+  .cause-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 1.25rem; }
+  .cause-card-accent { height: 3px; border-radius: 2px; margin-bottom: 12px; }
+  .cause-card h3 { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+  .cause-card p { font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; }
+  .cause-card .learn { font-size: 12px; color: #378ADD; margin-top: 10px; cursor: pointer; display: inline-block; }
+  .form-group { margin-bottom: 1rem; }
+  .form-label { font-size: 13px; font-weight: 500; display: block; margin-bottom: 6px; color: var(--color-text-secondary); }
+  .form-input { width: 100%; background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); border-radius: 8px; padding: 9px 12px; font-size: 14px; color: var(--color-text-primary); font-family: 'DM Sans', sans-serif; }
+  .form-select { appearance: none; width: 100%; background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); border-radius: 8px; padding: 9px 12px; font-size: 14px; color: var(--color-text-primary); font-family: 'DM Sans', sans-serif; }
+  .form-textarea { width: 100%; background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); border-radius: 8px; padding: 9px 12px; font-size: 14px; color: var(--color-text-primary); font-family: 'DM Sans', sans-serif; resize: vertical; min-height: 100px; }
+  .form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .resource-list { display: flex; flex-direction: column; gap: 8px; }
+  .resource-item { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+  .resource-left { display: flex; gap: 12px; align-items: center; }
+  .resource-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .resource-title { font-size: 14px; font-weight: 500; margin-bottom: 2px; }
+  .resource-type { font-size: 12px; color: var(--color-text-secondary); }
+  .about-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  .about-text p { font-size: 14px; color: var(--color-text-secondary); line-height: 1.8; margin-bottom: 1rem; }
+  .team-grid { display: flex; flex-direction: column; gap: 10px; }
+  .team-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 1rem; display: flex; gap: 12px; align-items: center; }
+  .team-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: 14px; flex-shrink: 0; }
+  .team-name { font-size: 14px; font-weight: 500; }
+  .team-role { font-size: 12px; color: var(--color-text-secondary); }
+  .values-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 1.5rem; }
+  .value-item { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 1rem; }
+  .value-item h4 { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .value-item p { font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; }
+  .action-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .action-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 1.5rem; }
+  .action-card.featured { border: 1.5px solid #378ADD; }
+  .action-badge { display: inline-block; font-size: 11px; font-weight: 500; background: #E6F1FB; color: #185FA5; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+  .action-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+  .action-card p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1rem; }
+  .contact-row { display: flex; gap: 12px; margin-bottom: 1rem; }
+  .contact-person { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 1rem 1.25rem; display: flex; gap: 12px; align-items: center; flex: 1; }
+  .luma-placeholder { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 3rem 2rem; text-align: center; color: var(--color-text-secondary); font-size: 14px; }
+  .faq-list { display: flex; flex-direction: column; gap: 8px; margin-top: 1.5rem; }
+  .faq-item { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; overflow: hidden; }
+  .faq-q { font-size: 14px; font-weight: 500; padding: 1rem 1.25rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .faq-q:hover { background: var(--color-background-secondary); }
+  .faq-arrow { font-size: 12px; color: var(--color-text-secondary); transition: transform 0.2s; flex-shrink: 0; }
+  .faq-a { font-size: 13px; color: var(--color-text-secondary); line-height: 1.7; padding: 0 1.25rem 1rem; display: none; }
+  .faq-item.open .faq-a { display: block; }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .footer { background: var(--color-background-primary); border-top: 0.5px solid var(--color-border-tertiary); padding: 2rem; text-align: center; }
+  .footer p { font-size: 13px; color: var(--color-text-secondary); }
+  .footer-links { display: flex; gap: 16px; justify-content: center; margin-top: 8px; }
+  .footer-link { font-size: 13px; color: var(--color-text-secondary); cursor: pointer; }
+  .footer-link:hover { color: #378ADD; }
+</style>
+
+<div class="site">
+  <nav class="nav">
+    <div class="nav-logo"><div class="nav-logo-dot"></div>EA Turkey</div>
+    <div class="nav-links">
+      <button class="nav-link active" onclick="showPage('home', this)">Home</button>
+      <button class="nav-link" onclick="showPage('about', this)">About</button>
+      <button class="nav-link" onclick="showPage('events', this)">Events</button>
+      <button class="nav-link" onclick="showPage('resources', this)">Resources</button>
+      <button class="nav-link" onclick="showPage('contact', this)">Get involved</button>
+    </div>
+    <button class="nav-cta" onclick="showPage('contact', document.querySelectorAll('.nav-link')[4])">Join us</button>
+  </nav>
+
+  <div id="page-home" class="page active">
+    <div class="hero">
+      <div class="hero-tag">Effective Altruism · Turkey</div>
+      <h1>Doing good,<br><em>as well as possible</em></h1>
+      <p>A national community using evidence and reason to figure out how to benefit others the most.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="showPage('contact', document.querySelectorAll('.nav-link')[4])">Join the community</button>
+        <button class="btn-secondary" onclick="showPage('about', document.querySelectorAll('.nav-link')[1])">Learn about EA</button>
+      </div>
+    </div>
+
+    <div class="stats-strip">
+      <div class="stats-inner">
+        <div class="stat-item"><div class="stat-num">2021</div><div class="stat-label">Founded</div></div>
+        <div class="stat-item"><div class="stat-num">250+</div><div class="stat-label">Community members</div></div>
+        <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Active cities</div></div>
+        <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">University clubs</div></div>
+        <div class="stat-item"><div class="stat-num">50+</div><div class="stat-label">Events held</div></div>
+      </div>
+    </div>
+
+    <div class="ea-explainer">
+      <div class="ea-explainer-inner">
+        <div class="ea-explainer-grid">
+          <div class="ea-explainer-text">
+            <div class="label">What is EA?</div>
+            <h2>Using evidence to do <em>the most good</em></h2>
+            <p>Effective Altruism is a research field and a community dedicated to finding the best ways to help others — and putting those ideas into practice.</p>
+            <p>Rather than asking "how can I do some good?", EA asks "how can I do the most good possible?" That means taking seriously questions about which problems matter most, and how to address them effectively.</p>
+          </div>
+          <div class="ea-pillars">
+            <div class="ea-pillar"><div class="ea-pillar-icon">🔍</div><div><div class="ea-pillar-title">Evidence & reason</div><div class="ea-pillar-desc">We use careful thinking and data to work out which interventions actually help, rather than going on intuition alone.</div></div></div>
+            <div class="ea-pillar"><div class="ea-pillar-icon">🌍</div><div><div class="ea-pillar-title">Scale & neglectedness</div><div class="ea-pillar-desc">We focus on problems that are large in scale, tractable to solve, and currently neglected by mainstream attention and funding.</div></div></div>
+            <div class="ea-pillar"><div class="ea-pillar-icon">🔄</div><div><div class="ea-pillar-title">Openness to change</div><div class="ea-pillar-desc">We update our views when the evidence shifts, even if that means working on unexpected problems or changing direction.</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="causes-strip">
+      <div class="causes-inner">
+        <div style="font-size:11px; font-weight:500; letter-spacing:0.08em; color:#185FA5; text-transform:uppercase; margin-bottom:0.5rem;">Cause areas</div>
+        <div class="section-title" style="margin-bottom:0.25rem;">Where EA focuses</div>
+        <div class="section-sub">EA prioritises problems that are big, neglected, and solvable.</div>
+        <div class="cause-cards">
+          <div class="cause-card"><div class="cause-card-accent" style="background:#378ADD;"></div><h3>Global health & poverty</h3><p>Hundreds of millions lack access to basic health interventions. Evidence shows we can save a life for as little as a few thousand dollars.</p><span class="learn" onclick="showPage('resources', document.querySelectorAll('.nav-link')[3])">Explore →</span></div>
+          <div class="cause-card"><div class="cause-card-accent" style="background:#7F77DD;"></div><h3>AI safety</h3><p>Advanced AI could be one of the most transformative and potentially dangerous technologies ever developed. Getting it right matters enormously.</p><span class="learn" onclick="showPage('resources', document.querySelectorAll('.nav-link')[3])">Explore →</span></div>
+          <div class="cause-card"><div class="cause-card-accent" style="background:#EF9F27;"></div><h3>Biosecurity</h3><p>Natural and engineered pandemics pose existential-scale risks. Better policy, research, and infrastructure can dramatically reduce these risks.</p><span class="learn" onclick="showPage('resources', document.querySelectorAll('.nav-link')[3])">Explore →</span></div>
+          <div class="cause-card"><div class="cause-card-accent" style="background:#1D9E75;"></div><h3>Animal welfare</h3><p>Billions of animals experience suffering in farming and research. EA takes this seriously as a moral issue deserving more attention.</p><span class="learn" onclick="showPage('resources', document.querySelectorAll('.nav-link')[3])">Explore →</span></div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section">
+      <div class="section-title">Upcoming events</div>
+      <div class="section-sub">Join us in Istanbul, Ankara, or online</div>
+      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:1.5rem;">
+        <div style="background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:12px; padding:1rem 1.25rem; display:flex; gap:1rem; align-items:flex-start;">
+          <div style="min-width:48px; text-align:center; background:#E6F1FB; border-radius:8px; padding:6px 8px;">
+            <div style="font-family:'DM Serif Display',serif; font-size:1.4rem; line-height:1; color:#185FA5;">14</div>
+            <div style="font-size:11px; color:#378ADD; font-weight:500; text-transform:uppercase;">Apr</div>
+          </div>
+          <div><div style="font-size:14px; font-weight:500; margin-bottom:4px;">EA Intro — expression of interest</div><div style="font-size:12px; color:var(--color-text-secondary);">Interested in joining a fellowship cohort? Register your interest.</div><span class="event-tag tag-istanbul">Istanbul</span></div>
+        </div>
+        <div style="background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:12px; padding:1rem 1.25rem; display:flex; gap:1rem; align-items:flex-start;">
+          <div style="min-width:48px; text-align:center; background:#E6F1FB; border-radius:8px; padding:6px 8px;">
+            <div style="font-family:'DM Serif Display',serif; font-size:1.4rem; line-height:1; color:#185FA5;">21</div>
+            <div style="font-size:11px; color:#378ADD; font-weight:500; text-transform:uppercase;">Apr</div>
+          </div>
+          <div><div style="font-size:14px; font-weight:500; margin-bottom:4px;">Career conversations: global health</div><div style="font-size:12px; color:var(--color-text-secondary);">Panel with professionals in high-impact global health roles</div><span class="event-tag tag-online">Online</span></div>
+        </div>
+      </div>
+      <button class="btn-secondary" onclick="showPage('events', document.querySelectorAll('.nav-link')[2])">View all events</button>
+    </div>
+  </div>
+
+  <div id="page-about" class="page">
+    <div class="hero" style="padding:3.5rem 2rem 3rem;">
+      <div class="hero-tag">About us</div>
+      <h1 style="font-size:2.2rem;">Building EA in Turkey,<br><em>from the ground up</em></h1>
+      <p>We're a national community coordinating city groups, fellowships, and professional networks across Turkey.</p>
+    </div>
+    <div class="section">
+      <div class="about-two-col">
+        <div class="about-text">
+          <div class="section-title">Our story</div>
+          <p>EA Turkey was founded in 2021 and grew from independently run city groups and university fellowships. Following the 2024 Istanbul Summit, we're building national infrastructure to connect and grow these communities.</p>
+          <p>Our goal is to help people in Turkey discover EA, develop their thinking, and pursue high-impact careers — while contributing to the global EA movement.</p>
+        </div>
+        <div>
+          <div class="section-title">Our team</div>
+          <div class="team-grid">
+            <div class="team-card"><div class="team-avatar" style="background:#E6F1FB; color:#185FA5;">CK</div><div><div class="team-name">Ceren Devrim Karabulut</div><div class="team-role">Co-director</div></div></div>
+            <div class="team-card"><div class="team-avatar" style="background:#EEEDFE; color:#3C3489;">FA</div><div><div class="team-name">Fırat Akova</div><div class="team-role">Co-director</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-title" style="margin-top:2.5rem;">Our values</div>
+      <div class="values-list">
+        <div class="value-item"><h4>Evidence-based</h4><p>We rely on data and careful reasoning to identify the most impactful ways to help.</p></div>
+        <div class="value-item"><h4>Cause neutrality</h4><p>We follow the evidence across causes rather than committing to one area a priori.</p></div>
+        <div class="value-item"><h4>Collaborative spirit</h4><p>We work together and support each other's growth, ideas, and career paths.</p></div>
+        <div class="value-item"><h4>Long-term thinking</h4><p>We consider how actions affect not just people alive today, but future generations too.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page-events" class="page">
+    <div class="hero" style="padding:3.5rem 2rem 3rem;">
+      <div class="hero-tag">Events</div>
+      <h1 style="font-size:2.2rem;">Meet the community</h1>
+      <p>Fellowships, talks, and socials in Istanbul, Ankara, and online.</p>
+    </div>
+    <div class="section">
+      <div class="luma-placeholder"><div style="font-size:22px;">📅</div><div style="font-weight:500; margin-top:8px;">Luma calendar</div><p style="margin-top:8px; font-size:12px;">Your Luma events calendar will be embedded here.</p></div>
+    </div>
+  </div>
+
+  <div id="page-resources" class="page">
+    <div class="hero" style="padding:3.5rem 2rem 3rem;">
+      <div class="hero-tag">Resources</div>
+      <h1 style="font-size:2.2rem;">Learn to do more good</h1>
+      <p>Curated reading, tools, and guides for every stage of your EA journey.</p>
+    </div>
+    <div class="section">
+      <div class="section-title">Getting started</div>
+      <div class="section-sub">New to EA? Start here.</div>
+      <div class="resource-list" style="margin-bottom:2rem;">
+        <div class="resource-item"><div class="resource-left"><div class="resource-icon" style="background:#E6F1FB;">📖</div><div><div class="resource-title">Introduction to Effective Altruism</div><div class="resource-type">Article · effectivealtruism.org</div></div></div><div style="font-size:16px; color:var(--color-text-secondary);">→</div></div>
+        <div class="resource-item"><div class="resource-left"><div class="resource-icon" style="background:#EEEDFE;">🎧</div><div><div class="resource-title">80,000 Hours Podcast</div><div class="resource-type">Podcast series · 80000hours.org</div></div></div><div style="font-size:16px; color:var(--color-text-secondary);">→</div></div>
+        <div class="resource-item"><div class="resource-left"><div class="resource-icon" style="background:#FAEEDA;">📗</div><div><div class="resource-title">Doing Good Better — Will MacAskill</div><div class="resource-type">Book</div></div></div><div style="font-size:16px; color:var(--color-text-secondary);">→</div></div>
+      </div>
+      <div class="section-title">Career resources</div>
+      <div class="section-sub">Find and build a high-impact career.</div>
+      <div class="resource-list">
+        <div class="resource-item"><div class="resource-left"><div class="resource-icon" style="background:#EAF3DE;">💼</div><div><div class="resource-title">80,000 Hours Career Guide</div><div class="resource-type">Guide · 80000hours.org</div></div></div><div style="font-size:16px; color:var(--color-text-secondary);">→</div></div>
+        <div class="resource-item"><div class="resource-left"><div class="resource-icon" style="background:#E6F1FB;">🗺</div><div><div class="resource-title">EA Turkey mentorship network</div><div class="resource-type">Community resource</div></div></div><div style="font-size:16px; color:var(--color-text-secondary);">→</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page-contact" class="page">
+    <div class="hero" style="padding:3.5rem 2rem 3rem;">
+      <div class="hero-tag">Get involved</div>
+      <h1 style="font-size:2.2rem;">Join EA Turkey</h1>
+      <p>Whether you're brand new or already engaged with EA, there's a place for you here.</p>
+    </div>
+    <div class="section">
+      <div class="section-title">Ways to get involved</div>
+      <div class="section-sub">Pick what feels right for where you are.</div>
+      <div class="action-grid" style="margin-bottom:2.5rem;">
+        <div class="action-card featured"><div class="action-badge">Express interest</div><h3>Join an intro fellowship</h3><p>We're building cohort-based fellowships to explore EA ideas together. Register your interest and we'll reach out when a cohort forms.</p><button class="btn-primary" onclick="document.getElementById('eoi-form').scrollIntoView({behavior:'smooth'})">Register interest</button></div>
+        <div class="action-card"><h3>Explore cause areas</h3><p>Global health, AI safety, biosecurity — learn about the problems EA focuses on and find where your skills might fit.</p><button class="btn-secondary" onclick="showPage('resources', document.querySelectorAll('.nav-link')[3])">Browse resources</button></div>
+        <div class="action-card"><h3>Join our WhatsApp group</h3><p>Connect with the EA Turkey community — get event updates, share ideas, and meet people working on pressing problems.</p><button class="btn-secondary">Join WhatsApp</button></div>
+        <div class="action-card"><h3>Volunteer or organise</h3><p>Help run events, translate materials into Turkish, or support outreach in your city. We'd love the help.</p><button class="btn-secondary" onclick="document.getElementById('eoi-form').scrollIntoView({behavior:'smooth'})">Get in touch</button></div>
+      </div>
+
+      <hr class="divider" style="margin-bottom:2.5rem;">
+      <div class="section-title">Contact the team</div>
+      <div class="section-sub">Reach out directly to either of our co-directors.</div>
+      <div class="contact-row">
+        <div class="contact-person"><div class="team-avatar" style="background:#E6F1FB; color:#185FA5; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:500; font-size:14px; flex-shrink:0;">CK</div><div><div class="team-name">Ceren Devrim Karabulut</div><div class="team-role">Co-director · EA Turkey</div></div></div>
+        <div class="contact-person"><div class="team-avatar" style="background:#EEEDFE; color:#3C3489; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:500; font-size:14px; flex-shrink:0;">FA</div><div><div class="team-name">Fırat Akova</div><div class="team-role">Co-director · EA Turkey</div></div></div>
+      </div>
+
+      <hr class="divider" style="margin:2.5rem 0;">
+      <div class="section-title">Sıkça sorulan sorular</div>
+      <div class="section-sub">Aklındaki soruların cevabı burada olabilir.</div>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">EA nedir? <span class="faq-arrow">▾</span></div><div class="faq-a">Effective Altruism (Etkin Yardımseverlik), kanıta dayalı yöntemlerle başkalarına en fazla faydayı sağlamanın yollarını araştıran bir topluluk ve düşünce akımıdır. EA, "nasıl iyilik yapabilirim?" yerine "mevcut kaynaklarımla en fazla iyiliği nasıl yapabilirim?" sorusunu sorar.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Hangi şehirlerde aktifsiniz? <span class="faq-arrow">▾</span></div><div class="faq-a">Şu an İstanbul ve Ankara'da aktif şehir gruplarımız var. Bunların yanı sıra 5 üniversite kulübümüz mevcut. Başka bir şehirde yaşıyorsan online etkinliklerimize katılabilir veya kendi şehrinde bir grup kurma konusunda bizimle iletişime geçebilirsin.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">EA Türkiye kimlerden oluşuyor? <span class="faq-arrow">▾</span></div><div class="faq-a">EA Türkiye, 2021'den bu yana büyüyen 250'den fazla kişilik bir topluluktur. Üniversite öğrencileri, akademisyenler, kariyer değiştirmeyi düşünenler ve küresel sorunlara çözüm üretmek isteyen profesyonellerden oluşur. Topluluğu Ceren Devrim Karabulut ve Fırat Akova eş direktör olarak koordine ediyor.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Gönüllü olabilir miyim? <span class="faq-arrow">▾</span></div><div class="faq-a">Kesinlikle! Etkinlik organizasyonu, içerik üretimi, Türkçe çeviri veya kendi şehrinde topluluk kurma gibi konularda destek olabilirsin. Aşağıdaki formu doldurarak veya doğrudan bize ulaşarak başlayabilirsin.</div></div>
+      </div>
+
+      <hr class="divider" style="margin:2.5rem 0;">
+      <div id="eoi-form">
+        <div class="section-title">Send us a message</div>
+        <div class="section-sub">We'll get back to you within a few days.</div>
+        <div style="background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:12px; padding:1.5rem;">
+          <div class="form-2col">
+            <div class="form-group"><label class="form-label">First name</label><input type="text" class="form-input" placeholder="Ada"></div>
+            <div class="form-group"><label class="form-label">Last name</label><input type="text" class="form-input" placeholder="Yılmaz"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="ada@example.com"></div>
+          <div class="form-group"><label class="form-label">City</label><select class="form-select"><option>Istanbul</option><option>Ankara</option><option>Izmir</option><option>Other</option></select></div>
+          <div class="form-group"><label class="form-label">I'm interested in...</label><select class="form-select"><option>Joining an intro fellowship cohort</option><option>Attending events</option><option>Volunteering / organising</option><option>Starting a local group</option><option>Just staying in touch</option></select></div>
+          <div class="form-group"><label class="form-label">Anything else?</label><textarea class="form-textarea" placeholder="Tell us a little about yourself or your interest in EA..."></textarea></div>
+          <button class="btn-primary" style="width:100%;">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>EA Turkey · Part of the global Effective Altruism community</p>
+    <div class="footer-links">
+      <span class="footer-link" onclick="showPage('about', null)">About</span>
+      <span class="footer-link" onclick="showPage('events', null)">Events</span>
+      <span class="footer-link" onclick="showPage('resources', null)">Resources</span>
+      <span class="footer-link" onclick="showPage('contact', null)">Get involved</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+function showPage(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+}
+function toggleFaq(el) {
+  el.parentElement.classList.toggle('open');
+}
+</script>

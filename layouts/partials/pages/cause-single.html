@@ -1,0 +1,77 @@
+{{ partial "hero.html" (dict
+  "page" .
+  "variant" "page"
+  "eyebrow" .Params.hero_eyebrow
+  "title" .Title
+  "lead" (.Params.summary | default .Params.description)
+) }}
+
+{{ partial "helpers/lang-context.html" . }}
+{{ $langSite := .Scratch.Get "langSite" }}
+{{ $resources := slice }}
+{{ $events := slice }}
+{{ range $langSite.RegularPages }}
+  {{ $item := . }}
+  {{ with .File }}
+    {{ if hasPrefix .Path "resources/" }}
+      {{ $resources = $resources | append $item }}
+    {{ end }}
+    {{ if hasPrefix .Path "events/" }}
+      {{ $events = $events | append $item }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $relatedResources := slice }}
+{{ $relatedEvents := slice }}
+
+{{ range $resources }}
+  {{ if eq .Params.cause_area $.Params.translationKey }}
+    {{ $relatedResources = $relatedResources | append . }}
+  {{ end }}
+{{ end }}
+
+{{ range $events }}
+  {{ if eq .Params.cause_area $.Params.translationKey }}
+    {{ $relatedEvents = $relatedEvents | append . }}
+  {{ end }}
+{{ end }}
+
+<section class="section">
+  <div class="container stack-lg">
+    {{ with .Params.featured_image }}
+      <div class="featured-media" data-reveal>
+        {{ partial "picture.html" (dict
+          "src" .
+          "alt" $.Title
+          "class" ""
+          "variant" "hero"
+          "sizes" "(min-width: 72rem) 72rem, 100vw"
+        ) }}
+      </div>
+    {{ end }}
+
+    <div class="prose" data-reveal>{{ .Content }}</div>
+
+    {{ if gt (len $relatedResources) 0 }}
+      <section class="stack-md" data-reveal>
+        <h2>{{ i18n "related_resources" }}</h2>
+        <div class="list-shell">
+          {{ range first 3 $relatedResources }}
+            {{ partial "resource-item.html" . }}
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    {{ if gt (len $relatedEvents) 0 }}
+      <section class="stack-md" data-reveal>
+        <h2>{{ i18n "related_events" }}</h2>
+        <div class="event-grid event-grid--archive">
+          {{ range first 3 $relatedEvents }}
+            {{ partial "event-card.html" (dict "page" . "variant" "archive") }}
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+</section>

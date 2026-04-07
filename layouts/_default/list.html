@@ -1,0 +1,27 @@
+{{ define "main" }}
+  {{ $sectionKey := partial "helpers/section-key.html" . | strings.TrimSpace }}
+  {{ if eq $sectionKey "about" }}
+    {{ partial "pages/about-list.html" . }}
+  {{ else if eq $sectionKey "events" }}
+    {{ partial "pages/events-list.html" . }}
+  {{ else if eq $sectionKey "blog" }}
+    {{ partial "pages/blog-list.html" . }}
+  {{ else if eq $sectionKey "get-involved" }}
+    {{ partial "pages/get-involved-list.html" . }}
+  {{ else if eq $sectionKey "news" }}
+    {{ partial "pages/news-list.html" . }}
+  {{ else }}
+    {{ partial "hero.html" (dict
+      "page" .
+      "variant" "page"
+      "eyebrow" .Params.hero_eyebrow
+      "title" (.Params.hero_title | default .Title)
+      "lead" (.Params.hero_lead | default .Params.description)
+    ) }}
+    <section class="section">
+      <div class="container stack-lg">
+        {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

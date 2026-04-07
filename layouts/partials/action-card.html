@@ -1,0 +1,11 @@
+{{ $url := .cta_url | default .cta_anchor }}
+<article class="action-card">
+  {{ with .badge }}<span class="action-card__badge">{{ . }}</span>{{ end }}
+  <div class="stack-md">
+    <div class="stack-sm">
+      <h3>{{ .title }}</h3>
+      <p class="action-card__text">{{ .text }}</p>
+    </div>
+    {{ with $url }}{{ partial "button.html" (dict "url" . "label" $.cta_label "variant" "secondary") }}{{ end }}
+  </div>
+</article>

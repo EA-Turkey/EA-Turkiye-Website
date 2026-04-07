@@ -1,0 +1,209 @@
+- id: skip_to_content
+  translation: "Ana içeriğe geç"
+
+- id: main_navigation
+  translation: "Ana gezinme"
+
+- id: language_switcher
+  translation: "Dil seçici"
+
+- id: open_menu
+  translation: "Menüyü aç"
+
+- id: close_menu
+  translation: "Menüyü kapat"
+
+- id: join_us
+  translation: "Katıl"
+
+- id: learn_more
+  translation: "Daha fazla bilgi"
+
+- id: read_more
+  translation: "Devamını oku"
+
+- id: view_all_events
+  translation: "Tüm etkinlikleri gör"
+
+- id: upcoming_events
+  translation: "Yaklaşan etkinlikler"
+
+- id: past_events
+  translation: "Geçmiş etkinlikler"
+
+- id: no_upcoming_events
+  translation: "Yakında açıklanacak yeni etkinlikler için takipte kal."
+
+- id: no_past_events
+  translation: "Geçmiş etkinlikler burada arşivlenecek."
+
+- id: featured_resources
+  translation: "Öne çıkan kaynaklar"
+
+- id: related_resources
+  translation: "İlgili kaynaklar"
+
+- id: related_events
+  translation: "İlgili etkinlikler"
+
+- id: meet_the_team
+  translation: "Ekiple tanış"
+
+- id: our_values
+  translation: "Nasıl çalışıyoruz"
+
+- id: action_paths
+  translation: "Başlamak için yollar"
+
+- id: contact_people
+  translation: "Konuşabileceğin kişiler"
+
+- id: frequently_asked_questions
+  translation: "Sık sorulan sorular"
+
+- id: event_details
+  translation: "Etkinlik detayları"
+
+- id: resource_details
+  translation: "Kaynak detayları"
+
+- id: view_resource
+  translation: "Kaynağı aç"
+
+- id: register_now
+  translation: "Kayıt ol"
+
+- id: open_luma
+  translation: "Luma sayfasını aç"
+
+- id: view_on_substack
+  translation: "Substack'te görüntüle"
+
+- id: add_to_calendar
+  translation: "Takvime ekle"
+
+- id: back_to_events
+  translation: "Etkinliklere dön"
+
+- id: city
+  translation: "Şehir"
+
+- id: venue
+  translation: "Mekân"
+
+- id: mode
+  translation: "Biçim"
+
+- id: publisher
+  translation: "Yayıncı"
+
+- id: level
+  translation: "Seviye"
+
+- id: cause_area
+  translation: "Odak alanı"
+
+- id: story_heading
+  translation: "Hikâyemiz"
+
+- id: footer_org_description
+  translation: "EA Türkiye, kanıt ve akıl yürütmeyle en çok iyiliği yapmanın yollarını araştıran bir topluluktur."
+
+- id: footer_links
+  translation: "Bağlantılar"
+
+- id: footer_connect
+  translation: "Bağlan"
+
+- id: footer_copyright
+  translation: "EA Türkiye"
+
+- id: social_linkedin
+  translation: "LinkedIn"
+
+- id: social_substack
+  translation: "Substack"
+
+- id: social_whatsapp
+  translation: "WhatsApp"
+
+- id: form_first_name
+  translation: "Ad"
+
+- id: form_last_name
+  translation: "Soyad"
+
+- id: form_email
+  translation: "E-posta"
+
+- id: form_city
+  translation: "Şehir"
+
+- id: form_interest
+  translation: "İlgi alanı"
+
+- id: form_message
+  translation: "Mesaj"
+
+- id: form_submit
+  translation: "Mesajı gönder"
+
+- id: form_fallback_prefix
+  translation: "Form çalışmazsa bize doğrudan e-posta yazabilirsin:"
+
+- id: form_status_sending
+  translation: "Gönderiliyor..."
+
+- id: form_status_error_generic
+  translation: "Bir sorun oluştu. Lütfen aşağıdaki e-posta bağlantısını kullan."
+
+- id: cause_general
+  translation: "Genel"
+
+- id: cause_global_health_poverty
+  translation: "Küresel sağlık ve yoksulluk"
+
+- id: cause_ai_safety
+  translation: "Yapay zekâ güvenliği"
+
+- id: cause_biosecurity
+  translation: "Biyogüvenlik"
+
+- id: cause_animal_welfare
+  translation: "Hayvan refahı"
+
+- id: mode_in_person
+  translation: "Yüz yüze"
+
+- id: mode_online
+  translation: "Çevrimiçi"
+
+- id: mode_hybrid
+  translation: "Hibrit"
+
+- id: resource_type_article
+  translation: "Makale"
+
+- id: resource_type_video
+  translation: "Video"
+
+- id: resource_type_course
+  translation: "Program"
+
+- id: level_intro
+  translation: "Başlangıç"
+
+- id: level_intermediate
+  translation: "Orta seviye"
+
+- id: not_found_title
+  translation: "Aradığın sayfayı bulamadık"
+
+- id: not_found_text
+  translation: "Bağlantı taşınmış olabilir. Ana sayfadan veya menüden devam edebilirsin."
+
+- id: return_home
+  translation: "Ana sayfaya dön"
+
+- id: default_meta_description
+  translation: "EA Türkiye, kanıt, akıl yürütme ve topluluk aracılığıyla en çok iyiliği yapmanın yollarını araştıran bir topluluktur."

@@ -1,0 +1,9 @@
+{{ partial "helpers/lang-context.html" . }}
+{{ $currentLang := .Scratch.Get "actualLang" }}
+<div class="language-switcher" aria-label="{{ i18n "language_switcher" }}">
+  {{ range sort site.Sites "Language.Weight" }}
+    {{ $lang := .Language.Lang }}
+    {{ $url := partial "helpers/find-translation.html" (dict "page" $ "targetLang" $lang) | strings.TrimSpace }}
+    <a href="{{ $url }}" {{ if eq $lang $currentLang }}aria-current="true"{{ end }}>{{- .Params.language_label -}}</a>
+  {{ end }}
+</div>

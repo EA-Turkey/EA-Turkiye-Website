@@ -1,0 +1,61 @@
+{{ $start := time.AsTime .Params.start }}
+{{ $calendarStart := "" }}
+{{ $calendarEnd := "" }}
+{{ if and .Params.calendar_start .Params.calendar_end }}
+  {{ $calendarStart = time.AsTime .Params.calendar_start }}
+  {{ $calendarEnd = time.AsTime .Params.calendar_end }}
+{{ end }}
+{{ $calendarURL := "" }}
+{{ if and $calendarStart $calendarEnd }}
+  {{ $calendarURL = printf "https://calendar.google.com/calendar/render?action=TEMPLATE&text=%s&dates=%s/%s&details=%s&location=%s" (urlquery .Title) ($calendarStart.UTC.Format "20060102T150405Z") ($calendarEnd.UTC.Format "20060102T150405Z") (urlquery (.Params.summary | default .Params.description)) (urlquery (.Params.venue | default .Params.city)) }}
+{{ end }}
+
+{{ partial "hero.html" (dict
+  "page" .
+  "variant" "page"
+  "eyebrow" .Params.hero_eyebrow
+  "title" .Title
+  "lead" (.Params.summary | default .Params.description)
+) }}
+
+<section class="section">
+  <div class="container stack-lg">
+    <div class="meta-grid" data-reveal>
+      <div class="meta-panel">
+        <span>{{ i18n "event_details" }}</span>
+        <p>{{ .Params.schedule_text | default (printf "%s · %s" ($start | time.Format ":date_long") ($start | time.Format "15:04")) }}</p>
+      </div>
+      {{ with .Params.city }}
+        <div class="meta-panel"><span>{{ i18n "city" }}</span><p>{{ . }}</p></div>
+      {{ end }}
+      {{ with .Params.event_mode }}
+        <div class="meta-panel"><span>{{ i18n "mode" }}</span><p>{{ i18n (printf "mode_%s" (replace . "-" "_")) }}</p></div>
+      {{ end }}
+      {{ with .Params.venue }}
+        <div class="meta-panel"><span>{{ i18n "venue" }}</span><p>{{ . }}</p></div>
+      {{ end }}
+    </div>
+
+    {{ with .Params.featured_image }}
+      <div class="featured-media" data-reveal>
+        {{ partial "picture.html" (dict
+          "src" .
+          "alt" $.Title
+          "class" ""
+          "variant" "hero"
+          "sizes" "(min-width: 72rem) 72rem, 100vw"
+        ) }}
+      </div>
+    {{ end }}
+
+    <div class="prose" data-reveal>{{ .Content }}</div>
+
+    <div class="cluster" data-reveal>
+      {{ with .Params.source_url }}{{ partial "button.html" (dict "url" . "label" (i18n "view_on_substack") "variant" "primary" "external" true) }}{{ end }}
+      {{ with .Params.luma_url }}{{ partial "button.html" (dict "url" . "label" (i18n "open_luma") "variant" "secondary" "external" true) }}{{ end }}
+      {{ with $calendarURL }}{{ partial "button.html" (dict "url" . "label" (i18n "add_to_calendar") "variant" "secondary" "external" true) }}{{ end }}
+      {{ partial "helpers/lang-context.html" . }}
+      {{ partial "button.html" (dict "url" (partial "helpers/section-root.html" (dict "lang" (.Scratch.Get "actualLang") "key" "events") | strings.TrimSpace) "label" (i18n "back_to_events") "variant" "ghost") }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+{{ partial "hero.html" (dict
+  "page" .
+  "variant" "page"
+  "eyebrow" .Params.hero_eyebrow
+  "title" .Title
+  "lead" (.Params.summary | default .Params.description)
+) }}
+
+<section class="section">
+  <div class="container stack-lg">
+    <div class="meta-panel" data-reveal>
+      <span>{{ i18n "story_heading" }}</span>
+      <p>{{ .Date | time.Format ":date_long" }}</p>
+    </div>
+    <div class="prose" data-reveal>{{ .Content }}</div>
+  </div>
+</section>

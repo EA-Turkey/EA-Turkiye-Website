@@ -1,0 +1,40 @@
+{{ $variant := .variant | default "page" }}
+{{ $page := .page }}
+{{ $eyebrow := .eyebrow }}
+{{ $title := .title }}
+{{ $lead := .lead }}
+{{ $primaryURL := .primary_url }}
+{{ $primaryLabel := .primary_label }}
+{{ $secondaryURL := .secondary_url }}
+{{ $secondaryLabel := .secondary_label }}
+{{ $image := .image }}
+{{ $imageAlt := .image_alt | default $title }}
+
+<section class="hero hero--{{ $variant }}">
+  <div class="{{ if eq $variant "home" }}container--wide{{ else }}container{{ end }} hero__inner">
+    <div class="hero__content stack-md" data-reveal>
+      {{ with $eyebrow }}<span class="hero__eyebrow">{{ . }}</span>{{ end }}
+      <h1 class="hero__title">{{ $title }}</h1>
+      {{ with $lead }}<p class="hero__lead">{{ . }}</p>{{ end }}
+      {{ if or $primaryURL $secondaryURL }}
+        <div class="hero__actions">
+          {{ with $primaryURL }}{{ partial "button.html" (dict "url" . "label" $primaryLabel "variant" "primary" "size" "cta") }}{{ end }}
+          {{ with $secondaryURL }}{{ partial "button.html" (dict "url" . "label" $secondaryLabel "variant" "secondary") }}{{ end }}
+        </div>
+      {{ end }}
+    </div>
+
+    {{ if and (eq $variant "home") $image }}
+      <div class="hero__media" data-reveal>
+        {{ partial "picture.html" (dict
+          "src" $image
+          "alt" $imageAlt
+          "class" "hero__image"
+          "variant" "hero"
+          "sizes" "(min-width: 72rem) 42rem, 100vw"
+          "loading" "eager"
+        ) }}
+      </div>
+    {{ end }}
+  </div>
+</section>

@@ -1,0 +1,87 @@
+{{ partial "hero.html" (dict
+  "page" .
+  "variant" "page"
+  "eyebrow" .Params.hero_eyebrow
+  "title" (.Params.hero_title | default .Title)
+  "lead" (.Params.hero_lead | default .Params.description)
+) }}
+
+{{ partial "helpers/lang-context.html" . }}
+{{ $langSite := .Scratch.Get "langSite" }}
+{{ $events := slice }}
+{{ range $langSite.RegularPages }}
+  {{ $item := . }}
+  {{ with .File }}
+    {{ if hasPrefix .Path "events/" }}
+      {{ $events = $events | append $item }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $upcoming := slice }}
+{{ $past := slice }}
+{{ $now := now }}
+{{ range sort $events "Params.start" }}
+  {{ $end := cond .Params.end (time.AsTime .Params.end) (time.AsTime .Params.start) }}
+  {{ if ge $end.Unix $now.Unix }}
+    {{ $upcoming = $upcoming | append . }}
+  {{ else }}
+    {{ $past = $past | append . }}
+  {{ end }}
+{{ end }}
+{{ $past = sort $past "Params.start" "desc" }}
+
+<section class="section events-archive events-archive__upcoming">
+  <div class="container--wide stack-lg">
+    {{ partial "section-header.html" (dict "title" (i18n "upcoming_events")) }}
+    <div class="events-archive__upcoming-layout">
+      {{ with .Site.Params.events.luma_embed_url }}
+        <div class="luma-embed events-archive__calendar" data-reveal>
+          <iframe src="{{ . }}" title="Luma"></iframe>
+        </div>
+      {{ end }}
+      <aside class="events-archive__sidebar" data-reveal>
+        <div class="stack-md">
+          {{ with $.Params.upcoming_text }}
+            <p class="events-archive__sidebar-text">{{ . }}</p>
+          {{ end }}
+          {{ if gt (len $upcoming) 0 }}
+            {{ with $.Site.Params.events.luma_calendar_url }}
+              {{ partial "button.html" (dict "url" . "label" (i18n "open_luma") "variant" "secondary") }}
+            {{ end }}
+          {{ else }}
+            <div class="empty-state events-archive__empty">
+              <p>{{ i18n "no_upcoming_events" }}</p>
+            </div>
+            {{ with $.Site.Params.events.luma_calendar_url }}
+              {{ partial "button.html" (dict "url" . "label" (i18n "open_luma") "variant" "secondary") }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </aside>
+    </div>
+    {{ if gt (len $upcoming) 0 }}
+      <div class="event-grid event-grid--archive events-archive__grid events-archive__grid--upcoming">
+        {{ range $upcoming }}
+          {{ partial "event-card.html" (dict "page" . "variant" "archive") }}
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section section--surface events-archive events-archive__past">
+  <div class="container--wide stack-lg">
+    {{ partial "section-header.html" (dict "title" (i18n "past_events") "text" .Params.past_text) }}
+    {{ if gt (len $past) 0 }}
+      <div class="event-grid event-grid--archive events-archive__grid">
+        {{ range $past }}
+          {{ partial "event-card.html" (dict "page" . "variant" "archive") }}
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="empty-state events-archive__empty" data-reveal>
+        <p>{{ i18n "no_past_events" }}</p>
+      </div>
+    {{ end }}
+  </div>
+</section>

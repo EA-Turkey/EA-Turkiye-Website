@@ -1,0 +1,25 @@
+{{- $lang := .lang -}}
+{{- $key := .key -}}
+{{- $tr := dict
+  "home" "/"
+  "about" "/hakkimizda/"
+  "events" "/etkinlikler/"
+  "blog" "/blog/"
+  "get-involved" "/katil/"
+  "cause-areas" "/odak-alanlari/"
+  "news" "/haberler/"
+-}}
+{{- $en := dict
+  "home" "/en/"
+  "about" "/en/about/"
+  "events" "/en/events/"
+  "blog" "/en/blog/"
+  "get-involved" "/en/get-involved/"
+  "cause-areas" "/en/cause-areas/"
+  "news" "/en/news/"
+-}}
+{{- if eq $lang "en" -}}
+  {{- index $en $key | default "/en/" -}}
+{{- else -}}
+  {{- index $tr $key | default "/" -}}
+{{- end -}}

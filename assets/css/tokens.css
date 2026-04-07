@@ -1,0 +1,87 @@
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  --color-brand-700: #1b5266;
+  --color-brand-700-rgb: 27, 82, 102;
+  --color-brand-600: #0c869b;
+  --color-brand-600-rgb: 12, 134, 155;
+  --color-brand-500: #00b2be;
+  --color-brand-500-rgb: 0, 178, 190;
+  --color-brand-100: #e6f7f8;
+  --color-brand-100-rgb: 230, 247, 248;
+  --color-brand-line: rgba(var(--color-brand-500-rgb), 0.24);
+  --color-brand-wash-subtle: rgba(var(--color-brand-500-rgb), 0.05);
+  --color-brand-wash: rgba(var(--color-brand-500-rgb), 0.08);
+  --color-brand-glow: rgba(var(--color-brand-500-rgb), 0.09);
+  --color-brand-wash-strong: rgba(var(--color-brand-500-rgb), 0.16);
+  --color-brand-selection: rgba(var(--color-brand-500-rgb), 0.18);
+  --color-brand-stroke-soft: rgba(var(--color-brand-600-rgb), 0.14);
+  --color-brand-stroke: rgba(var(--color-brand-600-rgb), 0.28);
+
+  --color-ink-950: #162126;
+  --color-ink-900: #333333;
+  --color-ink-700: #52666d;
+  --color-ink-500: #74868c;
+
+  --color-bg: #f7fafb;
+  --color-surface: #ffffff;
+  --color-surface-alt: #eef5f7;
+  --color-border: #d8e5e9;
+  --color-overlay: rgba(10, 24, 28, 0.06);
+
+  --color-link: var(--color-brand-700);
+  --color-link-hover: var(--color-brand-600);
+  --color-focus: rgba(var(--color-brand-500-rgb), 0.34);
+
+  --color-cause-global-health: var(--color-brand-600);
+  --color-cause-ai-safety: #6172c5;
+  --color-cause-biosecurity: #cf8a34;
+  --color-cause-animal-welfare: #2f8c67;
+  --color-cause-general: #46545a;
+
+  --text-display: clamp(2.8rem, 7vw, 5.6rem);
+  --text-h1: clamp(2.2rem, 5vw, 3.8rem);
+  --text-h2: clamp(1.8rem, 3vw, 2.8rem);
+  --text-h3: clamp(1.3rem, 2vw, 1.6rem);
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-small: 0.9375rem;
+  --text-xs: 0.8125rem;
+
+  --leading-tight: 1.1;
+  --leading-normal: 1.65;
+  --leading-loose: 1.8;
+
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-56: 3.5rem;
+  --space-64: 4rem;
+  --space-80: 5rem;
+  --space-96: 6rem;
+  --space-120: 7.5rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 12px 30px rgba(22, 33, 38, 0.06);
+  --shadow-md: 0 24px 60px rgba(22, 33, 38, 0.09);
+
+  --container: 72rem;
+  --container-wide: 82rem;
+  --container-narrow: 46rem;
+
+  --header-height: 4.75rem;
+  --transition-fast: 160ms ease;
+  --transition-base: 280ms ease;
+}

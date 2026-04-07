@@ -1,0 +1,63 @@
+{{ $page := .page }}
+{{ $variant := .variant | default "archive" }}
+{{ $isHome := eq $variant "home" }}
+{{ $start := time.AsTime $page.Params.start }}
+{{ $modeLabel := "" }}
+{{ with $page.Params.event_mode }}{{ $modeLabel = i18n (printf "mode_%s" (replace . "-" "_")) }}{{ end }}
+{{ $image := $page.Params.card_image | default $page.Params.featured_image }}
+{{ $displayDate := $page.Params.schedule_text | default ($start | time.Format ":date_long") }}
+{{ $dateLabel := cond $isHome $displayDate ($start | time.Format ":date_long") }}
+{{ $summary := "" }}
+{{ with $page.Params.summary }}
+  {{ $summary = . | plainify | replaceRE "\\s+" " " | strings.TrimSpace }}
+{{ end }}
+{{ if not $summary }}
+  {{ with ($page.Params.description | default $page.Summary) }}
+    {{ $summary = . | plainify | replaceRE "\\s+" " " | strings.TrimSpace }}
+  {{ end }}
+{{ end }}
+{{ $hasMeta := or $page.Params.city $page.Params.event_mode }}
+
+<article class="event-card event-card--{{ $variant }} {{ if $image }}event-card--has-image{{ else }}event-card--no-image{{ end }}">
+  {{ if $image }}
+    <a class="event-card__media" href="{{ $page.RelPermalink }}">
+      {{ partial "picture.html" (dict
+        "src" $image
+        "alt" $page.Title
+        "class" "event-card__image"
+        "variant" "card"
+        "sizes" "(min-width: 64rem) 33vw, (min-width: 48rem) 50vw, 100vw"
+      ) }}
+    </a>
+  {{ else }}
+    <a class="event-card__media event-card__media--fallback" href="{{ $page.RelPermalink }}">
+      <div class="event-card__fallback">
+        <p class="event-card__fallback-date">{{ $dateLabel }}</p>
+        <h3 class="event-card__fallback-title">{{ $page.Title }}</h3>
+        {{ if $hasMeta }}
+          <div class="event-card__chips event-card__chips--cover">
+            {{ with $page.Params.city }}{{ if ne . $modeLabel }}<span class="chip">{{ . }}</span>{{ end }}{{ end }}
+            {{ with $page.Params.event_mode }}<span class="chip">{{ $modeLabel }}</span>{{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </a>
+  {{ end }}
+  <div class="event-card__body{{ if not $image }} event-card__body--compact{{ end }}">
+    {{ if $image }}
+      <div class="event-card__meta">
+        <p class="event-card__date">{{ $dateLabel }}</p>
+      </div>
+      <h3 class="event-card__title"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
+    {{ end }}
+    {{ with $summary }}
+      <p class="event-card__summary">{{ . }}</p>
+    {{ end }}
+    {{ if and $image $hasMeta }}
+      <div class="event-card__chips">
+        {{ with $page.Params.city }}{{ if ne . $modeLabel }}<span class="chip">{{ . }}</span>{{ end }}{{ end }}
+        {{ with $page.Params.event_mode }}<span class="chip">{{ $modeLabel }}</span>{{ end }}
+      </div>
+    {{ end }}
+  </div>
+</article>

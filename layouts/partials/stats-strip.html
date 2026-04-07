@@ -1,0 +1,12 @@
+{{ with . }}
+  <div class="stats-strip" data-reveal>
+    <div class="stats-strip__grid">
+      {{ range . }}
+        <div>
+          <div class="stats-strip__value">{{ .value }}</div>
+          <p class="stats-strip__label">{{ .label }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

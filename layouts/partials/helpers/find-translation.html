@@ -1,0 +1,25 @@
+{{- $page := .page -}}
+{{- $targetLang := .targetLang -}}
+{{- $targetURL := "" -}}
+{{- range $page.AllTranslations -}}
+  {{- $translationLang := cond (hasPrefix .RelPermalink "/en/") "en" "tr" -}}
+  {{- if eq $translationLang $targetLang -}}
+    {{- $targetURL = .RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+{{- if and (not $targetURL) $page.Params.translationKey -}}
+  {{- $translationKey := $page.Params.translationKey -}}
+  {{- range site.AllPages -}}
+    {{- if and (eq .Params.translationKey $translationKey) (ne .RelPermalink $page.RelPermalink) -}}
+      {{- $candidateLang := cond (hasPrefix .RelPermalink "/en/") "en" "tr" -}}
+      {{- if eq $candidateLang $targetLang -}}
+        {{- $targetURL = .RelPermalink -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $targetURL -}}
+  {{- $sectionKey := partial "helpers/section-key.html" $page | strings.TrimSpace -}}
+  {{- $targetURL = partial "helpers/section-root.html" (dict "lang" $targetLang "key" $sectionKey) | strings.TrimSpace -}}
+{{- end -}}
+{{- $targetURL -}}

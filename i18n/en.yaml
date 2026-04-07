@@ -1,0 +1,209 @@
+- id: skip_to_content
+  translation: "Skip to content"
+
+- id: main_navigation
+  translation: "Main navigation"
+
+- id: language_switcher
+  translation: "Language switcher"
+
+- id: open_menu
+  translation: "Open menu"
+
+- id: close_menu
+  translation: "Close menu"
+
+- id: join_us
+  translation: "Get involved"
+
+- id: learn_more
+  translation: "Learn more"
+
+- id: read_more
+  translation: "Read more"
+
+- id: view_all_events
+  translation: "View all events"
+
+- id: upcoming_events
+  translation: "Upcoming events"
+
+- id: past_events
+  translation: "Past events"
+
+- id: no_upcoming_events
+  translation: "New events will appear here soon."
+
+- id: no_past_events
+  translation: "Past events will be archived here."
+
+- id: featured_resources
+  translation: "Featured resources"
+
+- id: related_resources
+  translation: "Related resources"
+
+- id: related_events
+  translation: "Related events"
+
+- id: meet_the_team
+  translation: "Meet the team"
+
+- id: our_values
+  translation: "How we work"
+
+- id: action_paths
+  translation: "Ways to start"
+
+- id: contact_people
+  translation: "People you can contact"
+
+- id: frequently_asked_questions
+  translation: "Frequently asked questions"
+
+- id: event_details
+  translation: "Event details"
+
+- id: resource_details
+  translation: "Resource details"
+
+- id: view_resource
+  translation: "Open resource"
+
+- id: register_now
+  translation: "Register now"
+
+- id: open_luma
+  translation: "Open on Luma"
+
+- id: view_on_substack
+  translation: "View on Substack"
+
+- id: add_to_calendar
+  translation: "Add to calendar"
+
+- id: back_to_events
+  translation: "Back to events"
+
+- id: city
+  translation: "City"
+
+- id: venue
+  translation: "Venue"
+
+- id: mode
+  translation: "Format"
+
+- id: publisher
+  translation: "Publisher"
+
+- id: level
+  translation: "Level"
+
+- id: cause_area
+  translation: "Cause area"
+
+- id: story_heading
+  translation: "Our story"
+
+- id: footer_org_description
+  translation: "EA Turkey is a community exploring how to do the most good through evidence and reason."
+
+- id: footer_links
+  translation: "Links"
+
+- id: footer_connect
+  translation: "Connect"
+
+- id: footer_copyright
+  translation: "EA Turkey"
+
+- id: social_linkedin
+  translation: "LinkedIn"
+
+- id: social_substack
+  translation: "Substack"
+
+- id: social_whatsapp
+  translation: "WhatsApp"
+
+- id: form_first_name
+  translation: "First name"
+
+- id: form_last_name
+  translation: "Last name"
+
+- id: form_email
+  translation: "Email"
+
+- id: form_city
+  translation: "City"
+
+- id: form_interest
+  translation: "Interest"
+
+- id: form_message
+  translation: "Message"
+
+- id: form_submit
+  translation: "Send message"
+
+- id: form_fallback_prefix
+  translation: "If the form is unavailable, email us directly at"
+
+- id: form_status_sending
+  translation: "Sending..."
+
+- id: form_status_error_generic
+  translation: "Something went wrong. Please use the email link below."
+
+- id: cause_general
+  translation: "General"
+
+- id: cause_global_health_poverty
+  translation: "Global health and poverty"
+
+- id: cause_ai_safety
+  translation: "AI safety"
+
+- id: cause_biosecurity
+  translation: "Biosecurity"
+
+- id: cause_animal_welfare
+  translation: "Animal welfare"
+
+- id: mode_in_person
+  translation: "In person"
+
+- id: mode_online
+  translation: "Online"
+
+- id: mode_hybrid
+  translation: "Hybrid"
+
+- id: resource_type_article
+  translation: "Article"
+
+- id: resource_type_video
+  translation: "Video"
+
+- id: resource_type_course
+  translation: "Course"
+
+- id: level_intro
+  translation: "Introductory"
+
+- id: level_intermediate
+  translation: "Intermediate"
+
+- id: not_found_title
+  translation: "We couldn't find that page"
+
+- id: not_found_text
+  translation: "The link may have moved. You can continue from the homepage or the main navigation."
+
+- id: return_home
+  translation: "Return home"
+
+- id: default_meta_description
+  translation: "EA Turkey is a community exploring how to do the most good through evidence, reason, and community."

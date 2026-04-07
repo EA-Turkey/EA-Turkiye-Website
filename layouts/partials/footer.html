@@ -1,0 +1,42 @@
+{{ partial "helpers/lang-context.html" . }}
+{{ $langSite := .Scratch.Get "langSite" }}
+{{ $actualLang := .Scratch.Get "actualLang" }}
+{{ $orgName := cond (eq $actualLang "en") $langSite.Params.organization.name_en $langSite.Params.organization.name }}
+{{ $year := now.Format "2006" }}
+
+<footer class="site-footer">
+  <div class="container--wide footer-grid">
+    <div class="footer-column footer-brand">
+      <img src="/{{ $langSite.Params.brand.logo_footer }}" alt="{{ $orgName }}">
+      <p class="footer-copy">{{ i18n "footer_org_description" }}</p>
+      <p class="copyright">© {{ $year }} {{ i18n "footer_copyright" }}</p>
+    </div>
+
+    <div class="footer-column">
+      <p class="footer-label">{{ i18n "footer_links" }}</p>
+      <nav aria-label="{{ i18n "footer_links" }}">
+        <ul class="footer-nav">
+          {{ range $langSite.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-column">
+      <p class="footer-label">{{ i18n "footer_connect" }}</p>
+      <ul class="social-links">
+        <li><a href="mailto:{{ $langSite.Params.contact.primary_email }}">{{ $langSite.Params.contact.primary_email }}</a></li>
+        {{ with $langSite.Params.social.linkedin }}
+          <li><a href="{{ . }}" target="_blank" rel="noreferrer">{{ i18n "social_linkedin" }}</a></li>
+        {{ end }}
+        {{ with $langSite.Params.social.substack }}
+          <li><a href="{{ . }}" target="_blank" rel="noreferrer">{{ i18n "social_substack" }}</a></li>
+        {{ end }}
+        {{ with $langSite.Params.contact.whatsapp_url }}
+          <li><a href="{{ . }}" target="_blank" rel="noreferrer">{{ i18n "social_whatsapp" }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</footer>

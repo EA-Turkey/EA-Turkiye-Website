@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+set -euo pipefail
+
+ROOT_DIR="${0:A:h:h}"
+cd "$ROOT_DIR"
+
+mkdir -p static/avif
+
+for src in assets/images/**/*.(jpg|jpeg)(N); do
+  rel=${src#assets/images/}
+  base=${rel%.*}
+  mkdir -p "static/avif/${base:h}"
+
+  for width in 320 480 640 800 960 1280 1600; do
+    magick "$src" -resize "${width}x" -quality 55 "static/avif/${base}-${width}.avif"
+  done
+done

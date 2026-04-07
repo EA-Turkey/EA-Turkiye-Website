@@ -1,0 +1,4 @@
+/kaynaklar /blog 301
+/kaynaklar/* /blog/:splat 301
+/en/resources /en/blog 301
+/en/resources/* /en/blog/:splat 301

@@ -1,0 +1,9 @@
+{{ $url := .url }}
+{{ $label := .label }}
+{{ $variant := .variant | default "primary" }}
+{{ $isExternal := .external | default false }}
+{{ $classes := printf "button button--%s" $variant }}
+{{ with .size }}{{ $classes = printf "%s button--size-%s" $classes . }}{{ end }}
+{{ with .class }}{{ $classes = printf "%s %s" $classes . }}{{ end }}
+
+<a class="{{ $classes }}" href="{{ $url }}" {{ if $isExternal }}target="_blank" rel="noreferrer"{{ end }}>{{- $label -}}</a>

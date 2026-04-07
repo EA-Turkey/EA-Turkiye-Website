@@ -1,0 +1,64 @@
+{{ $src := .src }}
+{{ $alt := .alt | default "" }}
+{{ $class := .class | default "" }}
+{{ $variant := .variant | default "inline" }}
+{{ $sizes := .sizes | default "100vw" }}
+{{ $loading := cond (eq (.loading | default "") "eager") "eager" "lazy" }}
+{{ $resource := resources.Get (printf "images/%s" $src) }}
+{{ $avifBase := replaceRE "\\.[^.]+$" "" $src }}
+
+{{ if not $resource }}
+  <img src="" alt="{{ $alt }}" class="{{ $class }}">
+{{ else }}
+  {{ $widths := slice 640 960 1200 }}
+  {{ if eq $variant "hero" }}
+    {{ $widths = slice 640 960 1280 1600 }}
+  {{ else if eq $variant "card" }}
+    {{ $widths = slice 320 480 640 800 }}
+  {{ end }}
+
+  {{ $validWidths := slice }}
+  {{ range $widths }}
+    {{ if le . $resource.Width }}
+      {{ $validWidths = $validWidths | append . }}
+    {{ end }}
+  {{ end }}
+  {{ if eq (len $validWidths) 0 }}
+    {{ $validWidths = slice $resource.Width }}
+  {{ end }}
+
+  {{ $avifSet := slice }}
+  {{ $webpSet := slice }}
+  {{ $jpgSet := slice }}
+  {{ range $validWidths }}
+    {{ $webp := $resource.Resize (printf "%dx webp q80" .) }}
+    {{ $jpg := $resource.Resize (printf "%dx jpg q82" .) }}
+    {{ $avifFile := printf "static/avif/%s-%d.avif" $avifBase . }}
+    {{ if fileExists $avifFile }}
+      {{ $avifSet = $avifSet | append (printf "/avif/%s-%d.avif %dw" $avifBase . .) }}
+    {{ end }}
+    {{ $webpSet = $webpSet | append (printf "%s %dw" $webp.RelPermalink $jpg.Width) }}
+    {{ $jpgSet = $jpgSet | append (printf "%s %dw" $jpg.RelPermalink $jpg.Width) }}
+  {{ end }}
+
+  {{ $largestWidth := index $validWidths (sub (len $validWidths) 1) }}
+  {{ $fallback := $resource.Resize (printf "%dx jpg q82" $largestWidth) }}
+
+  <picture class="picture">
+    {{ if gt (len $avifSet) 0 }}
+      <source type="image/avif" srcset="{{ delimit $avifSet ", " }}" sizes="{{ $sizes }}">
+    {{ end }}
+    <source type="image/webp" srcset="{{ delimit $webpSet ", " }}" sizes="{{ $sizes }}">
+    <img
+      src="{{ $fallback.RelPermalink }}"
+      srcset="{{ delimit $jpgSet ", " }}"
+      sizes="{{ $sizes }}"
+      alt="{{ $alt }}"
+      class="{{ $class }}"
+      width="{{ $fallback.Width }}"
+      height="{{ $fallback.Height }}"
+      loading="{{ $loading }}"
+      decoding="async"
+    >
+  </picture>
+{{ end }}

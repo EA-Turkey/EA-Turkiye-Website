@@ -1,0 +1,106 @@
+{{ define "main" }}
+  {{ partial "helpers/lang-context.html" . }}
+  {{ $langSite := .Scratch.Get "langSite" }}
+  {{ $causes := slice }}
+  {{ range $langSite.RegularPages }}
+    {{ $item := . }}
+    {{ with .File }}
+      {{ if hasPrefix .Path "cause-areas/" }}
+        {{ $causes = $causes | append $item }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $sortedCauses := sort $causes "Weight" }}
+  {{ $events := slice }}
+  {{ range $langSite.RegularPages }}
+    {{ $item := . }}
+    {{ with .File }}
+      {{ if hasPrefix .Path "events/" }}
+        {{ $events = $events | append $item }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $upcoming := slice }}
+  {{ $past := slice }}
+  {{ $now := now }}
+  {{ range sort $events "Params.start" }}
+    {{ $end := cond .Params.end (time.AsTime .Params.end) (time.AsTime .Params.start) }}
+    {{ if ge $end.Unix $now.Unix }}
+      {{ $upcoming = $upcoming | append . }}
+    {{ else }}
+      {{ $past = $past | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $fallbackEvents := sort $past "Params.start" "desc" }}
+  {{ $homeEvents := cond (gt (len $upcoming) 0) $upcoming $fallbackEvents }}
+
+  {{ partial "hero.html" (dict
+    "page" .
+    "variant" "home"
+    "eyebrow" .Params.hero_eyebrow
+    "title" .Params.hero_title
+    "lead" .Params.hero_lead
+    "primary_url" .Params.hero_primary_url
+    "primary_label" .Params.hero_primary_label
+    "secondary_url" .Params.hero_secondary_url
+    "secondary_label" .Params.hero_secondary_label
+    "image" .Params.hero_image
+    "image_alt" .Params.hero_image_alt
+  ) }}
+
+  <section class="section section--tight">
+    <div class="container">
+      {{ partial "stats-strip.html" .Params.stats }}
+    </div>
+  </section>
+
+  {{ partial "ea-explainer.html" (dict
+    "label" .Params.explainer_label
+    "title" .Params.explainer_title
+    "intro" .Params.explainer_intro
+    "pillars" .Params.pillars
+  ) }}
+
+  <section class="section section--surface">
+    <div class="container">
+      {{ partial "section-header.html" (dict
+        "eyebrow" .Params.cause_section_label
+        "title" .Params.cause_section_title
+        "text" .Params.cause_section_text
+      ) }}
+      {{ partial "cause-cards.html" (first 4 $sortedCauses) }}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial "section-header.html" (dict
+        "eyebrow" .Params.events_section_label
+        "title" .Params.events_section_title
+        "text" .Params.events_section_text
+        "action" (partial "button.html" (dict "url" .Params.events_section_url "label" (i18n "view_all_events") "variant" "ghost"))
+      ) }}
+      <div class="event-grid event-grid--home">
+        {{ range first 3 $homeEvents }}
+          {{ partial "event-card.html" (dict "page" . "variant" "home") }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="final-cta" data-reveal>
+        <div class="stack-sm">
+          <span class="section-header__eyebrow">{{ .Params.final_cta_eyebrow }}</span>
+          <h2>{{ .Params.final_cta_title }}</h2>
+          <p class="text-muted">{{ .Params.final_cta_text }}</p>
+        </div>
+        <div class="cluster">
+          {{ partial "button.html" (dict "url" .Params.final_cta_primary_url "label" .Params.final_cta_primary_label "variant" "primary" "size" "cta") }}
+          {{ partial "button.html" (dict "url" .Params.final_cta_secondary_url "label" .Params.final_cta_secondary_label "variant" "secondary" "size" "cta") }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

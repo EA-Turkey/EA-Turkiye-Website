@@ -1,0 +1,19 @@
+{{ partial "helpers/lang-context.html" . }}
+<!doctype html>
+<html lang="{{ (.Scratch.Get "langSite").Language.LanguageCode }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="{{ if .IsHome }}page-home{{ else }}page-inner{{ end }}">
+    <a class="skip-link" href="#main-content">{{ i18n "skip_to_content" }}</a>
+    {{ partial "header.html" . }}
+    <main id="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ $mainJS := resources.Get "js/main.js" | minify | fingerprint }}
+    {{ $formJS := resources.Get "js/form.js" | minify | fingerprint }}
+    <script src="{{ $mainJS.RelPermalink }}" integrity="{{ $mainJS.Data.Integrity }}" defer></script>
+    <script src="{{ $formJS.RelPermalink }}" integrity="{{ $formJS.Data.Integrity }}" defer></script>
+  </body>
+</html>

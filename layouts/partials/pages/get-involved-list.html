@@ -1,0 +1,53 @@
+{{ partial "hero.html" (dict
+  "page" .
+  "variant" "page"
+  "eyebrow" .Params.hero_eyebrow
+  "title" (.Params.hero_title | default .Title)
+  "lead" (.Params.hero_lead | default .Params.description)
+) }}
+
+<section class="section">
+  <div class="container stack-lg">
+    {{ partial "section-header.html" (dict "title" (i18n "action_paths") "text" .Params.action_cards_text) }}
+    <div class="grid-2">
+      {{ range .Params.action_cards }}
+        {{ partial "action-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container stack-lg">
+    {{ partial "section-header.html" (dict "title" (i18n "contact_people") "text" .Params.contact_people_text) }}
+    <div class="team-grid">
+      {{ range .Params.contact_ids }}
+        {{ with index site.Data.team . }}
+          {{ partial "team-member.html" (dict "person" . "page" $) }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container stack-lg">
+    {{ partial "section-header.html" (dict "title" (i18n "frequently_asked_questions") "text" .Params.faq_text) }}
+    <div class="faq-list">
+      {{ range $index, $item := .Params.faq }}
+        {{ partial "faq-item.html" (dict "item" $item "index" $index) }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface" id="iletisim-formu">
+  <div class="container--narrow stack-lg">
+    <div class="stack-sm" data-reveal>
+      <span class="section-header__eyebrow">{{ .Params.form.heading }}</span>
+      <h2>{{ .Params.form.heading }}</h2>
+      <p class="text-muted">{{ .Params.form.lead }}</p>
+    </div>
+    {{ partial "contact-form.html" . }}
+  </div>
+</section>
