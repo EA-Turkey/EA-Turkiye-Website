@@ -35,7 +35,7 @@ summaryLength = 40
   page = ["HTML"]
 
 [params]
-  default_og_image = "brand/og-default.jpg"
+  default_og_image = "brand/og-default-organizer.png"
 
   [params.organization]
     name = "EA Türkiye"
