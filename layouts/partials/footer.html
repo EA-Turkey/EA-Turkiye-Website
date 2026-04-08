@@ -7,7 +7,7 @@
 <footer class="site-footer">
   <div class="container--wide footer-grid">
     <div class="footer-column footer-brand">
-      <img src="/{{ $langSite.Params.brand.logo_footer }}" alt="{{ $orgName }}">
+      <img src="{{ $langSite.Params.brand.logo_footer | relURL }}" alt="{{ $orgName }}">
       <p class="footer-copy">{{ i18n "footer_org_description" }}</p>
       <p class="copyright">© {{ $year }} {{ i18n "footer_copyright" }}</p>
     </div>

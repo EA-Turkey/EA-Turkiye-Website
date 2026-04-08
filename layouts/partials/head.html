@@ -2,9 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ partial "seo-meta.html" . }}
 
-<link rel="preload" href="/fonts/inter-400-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/inter-600-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/playfair-700-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/inter-400-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/inter-600-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/playfair-700-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 
 {{ $css := slice
   (resources.Get "css/tokens.css")
@@ -17,6 +17,6 @@
 }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
-<link rel="icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+<link rel="manifest" href="{{ "site.webmanifest" | relURL }}">

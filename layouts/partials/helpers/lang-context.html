@@ -1,4 +1,4 @@
-{{- $actualLang := cond (hasPrefix .RelPermalink "/en/") "en" "tr" -}}
+{{- $actualLang := partial "helpers/lang-from-url.html" .RelPermalink -}}
 {{- $langSite := .Site -}}
 {{- range site.Sites -}}
   {{- if eq .Language.Lang $actualLang -}}
@@ -8,4 +8,4 @@
 {{- .Scratch.Set "actualLang" $actualLang -}}
 {{- .Scratch.Set "isEN" (eq $actualLang "en") -}}
 {{- .Scratch.Set "langSite" $langSite -}}
-{{- .Scratch.Set "homeURL" (cond (eq $actualLang "en") "/en/" "/") -}}
+{{- .Scratch.Set "homeURL" $langSite.Home.RelPermalink -}}

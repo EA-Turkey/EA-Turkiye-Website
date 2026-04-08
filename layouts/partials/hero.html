@@ -10,6 +10,13 @@
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default $title }}
 
+{{ if and $primaryURL (hasPrefix $primaryURL "/") }}
+  {{ $primaryURL = ($primaryURL | strings.TrimPrefix "/") | absURL }}
+{{ end }}
+{{ if and $secondaryURL (hasPrefix $secondaryURL "/") }}
+  {{ $secondaryURL = ($secondaryURL | strings.TrimPrefix "/") | absURL }}
+{{ end }}
+
 <section class="hero hero--{{ $variant }}">
   <div class="{{ if eq $variant "home" }}container--wide{{ else }}container{{ end }} hero__inner">
     <div class="hero__content stack-md" data-reveal>

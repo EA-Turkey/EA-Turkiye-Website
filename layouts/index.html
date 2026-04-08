@@ -33,6 +33,18 @@
   {{ end }}
   {{ $fallbackEvents := sort $past "Params.start" "desc" }}
   {{ $homeEvents := cond (gt (len $upcoming) 0) $upcoming $fallbackEvents }}
+  {{ $eventsSectionURL := .Params.events_section_url }}
+  {{ if and $eventsSectionURL (hasPrefix $eventsSectionURL "/") }}
+    {{ $eventsSectionURL = ($eventsSectionURL | strings.TrimPrefix "/") | absURL }}
+  {{ end }}
+  {{ $finalPrimaryURL := .Params.final_cta_primary_url }}
+  {{ if and $finalPrimaryURL (hasPrefix $finalPrimaryURL "/") }}
+    {{ $finalPrimaryURL = ($finalPrimaryURL | strings.TrimPrefix "/") | absURL }}
+  {{ end }}
+  {{ $finalSecondaryURL := .Params.final_cta_secondary_url }}
+  {{ if and $finalSecondaryURL (hasPrefix $finalSecondaryURL "/") }}
+    {{ $finalSecondaryURL = ($finalSecondaryURL | strings.TrimPrefix "/") | absURL }}
+  {{ end }}
 
   {{ partial "hero.html" (dict
     "page" .
@@ -78,7 +90,7 @@
         "eyebrow" .Params.events_section_label
         "title" .Params.events_section_title
         "text" .Params.events_section_text
-        "action" (partial "button.html" (dict "url" .Params.events_section_url "label" (i18n "view_all_events") "variant" "ghost"))
+        "action" (partial "button.html" (dict "url" $eventsSectionURL "label" (i18n "view_all_events") "variant" "ghost"))
       ) }}
       <div class="event-grid event-grid--home">
         {{ range first 3 $homeEvents }}
@@ -97,8 +109,8 @@
           <p class="text-muted">{{ .Params.final_cta_text }}</p>
         </div>
         <div class="cluster">
-          {{ partial "button.html" (dict "url" .Params.final_cta_primary_url "label" .Params.final_cta_primary_label "variant" "primary" "size" "cta") }}
-          {{ partial "button.html" (dict "url" .Params.final_cta_secondary_url "label" .Params.final_cta_secondary_label "variant" "secondary" "size" "cta") }}
+          {{ partial "button.html" (dict "url" $finalPrimaryURL "label" .Params.final_cta_primary_label "variant" "primary" "size" "cta") }}
+          {{ partial "button.html" (dict "url" $finalSecondaryURL "label" .Params.final_cta_secondary_label "variant" "secondary" "size" "cta") }}
         </div>
       </div>
     </div>

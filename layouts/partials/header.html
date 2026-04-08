@@ -3,12 +3,12 @@
 {{ $homeURL := .Scratch.Get "homeURL" }}
 {{ $actualLang := .Scratch.Get "actualLang" }}
 {{ $orgName := cond (eq $actualLang "en") $langSite.Params.organization.name_en $langSite.Params.organization.name }}
-{{ $joinURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "get-involved") | strings.TrimSpace }}
+{{ $joinURL := ((partial "helpers/section-root.html" (dict "lang" $actualLang "key" "get-involved") | strings.TrimSpace) | strings.TrimPrefix "/") | absURL }}
 
 <header class="site-header">
   <div class="container--wide header-inner">
     <a class="site-logo" href="{{ $homeURL }}" aria-label="{{ $orgName }}">
-      <img src="/{{ $langSite.Params.brand.logo_header }}" alt="{{ $orgName }}">
+      <img src="{{ $langSite.Params.brand.logo_header | relURL }}" alt="{{ $orgName }}">
     </a>
 
     <nav id="site-nav" class="site-nav" data-site-nav aria-label="{{ i18n "main_navigation" }}">

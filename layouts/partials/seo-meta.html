@@ -25,9 +25,9 @@
   {{ $alternatePages = $alternatePages | append . }}
 {{ end }}
 
-{{ $xDefault := partial "helpers/section-root.html" (dict "lang" "tr" "key" "home") | strings.TrimSpace }}
+{{ $xDefault := (partial "helpers/section-root.html" (dict "lang" "tr" "key" "home") | strings.TrimSpace) | absURL }}
 {{ range $alternatePages }}
-  {{ $altLang := cond (hasPrefix .RelPermalink "/en/") "en" "tr" }}
+  {{ $altLang := partial "helpers/lang-from-url.html" .RelPermalink }}
   {{ if eq $altLang "tr" }}
     {{ $xDefault = .Permalink }}
   {{ end }}
@@ -38,7 +38,7 @@
 <link rel="canonical" href="{{ .Permalink }}">
 
 {{ range $alternatePages }}
-  {{ $altLang := cond (hasPrefix .RelPermalink "/en/") "en" "tr" }}
+  {{ $altLang := partial "helpers/lang-from-url.html" .RelPermalink }}
   {{ $hreflang := cond (eq $altLang "en") "en-US" "tr-TR" }}
   <link rel="alternate" hreflang="{{ $hreflang }}" href="{{ .Permalink }}">
 {{ end }}

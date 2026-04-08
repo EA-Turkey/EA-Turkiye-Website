@@ -34,8 +34,9 @@
     {{ $webp := $resource.Resize (printf "%dx webp q80" .) }}
     {{ $jpg := $resource.Resize (printf "%dx jpg q82" .) }}
     {{ $avifFile := printf "static/avif/%s-%d.avif" $avifBase . }}
+    {{ $avifPath := printf "avif/%s-%d.avif" $avifBase . }}
     {{ if fileExists $avifFile }}
-      {{ $avifSet = $avifSet | append (printf "/avif/%s-%d.avif %dw" $avifBase . .) }}
+      {{ $avifSet = $avifSet | append (printf "%s %dw" ($avifPath | relURL) .) }}
     {{ end }}
     {{ $webpSet = $webpSet | append (printf "%s %dw" $webp.RelPermalink $jpg.Width) }}
     {{ $jpgSet = $jpgSet | append (printf "%s %dw" $jpg.RelPermalink $jpg.Width) }}
