@@ -36,7 +36,7 @@
     <div class="events-archive__upcoming-layout">
       {{ with .Site.Params.events.luma_embed_url }}
         <div class="luma-embed events-archive__calendar" data-reveal>
-          <iframe data-desktop-embed-src="{{ . }}" title="Luma" loading="lazy"></iframe>
+          <iframe src="{{ . }}" title="Luma" loading="lazy"></iframe>
         </div>
         <div class="events-archive__calendar-teaser" data-reveal>
           <div class="stack-md">

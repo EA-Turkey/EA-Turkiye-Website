@@ -146,40 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const desktopEmbedFrames = Array.from(document.querySelectorAll("[data-desktop-embed-src]")).filter(
-    (element) => element instanceof HTMLIFrameElement
-  );
-
-  if (desktopEmbedFrames.length) {
-    const desktopMediaQuery = window.matchMedia("(min-width: 769px)");
-
-    const hydrateDesktopEmbeds = () => {
-      if (!desktopMediaQuery.matches) {
-        return;
-      }
-
-      desktopEmbedFrames.forEach((frame) => {
-        if (frame.src) {
-          return;
-        }
-
-        const source = frame.dataset.desktopEmbedSrc;
-
-        if (source) {
-          frame.src = source;
-        }
-      });
-    };
-
-    hydrateDesktopEmbeds();
-
-    if (typeof desktopMediaQuery.addEventListener === "function") {
-      desktopMediaQuery.addEventListener("change", hydrateDesktopEmbeds);
-    } else if (typeof desktopMediaQuery.addListener === "function") {
-      desktopMediaQuery.addListener(hydrateDesktopEmbeds);
-    }
-  }
-
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
       (entries) => {

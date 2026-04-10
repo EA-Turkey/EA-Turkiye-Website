@@ -2150,12 +2150,8 @@ html[lang^="en"] .page-home .hero--home .hero__title {
     justify-self: start;
   }
 
-  .events-archive__calendar {
-    display: none;
-  }
-
-  .events-archive__calendar-teaser {
-    display: block;
+  .luma-embed iframe {
+    min-height: 30rem;
   }
 
   .contact-form > .button {
