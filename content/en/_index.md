@@ -6,6 +6,7 @@ hero_eyebrow: Effective Altruism · Turkey
 hero_title: A community looking for better ways to address the world's most urgent problems
 hero_lead: We use evidence, reasoning, and community to explore how to benefit others as much as possible.
 hero_image: home/CEM_0726.jpg
+social_image: brand/ea-turkiye-thumbnail.jpg
 hero_image_alt: EA Turkey community members gathered at an event
 hero_primary_label: Join the community
 hero_primary_url: /en/get-involved/

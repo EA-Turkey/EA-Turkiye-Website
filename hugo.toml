@@ -41,7 +41,7 @@ summaryLength = 40
   notAlternative = true
 
 [params]
-  default_og_image = "brand/og-default-organizer.png"
+  default_og_image = "brand/ea-turkiye-thumbnail.jpg"
 
   [params.organization]
     name = "EA Türkiye"

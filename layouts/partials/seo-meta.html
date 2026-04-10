@@ -4,18 +4,23 @@
 {{ $siteTitle := cond (eq $actualLang "en") $langSite.Params.organization.name_en $langSite.Params.organization.name }}
 {{ $title := cond .IsHome $siteTitle (printf "%s | %s" .Title $siteTitle) }}
 {{ $description := .Params.description | default (i18n "default_meta_description") }}
-{{ $ogImage := printf "/%s" $langSite.Params.default_og_image }}
+{{ $baseURL := $langSite.BaseURL }}
+{{ $ogImage := printf "%s%s" $baseURL (strings.TrimPrefix "/" $langSite.Params.default_og_image) }}
 
-{{ with .Params.featured_image }}
-  {{ with resources.Get (printf "images/%s" .) }}
-    {{ $processed := .Fill "1200x630 center jpg q82" }}
-    {{ $ogImage = $processed.Permalink }}
-  {{ end }}
+{{ with .Params.social_image }}
+  {{ $ogImage = printf "%s%s" $baseURL (strings.TrimPrefix "/" .) }}
 {{ else }}
-  {{ with .Params.hero_image }}
+  {{ with .Params.featured_image }}
     {{ with resources.Get (printf "images/%s" .) }}
       {{ $processed := .Fill "1200x630 center jpg q82" }}
       {{ $ogImage = $processed.Permalink }}
+    {{ end }}
+  {{ else }}
+    {{ with .Params.hero_image }}
+      {{ with resources.Get (printf "images/%s" .) }}
+        {{ $processed := .Fill "1200x630 center jpg q82" }}
+        {{ $ogImage = $processed.Permalink }}
+      {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
