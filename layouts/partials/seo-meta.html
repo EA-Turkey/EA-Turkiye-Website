@@ -9,20 +9,6 @@
 
 {{ with .Params.social_image }}
   {{ $ogImage = printf "%s%s" $baseURL (strings.TrimPrefix "/" .) }}
-{{ else }}
-  {{ with .Params.featured_image }}
-    {{ with resources.Get (printf "images/%s" .) }}
-      {{ $processed := .Fill "1200x630 center jpg q82" }}
-      {{ $ogImage = $processed.Permalink }}
-    {{ end }}
-  {{ else }}
-    {{ with .Params.hero_image }}
-      {{ with resources.Get (printf "images/%s" .) }}
-        {{ $processed := .Fill "1200x630 center jpg q82" }}
-        {{ $ogImage = $processed.Permalink }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
 {{ end }}
 
 {{ $alternatePages := slice . }}

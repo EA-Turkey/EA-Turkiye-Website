@@ -6,7 +6,6 @@ hero_eyebrow: Efektif Altruizm · Türkiye
 hero_title: Dünyanın en acil sorunları için daha iyi yollar arayan bir topluluk
 hero_lead: Kanıt, akıl yürütme ve topluluk aracılığıyla başkalarına mümkün olduğunca fazla fayda sağlamanın yollarını araştırıyoruz.
 hero_image: home/CEM_0726.jpg
-social_image: brand/ea-turkiye-thumbnail.jpg
 hero_image_alt: EA Türkiye etkinliğinde bir araya gelen topluluk üyeleri
 hero_primary_label: Topluluğa katıl
 hero_primary_url: /katil/
