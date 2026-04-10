@@ -18,7 +18,7 @@ values_text: Sorunlara yaklaşımımızı belirleyen birkaç temel alışkanlık
 values:
   - title: Kanıta dayalı yaklaşım
     text: En çok fayda sağlayan yolları belirlemek için veri ve dikkatli düşünmeyi ciddiye alırız.
-  - title: Neden tarafsızlığı
+  - title: Problem alanı tarafsızlığı
     text: Başlangıçta tek bir alana bağlanmak yerine kanıtı farklı problem alanları boyunca takip ederiz.
   - title: İşbirliği
     text: İnsanların birbirinden öğrenmesini ve uzun vadeli çalışma ilişkileri kurmasını kolaylaştırmak isteriz.

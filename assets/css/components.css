@@ -882,6 +882,16 @@ html[lang^="en"] .page-home .hero--home .hero__title {
   color: inherit;
 }
 
+.action-card__body {
+  display: grid;
+  gap: var(--space-18, 1.125rem);
+}
+
+.action-card > .action-card__body {
+  min-height: 100%;
+  padding: var(--space-24);
+}
+
 .cause-card__link:hover,
 .cause-card__link:focus-visible,
 .action-card__link:hover,
@@ -2132,6 +2142,14 @@ html[lang^="en"] .page-home .hero--home .hero__title {
   .action-card__link {
     padding: var(--space-18, 1.125rem);
     gap: var(--space-12);
+  }
+
+  .action-card__body {
+    gap: var(--space-12);
+  }
+
+  .action-card > .action-card__body {
+    padding: var(--space-18, 1.125rem);
   }
 
   .resource-row__link {

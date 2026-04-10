@@ -15,11 +15,13 @@
       </div>
     </a>
   {{ else }}
-    {{ with .badge }}<span class="action-card__badge">{{ . }}</span>{{ end }}
-    <div class="stack-md">
-      <div class="stack-sm">
-        <h3>{{ .title }}</h3>
-        <p class="action-card__text">{{ .text }}</p>
+    <div class="action-card__body">
+      {{ with .badge }}<span class="action-card__badge">{{ . }}</span>{{ end }}
+      <div class="stack-md">
+        <div class="stack-sm">
+          <h3>{{ .title }}</h3>
+          <p class="action-card__text">{{ .text }}</p>
+        </div>
       </div>
     </div>
   {{ end }}
