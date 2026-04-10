@@ -13,9 +13,9 @@
   (resources.Get "css/layout.css")
   (resources.Get "css/components.css")
   (resources.Get "css/utilities.css")
-  | resources.Concat "css/main.css" | minify | fingerprint
+  | resources.Concat "css/main.css" | minify
 }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $css.RelPermalink }}?v={{ md5 $css.Content }}">
 
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
