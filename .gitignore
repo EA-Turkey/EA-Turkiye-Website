@@ -3,5 +3,6 @@
 .DS_Store
 public
 /resources
+/org-logos
 .wrangler
 .vscode

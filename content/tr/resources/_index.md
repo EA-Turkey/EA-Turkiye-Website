@@ -4,7 +4,7 @@ title: Kaynaklar
 description: Efektif altruizm ve etrafındaki temel sorular için özenle seçilmiş başlangıç noktaları.
 url: /kaynaklar/
 hero_eyebrow: Kaynaklar
-hero_title: Başlamak için dikkatli bir yer
+hero_title: Başlangıç için özenle derlenmiş bir seçki
 hero_lead: 'Burası, efektif altruizme güvenilir bir giriş sunmak için bilerek küçük tutulmuş bir kitaplık: ne olduğu, hangi sorunlara odaklandığı, en güçlü argümanlarının nerede olduğu, nerelerde tartışıldığı ve makul bir sonraki adımın nasıl görünebileceği.'
 review_note: En son Nisan 2026 içinde gözden geçirildi ve güncellendi. Kapsamlı bir dizin yerine canlı ve yüksek sinyalli küçük bir kitaplığı tercih ediyoruz.
 pathways:

@@ -3,9 +3,22 @@
 {{ $level := .Params.level }}
 {{ $language := .Params.language }}
 {{ $summary := .Params.summary | default .Params.description }}
+{{ $publisher := .Params.publisher | default "" }}
+{{ $logoOnlyPublishers := dict
+  "GiveWell" true
+  "80,000 Hours" true
+  "AISafety.info" true
+  "Probably Good" true
+  "Giving What We Can" true
+  "Magnify Mentoring" true
+}}
 {{ $attributionParts := slice }}
 {{ with .Params.author }}{{ $attributionParts = $attributionParts | append . }}{{ end }}
-{{ with .Params.publisher }}{{ $attributionParts = $attributionParts | append . }}{{ end }}
+{{ with $publisher }}
+  {{ if not (index $logoOnlyPublishers .) }}
+    {{ $attributionParts = $attributionParts | append . }}
+  {{ end }}
+{{ end }}
 {{ $primaryURL := .RelPermalink }}
 {{ $primaryLabel := i18n "view_details" }}
 {{ $primaryExternal := false }}
@@ -19,15 +32,18 @@
 
 <article class="resource-card" data-reveal>
   <div class="stack-md">
+    <div class="resource-card__identity stack-sm">
+      {{ partial "resource-publisher-logo.html" . }}
+      {{ if gt (len $attributionParts) 0 }}
+        <p class="resource-card__attribution">{{ delimit $attributionParts " · " }}</p>
+      {{ end }}
+    </div>
     <div class="resource-card__meta">
       <span class="chip">{{ i18n (printf "resource_type_%s" (replace $resourceType "-" "_")) }}</span>
       {{ with $timeCommitment }}<span class="chip">{{ . }}</span>{{ end }}
       {{ with $level }}<span class="chip">{{ i18n (printf "level_%s" (replace . "-" "_")) }}</span>{{ end }}
       {{ with $language }}<span class="chip resource-card__language-chip">{{ i18n (printf "language_%s" .) }}</span>{{ end }}
     </div>
-    {{ if gt (len $attributionParts) 0 }}
-      <p class="resource-card__attribution">{{ delimit $attributionParts " · " }}</p>
-    {{ end }}
     <div class="stack-sm">
       <h3 class="resource-card__title">
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>

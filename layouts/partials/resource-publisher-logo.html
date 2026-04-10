@@ -1,0 +1,95 @@
+{{ $publisher := .Params.publisher | default "" }}
+{{ $logos := dict
+  "80,000 Hours" "org-logos/80000-hours.svg"
+  "AISafety.info" "org-logos/aisafety-info.png"
+  "Animal Charity Evaluators" "org-logos/animal-charity-evaluators.svg"
+  "BlueDot Impact" "org-logos/bluedot-impact.svg"
+  "Boston Review" "org-logos/boston-review.png"
+  "EA Forum / Effective Altruism" "org-logos/ea-logo.svg"
+  "Effective Altruism" "org-logos/ea-logo.svg"
+  "GiveWell" "org-logos/givewell.svg"
+  "Giving What We Can" "org-logos/giving-what-we-can.svg"
+  "Magnify Mentoring" "org-logos/magnify-mentoring.png"
+  "Our World in Data" "org-logos/our-world-in-data-logo.png"
+  "Oxford University Press" "org-logos/oxford-university-press.svg"
+  "Probably Good" "org-logos/probably-good-logo-dark.png"
+  "TED" "org-logos/ted.svg"
+  "UCL Discovery" "org-logos/ucl-discovery.svg"
+  "Vox Future Perfect" "org-logos/vox-future-perfect.svg"
+}}
+{{ $src := index $logos $publisher }}
+
+{{ with $src }}
+  {{ $resource := resources.Get (printf "images/%s" .) }}
+  {{ with $resource }}
+    {{ $ext := lower (path.Ext $src) }}
+    <div class="resource-card__logo-mark" aria-hidden="true">
+      {{ if eq $ext ".svg" }}
+        <img
+          src="{{ .RelPermalink }}"
+          alt=""
+          class="resource-card__logo"
+          loading="lazy"
+          decoding="async"
+        >
+      {{ else }}
+        {{ $widths := slice 160 320 480 640 }}
+        {{ $validWidths := slice }}
+        {{ range $widths }}
+          {{ if le . $resource.Width }}
+            {{ $validWidths = $validWidths | append . }}
+          {{ end }}
+        {{ end }}
+        {{ if eq (len $validWidths) 0 }}
+          {{ $validWidths = slice $resource.Width }}
+        {{ else if ne (index $validWidths (sub (len $validWidths) 1)) $resource.Width }}
+          {{ $validWidths = $validWidths | append $resource.Width }}
+        {{ end }}
+
+        {{ $base := replaceRE "\\.[^.]+$" "" $src }}
+        {{ $avifSet := slice }}
+        {{ $webpSet := slice }}
+        {{ $jpegFallbackPublishers := dict
+          "Probably Good" true
+          "Our World in Data" true
+        }}
+        {{ $fallbackFormat := cond (index $jpegFallbackPublishers $publisher) "jpg" "png" }}
+        {{ $fallbackSet := slice }}
+        {{ range $validWidths }}
+          {{ $fallbackImage := $resource.Resize (printf "%dx %s q84" . $fallbackFormat) }}
+          {{ $webp := $resource.Resize (printf "%dx webp q84" .) }}
+          {{ $avifFile := printf "static/avif/%s-%d.avif" $base . }}
+          {{ $avifPath := printf "avif/%s-%d.avif" $base . }}
+          {{ if fileExists $avifFile }}
+            {{ $avifSet = $avifSet | append (printf "%s %dw" ($avifPath | relURL) .) }}
+          {{ end }}
+          {{ $webpSet = $webpSet | append (printf "%s %dw" $webp.RelPermalink $fallbackImage.Width) }}
+          {{ $fallbackSet = $fallbackSet | append (printf "%s %dw" $fallbackImage.RelPermalink $fallbackImage.Width) }}
+        {{ end }}
+
+        {{ $largestWidth := index $validWidths (sub (len $validWidths) 1) }}
+        {{ $fallback := $resource.Resize (printf "%dx %s q84" $largestWidth $fallbackFormat) }}
+        {{ $fallbackMime := cond (eq $fallbackFormat "jpg") "image/jpeg" "image/png" }}
+
+        <picture class="resource-card__logo-picture">
+          {{ if gt (len $avifSet) 0 }}
+            <source type="image/avif" srcset="{{ delimit $avifSet ", " }}" sizes="(max-width: 560px) 42vw, 160px">
+          {{ end }}
+          <source type="image/webp" srcset="{{ delimit $webpSet ", " }}" sizes="(max-width: 560px) 42vw, 160px">
+          <source type="{{ $fallbackMime }}" srcset="{{ delimit $fallbackSet ", " }}" sizes="(max-width: 560px) 42vw, 160px">
+          <img
+            src="{{ $fallback.RelPermalink }}"
+            srcset="{{ delimit $fallbackSet ", " }}"
+            sizes="(max-width: 560px) 42vw, 160px"
+            alt=""
+            class="resource-card__logo"
+            width="{{ $fallback.Width }}"
+            height="{{ $fallback.Height }}"
+            loading="lazy"
+            decoding="async"
+          >
+        </picture>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
