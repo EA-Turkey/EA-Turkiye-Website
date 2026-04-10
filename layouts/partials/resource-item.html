@@ -1,12 +1,14 @@
 {{ $resourceType := .Params.resource_type | default "article" }}
 <article class="resource-row">
-  <div class="resource-row__meta stack-sm">
-    <span class="chip">{{ i18n (printf "resource_type_%s" (replace $resourceType "-" "_")) }}</span>
-    {{ with .Params.publisher }}<span class="text-muted">{{ . }}</span>{{ end }}
-  </div>
-  <div class="resource-row__body">
-    <h3 class="resource-row__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <p class="resource-row__summary">{{ .Params.summary | default .Params.description }}</p>
-  </div>
-  <div>{{ partial "button.html" (dict "url" .RelPermalink "label" (i18n "view_resource") "variant" "ghost") }}</div>
+  <a class="resource-row__link" href="{{ .RelPermalink }}">
+    <div class="resource-row__meta stack-sm">
+      <span class="chip">{{ i18n (printf "resource_type_%s" (replace $resourceType "-" "_")) }}</span>
+      {{ with .Params.publisher }}<span class="text-muted">{{ . }}</span>{{ end }}
+    </div>
+    <div class="resource-row__body">
+      <h3 class="resource-row__title">{{ .Title }}</h3>
+      <p class="resource-row__summary">{{ .Params.summary | default .Params.description }}</p>
+    </div>
+    <span class="resource-row__cta">{{ i18n "view_resource" }}</span>
+  </a>
 </article>

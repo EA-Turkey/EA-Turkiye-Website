@@ -33,6 +33,10 @@
   {{ end }}
   {{ $fallbackEvents := sort $past "Params.start" "desc" }}
   {{ $homeEvents := cond (gt (len $upcoming) 0) $upcoming $fallbackEvents }}
+  {{ $featuredEvent := false }}
+  {{ if gt (len $upcoming) 0 }}
+    {{ $featuredEvent = index $upcoming 0 }}
+  {{ end }}
   {{ $eventsSectionURL := .Params.events_section_url }}
   {{ if and $eventsSectionURL (hasPrefix $eventsSectionURL "/") }}
     {{ $eventsSectionURL = ($eventsSectionURL | strings.TrimPrefix "/") | absURL }}
@@ -58,33 +62,16 @@
     "secondary_label" .Params.hero_secondary_label
     "image" .Params.hero_image
     "image_alt" .Params.hero_image_alt
+    "featured_event" $featuredEvent
   ) }}
 
-  <section class="section section--tight">
+  <section class="section section--tight home-section home-section--stats">
     <div class="container">
       {{ partial "stats-strip.html" .Params.stats }}
     </div>
   </section>
 
-  {{ partial "ea-explainer.html" (dict
-    "label" .Params.explainer_label
-    "title" .Params.explainer_title
-    "intro" .Params.explainer_intro
-    "pillars" .Params.pillars
-  ) }}
-
-  <section class="section section--surface">
-    <div class="container">
-      {{ partial "section-header.html" (dict
-        "eyebrow" .Params.cause_section_label
-        "title" .Params.cause_section_title
-        "text" .Params.cause_section_text
-      ) }}
-      {{ partial "cause-cards.html" (first 4 $sortedCauses) }}
-    </div>
-  </section>
-
-  <section class="section">
+  <section class="section home-section home-section--events">
     <div class="container">
       {{ partial "section-header.html" (dict
         "eyebrow" .Params.events_section_label
@@ -97,6 +84,24 @@
           {{ partial "event-card.html" (dict "page" . "variant" "home") }}
         {{ end }}
       </div>
+    </div>
+  </section>
+
+  {{ partial "ea-explainer.html" (dict
+    "label" .Params.explainer_label
+    "title" .Params.explainer_title
+    "intro" .Params.explainer_intro
+    "pillars" .Params.pillars
+  ) }}
+
+  <section class="section section--surface home-section home-section--causes">
+    <div class="container">
+      {{ partial "section-header.html" (dict
+        "eyebrow" .Params.cause_section_label
+        "title" .Params.cause_section_title
+        "text" .Params.cause_section_text
+      ) }}
+      {{ partial "cause-cards.html" (first 4 $sortedCauses) }}
     </div>
   </section>
 

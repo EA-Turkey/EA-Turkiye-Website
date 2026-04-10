@@ -4,6 +4,9 @@
 {{ $actualLang := .Scratch.Get "actualLang" }}
 {{ $orgName := cond (eq $actualLang "en") $langSite.Params.organization.name_en $langSite.Params.organization.name }}
 {{ $joinURL := ((partial "helpers/section-root.html" (dict "lang" $actualLang "key" "get-involved") | strings.TrimSpace) | strings.TrimPrefix "/") | absURL }}
+{{ $aboutURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "about") | strings.TrimSpace }}
+{{ $eventsURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "events") | strings.TrimSpace }}
+{{ $blogURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "blog") | strings.TrimSpace }}
 {{ $headerLogoSizes := "(max-width: 560px) 196px, 235px" }}
 {{ $headerLogoWebPSrcSet := printf "%s 400w, %s 800w" ("brand/generated/logo-header-v1-400.webp" | relURL) ("brand/generated/logo-header-v1-800.webp" | relURL) }}
 {{ $headerLogoPngSrcSet := printf "%s 400w, %s 800w" ("brand/generated/logo-header-v1-400.png" | relURL) ("brand/generated/logo-header-v1-800.png" | relURL) }}
@@ -29,17 +32,27 @@
       </picture>
     </a>
 
+    <button class="site-nav__backdrop" type="button" data-nav-close tabindex="-1" aria-hidden="true"></button>
+
     <nav id="site-nav" class="site-nav" data-site-nav aria-label="{{ i18n "main_navigation" }}">
       <ul class="site-nav__list">
         {{ range $langSite.Menus.main }}
           {{ $target := .URL }}
           {{ $isActive := false }}
+          {{ $itemClass := "site-nav__item" }}
           {{ if eq $target "/" }}
             {{ $isActive = $.IsHome }}
           {{ else }}
             {{ $isActive = or (eq $.RelPermalink $target) (and (ne $target "/") (ne $target "/en/") (hasPrefix $.RelPermalink $target)) }}
           {{ end }}
-          <li>
+          {{ if eq $target $eventsURL }}
+            {{ $itemClass = printf "%s site-nav__item--events" $itemClass }}
+          {{ else if eq $target $aboutURL }}
+            {{ $itemClass = printf "%s site-nav__item--about" $itemClass }}
+          {{ else if eq $target $blogURL }}
+            {{ $itemClass = printf "%s site-nav__item--blog" $itemClass }}
+          {{ end }}
+          <li class="{{ $itemClass }}">
             <a href="{{ $target }}" class="{{ if $isActive }}is-active{{ end }}" {{ if $isActive }}aria-current="page"{{ end }}>
               {{ .Name }}
             </a>

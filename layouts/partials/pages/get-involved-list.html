@@ -17,6 +17,17 @@
   </div>
 </section>
 
+<section class="section section--surface" id="iletisim-formu">
+  <div class="container--narrow stack-lg">
+    <div class="stack-sm" data-reveal>
+      <span class="section-header__eyebrow">{{ .Params.form.heading }}</span>
+      <h2>{{ .Params.form.heading }}</h2>
+      <p class="text-muted">{{ .Params.form.lead }}</p>
+    </div>
+    {{ partial "contact-form.html" . }}
+  </div>
+</section>
+
 <section class="section section--surface">
   <div class="container stack-lg">
     {{ partial "section-header.html" (dict "title" (i18n "contact_people") "text" .Params.contact_people_text) }}
@@ -38,16 +49,5 @@
         {{ partial "faq-item.html" (dict "item" $item "index" $index) }}
       {{ end }}
     </div>
-  </div>
-</section>
-
-<section class="section section--surface" id="iletisim-formu">
-  <div class="container--narrow stack-lg">
-    <div class="stack-sm" data-reveal>
-      <span class="section-header__eyebrow">{{ .Params.form.heading }}</span>
-      <h2>{{ .Params.form.heading }}</h2>
-      <p class="text-muted">{{ .Params.form.lead }}</p>
-    </div>
-    {{ partial "contact-form.html" . }}
   </div>
 </section>

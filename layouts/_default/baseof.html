@@ -1,10 +1,11 @@
 {{ partial "helpers/lang-context.html" . }}
+{{ $sectionKey := partial "helpers/section-key.html" . | strings.TrimSpace }}
 <!doctype html>
 <html lang="{{ (.Scratch.Get "langSite").Language.LanguageCode }}">
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="{{ if .IsHome }}page-home{{ else }}page-inner{{ end }}">
+  <body class="{{ if .IsHome }}page-home{{ else }}page-inner{{ end }} page-section-{{ $sectionKey }} {{ if .IsHome }}page-kind-home{{ else if .IsSection }}page-kind-list{{ else if .IsPage }}page-kind-single{{ else }}page-kind-generic{{ end }}">
     <a class="skip-link" href="#main-content">{{ i18n "skip_to_content" }}</a>
     {{ partial "header.html" . }}
     <main id="main-content">

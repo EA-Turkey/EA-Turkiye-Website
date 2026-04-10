@@ -3,12 +3,24 @@
   {{ $url = ($url | strings.TrimPrefix "/") | absURL }}
 {{ end }}
 <article class="action-card">
-  {{ with .badge }}<span class="action-card__badge">{{ . }}</span>{{ end }}
-  <div class="stack-md">
-    <div class="stack-sm">
-      <h3>{{ .title }}</h3>
-      <p class="action-card__text">{{ .text }}</p>
+  {{ if $url }}
+    <a class="action-card__link" href="{{ $url }}">
+      {{ with .badge }}<span class="action-card__badge">{{ . }}</span>{{ end }}
+      <div class="stack-md">
+        <div class="stack-sm">
+          <h3>{{ .title }}</h3>
+          <p class="action-card__text">{{ .text }}</p>
+        </div>
+        <span class="action-card__cta">{{ .cta_label }}</span>
+      </div>
+    </a>
+  {{ else }}
+    {{ with .badge }}<span class="action-card__badge">{{ . }}</span>{{ end }}
+    <div class="stack-md">
+      <div class="stack-sm">
+        <h3>{{ .title }}</h3>
+        <p class="action-card__text">{{ .text }}</p>
+      </div>
     </div>
-    {{ with $url }}{{ partial "button.html" (dict "url" . "label" $.cta_label "variant" "secondary") }}{{ end }}
-  </div>
+  {{ end }}
 </article>

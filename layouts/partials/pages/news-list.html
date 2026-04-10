@@ -11,14 +11,16 @@
     <div class="list-shell">
       {{ range sort .RegularPages "Date" "desc" }}
         <article class="resource-row">
-          <div>
-            <span class="chip">{{ .Date | time.Format ":date_long" }}</span>
-          </div>
-          <div class="stack-sm">
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <p class="text-muted">{{ .Params.summary | default .Params.description }}</p>
-          </div>
-          <div>{{ partial "button.html" (dict "url" .RelPermalink "label" (i18n "read_more") "variant" "ghost") }}</div>
+          <a class="resource-row__link" href="{{ .RelPermalink }}">
+            <div class="resource-row__meta stack-sm">
+              <span class="chip">{{ .Date | time.Format ":date_long" }}</span>
+            </div>
+            <div class="resource-row__body">
+              <h3 class="resource-row__title">{{ .Title }}</h3>
+              <p class="resource-row__summary">{{ .Params.summary | default .Params.description }}</p>
+            </div>
+            <span class="resource-row__cta">{{ i18n "read_more" }}</span>
+          </a>
         </article>
       {{ end }}
     </div>

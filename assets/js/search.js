@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "textarea:not([disabled])",
     "[tabindex]:not([tabindex='-1'])",
   ].join(",");
+  const bodyChildren = Array.from(document.body.children).filter(
+    (element) => element instanceof HTMLElement && element !== searchRoot && element.tagName !== "SCRIPT"
+  );
 
   let activeTrigger = null;
   let activeFilter = "all";
@@ -36,6 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let searchIndexPromise = null;
   let searchHasError = false;
   let knownCities = [];
+
+  const setInertState = (isInert) => {
+    bodyChildren.forEach((element) => {
+      element.inert = isInert;
+    });
+  };
 
   const rawConfig = (() => {
     if (!searchRoot.dataset.searchConfig) {
@@ -916,6 +925,7 @@ document.addEventListener("DOMContentLoaded", () => {
     searchRoot.hidden = true;
     searchRoot.setAttribute("aria-hidden", "true");
     document.body.classList.remove("is-search-open");
+    setInertState(false);
     clearResults();
     searchInput.value = "";
     setFilter("all");
@@ -929,10 +939,17 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const openSearch = (trigger) => {
+    const navToggle = document.querySelector("[data-nav-toggle]");
+
+    if (document.body.classList.contains("is-nav-open") && navToggle instanceof HTMLElement) {
+      navToggle.click();
+    }
+
     activeTrigger = trigger instanceof HTMLElement ? trigger : document.activeElement;
     searchRoot.hidden = false;
     searchRoot.setAttribute("aria-hidden", "false");
     document.body.classList.add("is-search-open");
+    setInertState(true);
     setState(searchIndex ? "empty" : "loading");
     ensureIndex();
 

@@ -1,26 +1,34 @@
 {{ partial "helpers/lang-context.html" . }}
 {{ $lang := .Scratch.Get "actualLang" }}
-<form id="contact-form" class="contact-form" action="/api/contact" method="post" novalidate>
+<form
+  id="contact-form"
+  class="contact-form"
+  action="/api/contact"
+  method="post"
+  data-sending-message="{{ i18n "form_status_sending" }}"
+  data-error-message="{{ i18n "form_status_error_generic" }}"
+  novalidate
+>
   <div class="form-grid form-grid--2">
     <div class="form-field">
       <label for="first_name">{{ i18n "form_first_name" }}</label>
-      <input id="first_name" name="first_name" type="text" required>
+      <input id="first_name" name="first_name" type="text" autocomplete="given-name" required>
     </div>
     <div class="form-field">
       <label for="last_name">{{ i18n "form_last_name" }}</label>
-      <input id="last_name" name="last_name" type="text">
+      <input id="last_name" name="last_name" type="text" autocomplete="family-name">
     </div>
   </div>
 
   <div class="form-field">
     <label for="email">{{ i18n "form_email" }}</label>
-    <input id="email" name="email" type="email" required>
+    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false" required>
   </div>
 
   <div class="form-grid form-grid--2">
     <div class="form-field">
       <label for="city">{{ i18n "form_city" }}</label>
-      <select id="city" name="city">
+      <select id="city" name="city" autocomplete="address-level2">
         {{ range .Params.form.cities }}
           <option value="{{ . }}">{{ . }}</option>
         {{ end }}
@@ -29,7 +37,7 @@
 
     <div class="form-field">
       <label for="interest">{{ i18n "form_interest" }}</label>
-      <select id="interest" name="interest" required>
+      <select id="interest" name="interest" autocomplete="off" required>
         {{ range .Params.form.interests }}
           <option value="{{ . }}">{{ . }}</option>
         {{ end }}
@@ -39,7 +47,7 @@
 
   <div class="form-field">
     <label for="message">{{ i18n "form_message" }}</label>
-    <textarea id="message" name="message" rows="6"></textarea>
+    <textarea id="message" name="message" rows="6" autocomplete="off"></textarea>
   </div>
 
   <input type="hidden" name="language" value="{{ $lang }}">

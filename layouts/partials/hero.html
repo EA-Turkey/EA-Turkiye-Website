@@ -9,6 +9,8 @@
 {{ $secondaryLabel := .secondary_label }}
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default $title }}
+{{ $featuredEvent := .featured_event }}
+{{ $titleLines := slice }}
 
 {{ if and $primaryURL (hasPrefix $primaryURL "/") }}
   {{ $primaryURL = ($primaryURL | strings.TrimPrefix "/") | absURL }}
@@ -16,12 +18,25 @@
 {{ if and $secondaryURL (hasPrefix $secondaryURL "/") }}
   {{ $secondaryURL = ($secondaryURL | strings.TrimPrefix "/") | absURL }}
 {{ end }}
+{{ if and (eq $variant "home") $page.IsHome }}
+  {{ if hasPrefix $page.RelPermalink "/en/" }}
+    {{ $titleLines = slice "A community" "looking for" "better ways" "to address the" "world's most" "urgent problems" }}
+  {{ else }}
+    {{ $titleLines = slice "Dünyanın en acil" "sorunları için" "daha iyi yollar" "arayan bir" "topluluk" }}
+  {{ end }}
+{{ end }}
 
 <section class="hero hero--{{ $variant }}">
   <div class="{{ if eq $variant "home" }}container--wide{{ else }}container{{ end }} hero__inner">
-    <div class="hero__content stack-md" data-reveal>
+    <div class="hero__content stack-md"{{ if eq $variant "home" }} data-reveal{{ end }}>
       {{ with $eyebrow }}<span class="hero__eyebrow">{{ . }}</span>{{ end }}
-      <h1 class="hero__title">{{ $title }}</h1>
+      <h1 class="hero__title">
+        {{ if gt (len $titleLines) 0 }}
+          {{ range $titleLines }}<span class="hero__title-line">{{ . }}</span>{{ end }}
+        {{ else }}
+          {{ $title }}
+        {{ end }}
+      </h1>
       {{ with $lead }}<p class="hero__lead">{{ . }}</p>{{ end }}
       {{ if or $primaryURL $secondaryURL }}
         <div class="hero__actions">
@@ -44,4 +59,21 @@
       </div>
     {{ end }}
   </div>
+
+  {{ if and (eq $variant "home") $featuredEvent }}
+    {{ $eventDate := $featuredEvent.Params.schedule_text | default ((time.AsTime $featuredEvent.Params.start) | time.Format ":date_long") }}
+    <div class="container--wide hero__footer">
+      <a class="hero__event" href="{{ $featuredEvent.RelPermalink }}">
+        <div class="hero__event-copy">
+          <span class="hero__event-label">{{ i18n "upcoming_events" }}</span>
+          <h2 class="hero__event-title">{{ $featuredEvent.Title }}</h2>
+          <p class="hero__event-meta">
+            <span>{{ $eventDate }}</span>
+            {{ with $featuredEvent.Params.city }}<span>{{ . }}</span>{{ end }}
+          </p>
+        </div>
+        <span class="hero__event-cta">{{ i18n "learn_more" }}</span>
+      </a>
+    </div>
+  {{ end }}
 </section>

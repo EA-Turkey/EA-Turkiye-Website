@@ -59,3 +59,16 @@
     </div>
   </div>
 </section>
+
+{{ with .Params.luma_url }}
+  <div class="event-mobile-cta">
+    <div class="container--wide event-mobile-cta__inner">
+      <div class="stack-sm">
+        <span class="event-mobile-cta__label">{{ $.Title }}</span>
+        <p class="event-mobile-cta__meta">{{ $start | time.Format ":date_long" }}</p>
+      </div>
+      {{ partial "button.html" (dict "url" . "label" (i18n "open_luma") "variant" "primary" "external" true "class" "event-mobile-cta__button") }}
+    </div>
+  </div>
+  <div class="event-mobile-cta-spacer" aria-hidden="true"></div>
+{{ end }}
