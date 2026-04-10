@@ -68,11 +68,22 @@
       <span class="sr-only">{{ i18n "search_short_label" }}</span>
     </button>
 
-    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
-      <span class="sr-only">{{ i18n "open_menu" }}</span>
-      <span class="nav-toggle__bar"></span>
-      <span class="nav-toggle__bar"></span>
-      <span class="nav-toggle__bar"></span>
+    <button
+      class="nav-toggle"
+      type="button"
+      data-nav-toggle
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="{{ i18n "open_menu" }}"
+      data-open-label="{{ i18n "open_menu" }}"
+      data-close-label="{{ i18n "close_menu" }}"
+    >
+      <span class="sr-only" data-nav-toggle-label>{{ i18n "open_menu" }}</span>
+      <span class="nav-toggle__icon" aria-hidden="true">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </span>
     </button>
   </div>
 </header>

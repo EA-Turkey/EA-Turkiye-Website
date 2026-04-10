@@ -5,10 +5,57 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("[data-site-nav]");
 
   if (navToggle && nav) {
+    const navToggleLabel = navToggle.querySelector("[data-nav-toggle-label]");
+    const openLabel = navToggle.getAttribute("data-open-label") || "";
+    const closeLabel = navToggle.getAttribute("data-close-label") || openLabel;
+
+    const setNavState = (isOpen) => {
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      navToggle.setAttribute("aria-label", isOpen ? closeLabel : openLabel);
+      if (navToggleLabel) {
+        navToggleLabel.textContent = isOpen ? closeLabel : openLabel;
+      }
+      nav.classList.toggle("is-open", isOpen);
+      document.body.classList.toggle("is-nav-open", isOpen);
+    };
+
     navToggle.addEventListener("click", () => {
       const expanded = navToggle.getAttribute("aria-expanded") === "true";
-      navToggle.setAttribute("aria-expanded", expanded ? "false" : "true");
-      nav.classList.toggle("is-open", !expanded);
+      setNavState(!expanded);
+    });
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+
+      if (!(target instanceof Node)) {
+        return;
+      }
+
+      if (!nav.classList.contains("is-open")) {
+        return;
+      }
+
+      if (nav.contains(target) || navToggle.contains(target)) {
+        return;
+      }
+
+      setNavState(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setNavState(false);
+      }
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setNavState(false));
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) {
+        setNavState(false);
+      }
     });
   }
 

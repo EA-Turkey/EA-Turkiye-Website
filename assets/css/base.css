@@ -32,8 +32,19 @@ body {
     linear-gradient(180deg, #fbfeff 0%, var(--color-bg) 50%, #f3f7f8 100%);
 }
 
-body.is-search-open {
+body.is-search-open,
+body.is-nav-open {
   overflow: hidden;
+}
+
+body.is-nav-open::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 85;
+  background: rgba(247, 250, 251, 0.18);
+  backdrop-filter: blur(10px);
+  pointer-events: none;
 }
 
 main {

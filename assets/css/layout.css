@@ -79,7 +79,11 @@
 
 @media (max-width: 768px) {
   .section {
-    padding-block: var(--space-64);
+    padding-block: var(--space-56);
+  }
+
+  .section--tight {
+    padding-block: var(--space-40);
   }
 
   .grid-2,
@@ -95,5 +99,13 @@
   .container--wide,
   .container--narrow {
     width: min(100% - 1.25rem, var(--container));
+  }
+
+  .section {
+    padding-block: var(--space-48);
+  }
+
+  .section--tight {
+    padding-block: var(--space-32);
   }
 }
