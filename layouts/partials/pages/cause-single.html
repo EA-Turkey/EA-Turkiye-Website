@@ -23,9 +23,16 @@
 {{ end }}
 {{ $relatedResources := slice }}
 {{ $relatedEvents := slice }}
+{{ $resourceCauseMap := dict
+  "ai-safety" (slice "ai-safety")
+  "animal-welfare" (slice "animal-welfare")
+  "biosecurity" (slice "biosecurity" "biosecurity-pandemics")
+  "global-health-poverty" (slice "global-health-poverty" "global-health-development")
+}}
+{{ $resourceCauseKeys := index $resourceCauseMap .Params.translationKey | default (slice .Params.translationKey) }}
 
 {{ range $resources }}
-  {{ if eq .Params.cause_area $.Params.translationKey }}
+  {{ if in $resourceCauseKeys .Params.cause_area }}
     {{ $relatedResources = $relatedResources | append . }}
   {{ end }}
 {{ end }}

@@ -2,6 +2,8 @@
   {{ $sectionKey := partial "helpers/section-key.html" . | strings.TrimSpace }}
   {{ if eq $sectionKey "events" }}
     {{ partial "pages/event-single.html" . }}
+  {{ else if eq $sectionKey "resources" }}
+    {{ partial "pages/resource-single.html" . }}
   {{ else if eq $sectionKey "blog" }}
     {{ partial "pages/blog-single.html" . }}
   {{ else if eq $sectionKey "cause-areas" }}

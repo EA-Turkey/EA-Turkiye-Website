@@ -14,8 +14,16 @@
 {{- $intentTags := slice -}}
 {{- $groupKey := $sectionKey -}}
 {{- $groupLabel := index $groupLabels $groupKey | default (index $groupLabels "page") -}}
+{{- $typeLabel := index $typeLabels $sectionKey | default (i18n "search_section_page") -}}
+{{- if and (eq $sectionKey "resources") $page.IsPage -}}
+  {{- $typeLabel = i18n (printf "resource_type_%s" (replace ($page.Params.resource_type | default "article") "-" "_")) -}}
+{{- end -}}
 
 {{- with $page.Params.city -}}
+  {{- $metadataParts = $metadataParts | append . -}}
+  {{- $aliasParts = $aliasParts | append . -}}
+{{- end -}}
+{{- with $page.Params.author -}}
   {{- $metadataParts = $metadataParts | append . -}}
   {{- $aliasParts = $aliasParts | append . -}}
 {{- end -}}
@@ -27,9 +35,17 @@
 {{- end -}}
 {{- with $page.Params.publisher -}}
   {{- $metadataParts = $metadataParts | append . -}}
+  {{- $aliasParts = $aliasParts | append . -}}
 {{- end -}}
 {{- with $page.Params.level -}}
   {{- $metadataParts = $metadataParts | append (index $levelLabels . | default .) -}}
+{{- end -}}
+{{- with $page.Params.time_commitment -}}
+  {{- $metadataParts = $metadataParts | append . -}}
+{{- end -}}
+{{- with $page.Params.language -}}
+  {{- $metadataParts = $metadataParts | append (i18n (printf "language_%s" .)) -}}
+  {{- $aliasParts = $aliasParts | append . -}}
 {{- end -}}
 {{- with $page.Params.event_mode -}}
   {{- $metadataParts = $metadataParts | append (index $modeLabels . | default .) -}}
@@ -39,6 +55,10 @@
 {{- with $page.Params.cause_area -}}
   {{- $metadataParts = $metadataParts | append (index $causeLabels . | default .) -}}
   {{- $aliasParts = $aliasParts | append (index $causeLabels . | default .) -}}
+{{- end -}}
+{{- with $page.Params.resource_type -}}
+  {{- $metadataParts = $metadataParts | append (i18n (printf "resource_type_%s" (replace . "-" "_"))) -}}
+  {{- $aliasParts = $aliasParts | append (replace . "-" " ") -}}
 {{- end -}}
 {{- with $page.Params.accent -}}
   {{- $metadataParts = $metadataParts | append (index $causeLabels . | default .) -}}
@@ -59,6 +79,9 @@
 
 {{- if eq $sectionKey "events" -}}
   {{- $intentTags = $intentTags | append "event" -}}
+{{- end -}}
+{{- if eq $sectionKey "resources" -}}
+  {{- $intentTags = $intentTags | append "resource" -}}
 {{- end -}}
 {{- if eq $sectionKey "get-involved" -}}
   {{- $intentTags = $intentTags | append "newcomer" "get-involved" -}}
@@ -96,7 +119,7 @@
   "section" $sectionKey
   "group_key" $groupKey
   "group_label" $groupLabel
-  "type_label" (index $typeLabels $sectionKey | default (i18n "search_section_page"))
+  "type_label" $typeLabel
   "date_display" $dateDisplay
   "timestamp" $timestamp
   "event_start_ts" $eventStartTs

@@ -2,6 +2,6 @@
 .hugo_build.lock
 .DS_Store
 public
-resources
+/resources
 .wrangler
 .vscode

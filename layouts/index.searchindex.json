@@ -2,7 +2,7 @@
 {{- $langSite := .Scratch.Get "langSite" -}}
 {{- $searchConfig := site.Data.search | default dict -}}
 {{- $items := slice -}}
-{{- $landingSections := slice "about" "get-involved" "cause-areas" -}}
+{{- $landingSections := slice "about" "get-involved" "cause-areas" "resources" -}}
 {{- $typeLabels := dict
   "about" (i18n "search_section_about")
   "blog" (i18n "search_section_blog")
@@ -10,6 +10,7 @@
   "events" (i18n "search_section_events")
   "get-involved" (i18n "search_section_get_involved")
   "news" (i18n "search_section_news")
+  "resources" (i18n "search_section_resources")
   "page" (i18n "search_section_page")
 -}}
 {{- $modeLabels := dict
@@ -18,6 +19,7 @@
   "online" (i18n "mode_online")
 -}}
 {{- $levelLabels := dict
+  "advanced" (i18n "level_advanced")
   "intermediate" (i18n "level_intermediate")
   "intro" (i18n "level_intro")
 -}}
@@ -25,8 +27,14 @@
   "ai-safety" (i18n "cause_ai_safety")
   "animal-welfare" (i18n "cause_animal_welfare")
   "biosecurity" (i18n "cause_biosecurity")
+  "biosecurity-pandemics" (i18n "cause_biosecurity_pandemics")
+  "careers-giving" (i18n "cause_careers_giving")
+  "critiques" (i18n "cause_critiques")
   "general" (i18n "cause_general")
+  "global-health-development" (i18n "cause_global_health_development")
   "global-health-poverty" (i18n "cause_global_health_poverty")
+  "global-priorities-longtermism" (i18n "cause_global_priorities_longtermism")
+  "meta-ea-community" (i18n "cause_meta_ea_community")
 -}}
 {{- $groupLabels := dict
   "about" (i18n "search_group_about")
@@ -35,9 +43,11 @@
   "events" (i18n "search_group_events")
   "get-involved" (i18n "search_group_get_involved")
   "news" (i18n "search_group_news")
+  "resources" (i18n "search_group_resources")
   "page" (i18n "search_group_page")
 -}}
 {{- $sectionPriorities := dict
+  "resources" 98
   "events" 96
   "cause-areas" 82
   "get-involved" 76

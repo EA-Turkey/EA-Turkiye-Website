@@ -8,6 +8,7 @@
   {{- end -}}
   {{- if or (in $path "/hakkimizda/") (in $path "/about/") -}}about
   {{- else if or (in $path "/etkinlikler/") (in $path "/events/") -}}events
+  {{- else if or (in $path "/kaynaklar/") (in $path "/resources/") -}}resources
   {{- else if in $path "/blog/" -}}blog
   {{- else if or (in $path "/katil/") (in $path "/get-involved/") -}}get-involved
   {{- else if or (in $path "/odak-alanlari/") (in $path "/cause-areas/") -}}cause-areas

@@ -34,6 +34,7 @@ Used for:
 - home
 - about
 - events
+- resources
 - blog
 - get involved
 - cause areas
@@ -53,6 +54,16 @@ Optional fields:
 - `hero_lead`
 - `hero_image`
 - arrays like `stats`, `values`, `faq`, `action_cards`
+
+Resources landing pages also use:
+
+- `review_note`
+- `pathways[]`
+- `jump_links[]`
+- `sections{}`
+- `shelves[]`
+- `cause_groups[]`
+- `closing_cta{}`
 
 ### 2. Event items
 
@@ -129,6 +140,41 @@ Recommended:
 - `slug`
 - `url`
 - `featured_image`
+
+### 5. Resource items
+
+Path:
+
+- `content/tr/resources/<internal-slug>/index.md`
+- `content/en/resources/<internal-slug>/index.md`
+
+Use the same internal folder name in both languages.
+
+Required fields:
+
+- `translationKey`
+- `title`
+- `description`
+- `summary`
+- `resource_type`
+- `cause_area`
+- `level`
+- `time_commitment`
+- `language`
+
+Recommended fields:
+
+- `slug`
+- `url`
+- `author`
+- `publisher`
+- `external_url`
+- `aliases`
+
+Resources are content pages, not data-file records.
+The Turkish landing page lives at `/kaynaklar/`.
+Turkish resource item pages should set explicit `url: /kaynaklar/<slug>/`.
+Turkish and English pairs must keep the same internal folder name and the same `translationKey`.
 
 ## Team data
 

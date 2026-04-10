@@ -19,6 +19,9 @@
 - id: learn_more
   translation: "Daha fazla bilgi"
 
+- id: go_to_section
+  translation: "Bölüme git"
+
 - id: read_more
   translation: "Devamını oku"
 
@@ -97,8 +100,17 @@
 - id: publisher
   translation: "Yayıncı"
 
+- id: author
+  translation: "Yazar"
+
 - id: level
   translation: "Seviye"
+
+- id: language
+  translation: "Dil"
+
+- id: time_commitment
+  translation: "Zaman"
 
 - id: cause_area
   translation: "Odak alanı"
@@ -190,11 +202,74 @@
 - id: resource_type_course
   translation: "Program"
 
+- id: resource_type_faq
+  translation: "SSS"
+
+- id: resource_type_guide
+  translation: "Rehber"
+
+- id: resource_type_handbook
+  translation: "El kitabı"
+
+- id: resource_type_recommendations
+  translation: "Öneriler"
+
+- id: resource_type_problem_profile
+  translation: "Problem profili"
+
+- id: resource_type_explainer
+  translation: "Açıklayıcı metin"
+
+- id: resource_type_glossary
+  translation: "Sözlük"
+
+- id: resource_type_paper
+  translation: "Makale"
+
+- id: resource_type_essay
+  translation: "Deneme"
+
+- id: resource_type_hub
+  translation: "Merkez"
+
+- id: resource_type_pledge
+  translation: "Taahhüt"
+
+- id: resource_type_program
+  translation: "Program"
+
+- id: resource_type_board
+  translation: "İlan panosu"
+
+- id: resource_type_mentoring
+  translation: "Mentorluk"
+
 - id: level_intro
   translation: "Başlangıç"
 
 - id: level_intermediate
   translation: "Orta seviye"
+
+- id: level_advanced
+  translation: "İleri seviye"
+
+- id: language_en
+  translation: "EN"
+
+- id: language_tr
+  translation: "TR"
+
+- id: view_details
+  translation: "Detayları gör"
+
+- id: back_to_resources
+  translation: "Kaynaklara dön"
+
+- id: resources_jump_links
+  translation: "Kaynak kısayolları"
+
+- id: resources_pathways
+  translation: "Okuma yolları"
 
 - id: not_found_title
   translation: "Aradığın sayfayı bulamadık"
@@ -221,7 +296,7 @@
   translation: "Site içinde ara"
 
 - id: search_placeholder
-  translation: "Yazılar, etkinlikler, odak alanları ya da şehir ara"
+  translation: "Kaynaklar, yazılar, etkinlikler, odak alanları ya da şehir ara"
 
 - id: search_loading
   translation: "Arama dizini yükleniyor..."
@@ -268,6 +343,9 @@
 - id: search_group_news
   translation: "Haberler"
 
+- id: search_group_resources
+  translation: "Kaynaklar"
+
 - id: search_group_page
   translation: "Sayfalar"
 
@@ -289,5 +367,26 @@
 - id: search_section_news
   translation: "Haber"
 
+- id: search_section_resources
+  translation: "Kaynaklar"
+
 - id: search_section_page
   translation: "Sayfa"
+
+- id: cause_global_health_development
+  translation: "Küresel sağlık ve kalkınma"
+
+- id: cause_biosecurity_pandemics
+  translation: "Biyogüvenlik ve pandemiler"
+
+- id: cause_global_priorities_longtermism
+  translation: "Küresel öncelikler ve uzun vadeli gelecek"
+
+- id: cause_meta_ea_community
+  translation: "Meta-EA ve topluluk inşası"
+
+- id: cause_critiques
+  translation: "Eleştiriler"
+
+- id: cause_careers_giving
+  translation: "Kariyer ve bağışçılık"

@@ -88,6 +88,11 @@ summaryLength = 40
       weight = 20
 
     [[languages.tr.menus.main]]
+      name = "Kaynaklar"
+      pageRef = "/resources"
+      weight = 25
+
+    [[languages.tr.menus.main]]
       name = "Blog"
       pageRef = "/blog"
       weight = 30
@@ -111,6 +116,11 @@ summaryLength = 40
       name = "Events"
       pageRef = "/events"
       weight = 20
+
+    [[languages.en.menus.main]]
+      name = "Resources"
+      pageRef = "/resources"
+      weight = 25
 
     [[languages.en.menus.main]]
       name = "Blog"

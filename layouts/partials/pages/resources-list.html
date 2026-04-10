@@ -8,44 +8,218 @@
 
 {{ partial "helpers/lang-context.html" . }}
 {{ $langSite := .Scratch.Get "langSite" }}
-{{ $resources := slice }}
+{{ $actualLang := .Scratch.Get "actualLang" }}
+{{ $resourcesByKey := dict }}
 {{ range $langSite.RegularPages }}
   {{ $item := . }}
   {{ with .File }}
     {{ if hasPrefix .Path "resources/" }}
-      {{ $resources = $resources | append $item }}
+      {{ with $item.Params.translationKey }}
+        {{ $resourcesByKey = merge $resourcesByKey (dict . $item) }}
+      {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $types := slice "article" "video" "course" }}
+{{ $sections := .Params.sections | default dict }}
+{{ $primerSection := index $sections "primer" }}
+{{ $startHereSection := index $sections "start_here" }}
+{{ $causeAreasSection := index $sections "cause_areas" }}
+{{ $critiquesSection := index $sections "critiques" }}
+{{ $readyToActSection := index $sections "ready_to_act" }}
+{{ $startHereShelf := dict }}
+{{ $critiquesShelf := dict }}
+{{ $readyToActShelf := dict }}
+{{ range .Params.shelves }}
+  {{ if eq .section "start_here" }}
+    {{ $startHereShelf = . }}
+  {{ else if eq .section "critiques" }}
+    {{ $critiquesShelf = . }}
+  {{ else if eq .section "ready_to_act" }}
+    {{ $readyToActShelf = . }}
+  {{ end }}
+{{ end }}
+{{ $resolveSectionURL := dict
+  "about" "about"
+  "blog" "blog"
+  "cause-areas" "cause-areas"
+  "events" "events"
+  "get-involved" "get-involved"
+  "news" "news"
+  "resources" "resources"
+}}
 
-<section class="section">
+<section class="section section--tight resources-intro">
   <div class="container stack-lg">
-    {{ $featured := where $resources ".Params.featured" true }}
-    {{ if gt (len $featured) 0 }}
-      <div class="list-shell" data-reveal>
-        <div class="stack-md">
-          <h2>{{ i18n "featured_resources" }}</h2>
-          {{ range $featured }}
-            {{ partial "resource-item.html" . }}
-          {{ end }}
-        </div>
+    {{ with .Params.review_note }}
+      <div class="resources-review-note" data-reveal>
+        <p>{{ . }}</p>
       </div>
     {{ end }}
 
-    {{ range $types }}
-      {{ $type := . }}
-      {{ $matching := where $resources ".Params.resource_type" $type }}
-      {{ if gt (len $matching) 0 }}
-        <section class="resource-group" data-reveal>
-          <h2>{{ i18n (printf "resource_type_%s" (replace $type "-" "_")) }}</h2>
-          <div class="list-shell">
-            {{ range $matching }}
-              {{ partial "resource-item.html" . }}
-            {{ end }}
-          </div>
-        </section>
-      {{ end }}
+    {{ with .Params.pathways }}
+      <section class="stack-md" aria-labelledby="resources-pathways-title">
+        <h2 id="resources-pathways-title" class="sr-only">{{ i18n "resources_pathways" }}</h2>
+        <div class="resources-pathways grid-3">
+          {{ range . }}
+            {{ partial "action-card.html" (dict
+              "title" .title
+              "text" .text
+              "cta_anchor" .anchor
+              "cta_label" (i18n "go_to_section")
+            ) }}
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    {{ with .Params.jump_links }}
+      <nav class="resources-jump-links" aria-label="{{ i18n "resources_jump_links" }}" data-reveal>
+        <ul class="resources-jump-links__list">
+          {{ range . }}
+            <li><a href="{{ .anchor }}">{{ .label }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
     {{ end }}
   </div>
 </section>
+
+<section class="section resources-primer" id="newcomer-primer">
+  <div class="container stack-lg">
+    {{ with $primerSection }}
+      {{ partial "section-header.html" (dict "eyebrow" .eyebrow "title" .title "text" .intro) }}
+    {{ end }}
+    {{ with .Content }}
+      <div class="prose resources-primer__body" data-reveal>{{ . }}</div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section section--surface resources-shelf" id="{{ strings.TrimPrefix "#" ($startHereShelf.anchor | default "#start-here") }}">
+  <div class="container stack-lg">
+    {{ with $startHereSection }}
+      {{ partial "section-header.html" (dict "eyebrow" .eyebrow "title" .title "text" .intro) }}
+    {{ end }}
+    <div class="resources-featured-grid">
+      {{ range $startHereShelf.item_keys }}
+        {{ $resource := index $resourcesByKey . }}
+        {{ with $resource }}
+          {{ partial "resource-item.html" . }}
+        {{ else }}
+          {{ if hugo.IsDevelopment }}
+            {{ printf "<!-- Missing resource reference: %s -->" . | safeHTML }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section resources-shelf" id="cause-areas">
+  <div class="container stack-lg">
+    {{ with $causeAreasSection }}
+      {{ partial "section-header.html" (dict "eyebrow" .eyebrow "title" .title "text" .intro) }}
+    {{ end }}
+    <div class="resources-cause-list">
+      {{ range .Params.cause_groups }}
+        <article class="resources-cause-card" data-reveal>
+          <div class="stack-sm">
+            <h3>{{ .title }}</h3>
+            <p class="text-muted">{{ .summary }}</p>
+          </div>
+          <div class="resources-cause-grid">
+            {{ range .item_keys }}
+              {{ $resource := index $resourcesByKey . }}
+              {{ with $resource }}
+                {{ partial "resource-item.html" . }}
+              {{ else }}
+                {{ if hugo.IsDevelopment }}
+                  {{ printf "<!-- Missing resource reference: %s -->" . | safeHTML }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface resources-shelf" id="{{ strings.TrimPrefix "#" ($critiquesShelf.anchor | default "#critiques") }}">
+  <div class="container stack-lg">
+    {{ with $critiquesSection }}
+      {{ partial "section-header.html" (dict "eyebrow" .eyebrow "title" .title "text" .intro) }}
+    {{ end }}
+    <div class="resources-featured-grid">
+      {{ range $critiquesShelf.item_keys }}
+        {{ $resource := index $resourcesByKey . }}
+        {{ with $resource }}
+          {{ partial "resource-item.html" . }}
+        {{ else }}
+          {{ if hugo.IsDevelopment }}
+            {{ printf "<!-- Missing resource reference: %s -->" . | safeHTML }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section resources-shelf" id="{{ strings.TrimPrefix "#" ($readyToActShelf.anchor | default "#ready-to-act") }}">
+  <div class="container stack-lg">
+    {{ with $readyToActSection }}
+      {{ partial "section-header.html" (dict "eyebrow" .eyebrow "title" .title "text" .intro) }}
+    {{ end }}
+    <div class="resources-featured-grid">
+      {{ range $readyToActShelf.item_keys }}
+        {{ $resource := index $resourcesByKey . }}
+        {{ with $resource }}
+          {{ partial "resource-item.html" . }}
+        {{ else }}
+          {{ if hugo.IsDevelopment }}
+            {{ printf "<!-- Missing resource reference: %s -->" . | safeHTML }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ with .Params.closing_cta }}
+  {{ $primaryURL := .primary_url }}
+  {{ $secondaryURL := .secondary_url }}
+  {{ if and $primaryURL (hasPrefix $primaryURL "/") }}
+    {{ $primaryKey := replaceRE "^/|/$" "" $primaryURL }}
+    {{ if index $resolveSectionURL $primaryKey }}
+      {{ $primaryURL = partial "helpers/section-root.html" (dict "lang" $actualLang "key" $primaryKey) | strings.TrimSpace }}
+    {{ else }}
+      {{ $primaryURL = ($primaryURL | strings.TrimPrefix "/") | absURL }}
+    {{ end }}
+  {{ end }}
+  {{ if and $secondaryURL (hasPrefix $secondaryURL "/") }}
+    {{ $secondaryKey := replaceRE "^/|/$" "" $secondaryURL }}
+    {{ if index $resolveSectionURL $secondaryKey }}
+      {{ $secondaryURL = partial "helpers/section-root.html" (dict "lang" $actualLang "key" $secondaryKey) | strings.TrimSpace }}
+    {{ else }}
+      {{ $secondaryURL = ($secondaryURL | strings.TrimPrefix "/") | absURL }}
+    {{ end }}
+  {{ end }}
+  <section class="section section--surface">
+    <div class="container">
+      <div class="final-cta resources-final-cta" data-reveal>
+        <div class="stack-sm">
+          <h2>{{ .title }}</h2>
+          <p class="text-muted">{{ .text }}</p>
+        </div>
+        <div class="cluster final-cta__actions">
+          {{ with $primaryURL }}
+            {{ partial "button.html" (dict "url" . "label" $.Params.closing_cta.primary_label "variant" "primary") }}
+          {{ end }}
+          {{ with $secondaryURL }}
+            {{ partial "button.html" (dict "url" . "label" $.Params.closing_cta.secondary_label "variant" "secondary") }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

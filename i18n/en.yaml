@@ -19,6 +19,9 @@
 - id: learn_more
   translation: "Learn more"
 
+- id: go_to_section
+  translation: "Go to section"
+
 - id: read_more
   translation: "Read more"
 
@@ -97,8 +100,17 @@
 - id: publisher
   translation: "Publisher"
 
+- id: author
+  translation: "Author"
+
 - id: level
   translation: "Level"
+
+- id: language
+  translation: "Language"
+
+- id: time_commitment
+  translation: "Time commitment"
 
 - id: cause_area
   translation: "Cause area"
@@ -190,11 +202,74 @@
 - id: resource_type_course
   translation: "Course"
 
+- id: resource_type_faq
+  translation: "FAQ"
+
+- id: resource_type_guide
+  translation: "Guide"
+
+- id: resource_type_handbook
+  translation: "Handbook"
+
+- id: resource_type_recommendations
+  translation: "Recommendations"
+
+- id: resource_type_problem_profile
+  translation: "Problem profile"
+
+- id: resource_type_explainer
+  translation: "Explainer"
+
+- id: resource_type_glossary
+  translation: "Glossary"
+
+- id: resource_type_paper
+  translation: "Paper"
+
+- id: resource_type_essay
+  translation: "Essay"
+
+- id: resource_type_hub
+  translation: "Hub"
+
+- id: resource_type_pledge
+  translation: "Pledge"
+
+- id: resource_type_program
+  translation: "Program"
+
+- id: resource_type_board
+  translation: "Board"
+
+- id: resource_type_mentoring
+  translation: "Mentoring"
+
 - id: level_intro
   translation: "Introductory"
 
 - id: level_intermediate
   translation: "Intermediate"
+
+- id: level_advanced
+  translation: "Advanced"
+
+- id: language_en
+  translation: "EN"
+
+- id: language_tr
+  translation: "TR"
+
+- id: view_details
+  translation: "View details"
+
+- id: back_to_resources
+  translation: "Back to resources"
+
+- id: resources_jump_links
+  translation: "Resources jump links"
+
+- id: resources_pathways
+  translation: "Reading pathways"
 
 - id: not_found_title
   translation: "We couldn't find that page"
@@ -221,7 +296,7 @@
   translation: "Search the site"
 
 - id: search_placeholder
-  translation: "Search posts, events, cause areas, or cities"
+  translation: "Search resources, posts, events, cause areas, or cities"
 
 - id: search_loading
   translation: "Loading the search index..."
@@ -268,6 +343,9 @@
 - id: search_group_news
   translation: "News"
 
+- id: search_group_resources
+  translation: "Resources"
+
 - id: search_group_page
   translation: "Pages"
 
@@ -289,5 +367,26 @@
 - id: search_section_news
   translation: "News"
 
+- id: search_section_resources
+  translation: "Resources"
+
 - id: search_section_page
   translation: "Page"
+
+- id: cause_global_health_development
+  translation: "Global health and development"
+
+- id: cause_biosecurity_pandemics
+  translation: "Biosecurity and pandemics"
+
+- id: cause_global_priorities_longtermism
+  translation: "Global priorities and the long-term future"
+
+- id: cause_meta_ea_community
+  translation: "Meta-EA and community building"
+
+- id: cause_critiques
+  translation: "Critiques"
+
+- id: cause_careers_giving
+  translation: "Careers and giving"

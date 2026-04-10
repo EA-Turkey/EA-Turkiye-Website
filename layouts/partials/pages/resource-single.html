@@ -1,18 +1,26 @@
+{{ partial "helpers/lang-context.html" . }}
+{{ $actualLang := .Scratch.Get "actualLang" }}
+{{ $resourcesURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "resources") | strings.TrimSpace }}
+{{ $summary := .Params.summary | default .Params.description }}
+
 {{ partial "hero.html" (dict
   "page" .
   "variant" "page"
   "eyebrow" .Params.hero_eyebrow
   "title" .Title
-  "lead" (.Params.summary | default .Params.description)
+  "lead" $summary
 ) }}
 
 <section class="section">
   <div class="container stack-lg">
-    <div class="meta-grid" data-reveal>
+    <div class="meta-grid resource-single__meta" data-reveal>
       <div class="meta-panel">
         <span>{{ i18n "resource_details" }}</span>
         <p>{{ i18n (printf "resource_type_%s" (replace (.Params.resource_type | default "article") "-" "_")) }}</p>
       </div>
+      {{ with .Params.author }}
+        <div class="meta-panel"><span>{{ i18n "author" }}</span><p>{{ . }}</p></div>
+      {{ end }}
       {{ with .Params.publisher }}
         <div class="meta-panel"><span>{{ i18n "publisher" }}</span><p>{{ . }}</p></div>
       {{ end }}
@@ -22,26 +30,27 @@
       {{ with .Params.level }}
         <div class="meta-panel"><span>{{ i18n "level" }}</span><p>{{ i18n (printf "level_%s" (replace . "-" "_")) }}</p></div>
       {{ end }}
+      {{ with .Params.time_commitment }}
+        <div class="meta-panel"><span>{{ i18n "time_commitment" }}</span><p>{{ . }}</p></div>
+      {{ end }}
+      {{ with .Params.language }}
+        <div class="meta-panel"><span>{{ i18n "language" }}</span><p>{{ i18n (printf "language_%s" .) }}</p></div>
+      {{ end }}
     </div>
 
-    {{ with .Params.featured_image }}
-      <div class="featured-media" data-reveal>
-        {{ partial "picture.html" (dict
-          "src" .
-          "alt" $.Title
-          "class" ""
-          "variant" "hero"
-          "sizes" "(min-width: 72rem) 72rem, 100vw"
-        ) }}
-      </div>
+    {{ with .Params.description }}
+      {{ if ne . $summary }}
+        <p class="resource-single__description text-muted" data-reveal>{{ . }}</p>
+      {{ end }}
     {{ end }}
 
     <div class="prose" data-reveal>{{ .Content }}</div>
 
-    {{ with .Params.external_url }}
-      <div data-reveal>
+    <div class="cluster" data-reveal>
+      {{ with .Params.external_url }}
         {{ partial "button.html" (dict "url" . "label" (i18n "view_resource") "variant" "primary" "external" true) }}
-      </div>
-    {{ end }}
+      {{ end }}
+      {{ partial "button.html" (dict "url" $resourcesURL "label" (i18n "back_to_resources") "variant" "ghost") }}
+    </div>
   </div>
 </section>

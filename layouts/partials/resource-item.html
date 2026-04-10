@@ -1,14 +1,44 @@
 {{ $resourceType := .Params.resource_type | default "article" }}
-<article class="resource-row">
-  <a class="resource-row__link" href="{{ .RelPermalink }}">
-    <div class="resource-row__meta stack-sm">
+{{ $timeCommitment := .Params.time_commitment }}
+{{ $level := .Params.level }}
+{{ $language := .Params.language }}
+{{ $summary := .Params.summary | default .Params.description }}
+{{ $attributionParts := slice }}
+{{ with .Params.author }}{{ $attributionParts = $attributionParts | append . }}{{ end }}
+{{ with .Params.publisher }}{{ $attributionParts = $attributionParts | append . }}{{ end }}
+{{ $primaryURL := .RelPermalink }}
+{{ $primaryLabel := i18n "view_details" }}
+{{ $primaryExternal := false }}
+{{ $secondaryURL := "" }}
+{{ if .Params.external_url }}
+  {{ $primaryURL = .Params.external_url }}
+  {{ $primaryLabel = i18n "view_resource" }}
+  {{ $primaryExternal = true }}
+  {{ $secondaryURL = .RelPermalink }}
+{{ end }}
+
+<article class="resource-card" data-reveal>
+  <div class="stack-md">
+    <div class="resource-card__meta">
       <span class="chip">{{ i18n (printf "resource_type_%s" (replace $resourceType "-" "_")) }}</span>
-      {{ with .Params.publisher }}<span class="text-muted">{{ . }}</span>{{ end }}
+      {{ with $timeCommitment }}<span class="chip">{{ . }}</span>{{ end }}
+      {{ with $level }}<span class="chip">{{ i18n (printf "level_%s" (replace . "-" "_")) }}</span>{{ end }}
+      {{ with $language }}<span class="chip resource-card__language-chip">{{ i18n (printf "language_%s" .) }}</span>{{ end }}
     </div>
-    <div class="resource-row__body">
-      <h3 class="resource-row__title">{{ .Title }}</h3>
-      <p class="resource-row__summary">{{ .Params.summary | default .Params.description }}</p>
+    {{ if gt (len $attributionParts) 0 }}
+      <p class="resource-card__attribution">{{ delimit $attributionParts " · " }}</p>
+    {{ end }}
+    <div class="stack-sm">
+      <h3 class="resource-card__title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h3>
+      <p class="resource-card__summary">{{ $summary }}</p>
     </div>
-    <span class="resource-row__cta">{{ i18n "view_resource" }}</span>
-  </a>
+  </div>
+  <div class="resource-card__actions cluster">
+    {{ partial "button.html" (dict "url" $primaryURL "label" $primaryLabel "variant" "primary" "external" $primaryExternal) }}
+    {{ with $secondaryURL }}
+      {{ partial "button.html" (dict "url" . "label" (i18n "view_details") "variant" "secondary") }}
+    {{ end }}
+  </div>
 </article>

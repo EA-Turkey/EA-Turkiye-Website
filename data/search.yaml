@@ -1,5 +1,6 @@
 filters:
   - all
+  - resources
   - events
   - cause-areas
   - blog
@@ -8,6 +9,7 @@ filters:
   - news
 
 group_priority:
+  - resources
   - events
   - cause-areas
   - get-involved
@@ -18,18 +20,26 @@ group_priority:
 
 zero_state_suggestions:
   tr:
+    - "Kaynaklar"
     - "Yapay zekâ güvenliği"
     - "Biyogüvenlik"
     - "Yaklaşan etkinlikler"
-    - "Nasıl katılırım?"
   en:
+    - "Resources"
     - "AI safety"
     - "Biosecurity"
     - "Upcoming events"
-    - "How do I get involved?"
 
 query_aliases:
   tr:
+    "kaynak":
+      - "Kaynaklar"
+      - "Giriş"
+      - "Başlangıç"
+    "kaynaklar":
+      - "Kaynaklar"
+      - "Giriş"
+      - "Başlangıç"
     "yapay zeka":
       - "Yapay zekâ güvenliği"
       - "AI safety"
@@ -82,6 +92,14 @@ query_aliases:
     "çevrimiçi":
       - "Online"
   en:
+    "resources":
+      - "Resources"
+      - "Introduction"
+      - "Getting started"
+    "resource":
+      - "Resources"
+      - "Introduction"
+      - "Getting started"
     "ai safety":
       - "Yapay zekâ güvenliği"
       - "Yapay zeka"
@@ -121,6 +139,12 @@ query_aliases:
 
 intent_terms:
   tr:
+    resource:
+      - "kaynak"
+      - "kaynaklar"
+      - "okuma"
+      - "rehber"
+      - "giriş"
     ai-safety:
       - "yapay zeka"
       - "yapay zekâ"
@@ -164,6 +188,12 @@ intent_terms:
       - "hibrit"
       - "hybrid"
   en:
+    resource:
+      - "resource"
+      - "resources"
+      - "reading"
+      - "guide"
+      - "getting started"
     ai-safety:
       - "ai safety"
       - "ai"

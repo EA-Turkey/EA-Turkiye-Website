@@ -4,6 +4,8 @@
     {{ partial "pages/about-list.html" . }}
   {{ else if eq $sectionKey "events" }}
     {{ partial "pages/events-list.html" . }}
+  {{ else if eq $sectionKey "resources" }}
+    {{ partial "pages/resources-list.html" . }}
   {{ else if eq $sectionKey "blog" }}
     {{ partial "pages/blog-list.html" . }}
   {{ else if eq $sectionKey "get-involved" }}
