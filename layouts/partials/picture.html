@@ -4,6 +4,7 @@
 {{ $variant := .variant | default "inline" }}
 {{ $sizes := .sizes | default "100vw" }}
 {{ $loading := cond (eq (.loading | default "") "eager") "eager" "lazy" }}
+{{ $fetchPriority := .fetchpriority | default "" }}
 {{ $resource := resources.Get (printf "images/%s" $src) }}
 {{ $avifBase := replaceRE "\\.[^.]+$" "" $src }}
 
@@ -12,7 +13,7 @@
 {{ else }}
   {{ $widths := slice 640 960 1200 }}
   {{ if eq $variant "hero" }}
-    {{ $widths = slice 480 640 768 960 1280 1440 }}
+    {{ $widths = slice 480 520 560 600 640 768 960 1280 1440 }}
   {{ else if eq $variant "card" }}
     {{ $widths = slice 320 480 640 800 }}
   {{ end }}
@@ -59,6 +60,7 @@
       width="{{ $fallback.Width }}"
       height="{{ $fallback.Height }}"
       loading="{{ $loading }}"
+      {{ with $fetchPriority }}fetchpriority="{{ . }}"{{ end }}
       decoding="async"
     >
   </picture>

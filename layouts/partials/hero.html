@@ -11,6 +11,7 @@
 {{ $imageAlt := .image_alt | default $title }}
 {{ $featuredEvent := .featured_event }}
 {{ $titleLines := slice }}
+{{ $imageSizes := "(min-width: 84rem) 37.5rem, (min-width: 64.0625rem) calc((100vw - 5rem) * 0.475), (min-width: 48.0625rem) calc((100vw - 5rem) / 2), (min-width: 35.0625rem) calc(100vw - 2rem), calc(100vw - 1.25rem)" }}
 
 {{ if and $primaryURL (hasPrefix $primaryURL "/") }}
   {{ $primaryURL = ($primaryURL | strings.TrimPrefix "/") | absURL }}
@@ -20,6 +21,7 @@
 {{ end }}
 {{ if and (eq $variant "home") $page.IsHome }}
   {{ if hasPrefix $page.RelPermalink "/en/" }}
+    {{ $imageSizes = "(min-width: 84rem) 32.625rem, (min-width: 64.0625rem) calc((100vw - 4.5rem) * 0.41), (min-width: 48.0625rem) calc((100vw - 4.5rem) / 2), (min-width: 35.0625rem) calc(100vw - 2rem), calc(100vw - 1.25rem)" }}
     {{ $titleLines = slice "A community" "looking for" "better ways" "to address the" "world's most" "urgent problems" }}
   {{ else }}
     {{ $titleLines = slice "Dünyanın en acil" "sorunları için" "daha iyi yollar" "arayan bir" "topluluk" }}
@@ -53,8 +55,9 @@
           "alt" $imageAlt
           "class" "hero__image"
           "variant" "hero"
-          "sizes" "(min-width: 72rem) 42rem, (min-width: 48rem) calc(100vw - 2rem), calc(100vw - 1.25rem)"
+          "sizes" $imageSizes
           "loading" "eager"
+          "fetchpriority" "high"
         ) }}
       </div>
     {{ end }}
