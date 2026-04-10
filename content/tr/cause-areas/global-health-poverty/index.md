@@ -9,7 +9,7 @@ card_excerpt: Önlenebilir hastalıklar ve aşırı yoksulluk gibi devasa sorunl
 featured_image: cause-areas/global-health-poverty/cover.jpg
 summary: Ölçeği çok büyük, ölçmesi nispeten mümkün ve hâlâ ciddi kaynak açığı bulunan alanlardan biri.
 ---
-Küresel sağlık ve yoksulluk, etkili iyilik içinde en erişilebilir odak alanlarından biri olarak görülür. Bunun nedeni, bazı müdahalelerin etkisinin görece iyi ölçülebilmesi ve küçük ek kaynakların bile önemli fark yaratabilmesidir.
+Küresel sağlık ve yoksulluk, efektif altruizm içinde en erişilebilir odak alanlarından biri olarak görülür. Bunun nedeni, bazı müdahalelerin etkisinin görece iyi ölçülebilmesi ve küçük ek kaynakların bile önemli fark yaratabilmesidir.
 
 Bu alana ilgi duyan biri için başlangıç soruları genellikle şunlardır:
 

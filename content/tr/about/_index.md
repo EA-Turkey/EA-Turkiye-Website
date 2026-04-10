@@ -4,7 +4,7 @@ title: Hakkımızda
 description: EA Türkiye'nin amacı, hikâyesi ve çalışma tarzı.
 url: /hakkimizda/
 hero_eyebrow: Hakkımızda
-hero_title: Türkiye'de etkili iyiliği birlikte inşa etmek
+hero_title: Türkiye'de efektif altruizmi birlikte inşa etmek
 hero_lead: Şehir topluluklarını, öğrenme alanlarını ve yüksek etkili kariyer yönelimlerini birbirine bağlayan ulusal bir topluluğuz.
 hero_image: about/mission.jpg
 hero_image_alt: EA Türkiye topluluk üyeleri bir etkinlik sırasında
@@ -27,6 +27,6 @@ values:
 ---
 ## Hikâyemiz
 
-EA Türkiye, Türkiye'de etkili iyilik çevresinde düşünen insanların birbirini bulmasını kolaylaştırmak için kuruldu. Amacımız tek bir etkinlik serisi üretmekten çok daha fazlası: insanların hangi sorunların en önemli olduğunu birlikte düşünmesini, daha iyi araçlarla karar vermesini ve daha yüksek etkili yollara yönelmesini desteklemek.
+EA Türkiye, Türkiye'de efektif altruizm çevresinde düşünen insanların birbirini bulmasını kolaylaştırmak için kuruldu. Amacımız tek bir etkinlik serisi üretmekten çok daha fazlası: insanların hangi sorunların en önemli olduğunu birlikte düşünmesini, daha iyi araçlarla karar vermesini ve daha yüksek etkili yollara yönelmesini desteklemek.
 
 Bugün bunu şehir toplulukları, giriş programları, kariyer odaklı sohbetler ve çevrimiçi kaynaklar aracılığıyla yapıyoruz. Site de bu yüzden var: yeni gelen biri için net bir giriş noktası, düzenli katılımcı için güncel bir merkez ve iş birliği arayan biri için güvenilir bir temas yüzeyi olmak.

@@ -5,12 +5,12 @@ description: EA Türkiye'ye katılmanın yolları ve iletişim formu.
 url: /katil/
 hero_eyebrow: Katıl
 hero_title: EA Türkiye'ye kendi hızında katıl
-hero_lead: İster tamamen yeni ol, ister zaten etkili iyilikle ilgileniyor ol, burada sana uygun bir giriş noktası bulabilirsin.
+hero_lead: İster tamamen yeni ol, ister zaten efektif altruizmle ilgileniyor ol, burada sana uygun bir giriş noktası bulabilirsin.
 action_cards_text: Topluluğa katılmanın tek bir doğru yolu yok. Bu seçenekler en yaygın başlangıç noktaları.
 action_cards:
   - badge: İlk adım
     title: Giriş oturumuna katıl
-    text: Etkili iyiliğin temel fikirlerini ve topluluğun nasıl çalıştığını konuştuğumuz tanışma oturumlarına gel.
+    text: Efektif altruizmin temel fikirlerini ve topluluğun nasıl çalıştığını konuştuğumuz tanışma oturumlarına gel.
     cta_label: Etkinlikleri gör
     cta_url: /etkinlikler/
   - badge: Öğren
@@ -34,8 +34,8 @@ contact_ids:
   - firat
 faq_text: En sık gelen soruların kısa yanıtlarını burada topladık.
 faq:
-  - question: Etkili iyilik tam olarak nedir?
-    answer: Etkili iyilik, başkalarına yardım etmenin en iyi yollarını kanıt ve akıl yürütmeyle araştıran bir topluluk ve düşünce alanıdır.
+  - question: Efektif altruizm tam olarak nedir?
+    answer: Efektif altruizm, başkalarına yardım etmenin en iyi yollarını kanıt ve akıl yürütmeyle araştıran bir topluluk ve düşünce alanıdır.
   - question: Hangi şehirlerde aktifsiniz?
     answer: Şu anda İstanbul ve Ankara odaklı etkinliklerimizin yanında çevrimiçi buluşmalar da düzenliyoruz.
   - question: Topluluğa yeni katılan biri ilk ne yapmalı?

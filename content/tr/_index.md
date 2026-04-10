@@ -2,7 +2,7 @@
 translationKey: home
 title: EA Türkiye
 description: Kanıt, akıl yürütme ve topluluk aracılığıyla dünyanın en acil sorunlarına daha iyi yanıtlar arayan bir topluluk.
-hero_eyebrow: Etkili İyilik · Türkiye
+hero_eyebrow: Efektif Altruizm · Türkiye
 hero_title: Dünyanın en acil sorunları için daha iyi yollar arayan bir topluluk
 hero_lead: Kanıt, akıl yürütme ve topluluk aracılığıyla başkalarına mümkün olduğunca fazla fayda sağlamanın yollarını araştırıyoruz.
 hero_image: home/CEM_0726.jpg
@@ -25,7 +25,7 @@ stats:
 explainer_label: EA nedir?
 explainer_title: Kanıtla daha fazla iyilik yapmak
 explainer_intro:
-  - Etkili İyilik, başkalarına yardım etmenin en iyi yollarını araştıran bir düşünce alanı ve topluluktur.
+  - Efektif Altruizm, başkalarına yardım etmenin en iyi yollarını araştıran bir düşünce alanı ve topluluktur.
   - Soru yalnızca nasıl yardım edileceği değil, elimizdeki kaynaklarla nasıl en çok iyiliğin yapılabileceğidir.
 pillars:
   - title: Kanıt ve akıl yürütme
@@ -43,10 +43,10 @@ events_section_text: Okuma gruplarından tanışma oturumlarına ve kariyer sohb
 events_section_url: /etkinlikler/
 final_cta_eyebrow: Sonraki adım
 final_cta_title: Topluluğu tanımak için net bir başlangıç noktası seç
-final_cta_text: İster etkili iyiliğe yeni bakıyor ol, ister yüksek etkili bir kariyer arıyor ol, EA Türkiye’de sana uygun bir giriş yolu var.
+final_cta_text: İster efektif altruizme yeni bakıyor ol, ister yüksek etkili bir kariyer arıyor ol, EA Türkiye’de sana uygun bir giriş yolu var.
 final_cta_primary_label: Katıl
 final_cta_primary_url: /katil/
 final_cta_secondary_label: Etkinlikleri gör
 final_cta_secondary_url: /etkinlikler/
 ---
-EA Türkiye, Türkiye'de etkili iyilik etrafında düşünen, öğrenen ve harekete geçen insanların buluşma noktasıdır.
+EA Türkiye, Türkiye'de efektif altruizm etrafında düşünen, öğrenen ve harekete geçen insanların buluşma noktasıdır.
