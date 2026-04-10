@@ -4,9 +4,12 @@
 {{ $orgName := cond (eq $actualLang "en") $langSite.Params.organization.name_en $langSite.Params.organization.name }}
 {{ $year := now.Format "2006" }}
 {{ $footerLogoSizes := "120px" }}
-{{ $footerLogoWebPSrcSet := printf "%s 120w, %s 240w" ("brand/generated/logo-footer-v1-120.webp" | relURL) ("brand/generated/logo-footer-v1-240.webp" | relURL) }}
-{{ $footerLogoPngSrcSet := printf "%s 120w, %s 240w" ("brand/generated/logo-footer-v1-120.png" | relURL) ("brand/generated/logo-footer-v1-240.png" | relURL) }}
-{{ $footerLogoSrc := "brand/generated/logo-footer-v1-120.png" | relURL }}
+{{ $footerLogoBase := cond (eq $actualLang "en") "logo-header-en" "logo-header-tr" }}
+{{ $footerLogoWebPSrcSet := printf "%s 400w, %s 800w" ((printf "brand/generated/%s-400.webp" $footerLogoBase) | relURL) ((printf "brand/generated/%s-800.webp" $footerLogoBase) | relURL) }}
+{{ $footerLogoPngSrcSet := printf "%s 400w, %s 800w" ((printf "brand/generated/%s-400.png" $footerLogoBase) | relURL) ((printf "brand/generated/%s-800.png" $footerLogoBase) | relURL) }}
+{{ $footerLogoSrc := (printf "brand/generated/%s-400.png" $footerLogoBase) | relURL }}
+{{ $footerLogoWidth := cond (eq $actualLang "en") 2709 2542 }}
+{{ $footerLogoHeight := 388 }}
 
 <footer class="site-footer">
   <div class="container--wide footer-grid">
@@ -19,8 +22,8 @@
           srcset="{{ $footerLogoPngSrcSet }}"
           sizes="{{ $footerLogoSizes }}"
           alt="{{ $orgName }}"
-          width="600"
-          height="160"
+          width="{{ $footerLogoWidth }}"
+          height="{{ $footerLogoHeight }}"
           loading="lazy"
           decoding="async"
         >

@@ -8,9 +8,12 @@
 {{ $eventsURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "events") | strings.TrimSpace }}
 {{ $blogURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "blog") | strings.TrimSpace }}
 {{ $headerLogoSizes := "(max-width: 560px) 196px, 235px" }}
-{{ $headerLogoWebPSrcSet := printf "%s 400w, %s 800w" ("brand/generated/logo-header-v1-400.webp" | relURL) ("brand/generated/logo-header-v1-800.webp" | relURL) }}
-{{ $headerLogoPngSrcSet := printf "%s 400w, %s 800w" ("brand/generated/logo-header-v1-400.png" | relURL) ("brand/generated/logo-header-v1-800.png" | relURL) }}
-{{ $headerLogoSrc := "brand/generated/logo-header-v1-400.png" | relURL }}
+{{ $headerLogoBase := cond (eq $actualLang "en") "logo-header-en" "logo-header-tr" }}
+{{ $headerLogoWebPSrcSet := printf "%s 400w, %s 800w" ((printf "brand/generated/%s-400.webp" $headerLogoBase) | relURL) ((printf "brand/generated/%s-800.webp" $headerLogoBase) | relURL) }}
+{{ $headerLogoPngSrcSet := printf "%s 400w, %s 800w" ((printf "brand/generated/%s-400.png" $headerLogoBase) | relURL) ((printf "brand/generated/%s-800.png" $headerLogoBase) | relURL) }}
+{{ $headerLogoSrc := (printf "brand/generated/%s-400.png" $headerLogoBase) | relURL }}
+{{ $headerLogoWidth := cond (eq $actualLang "en") 2709 2542 }}
+{{ $headerLogoHeight := 388 }}
 
 <header class="site-header">
   <div class="container--wide header-inner">
@@ -23,8 +26,8 @@
           srcset="{{ $headerLogoPngSrcSet }}"
           sizes="{{ $headerLogoSizes }}"
           alt="{{ $orgName }}"
-          width="3621"
-          height="518"
+          width="{{ $headerLogoWidth }}"
+          height="{{ $headerLogoHeight }}"
           loading="eager"
           decoding="async"
           fetchpriority="high"
