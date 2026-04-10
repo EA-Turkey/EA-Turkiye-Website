@@ -32,6 +32,10 @@ body {
     linear-gradient(180deg, #fbfeff 0%, var(--color-bg) 50%, #f3f7f8 100%);
 }
 
+body.is-search-open {
+  overflow: hidden;
+}
+
 main {
   display: block;
 }

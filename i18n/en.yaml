@@ -207,3 +207,87 @@
 
 - id: default_meta_description
   translation: "EA Turkey is a community exploring how to do the most good through evidence, reason, and community."
+
+- id: open_search
+  translation: "Open search"
+
+- id: close_search
+  translation: "Close search"
+
+- id: search_short_label
+  translation: "Search"
+
+- id: search_dialog_title
+  translation: "Search the site"
+
+- id: search_placeholder
+  translation: "Search posts, events, cause areas, or cities"
+
+- id: search_loading
+  translation: "Loading the search index..."
+
+- id: search_empty_state
+  translation: "Start with a title, topic, organization, or city."
+
+- id: search_zero_state_title
+  translation: "Start with a few high-signal searches"
+
+- id: search_zero_state_hint
+  translation: "Pick a suggestion below or type your own query."
+
+- id: search_no_results
+  translation: "No results matched this search."
+
+- id: search_no_results_hint
+  translation: "Try a shorter query or a different keyword."
+
+- id: search_error
+  translation: "Search is unavailable right now. Please try again in a moment."
+
+- id: search_filters_label
+  translation: "Search filters"
+
+- id: search_filter_all
+  translation: "All"
+
+- id: search_group_about
+  translation: "About"
+
+- id: search_group_blog
+  translation: "Blog"
+
+- id: search_group_cause_areas
+  translation: "Cause areas"
+
+- id: search_group_events
+  translation: "Events"
+
+- id: search_group_get_involved
+  translation: "Get involved"
+
+- id: search_group_news
+  translation: "News"
+
+- id: search_group_page
+  translation: "Pages"
+
+- id: search_section_about
+  translation: "About"
+
+- id: search_section_blog
+  translation: "Blog"
+
+- id: search_section_cause_areas
+  translation: "Cause area"
+
+- id: search_section_events
+  translation: "Event"
+
+- id: search_section_get_involved
+  translation: "Get involved"
+
+- id: search_section_news
+  translation: "News"
+
+- id: search_section_page
+  translation: "Page"

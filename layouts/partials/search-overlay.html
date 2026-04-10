@@ -1,0 +1,153 @@
+{{ partial "helpers/lang-context.html" . }}
+{{ $actualLang := printf "%s" (.Scratch.Get "actualLang") }}
+{{ $homeURL := .Scratch.Get "homeURL" }}
+{{ $indexURL := printf "%ssearch-index.json" $homeURL }}
+{{ $locale := cond (eq $actualLang "en") "en-US" "tr-TR" }}
+{{ $searchData := site.Data.search | default dict }}
+{{ $filterKeys := $searchData.filters | default (slice "all" "events" "cause-areas" "blog" "get-involved" "about" "news") }}
+{{ $groupPriority := $searchData.group_priority | default (slice "events" "cause-areas" "get-involved" "blog" "news" "about" "page") }}
+{{ $zeroStateSuggestions := index $searchData.zero_state_suggestions $actualLang | default (slice) }}
+{{ $groupLabels := dict
+  "about" (i18n "search_group_about")
+  "blog" (i18n "search_group_blog")
+  "cause-areas" (i18n "search_group_cause_areas")
+  "events" (i18n "search_group_events")
+  "get-involved" (i18n "search_group_get_involved")
+  "news" (i18n "search_group_news")
+  "page" (i18n "search_group_page")
+}}
+{{ $filterLabels := merge $groupLabels (dict "all" (i18n "search_filter_all")) }}
+{{ $filters := slice }}
+{{ range $filterKeys }}
+  {{ $filters = $filters | append (dict
+    "key" .
+    "label" (index $filterLabels . | default (i18n "search_filter_all"))
+  ) }}
+{{ end }}
+{{ $searchConfigJSON := dict
+  "filters" $filters
+  "groupPriority" $groupPriority
+  "groupLabels" $groupLabels
+  "zeroStateSuggestions" $zeroStateSuggestions
+  "queryAliases" (index $searchData.query_aliases $actualLang | default dict)
+  "intentTerms" (index $searchData.intent_terms $actualLang | default dict)
+  "resultLimits" (dict "all" 3 "filtered" 8)
+}}
+
+<div
+  id="site-search-dialog"
+  class="search-overlay"
+  data-search-root
+  data-search-config='{{ $searchConfigJSON | jsonify }}'
+  data-search-index-url="{{ $indexURL }}"
+  data-search-locale="{{ $locale }}"
+  hidden
+>
+  <button class="search-overlay__backdrop" type="button" data-search-close tabindex="-1" aria-hidden="true"></button>
+
+  <div class="search-overlay__panel" data-search-panel role="dialog" aria-modal="true" aria-labelledby="site-search-title">
+    <div class="search-overlay__header">
+      <div class="stack-sm">
+        <span class="hero__eyebrow">{{ i18n "search_short_label" }}</span>
+        <h2 id="site-search-title">{{ i18n "search_dialog_title" }}</h2>
+      </div>
+
+      <button class="search-close" type="button" data-search-close aria-label="{{ i18n "close_search" }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12"></path>
+          <path d="M18 6L6 18"></path>
+        </svg>
+        <span class="sr-only">{{ i18n "close_search" }}</span>
+      </button>
+    </div>
+
+    <form class="search-form" data-search-form role="search">
+      <label class="sr-only" for="site-search-input">{{ i18n "search_short_label" }}</label>
+      <div class="search-form__field">
+        <svg class="search-form__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6"></circle>
+          <path d="M20 20l-4.35-4.35"></path>
+        </svg>
+        <input
+          id="site-search-input"
+          class="search-form__input"
+          type="search"
+          name="q"
+          placeholder="{{ i18n "search_placeholder" }}"
+          autocomplete="off"
+          spellcheck="false"
+          data-search-input
+        >
+      </div>
+    </form>
+
+    <div class="search-overlay__body">
+      <div class="search-filters" role="toolbar" aria-label="{{ i18n "search_filters_label" }}" data-search-filters>
+        {{ range $filters }}
+          <button
+            class="search-filter{{ if eq .key "all" }} is-active{{ end }}"
+            type="button"
+            data-search-filter="{{ .key }}"
+            aria-pressed="{{ if eq .key "all" }}true{{ else }}false{{ end }}"
+          >
+            {{ .label }}
+          </button>
+        {{ end }}
+      </div>
+
+      <div class="search-overlay__content">
+        <div class="search-state search-state--empty" data-search-empty>
+          <div class="stack-sm">
+            <p class="search-state__title">{{ i18n "search_zero_state_title" }}</p>
+            <p>{{ i18n "search_zero_state_hint" }}</p>
+          </div>
+
+          <div class="search-suggestions" data-search-suggestions>
+            {{ range $zeroStateSuggestions }}
+              <button class="search-suggestion" type="button" data-search-suggestion="{{ . }}">
+                {{ . }}
+              </button>
+            {{ end }}
+          </div>
+        </div>
+
+        <div class="search-state" data-search-loading hidden>
+          <p class="search-state__title">{{ i18n "search_loading" }}</p>
+        </div>
+
+        <div class="search-state" data-search-no-results hidden>
+          <p class="search-state__title">{{ i18n "search_no_results" }}</p>
+          <p class="text-muted">{{ i18n "search_no_results_hint" }}</p>
+        </div>
+
+        <div class="search-state" data-search-error hidden>
+          <p class="search-state__title">{{ i18n "search_error" }}</p>
+        </div>
+
+        <div class="search-results" data-search-results hidden></div>
+      </div>
+    </div>
+
+    <template data-search-group-template>
+      <section class="search-group">
+        <div class="search-group__header">
+          <h3 class="search-group__title"></h3>
+        </div>
+        <div class="search-group__results"></div>
+      </section>
+    </template>
+
+    <template data-search-result-template>
+      <article class="search-result">
+        <a class="search-result__link" href="">
+          <div class="search-result__meta">
+            <span class="chip search-result__chip"></span>
+            <time class="search-result__date" hidden></time>
+          </div>
+          <h3 class="search-result__title"></h3>
+          <p class="search-result__summary"></p>
+        </a>
+      </article>
+    </template>
+  </div>
+</div>

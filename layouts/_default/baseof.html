@@ -11,9 +11,12 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
+    {{ partial "search-overlay.html" . }}
     {{ $mainJS := resources.Get "js/main.js" | minify | fingerprint }}
     {{ $formJS := resources.Get "js/form.js" | minify | fingerprint }}
+    {{ $searchJS := resources.Get "js/search.js" | minify | fingerprint }}
     <script src="{{ $mainJS.RelPermalink }}" integrity="{{ $mainJS.Data.Integrity }}" defer></script>
     <script src="{{ $formJS.RelPermalink }}" integrity="{{ $formJS.Data.Integrity }}" defer></script>
+    <script src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}" defer></script>
   </body>
 </html>

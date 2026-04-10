@@ -31,8 +31,24 @@
 
       {{ partial "language-switcher.html" . }}
 
+      <button class="search-trigger search-trigger--desktop" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="{{ i18n "open_search" }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6"></circle>
+          <path d="M20 20l-4.35-4.35"></path>
+        </svg>
+        <span class="search-trigger__label">{{ i18n "search_short_label" }}</span>
+      </button>
+
       {{ partial "button.html" (dict "url" $joinURL "label" (i18n "join_us") "variant" "primary" "class" "button--header-cta") }}
     </nav>
+
+    <button class="search-trigger search-trigger--mobile" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="{{ i18n "open_search" }}">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="6"></circle>
+        <path d="M20 20l-4.35-4.35"></path>
+      </svg>
+      <span class="sr-only">{{ i18n "search_short_label" }}</span>
+    </button>
 
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
       <span class="sr-only">{{ i18n "open_menu" }}</span>

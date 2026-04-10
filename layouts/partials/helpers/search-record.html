@@ -1,0 +1,116 @@
+{{- $page := .page -}}
+{{- $typeLabels := .typeLabels -}}
+{{- $groupLabels := .groupLabels -}}
+{{- $modeLabels := .modeLabels -}}
+{{- $levelLabels := .levelLabels -}}
+{{- $causeLabels := .causeLabels -}}
+{{- $sectionPriorities := .sectionPriorities -}}
+{{- $sectionKey := partial "helpers/section-key.html" $page | strings.TrimSpace -}}
+{{- $summary := $page.Params.summary | default $page.Params.description | default "" -}}
+{{- $body := replaceRE "\\s+" " " ($page.Plain | strings.TrimSpace) -}}
+{{- $metadataParts := slice -}}
+{{- $aliasParts := slice -}}
+{{- $translationAliases := slice -}}
+{{- $intentTags := slice -}}
+{{- $groupKey := $sectionKey -}}
+{{- $groupLabel := index $groupLabels $groupKey | default (index $groupLabels "page") -}}
+
+{{- with $page.Params.city -}}
+  {{- $metadataParts = $metadataParts | append . -}}
+  {{- $aliasParts = $aliasParts | append . -}}
+{{- end -}}
+{{- with $page.Params.venue -}}
+  {{- $metadataParts = $metadataParts | append . -}}
+{{- end -}}
+{{- with $page.Params.schedule_text -}}
+  {{- $metadataParts = $metadataParts | append . -}}
+{{- end -}}
+{{- with $page.Params.publisher -}}
+  {{- $metadataParts = $metadataParts | append . -}}
+{{- end -}}
+{{- with $page.Params.level -}}
+  {{- $metadataParts = $metadataParts | append (index $levelLabels . | default .) -}}
+{{- end -}}
+{{- with $page.Params.event_mode -}}
+  {{- $metadataParts = $metadataParts | append (index $modeLabels . | default .) -}}
+  {{- $aliasParts = $aliasParts | append (index $modeLabels . | default .) -}}
+  {{- $aliasParts = $aliasParts | append . -}}
+{{- end -}}
+{{- with $page.Params.cause_area -}}
+  {{- $metadataParts = $metadataParts | append (index $causeLabels . | default .) -}}
+  {{- $aliasParts = $aliasParts | append (index $causeLabels . | default .) -}}
+{{- end -}}
+{{- with $page.Params.accent -}}
+  {{- $metadataParts = $metadataParts | append (index $causeLabels . | default .) -}}
+  {{- $aliasParts = $aliasParts | append (index $causeLabels . | default .) -}}
+  {{- $aliasParts = $aliasParts | append (replace . "-" " ") -}}
+{{- end -}}
+{{- with $page.Params.translationKey -}}
+  {{- $aliasParts = $aliasParts | append (replace . "-" " ") -}}
+{{- end -}}
+{{- range $page.Translations -}}
+  {{- $translationAliases = $translationAliases | append .Title -}}
+{{- end -}}
+{{- with $page.Params.aliases -}}
+  {{- range . -}}
+    {{- $aliasParts = $aliasParts | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if eq $sectionKey "events" -}}
+  {{- $intentTags = $intentTags | append "event" -}}
+{{- end -}}
+{{- if eq $sectionKey "get-involved" -}}
+  {{- $intentTags = $intentTags | append "newcomer" "get-involved" -}}
+{{- end -}}
+{{- with $page.Params.accent -}}
+  {{- $intentTags = $intentTags | append . -}}
+{{- end -}}
+{{- with $page.Params.cause_area -}}
+  {{- $intentTags = $intentTags | append . -}}
+{{- end -}}
+{{- with $page.Params.event_mode -}}
+  {{- $intentTags = $intentTags | append . -}}
+{{- end -}}
+
+{{- $timestamp := 0 -}}
+{{- $dateDisplay := "" -}}
+{{- $eventStartTs := 0 -}}
+{{- if and (eq $sectionKey "events") $page.Params.start -}}
+  {{- $eventTime := time.AsTime $page.Params.start -}}
+  {{- $timestamp = $eventTime.Unix -}}
+  {{- $eventStartTs = $eventTime.Unix -}}
+  {{- $dateDisplay = $eventTime | time.Format ":date_long" -}}
+{{- else if and (or (eq $sectionKey "blog") (eq $sectionKey "news")) $page.Date -}}
+  {{- $timestamp = $page.Date.Unix -}}
+  {{- $dateDisplay = $page.Date | time.Format ":date_long" -}}
+{{- end -}}
+
+{{- $snippetSource := cond (ne $summary "") (printf "%s %s" $summary $body | strings.TrimSpace) $body -}}
+{{- $aliases := $aliasParts -}}
+
+{{- $record := dict
+  "id" (printf "%s:%s" $sectionKey $page.RelPermalink)
+  "title" $page.Title
+  "permalink" $page.RelPermalink
+  "section" $sectionKey
+  "group_key" $groupKey
+  "group_label" $groupLabel
+  "type_label" (index $typeLabels $sectionKey | default (i18n "search_section_page"))
+  "date_display" $dateDisplay
+  "timestamp" $timestamp
+  "event_start_ts" $eventStartTs
+  "city" ($page.Params.city | default "")
+  "event_mode" ($page.Params.event_mode | default "")
+  "section_priority" (index $sectionPriorities $groupKey | default 0)
+  "translation_key" ($page.Params.translationKey | default "")
+  "aliases" $aliases
+  "translation_aliases" $translationAliases
+  "intent_tags" $intentTags
+  "summary" $summary
+  "snippet_source" $snippetSource
+  "content" $body
+  "metadata" (delimit $metadataParts " ")
+-}}
+
+{{- return $record -}}

@@ -207,3 +207,87 @@
 
 - id: default_meta_description
   translation: "EA Türkiye, kanıt, akıl yürütme ve topluluk aracılığıyla en çok iyiliği yapmanın yollarını araştıran bir topluluktur."
+
+- id: open_search
+  translation: "Aramayı aç"
+
+- id: close_search
+  translation: "Aramayı kapat"
+
+- id: search_short_label
+  translation: "Ara"
+
+- id: search_dialog_title
+  translation: "Site içinde ara"
+
+- id: search_placeholder
+  translation: "Yazılar, etkinlikler, odak alanları ya da şehir ara"
+
+- id: search_loading
+  translation: "Arama dizini yükleniyor..."
+
+- id: search_empty_state
+  translation: "Başlamak için bir başlık, konu, kurum ya da şehir yaz."
+
+- id: search_zero_state_title
+  translation: "Öne çıkan aramalarla keşfet"
+
+- id: search_zero_state_hint
+  translation: "İstersen önerilerden biriyle başlayabilir ya da kendi aramanı yazabilirsin."
+
+- id: search_no_results
+  translation: "Bu arama için sonuç bulunamadı."
+
+- id: search_no_results_hint
+  translation: "Daha kısa ya da farklı bir ifade deneyebilirsin."
+
+- id: search_error
+  translation: "Arama şu anda yüklenemiyor. Lütfen birazdan tekrar dene."
+
+- id: search_filters_label
+  translation: "Arama filtreleri"
+
+- id: search_filter_all
+  translation: "Tümü"
+
+- id: search_group_about
+  translation: "Hakkımızda"
+
+- id: search_group_blog
+  translation: "Blog"
+
+- id: search_group_cause_areas
+  translation: "Odak alanları"
+
+- id: search_group_events
+  translation: "Etkinlikler"
+
+- id: search_group_get_involved
+  translation: "Katıl"
+
+- id: search_group_news
+  translation: "Haberler"
+
+- id: search_group_page
+  translation: "Sayfalar"
+
+- id: search_section_about
+  translation: "Hakkımızda"
+
+- id: search_section_blog
+  translation: "Blog"
+
+- id: search_section_cause_areas
+  translation: "Odak alanı"
+
+- id: search_section_events
+  translation: "Etkinlik"
+
+- id: search_section_get_involved
+  translation: "Katıl"
+
+- id: search_section_news
+  translation: "Haber"
+
+- id: search_section_page
+  translation: "Sayfa"

@@ -1,0 +1,197 @@
+filters:
+  - all
+  - events
+  - cause-areas
+  - blog
+  - get-involved
+  - about
+  - news
+
+group_priority:
+  - events
+  - cause-areas
+  - get-involved
+  - blog
+  - news
+  - about
+  - page
+
+zero_state_suggestions:
+  tr:
+    - "Yapay zekâ güvenliği"
+    - "Biyogüvenlik"
+    - "Yaklaşan etkinlikler"
+    - "Nasıl katılırım?"
+  en:
+    - "AI safety"
+    - "Biosecurity"
+    - "Upcoming events"
+    - "How do I get involved?"
+
+query_aliases:
+  tr:
+    "yapay zeka":
+      - "Yapay zekâ güvenliği"
+      - "AI safety"
+      - "AI"
+    "yapay zekâ":
+      - "Yapay zekâ güvenliği"
+      - "AI safety"
+      - "AI"
+    "ai":
+      - "AI safety"
+      - "Yapay zekâ güvenliği"
+    "ai safety":
+      - "Yapay zekâ güvenliği"
+      - "Yapay zeka guvenligi"
+    "biyoguvenlik":
+      - "Biyogüvenlik"
+      - "Biosecurity"
+    "biyogüvenlik":
+      - "Biosecurity"
+    "baslangic":
+      - "Başlangıç"
+      - "Katıl"
+      - "Nasıl katılırım?"
+      - "Get involved"
+    "başlangıç":
+      - "Katıl"
+      - "Nasıl katılırım?"
+      - "Get involved"
+    "nasil katilirim":
+      - "Nasıl katılırım?"
+      - "Katıl"
+      - "Get involved"
+    "nasıl katılırım":
+      - "Katıl"
+      - "Get involved"
+    "katil":
+      - "Katıl"
+      - "Başlangıç"
+      - "Get involved"
+    "katıl":
+      - "Başlangıç"
+      - "Get involved"
+    "etkinlik":
+      - "Yaklaşan etkinlikler"
+      - "Buluşma"
+      - "Program"
+    "cevrimici":
+      - "Çevrimiçi"
+      - "Online"
+    "çevrimiçi":
+      - "Online"
+  en:
+    "ai safety":
+      - "Yapay zekâ güvenliği"
+      - "Yapay zeka"
+      - "AI"
+    "yapay zeka":
+      - "Yapay zekâ güvenliği"
+      - "AI safety"
+    "biosecurity":
+      - "Biyogüvenlik"
+    "biyoguvenlik":
+      - "Biosecurity"
+      - "Biyogüvenlik"
+    "beginner":
+      - "Get involved"
+      - "Newcomer"
+    "newcomer":
+      - "Get involved"
+      - "Beginner"
+    "get involved":
+      - "How do I get involved?"
+      - "Beginner"
+      - "Newcomer"
+    "how do i get involved":
+      - "Get involved"
+      - "Beginner"
+      - "Newcomer"
+    "event":
+      - "Upcoming events"
+      - "Meetup"
+      - "Session"
+    "upcoming events":
+      - "Event"
+      - "Meetup"
+    "online":
+      - "Remote"
+      - "Virtual"
+
+intent_terms:
+  tr:
+    ai-safety:
+      - "yapay zeka"
+      - "yapay zekâ"
+      - "yapay zeka guvenligi"
+      - "yapay zekâ güvenliği"
+      - "ai safety"
+      - "ai"
+    newcomer:
+      - "başlangıç"
+      - "baslangic"
+      - "giriş"
+      - "giris"
+      - "katıl"
+      - "katil"
+      - "nasıl katılırım"
+      - "nasil katilirim"
+      - "get involved"
+      - "ilk adım"
+      - "ilk adim"
+    event:
+      - "etkinlik"
+      - "etkinlikler"
+      - "buluşma"
+      - "bulusma"
+      - "zirve"
+      - "program"
+      - "oturum"
+      - "toplantı"
+      - "toplanti"
+      - "session"
+      - "summit"
+      - "yaklaşan etkinlikler"
+      - "yaklasan etkinlikler"
+    city:
+      - "ankara"
+      - "istanbul"
+    online:
+      - "çevrimiçi"
+      - "cevrimici"
+      - "online"
+      - "hibrit"
+      - "hybrid"
+  en:
+    ai-safety:
+      - "ai safety"
+      - "ai"
+      - "artificial intelligence"
+      - "yapay zeka"
+      - "yapay zekâ"
+    newcomer:
+      - "get involved"
+      - "beginner"
+      - "newcomer"
+      - "getting started"
+      - "how do i get involved"
+      - "how can i get involved"
+      - "where should i start"
+    event:
+      - "event"
+      - "events"
+      - "meetup"
+      - "meeting"
+      - "summit"
+      - "program"
+      - "session"
+      - "upcoming events"
+    city:
+      - "ankara"
+      - "istanbul"
+    online:
+      - "online"
+      - "remote"
+      - "virtual"
+      - "hybrid"

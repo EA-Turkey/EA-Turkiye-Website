@@ -30,9 +30,15 @@ summaryLength = 40
       unsafe = false
 
 [outputs]
-  home = ["HTML"]
+  home = ["HTML", "searchIndex"]
   section = ["HTML"]
   page = ["HTML"]
+
+[outputFormats.searchIndex]
+  mediaType = "application/json"
+  baseName = "search-index"
+  isPlainText = true
+  notAlternative = true
 
 [params]
   default_og_image = "brand/og-default-organizer.png"
