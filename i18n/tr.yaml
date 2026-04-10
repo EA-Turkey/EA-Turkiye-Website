@@ -254,10 +254,10 @@
   translation: "İleri seviye"
 
 - id: language_en
-  translation: "EN"
+  translation: "İngilizce"
 
 - id: language_tr
-  translation: "TR"
+  translation: "Türkçe"
 
 - id: view_details
   translation: "Detayları gör"

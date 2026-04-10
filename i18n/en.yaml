@@ -254,10 +254,10 @@
   translation: "Advanced"
 
 - id: language_en
-  translation: "EN"
+  translation: "English"
 
 - id: language_tr
-  translation: "TR"
+  translation: "Turkish"
 
 - id: view_details
   translation: "View details"
