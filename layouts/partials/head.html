@@ -1,10 +1,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ partial "seo-meta.html" . }}
+{{ $headerLogoSizes := "(max-width: 560px) 196px, 235px" }}
+{{ $headerLogoPreload := "brand/generated/logo-header-v1-400.webp" | relURL }}
+{{ $headerLogoSrcSet := printf "%s 400w, %s 800w" ("brand/generated/logo-header-v1-400.webp" | relURL) ("brand/generated/logo-header-v1-800.webp" | relURL) }}
 
 <link rel="preload" href="{{ "fonts/inter-400-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ "fonts/inter-600-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ "fonts/playfair-700-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link
+  rel="preload"
+  href="{{ $headerLogoPreload }}"
+  as="image"
+  type="image/webp"
+  imagesrcset="{{ $headerLogoSrcSet }}"
+  imagesizes="{{ $headerLogoSizes }}"
+  fetchpriority="high"
+>
 
 {{ $css := slice
   (resources.Get "css/tokens.css")

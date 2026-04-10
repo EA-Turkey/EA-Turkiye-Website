@@ -3,11 +3,28 @@
 {{ $actualLang := .Scratch.Get "actualLang" }}
 {{ $orgName := cond (eq $actualLang "en") $langSite.Params.organization.name_en $langSite.Params.organization.name }}
 {{ $year := now.Format "2006" }}
+{{ $footerLogoSizes := "120px" }}
+{{ $footerLogoWebPSrcSet := printf "%s 120w, %s 240w" ("brand/generated/logo-footer-v1-120.webp" | relURL) ("brand/generated/logo-footer-v1-240.webp" | relURL) }}
+{{ $footerLogoPngSrcSet := printf "%s 120w, %s 240w" ("brand/generated/logo-footer-v1-120.png" | relURL) ("brand/generated/logo-footer-v1-240.png" | relURL) }}
+{{ $footerLogoSrc := "brand/generated/logo-footer-v1-120.png" | relURL }}
 
 <footer class="site-footer">
   <div class="container--wide footer-grid">
     <div class="footer-column footer-brand">
-      <img src="{{ $langSite.Params.brand.logo_footer | relURL }}" alt="{{ $orgName }}">
+      <picture>
+        <source type="image/webp" srcset="{{ $footerLogoWebPSrcSet }}" sizes="{{ $footerLogoSizes }}">
+        <source type="image/png" srcset="{{ $footerLogoPngSrcSet }}" sizes="{{ $footerLogoSizes }}">
+        <img
+          src="{{ $footerLogoSrc }}"
+          srcset="{{ $footerLogoPngSrcSet }}"
+          sizes="{{ $footerLogoSizes }}"
+          alt="{{ $orgName }}"
+          width="600"
+          height="160"
+          loading="lazy"
+          decoding="async"
+        >
+      </picture>
       <p class="footer-copy">{{ i18n "footer_org_description" }}</p>
       <p class="copyright">© {{ $year }} {{ i18n "footer_copyright" }}</p>
     </div>

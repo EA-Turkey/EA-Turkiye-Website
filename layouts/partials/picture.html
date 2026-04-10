@@ -12,7 +12,7 @@
 {{ else }}
   {{ $widths := slice 640 960 1200 }}
   {{ if eq $variant "hero" }}
-    {{ $widths = slice 640 960 1280 1600 }}
+    {{ $widths = slice 480 640 768 960 1280 1440 }}
   {{ else if eq $variant "card" }}
     {{ $widths = slice 320 480 640 800 }}
   {{ end }}
