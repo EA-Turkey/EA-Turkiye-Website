@@ -1,6 +1,7 @@
+{{ $fonts := resources.Get "css/fonts.css" | resources.ExecuteAsTemplate "css/fonts.css" . }}
 {{ $css := slice
   (resources.Get "css/tokens.css")
-  (resources.Get "css/fonts.css")
+  $fonts
   (resources.Get "css/base.css")
   (resources.Get "css/layout.css")
   (resources.Get "css/components.css")
