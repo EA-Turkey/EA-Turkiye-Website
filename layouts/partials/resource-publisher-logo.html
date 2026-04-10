@@ -14,10 +14,15 @@
   "Oxford University Press" "org-logos/oxford-university-press.svg"
   "Probably Good" "org-logos/probably-good-logo-dark.png"
   "TED" "org-logos/ted.svg"
-  "UCL Discovery" "org-logos/ucl-discovery.svg"
-  "Vox Future Perfect" "org-logos/vox-future-perfect.svg"
+  "UCL Discovery" "org-logos/ucl-discovery.png"
+  "Vox Future Perfect" "org-logos/vox-logo.jpg"
 }}
 {{ $src := index $logos $publisher }}
+{{ $logoModifiers := dict
+  "80,000 Hours" "resource-card__logo--80k-hours"
+  "Our World in Data" "resource-card__logo--our-world-in-data"
+}}
+{{ $logoModifier := index $logoModifiers $publisher }}
 
 {{ with $src }}
   {{ $resource := resources.Get (printf "images/%s" .) }}
@@ -28,7 +33,7 @@
         <img
           src="{{ .RelPermalink }}"
           alt=""
-          class="resource-card__logo"
+          class="resource-card__logo{{ with $logoModifier }} {{ . }}{{ end }}"
           loading="lazy"
           decoding="async"
         >
@@ -52,6 +57,7 @@
         {{ $jpegFallbackPublishers := dict
           "Probably Good" true
           "Our World in Data" true
+          "Vox Future Perfect" true
         }}
         {{ $fallbackFormat := cond (index $jpegFallbackPublishers $publisher) "jpg" "png" }}
         {{ $fallbackSet := slice }}
@@ -82,7 +88,7 @@
             srcset="{{ delimit $fallbackSet ", " }}"
             sizes="(max-width: 560px) 42vw, 160px"
             alt=""
-            class="resource-card__logo"
+            class="resource-card__logo{{ with $logoModifier }} {{ . }}{{ end }}"
             width="{{ $fallback.Width }}"
             height="{{ $fallback.Height }}"
             loading="lazy"
