@@ -1,4 +1,4 @@
-{{ $url := .url }}
+{{ $url := partial "helpers/resolve-url.html" .url | strings.TrimSpace }}
 {{ $label := .label }}
 {{ $variant := .variant | default "primary" }}
 {{ $isExternal := .external | default false }}

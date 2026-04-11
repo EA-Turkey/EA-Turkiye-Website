@@ -1,7 +1,4 @@
-{{ $url := .cta_url | default .cta_anchor }}
-{{ if and $url (hasPrefix $url "/") }}
-  {{ $url = ($url | strings.TrimPrefix "/") | absURL }}
-{{ end }}
+{{ $url := partial "helpers/resolve-url.html" (.cta_url | default .cta_anchor) | strings.TrimSpace }}
 <article class="action-card">
   {{ if $url }}
     <a class="action-card__link" href="{{ $url }}">

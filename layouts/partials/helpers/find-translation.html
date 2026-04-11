@@ -20,6 +20,6 @@
 {{- end -}}
 {{- if not $targetURL -}}
   {{- $sectionKey := partial "helpers/section-key.html" $page | strings.TrimSpace -}}
-  {{- $targetURL = ((partial "helpers/section-root.html" (dict "lang" $targetLang "key" $sectionKey) | strings.TrimSpace) | strings.TrimPrefix "/") | absURL -}}
+  {{- $targetURL = partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $targetLang "key" $sectionKey) | strings.TrimSpace) | strings.TrimSpace -}}
 {{- end -}}
 {{- $targetURL -}}

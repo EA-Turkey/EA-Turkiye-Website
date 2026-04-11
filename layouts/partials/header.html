@@ -3,10 +3,10 @@
 {{ $homeURL := .Scratch.Get "homeURL" }}
 {{ $actualLang := .Scratch.Get "actualLang" }}
 {{ $orgName := cond (eq $actualLang "en") $langSite.Params.organization.name_en $langSite.Params.organization.name }}
-{{ $joinURL := ((partial "helpers/section-root.html" (dict "lang" $actualLang "key" "get-involved") | strings.TrimSpace) | strings.TrimPrefix "/") | absURL }}
-{{ $aboutURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "about") | strings.TrimSpace }}
-{{ $eventsURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "events") | strings.TrimSpace }}
-{{ $blogURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "blog") | strings.TrimSpace }}
+{{ $joinURL := partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $actualLang "key" "get-involved") | strings.TrimSpace) | strings.TrimSpace }}
+{{ $aboutURL := partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $actualLang "key" "about") | strings.TrimSpace) | strings.TrimSpace }}
+{{ $eventsURL := partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $actualLang "key" "events") | strings.TrimSpace) | strings.TrimSpace }}
+{{ $blogURL := partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $actualLang "key" "blog") | strings.TrimSpace) | strings.TrimSpace }}
 {{ $headerLogoSizes := "(max-width: 560px) 196px, 235px" }}
 {{ $headerLogoBase := cond (eq $actualLang "en") "logo-header-en" "logo-header-tr" }}
 {{ $headerLogoWebPSrcSet := printf "%s 400w, %s 800w" ((printf "brand/generated/%s-400.webp" $headerLogoBase) | relURL) ((printf "brand/generated/%s-800.webp" $headerLogoBase) | relURL) }}

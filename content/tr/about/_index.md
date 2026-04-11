@@ -7,7 +7,7 @@ hero_eyebrow: Hakkımızda
 hero_title: Türkiye'de efektif altruizmi birlikte inşa etmek
 hero_lead: Şehir topluluklarını, öğrenme alanlarını ve yüksek etkili kariyer yönelimlerini birbirine bağlayan ulusal bir topluluğuz.
 hero_image: about/mission.jpg
-hero_image_alt: EA Türkiye topluluk üyeleri bir etkinlik sırasında
+hero_image_alt: EA Türkiye topluluk üyeleri Etkili İyilik İstanbul Zirvesi'nde birlikte poz veriyor
 team_eyebrow: Ekip
 team_text: Çekirdek ekip, topluluğun sürdürülebilir biçimde büyümesi için programlar, ortaklıklar ve yerel bağlantılar üzerinde çalışıyor.
 team_ids:

@@ -3,9 +3,9 @@
 {{ $eyebrow := .eyebrow }}
 {{ $title := .title }}
 {{ $lead := .lead }}
-{{ $primaryURL := .primary_url }}
+{{ $primaryURL := partial "helpers/resolve-url.html" .primary_url | strings.TrimSpace }}
 {{ $primaryLabel := .primary_label }}
-{{ $secondaryURL := .secondary_url }}
+{{ $secondaryURL := partial "helpers/resolve-url.html" .secondary_url | strings.TrimSpace }}
 {{ $secondaryLabel := .secondary_label }}
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default $title }}
@@ -13,12 +13,6 @@
 {{ $titleLines := slice }}
 {{ $imageSizes := "(min-width: 84rem) 37.5rem, (min-width: 64.0625rem) calc((100vw - 5rem) * 0.475), (min-width: 48.0625rem) calc((100vw - 5rem) / 2), (min-width: 35.0625rem) calc(100vw - 2rem), calc(100vw - 1.25rem)" }}
 
-{{ if and $primaryURL (hasPrefix $primaryURL "/") }}
-  {{ $primaryURL = ($primaryURL | strings.TrimPrefix "/") | absURL }}
-{{ end }}
-{{ if and $secondaryURL (hasPrefix $secondaryURL "/") }}
-  {{ $secondaryURL = ($secondaryURL | strings.TrimPrefix "/") | absURL }}
-{{ end }}
 {{ if and (eq $variant "home") $page.IsHome }}
   {{ if hasPrefix $page.RelPermalink "/en/" }}
     {{ $imageSizes = "(min-width: 84rem) 32.625rem, (min-width: 64.0625rem) calc((100vw - 4.5rem) * 0.41), (min-width: 48.0625rem) calc((100vw - 4.5rem) / 2), (min-width: 35.0625rem) calc(100vw - 2rem), calc(100vw - 1.25rem)" }}

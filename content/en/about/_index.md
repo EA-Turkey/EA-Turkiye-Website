@@ -6,7 +6,7 @@ hero_eyebrow: About
 hero_title: Building effective altruism in Turkey together
 hero_lead: We are a national community connecting city groups, learning spaces, and people exploring high-impact careers.
 hero_image: about/mission.jpg
-hero_image_alt: EA Turkey community members during an event
+hero_image_alt: EA Turkey community members posing together at the Etkili Iyilik Istanbul Summit
 team_eyebrow: Team
 team_text: The core team works on programs, partnerships, and local relationships that help the community grow sustainably.
 team_ids:

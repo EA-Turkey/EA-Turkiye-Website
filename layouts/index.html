@@ -37,18 +37,9 @@
   {{ if gt (len $upcoming) 0 }}
     {{ $featuredEvent = index $upcoming 0 }}
   {{ end }}
-  {{ $eventsSectionURL := .Params.events_section_url }}
-  {{ if and $eventsSectionURL (hasPrefix $eventsSectionURL "/") }}
-    {{ $eventsSectionURL = ($eventsSectionURL | strings.TrimPrefix "/") | absURL }}
-  {{ end }}
-  {{ $finalPrimaryURL := .Params.final_cta_primary_url }}
-  {{ if and $finalPrimaryURL (hasPrefix $finalPrimaryURL "/") }}
-    {{ $finalPrimaryURL = ($finalPrimaryURL | strings.TrimPrefix "/") | absURL }}
-  {{ end }}
-  {{ $finalSecondaryURL := .Params.final_cta_secondary_url }}
-  {{ if and $finalSecondaryURL (hasPrefix $finalSecondaryURL "/") }}
-    {{ $finalSecondaryURL = ($finalSecondaryURL | strings.TrimPrefix "/") | absURL }}
-  {{ end }}
+  {{ $eventsSectionURL := partial "helpers/resolve-url.html" .Params.events_section_url | strings.TrimSpace }}
+  {{ $finalPrimaryURL := partial "helpers/resolve-url.html" .Params.final_cta_primary_url | strings.TrimSpace }}
+  {{ $finalSecondaryURL := partial "helpers/resolve-url.html" .Params.final_cta_secondary_url | strings.TrimSpace }}
 
   {{ partial "hero.html" (dict
     "page" .

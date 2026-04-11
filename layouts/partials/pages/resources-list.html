@@ -191,17 +191,17 @@
   {{ if and $primaryURL (hasPrefix $primaryURL "/") }}
     {{ $primaryKey := replaceRE "^/|/$" "" $primaryURL }}
     {{ if index $resolveSectionURL $primaryKey }}
-      {{ $primaryURL = partial "helpers/section-root.html" (dict "lang" $actualLang "key" $primaryKey) | strings.TrimSpace }}
+      {{ $primaryURL = partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $actualLang "key" $primaryKey) | strings.TrimSpace) | strings.TrimSpace }}
     {{ else }}
-      {{ $primaryURL = ($primaryURL | strings.TrimPrefix "/") | absURL }}
+      {{ $primaryURL = partial "helpers/resolve-url.html" $primaryURL | strings.TrimSpace }}
     {{ end }}
   {{ end }}
   {{ if and $secondaryURL (hasPrefix $secondaryURL "/") }}
     {{ $secondaryKey := replaceRE "^/|/$" "" $secondaryURL }}
     {{ if index $resolveSectionURL $secondaryKey }}
-      {{ $secondaryURL = partial "helpers/section-root.html" (dict "lang" $actualLang "key" $secondaryKey) | strings.TrimSpace }}
+      {{ $secondaryURL = partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $actualLang "key" $secondaryKey) | strings.TrimSpace) | strings.TrimSpace }}
     {{ else }}
-      {{ $secondaryURL = ($secondaryURL | strings.TrimPrefix "/") | absURL }}
+      {{ $secondaryURL = partial "helpers/resolve-url.html" $secondaryURL | strings.TrimSpace }}
     {{ end }}
   {{ end }}
   <section class="section section--surface">

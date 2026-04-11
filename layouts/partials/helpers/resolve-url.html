@@ -1,0 +1,8 @@
+{{- $url := . -}}
+{{- if and $url (hasPrefix $url "/") (not (hasPrefix $url "//")) -}}
+  {{- $homePath := site.Home.RelPermalink -}}
+  {{- if and (ne $homePath "/") (not (hasPrefix $url $homePath)) -}}
+    {{- $url = ($url | strings.TrimPrefix "/") | relURL -}}
+  {{- end -}}
+{{- end -}}
+{{- $url -}}
