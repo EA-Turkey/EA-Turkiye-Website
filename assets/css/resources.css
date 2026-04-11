@@ -72,7 +72,9 @@
 }
 
 .resource-card {
+  --resource-logo-height: 2.25rem;
   display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
   gap: var(--space-20);
   min-width: 0;
   padding: var(--space-24);
@@ -95,7 +97,7 @@
 .resource-card__logo-mark {
   display: flex;
   align-items: center;
-  min-height: 2rem;
+  min-height: var(--resource-logo-height);
 }
 
 .resource-card__logo-picture {
@@ -107,19 +109,17 @@
   display: block;
   width: auto;
   max-width: min(10rem, 100%);
-  max-height: 2rem;
+  max-height: var(--resource-logo-height);
   object-fit: contain;
   object-position: left center;
 }
 
 .resource-card__logo--80k-hours {
   max-width: min(11rem, 100%);
-  max-height: 2.25rem;
 }
 
 .resource-card__logo--our-world-in-data {
   max-width: min(11.5rem, 100%);
-  max-height: 2.8rem;
 }
 
 .resource-card__language-chip {
@@ -160,10 +160,13 @@
 
 .resource-card__actions {
   align-items: stretch;
+  margin-top: auto;
 }
 
 .resource-card__actions .button {
   justify-content: center;
+  min-height: 3.25rem;
+  white-space: nowrap;
 }
 
 .resource-single__meta {
@@ -218,6 +221,10 @@
 }
 
 @media (max-width: 560px) {
+  .resource-card {
+    --resource-logo-height: 1.95rem;
+  }
+
   .resources-jump-links__list {
     display: grid;
     grid-template-columns: 1fr;
@@ -225,17 +232,14 @@
 
   .resource-card__logo {
     max-width: min(9rem, 100%);
-    max-height: 1.75rem;
   }
 
   .resource-card__logo--80k-hours {
     max-width: min(9.75rem, 100%);
-    max-height: 1.95rem;
   }
 
   .resource-card__logo--our-world-in-data {
     max-width: min(10rem, 100%);
-    max-height: 2.15rem;
   }
 
   .resources-jump-links__list a,
