@@ -6,6 +6,7 @@ slug: biosecurity
 accent: biosecurity
 card_excerpt: We look at how to build stronger institutions and prevention capacity for pandemics and other biological threats.
 featured_image: cause-areas/biosecurity/cover.jpg
+featured_image_credit: "Photo by [CDC](https://unsplash.com/@cdc?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText)"
 summary: An area with very large downside risk, fluctuating public attention, and still-limited prevention capacity.
 ---
 Biosecurity is about more than preparing for the next pandemic. It also includes early detection, laboratory safety, institutional coordination, and risk communication.

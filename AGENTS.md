@@ -22,6 +22,13 @@ Lean bilingual Hugo site for EA Türkiye.
 - Keep translation pairs aligned by internal folder name and `translationKey`
 - Do not reintroduce Doks/Thulite, Hugo Modules, or Node-based build steps
 
+## Image Pipeline
+
+- Responsive page images rendered through `layouts/partials/picture.html` should use committed AVIF derivatives from `static/avif/` and committed MozJPEG derivatives from `static/jpg/`
+- Regenerate AVIF with `./scripts/generate-avif.sh` after changing source photos
+- Regenerate MozJPEG JPEG derivatives with `./scripts/generate-jpeg.sh` after changing source photos
+- Do not assume every `.jpg` in the repo is MozJPEG; source assets in `assets/images/`, brand files in `static/brand/`, and some non-`picture.html` fallbacks may remain original or Hugo-generated
+
 ## Multilingual Caveat
 
 Hugo's `contentDir` language bug is treated as active.

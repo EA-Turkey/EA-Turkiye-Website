@@ -200,6 +200,7 @@ Do not edit the same person in multiple page files.
 - Cause images: `assets/images/cause-areas/<translationKey>/cover.jpg`
 - Team headshots: `assets/images/team/<person-id>.jpg`
 - AVIF derivatives: `static/avif/<matching-path>-<width>.avif`
+- MozJPEG derivatives: `static/jpg/<matching-path>-<width>.jpg`
 
 Reference these in front matter without the `assets/images/` prefix.
 
@@ -219,7 +220,8 @@ featured_image: events/ea-intro-session-april-2026/cover.jpg
 6. Put the image in `assets/images/events/<translationKey>/cover.jpg`.
 7. Update `start`, `schedule_text`, `city`, `event_mode`, `source_url`, and any optional `luma_url`.
 8. Add `calendar_start` and `calendar_end` only when both are accurate.
-8. Run `./scripts/generate-avif.sh`.
+9. Run `./scripts/generate-avif.sh`.
+10. Run `./scripts/generate-jpeg.sh`.
 
 ## How to add a new blog post
 
@@ -229,6 +231,7 @@ featured_image: events/ea-intro-session-april-2026/cover.jpg
 4. Add or update `source_url`.
 5. Add the image to `assets/images/blog/<translationKey>/cover.jpg` if needed.
 6. Run `./scripts/generate-avif.sh` if you changed images.
+7. Run `./scripts/generate-jpeg.sh` if you changed images.
 
 ## How to change sitewide links
 

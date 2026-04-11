@@ -32,19 +32,38 @@
   {{ $webpSet := slice }}
   {{ $jpgSet := slice }}
   {{ range $validWidths }}
-    {{ $webp := $resource.Resize (printf "%dx webp q80" .) }}
-    {{ $jpg := $resource.Resize (printf "%dx jpg q82" .) }}
+    {{ $webp := $resource.Resize (printf "%dx webp q90" .) }}
     {{ $avifFile := printf "static/avif/%s-%d.avif" $avifBase . }}
     {{ $avifPath := printf "avif/%s-%d.avif" $avifBase . }}
+    {{ $jpgStaticFile := printf "static/jpg/%s-%d.jpg" $avifBase . }}
+    {{ $jpgStaticPath := printf "jpg/%s-%d.jpg" $avifBase . }}
     {{ if fileExists $avifFile }}
       {{ $avifSet = $avifSet | append (printf "%s %dw" ($avifPath | relURL) .) }}
     {{ end }}
-    {{ $webpSet = $webpSet | append (printf "%s %dw" $webp.RelPermalink $jpg.Width) }}
-    {{ $jpgSet = $jpgSet | append (printf "%s %dw" $jpg.RelPermalink $jpg.Width) }}
+    {{ $webpSet = $webpSet | append (printf "%s %dw" $webp.RelPermalink .) }}
+    {{ if fileExists $jpgStaticFile }}
+      {{ $jpgSet = $jpgSet | append (printf "%s %dw" ($jpgStaticPath | relURL) .) }}
+    {{ else }}
+      {{ $jpg := $resource.Resize (printf "%dx jpg q90" .) }}
+      {{ $jpgSet = $jpgSet | append (printf "%s %dw" $jpg.RelPermalink $jpg.Width) }}
+    {{ end }}
   {{ end }}
 
   {{ $largestWidth := index $validWidths (sub (len $validWidths) 1) }}
-  {{ $fallback := $resource.Resize (printf "%dx jpg q82" $largestWidth) }}
+  {{ $fallbackStaticFile := printf "static/jpg/%s-%d.jpg" $avifBase $largestWidth }}
+  {{ $fallbackStaticPath := printf "jpg/%s-%d.jpg" $avifBase $largestWidth }}
+  {{ $fallbackSrc := "" }}
+  {{ $fallbackWidth := $largestWidth }}
+  {{ $fallbackHeight := div (mul $resource.Height $largestWidth) $resource.Width }}
+
+  {{ if fileExists $fallbackStaticFile }}
+    {{ $fallbackSrc = $fallbackStaticPath | relURL }}
+  {{ else }}
+    {{ $fallback := $resource.Resize (printf "%dx jpg q90" $largestWidth) }}
+    {{ $fallbackSrc = $fallback.RelPermalink }}
+    {{ $fallbackWidth = $fallback.Width }}
+    {{ $fallbackHeight = $fallback.Height }}
+  {{ end }}
 
   <picture class="picture">
     {{ if gt (len $avifSet) 0 }}
@@ -52,13 +71,13 @@
     {{ end }}
     <source type="image/webp" srcset="{{ delimit $webpSet ", " }}" sizes="{{ $sizes }}">
     <img
-      src="{{ $fallback.RelPermalink }}"
+      src="{{ $fallbackSrc }}"
       srcset="{{ delimit $jpgSet ", " }}"
       sizes="{{ $sizes }}"
       alt="{{ $alt }}"
       class="{{ $class }}"
-      width="{{ $fallback.Width }}"
-      height="{{ $fallback.Height }}"
+      width="{{ $fallbackWidth }}"
+      height="{{ $fallbackHeight }}"
       loading="{{ $loading }}"
       {{ with $fetchPriority }}fetchpriority="{{ . }}"{{ end }}
       decoding="async"

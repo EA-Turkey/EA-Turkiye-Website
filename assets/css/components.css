@@ -1414,11 +1414,27 @@ html[lang^="en"] .page-home .hero--home .hero__title {
 
 .featured-media {
   margin-block: var(--space-32);
+  margin-inline: 0;
+  display: grid;
+  gap: var(--space-12);
 }
 
 .featured-media img {
   width: 100%;
   border-radius: var(--radius-xl);
+}
+
+.media-credit,
+.media-credit p {
+  margin: 0;
+  color: var(--color-ink-700);
+  font-size: var(--text-xs);
+}
+
+.media-credit a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
 }
 
 .final-cta {

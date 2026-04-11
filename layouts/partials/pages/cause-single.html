@@ -46,7 +46,7 @@
 <section class="section">
   <div class="container stack-lg">
     {{ with .Params.featured_image }}
-      <div class="featured-media" data-reveal>
+      <figure class="featured-media" data-reveal>
         {{ partial "picture.html" (dict
           "src" .
           "alt" $.Title
@@ -54,7 +54,10 @@
           "variant" "hero"
           "sizes" "(min-width: 72rem) 72rem, 100vw"
         ) }}
-      </div>
+        {{ with $.Params.featured_image_credit }}
+          <figcaption class="media-credit">{{ . | markdownify }}</figcaption>
+        {{ end }}
+      </figure>
     {{ end }}
 
     <div class="prose" data-reveal>{{ .Content }}</div>

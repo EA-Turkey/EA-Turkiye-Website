@@ -7,6 +7,7 @@ slug: hayvan-refahi
 accent: animal-welfare
 card_excerpt: Çok büyük sayıda hayvanın yaşadığı koşulları iyileştirebilecek politika, kurumsal ve tüketim değişimlerini inceliyoruz.
 featured_image: cause-areas/animal-welfare/cover.jpg
+featured_image_credit: "Fotoğraf: [Danielle Suijkerbuijk](https://unsplash.com/@vandaantje?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText) / [Unsplash](https://unsplash.com/?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText)"
 summary: Etkilenen birey sayısının çok büyük olduğu ve nispeten ihmal edilmiş kalan alanlardan biri.
 ---
 Hayvan refahı odağı, özellikle endüstriyel hayvancılıkta çok büyük sayıda duyarlı canlının yaşadığı koşulları ciddiye alır. Politika değişiklikleri, şirket taahhütleri ve araştırma bu alanda birlikte önem taşır.

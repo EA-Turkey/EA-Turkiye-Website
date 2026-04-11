@@ -90,11 +90,13 @@ Required environment variables:
 - Photos that need resizing or format conversion go in `assets/images/...`
 - Logos/icons that should pass through unchanged go in `static/brand/...`
 - Responsive AVIF derivatives live in `static/avif/...` and are committed outputs generated from `assets/images/...`
+- Responsive MozJPEG derivatives live in `static/jpg/...` and are committed outputs generated from `assets/images/...`
 
 ### Regenerating AVIF derivatives after changing source photos
 
 ```bash
 ./scripts/generate-avif.sh
+./scripts/generate-jpeg.sh
 ```
 
 ## Form

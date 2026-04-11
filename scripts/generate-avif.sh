@@ -13,6 +13,6 @@ for src in assets/images/**/*.(jpg|jpeg)(N); do
   mkdir -p "static/avif/${base:h}"
 
   for width in 320 480 520 560 600 640 768 800 960 1280 1440 1600; do
-    magick "$src" -resize "${width}x" -quality 55 "static/avif/${base}-${width}.avif"
+    magick "$src" -resize "${width}x" -quality 90 "static/avif/${base}-${width}.avif"
   done
 done

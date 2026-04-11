@@ -6,6 +6,7 @@ slug: ai-safety
 accent: ai-safety
 card_excerpt: We ask how rapidly improving AI systems could create large benefits without also creating serious risks.
 featured_image: cause-areas/ai-safety/cover.jpg
+featured_image_credit: "Photo by [İsmail Enes Ayhan](https://unsplash.com/@ismailenesayhan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 summary: A field where technological progress is fast, stakes could be very large, and strong governance norms are still emerging.
 ---
 AI safety aims to reduce serious risks that may arise as advanced AI systems become more capable. The area spans technical research, governance, evaluation, and institutional design.
