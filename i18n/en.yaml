@@ -82,6 +82,24 @@
 - id: view_on_substack
   translation: "View on Substack"
 
+- id: featured_story
+  translation: "Featured story"
+
+- id: latest_from_blog
+  translation: "Latest from the blog"
+
+- id: browse_archive
+  translation: "Browse the archive"
+
+- id: back_to_blog
+  translation: "Back to blog"
+
+- id: more_from_blog
+  translation: "More from the blog"
+
+- id: open_on_substack
+  translation: "Open on Substack"
+
 - id: add_to_calendar
   translation: "Add to calendar"
 

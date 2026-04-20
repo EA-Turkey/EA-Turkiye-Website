@@ -1,28 +1,107 @@
-{{ partial "hero.html" (dict
-  "page" .
-  "variant" "page"
-  "eyebrow" .Params.hero_eyebrow
-  "title" (.Params.hero_title | default .Title)
-  "lead" (.Params.hero_lead | default .Params.description)
-) }}
+{{ partial "helpers/lang-context.html" . }}
+{{ $pages := sort .RegularPages "Date" "desc" }}
+{{ $featured := cond (gt (len $pages) 0) (index $pages 0) nil }}
+{{ $archive := slice }}
+{{ range $pages }}
+  {{ if and $featured (eq .RelPermalink $featured.RelPermalink) }}
+  {{ else }}
+    {{ $archive = $archive | append . }}
+  {{ end }}
+{{ end }}
+{{ $blogLabel := i18n "search_group_blog" }}
 
-<section class="section">
-  <div class="container stack-lg">
-    <div class="list-shell">
-      {{ range sort .RegularPages "Date" "desc" }}
-        <article class="resource-row">
-          <a class="resource-row__link" href="{{ .RelPermalink }}">
-            <div class="resource-row__meta stack-sm">
-              <span class="chip">{{ .Date | time.Format ":date_long" }}</span>
-            </div>
-            <div class="resource-row__body">
-              <h3 class="resource-row__title">{{ .Title }}</h3>
-              <p class="resource-row__summary">{{ .Params.summary | default .Params.description }}</p>
-            </div>
-            <span class="resource-row__cta">{{ i18n "read_more" }}</span>
-          </a>
-        </article>
+<section class="section section--tight blog-landing">
+  <div class="container--wide blog-landing__inner">
+    <div class="blog-landing__masthead stack-md" data-reveal>
+      <span class="blog-kicker">{{ .Params.hero_eyebrow | default $blogLabel }}</span>
+      <h1 class="blog-landing__title">{{ .Params.hero_title | default .Title }}</h1>
+      {{ with (.Params.hero_lead | default .Params.description) }}
+        <p class="blog-landing__lead">{{ . }}</p>
       {{ end }}
     </div>
+
+    {{ with $featured }}
+      {{ $featuredPage := . }}
+      <article class="blog-featured" data-reveal>
+        <a class="blog-featured__media{{ if not .Params.featured_image }} blog-featured__media--fallback{{ end }}" href="{{ .RelPermalink }}">
+          {{ with .Params.featured_image }}
+            {{ partial "picture.html" (dict
+              "src" .
+              "alt" $featuredPage.Title
+              "class" "blog-featured__image"
+              "variant" "hero"
+              "sizes" "(min-width: 84rem) 42rem, (min-width: 64rem) 52vw, 100vw"
+              "loading" "eager"
+              "fetchpriority" "high"
+            ) }}
+          {{ else }}
+            <div class="blog-featured__fallback">
+              <span class="blog-featured__fallback-date">{{ .Date | time.Format ":date_long" }}</span>
+              <strong class="blog-featured__fallback-title">{{ .Title }}</strong>
+            </div>
+          {{ end }}
+        </a>
+        <div class="blog-featured__content stack-md">
+          <div class="blog-featured__meta cluster">
+            <span class="blog-kicker">{{ i18n "featured_story" }}</span>
+            <span class="blog-date">{{ .Date | time.Format ":date_long" }}</span>
+          </div>
+          <h2 class="blog-featured__title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+          <p class="blog-featured__summary">{{ .Params.summary | default .Params.description }}</p>
+          <div class="blog-featured__actions cluster">
+            {{ partial "button.html" (dict "url" .RelPermalink "label" (i18n "read_more") "variant" "primary") }}
+            {{ with .Params.source_url }}
+              {{ partial "button.html" (dict "url" . "label" (i18n "open_on_substack") "variant" "text" "external" true) }}
+            {{ end }}
+          </div>
+        </div>
+      </article>
+    {{ end }}
   </div>
 </section>
+
+{{ if gt (len $archive) 0 }}
+  <section class="section section--tight blog-archive">
+    <div class="container--wide stack-lg">
+      <div class="blog-archive__header" data-reveal>
+        <h2 class="blog-archive__title">{{ i18n "browse_archive" }}</h2>
+      </div>
+
+      <div class="blog-archive__timeline">
+        {{ $lastYear := "" }}
+        {{ range $archive }}
+          {{ $archivePage := . }}
+          {{ $year := .Date.Format "2006" }}
+          {{ if ne $year $lastYear }}
+            <h3 class="blog-archive__year" data-reveal>{{ $year }}</h3>
+            {{ $lastYear = $year }}
+          {{ end }}
+          <article class="blog-archive-item{{ if not .Params.featured_image }} blog-archive-item--text-only{{ end }}" data-reveal>
+            <a class="blog-archive-item__link" href="{{ .RelPermalink }}">
+              {{ with .Params.featured_image }}
+                <div class="blog-archive-item__media">
+                  {{ partial "picture.html" (dict
+                    "src" .
+                    "alt" $archivePage.Title
+                    "class" "blog-archive-item__image"
+                    "variant" "card"
+                    "sizes" "(min-width: 84rem) 11rem, (min-width: 48rem) 10rem, 100vw"
+                  ) }}
+                </div>
+              {{ end }}
+              <div class="blog-archive-item__body">
+                <div class="blog-archive-item__meta">
+                  <span class="blog-date">{{ .Date | time.Format ":date_long" }}</span>
+                </div>
+                <h3 class="blog-archive-item__title">{{ .Title }}</h3>
+                <p class="blog-archive-item__summary">{{ .Params.summary | default .Params.description }}</p>
+              </div>
+            </a>
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

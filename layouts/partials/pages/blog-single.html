@@ -1,36 +1,95 @@
-{{ partial "hero.html" (dict
-  "page" .
-  "variant" "page"
-  "eyebrow" .Params.hero_eyebrow
-  "title" .Title
-  "lead" (.Params.summary | default .Params.description)
-) }}
+{{ partial "helpers/lang-context.html" . }}
+{{ $blogURL := partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" (.Scratch.Get "actualLang") "key" "blog") | strings.TrimSpace) | strings.TrimSpace }}
+{{ $related := slice }}
+{{ with .Parent }}
+  {{ $related = first 3 (sort (where .RegularPages "RelPermalink" "!=" $.RelPermalink) "Date" "desc") }}
+{{ end }}
+{{ $blogLabel := i18n "search_group_blog" }}
 
-<section class="section">
-  <div class="container stack-lg">
-    <div class="meta-panel" data-reveal>
-      <span>{{ i18n "story_heading" }}</span>
-      <p>{{ .Date | time.Format ":date_long" }}</p>
+<article class="blog-post">
+  <section class="section section--tight blog-post__hero">
+    <div class="container--wide stack-lg">
+      <a class="blog-post__back" href="{{ $blogURL }}" data-reveal>
+        <span aria-hidden="true">&larr;</span>
+        <span>{{ i18n "back_to_blog" }}</span>
+      </a>
+
+      <div class="blog-post__header{{ if .Params.featured_image }} blog-post__header--with-image{{ end }}">
+        <div class="blog-post__intro stack-md" data-reveal>
+          <div class="blog-post__meta">
+            <span class="blog-kicker">{{ $blogLabel }}</span>
+            <span class="blog-date">{{ .Date | time.Format ":date_long" }}</span>
+          </div>
+          <h1 class="blog-post__title">{{ .Title }}</h1>
+          {{ with (.Params.summary | default .Params.description) }}
+            <p class="blog-post__summary">{{ . }}</p>
+          {{ end }}
+          {{ with .Params.source_url }}
+            <div class="blog-post__actions cluster">
+              {{ partial "button.html" (dict "url" . "label" (i18n "open_on_substack") "variant" "text" "external" true) }}
+            </div>
+          {{ end }}
+        </div>
+
+        {{ with .Params.featured_image }}
+          <div class="blog-post__media" data-reveal>
+            {{ partial "picture.html" (dict
+              "src" .
+              "alt" $.Title
+              "class" "blog-post__image"
+              "variant" "hero"
+              "sizes" "(min-width: 84rem) 44rem, (min-width: 64rem) 54vw, 100vw"
+              "loading" "eager"
+              "fetchpriority" "high"
+            ) }}
+          </div>
+        {{ end }}
+      </div>
     </div>
+  </section>
 
-    {{ with .Params.featured_image }}
-      <div class="featured-media" data-reveal>
-        {{ partial "picture.html" (dict
-          "src" .
-          "alt" $.Title
-          "class" ""
-          "variant" "hero"
-          "sizes" "(min-width: 72rem) 72rem, 100vw"
-        ) }}
+  <section class="section section--tight blog-post__content">
+    <div class="container--narrow">
+      <div class="prose blog-prose" data-reveal>{{ .Content }}</div>
+    </div>
+  </section>
+
+  {{ with $related }}
+    <section class="section section--tight blog-related">
+      <div class="container--wide stack-lg">
+        <div class="section-header blog-related__header" data-reveal>
+          <div class="stack-sm">
+            <span class="section-header__eyebrow">{{ i18n "more_from_blog" }}</span>
+            <h2 class="blog-related__title">{{ i18n "latest_from_blog" }}</h2>
+          </div>
+        </div>
+
+        <div class="blog-related__grid">
+          {{ range . }}
+            {{ $relatedPage := . }}
+            <article class="blog-related-card{{ if not .Params.featured_image }} blog-related-card--text-only{{ end }}" data-reveal>
+              <a class="blog-related-card__link" href="{{ .RelPermalink }}">
+                {{ with .Params.featured_image }}
+                  <div class="blog-related-card__media">
+                    {{ partial "picture.html" (dict
+                      "src" .
+                      "alt" $relatedPage.Title
+                      "class" "blog-related-card__image"
+                      "variant" "card"
+                      "sizes" "(min-width: 84rem) 24rem, (min-width: 48rem) 48vw, 100vw"
+                    ) }}
+                  </div>
+                {{ end }}
+                <div class="blog-related-card__body">
+                  <span class="blog-date">{{ .Date | time.Format ":date_long" }}</span>
+                  <h3 class="blog-related-card__title">{{ .Title }}</h3>
+                  <p class="blog-related-card__summary">{{ .Params.summary | default .Params.description }}</p>
+                </div>
+              </a>
+            </article>
+          {{ end }}
+        </div>
       </div>
-    {{ end }}
-
-    <div class="prose" data-reveal>{{ .Content }}</div>
-
-    {{ with .Params.source_url }}
-      <div data-reveal>
-        {{ partial "button.html" (dict "url" . "label" (i18n "view_on_substack") "variant" "primary" "external" true) }}
-      </div>
-    {{ end }}
-  </div>
-</section>
+    </section>
+  {{ end }}
+</article>

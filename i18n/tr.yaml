@@ -82,6 +82,24 @@
 - id: view_on_substack
   translation: "Substack'te görüntüle"
 
+- id: featured_story
+  translation: "Öne çıkan yazı"
+
+- id: latest_from_blog
+  translation: "Blogdan son yazılar"
+
+- id: browse_archive
+  translation: "Arşivde gezin"
+
+- id: back_to_blog
+  translation: "Blog'a dön"
+
+- id: more_from_blog
+  translation: "Blogdan diğer yazılar"
+
+- id: open_on_substack
+  translation: "Substack'te aç"
+
 - id: add_to_calendar
   translation: "Takvime ekle"
 
