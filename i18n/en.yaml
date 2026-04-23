@@ -91,6 +91,9 @@
 - id: browse_archive
   translation: "Browse the archive"
 
+- id: blog_archive_years
+  translation: "Blog archive years"
+
 - id: back_to_blog
   translation: "Back to blog"
 

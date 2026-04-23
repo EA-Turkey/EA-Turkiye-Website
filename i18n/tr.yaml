@@ -91,6 +91,9 @@
 - id: browse_archive
   translation: "Arşivde gezin"
 
+- id: blog_archive_years
+  translation: "Blog arşiv yılları"
+
 - id: back_to_blog
   translation: "Blog'a dön"
 

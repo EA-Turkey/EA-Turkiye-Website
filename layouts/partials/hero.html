@@ -10,11 +10,13 @@
 {{ $stats := .stats }}
 {{ $featuredEvent := .featured_event }}
 {{ $heroClasses := slice "hero" (printf "hero--%s" $variant) }}
+{{ $showEyebrow := true }}
 {{ $titleLines := slice }}
 
 {{ if and (eq $variant "home") $page.IsHome }}
   {{ $heroClasses = $heroClasses | append "hero--text-only" }}
   {{ $heroClasses = $heroClasses | append "hero--centered" }}
+  {{ $showEyebrow = false }}
   {{ if hasPrefix $page.RelPermalink "/en/" }}
     {{ $titleLines = slice "A community looking" "for better ways to address" "the world's most" "urgent problems" }}
   {{ else }}
@@ -25,7 +27,7 @@
 <section class="{{ delimit $heroClasses " " }}">
   <div class="{{ if eq $variant "home" }}container--wide{{ else }}container{{ end }} hero__inner">
     <div class="hero__content stack-md"{{ if eq $variant "home" }} data-reveal{{ end }}>
-      {{ with $eyebrow }}<span class="hero__eyebrow">{{ . }}</span>{{ end }}
+      {{ if $showEyebrow }}{{ with $eyebrow }}<span class="hero__eyebrow">{{ . }}</span>{{ end }}{{ end }}
       <h1 class="hero__title">
         {{ if gt (len $titleLines) 0 }}
           {{ range $titleLines }}
