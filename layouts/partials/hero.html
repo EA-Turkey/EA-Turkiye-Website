@@ -7,28 +7,30 @@
 {{ $primaryLabel := .primary_label }}
 {{ $secondaryURL := partial "helpers/resolve-url.html" .secondary_url | strings.TrimSpace }}
 {{ $secondaryLabel := .secondary_label }}
-{{ $image := .image }}
-{{ $imageAlt := .image_alt | default $title }}
+{{ $stats := .stats }}
 {{ $featuredEvent := .featured_event }}
+{{ $heroClasses := slice "hero" (printf "hero--%s" $variant) }}
 {{ $titleLines := slice }}
-{{ $imageSizes := "(min-width: 84rem) 37.5rem, (min-width: 64.0625rem) calc((100vw - 5rem) * 0.475), (min-width: 48.0625rem) calc((100vw - 5rem) / 2), (min-width: 35.0625rem) calc(100vw - 2rem), calc(100vw - 1.25rem)" }}
 
 {{ if and (eq $variant "home") $page.IsHome }}
+  {{ $heroClasses = $heroClasses | append "hero--text-only" }}
+  {{ $heroClasses = $heroClasses | append "hero--centered" }}
   {{ if hasPrefix $page.RelPermalink "/en/" }}
-    {{ $imageSizes = "(min-width: 84rem) 32.625rem, (min-width: 64.0625rem) calc((100vw - 4.5rem) * 0.41), (min-width: 48.0625rem) calc((100vw - 4.5rem) / 2), (min-width: 35.0625rem) calc(100vw - 2rem), calc(100vw - 1.25rem)" }}
-    {{ $titleLines = slice "A community" "looking for" "better ways" "to address the" "world's most" "urgent problems" }}
+    {{ $titleLines = slice "A community looking" "for better ways to address" "the world's most" "urgent problems" }}
   {{ else }}
-    {{ $titleLines = slice "Dünyanın en acil" "sorunları için" "daha iyi yollar" "arayan bir" "topluluk" }}
+    {{ $titleLines = slice "Dünyanın en acil" "sorunları için daha iyi" "yollar arayan" "bir topluluk" }}
   {{ end }}
 {{ end }}
 
-<section class="hero hero--{{ $variant }}">
+<section class="{{ delimit $heroClasses " " }}">
   <div class="{{ if eq $variant "home" }}container--wide{{ else }}container{{ end }} hero__inner">
     <div class="hero__content stack-md"{{ if eq $variant "home" }} data-reveal{{ end }}>
       {{ with $eyebrow }}<span class="hero__eyebrow">{{ . }}</span>{{ end }}
       <h1 class="hero__title">
         {{ if gt (len $titleLines) 0 }}
-          {{ range $titleLines }}<span class="hero__title-line">{{ . }}</span>{{ end }}
+          {{ range $titleLines }}
+            <span class="hero__title-line">{{ . }}</span>
+          {{ end }}
         {{ else }}
           {{ $title }}
         {{ end }}
@@ -41,21 +43,13 @@
         </div>
       {{ end }}
     </div>
-
-    {{ if and (eq $variant "home") $image }}
-      <div class="hero__media" data-reveal>
-        {{ partial "picture.html" (dict
-          "src" $image
-          "alt" $imageAlt
-          "class" "hero__image"
-          "variant" "hero"
-          "sizes" $imageSizes
-          "loading" "eager"
-          "fetchpriority" "high"
-        ) }}
-      </div>
-    {{ end }}
   </div>
+
+  {{ if and (eq $variant "home") $stats }}
+    <div class="container hero__proof" data-reveal>
+      {{ partial "stats-strip.html" $stats }}
+    </div>
+  {{ end }}
 
   {{ if and (eq $variant "home") $featuredEvent }}
     {{ $eventDate := $featuredEvent.Params.schedule_text | default ((time.AsTime $featuredEvent.Params.start) | time.Format ":date_long") }}

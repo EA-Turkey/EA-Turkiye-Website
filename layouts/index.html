@@ -51,16 +51,9 @@
     "primary_label" .Params.hero_primary_label
     "secondary_url" .Params.hero_secondary_url
     "secondary_label" .Params.hero_secondary_label
-    "image" .Params.hero_image
-    "image_alt" .Params.hero_image_alt
+    "stats" .Params.stats
     "featured_event" $featuredEvent
   ) }}
-
-  <section class="section section--tight home-section home-section--stats">
-    <div class="container">
-      {{ partial "stats-strip.html" .Params.stats }}
-    </div>
-  </section>
 
   <section class="section home-section home-section--events">
     <div class="container">
