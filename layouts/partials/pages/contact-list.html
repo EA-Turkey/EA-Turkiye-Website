@@ -1,0 +1,112 @@
+{{ partial "helpers/lang-context.html" . }}
+{{ $langSite := .Scratch.Get "langSite" }}
+{{ $email := $langSite.Params.contact.primary_email }}
+{{ $emailURL := printf "mailto:%s" $email }}
+{{ $primaryURL := partial "helpers/resolve-url.html" (.Params.hero_primary_anchor | default "#iletisim-formu") | strings.TrimSpace }}
+
+<section class="contact-hero" aria-labelledby="contact-hero-title">
+  <div class="container--wide contact-hero__inner">
+    <div class="contact-hero__content stack-md" data-reveal>
+      {{ with .Params.hero_eyebrow }}<span class="hero__eyebrow">{{ . }}</span>{{ end }}
+      <h1 id="contact-hero-title" class="contact-hero__title">{{ .Params.hero_title | default .Title }}</h1>
+      {{ with .Params.hero_lead }}<p class="contact-hero__lead">{{ . }}</p>{{ end }}
+      <div class="contact-hero__actions">
+        {{ partial "button.html" (dict "url" $primaryURL "label" .Params.hero_primary_label "variant" "primary" "size" "cta") }}
+        {{ partial "button.html" (dict "url" $emailURL "label" .Params.hero_secondary_label "variant" "secondary" "size" "cta") }}
+      </div>
+    </div>
+
+    <aside class="contact-hero__panel" data-reveal aria-label="{{ .Params.direct_eyebrow }}">
+      <div class="contact-hero__routes">
+        <a class="contact-hero__route" href="{{ $emailURL }}">
+          <span>{{ .Params.email_title }}</span>
+          <strong>{{ $email }}</strong>
+        </a>
+        <a class="contact-hero__route" href="{{ $primaryURL }}">
+          <span>{{ .Params.form.heading }}</span>
+          <strong>{{ .Params.form.lead }}</strong>
+        </a>
+        <div class="contact-hero__route">
+          <span>{{ .Params.response_title }}</span>
+          <strong>{{ .Params.response_text }}</strong>
+        </div>
+      </div>
+
+      <div class="contact-hero__signals">
+        <span class="contact-hero__signals-label">{{ .Params.topics_eyebrow }}</span>
+        <div class="contact-hero__signal-list">
+          {{ range first 4 .Params.topics }}
+            <span class="contact-hero__signal">{{ .title }}</span>
+          {{ end }}
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section contact-topics">
+  <div class="container contact-topics__layout">
+    <div class="contact-topics__intro stack-sm" data-reveal>
+      {{ with .Params.topics_eyebrow }}<span class="section-header__eyebrow">{{ . }}</span>{{ end }}
+      <h2>{{ .Params.topics_title }}</h2>
+      {{ with .Params.topics_text }}<p class="text-muted">{{ . }}</p>{{ end }}
+    </div>
+
+    <div class="contact-topic-list">
+      {{ range $index, $topic := .Params.topics }}
+        <article class="contact-topic" data-reveal>
+          <span class="contact-topic__index">{{ printf "%02d" (add $index 1) }}</span>
+          <div class="stack-sm">
+            <h3>{{ $topic.title }}</h3>
+            <p class="text-muted">{{ $topic.text }}</p>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface contact-form-section" id="iletisim-formu">
+  <div class="container contact-form-layout">
+    <div class="contact-direct stack-lg" data-reveal>
+      <div class="stack-sm">
+        {{ with .Params.direct_eyebrow }}<span class="section-header__eyebrow">{{ . }}</span>{{ end }}
+        <h2>{{ .Params.direct_title }}</h2>
+        {{ with .Params.direct_text }}<p class="text-muted">{{ . }}</p>{{ end }}
+      </div>
+
+      <div class="contact-direct__meta">
+        <div class="contact-direct__row">
+          <span>{{ .Params.email_title }}</span>
+          <a href="{{ $emailURL }}">{{ $email }}</a>
+        </div>
+        <div class="contact-direct__row">
+          <span>{{ .Params.response_title }}</span>
+          <p>{{ .Params.response_text }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-shell" data-reveal>
+      <div class="contact-form-shell__intro stack-sm">
+        <span class="section-header__eyebrow">{{ .Params.form.heading }}</span>
+        <h2>{{ .Params.form.heading }}</h2>
+        {{ with .Params.form.lead }}<p class="text-muted">{{ . }}</p>{{ end }}
+      </div>
+      {{ partial "contact-form.html" . }}
+    </div>
+  </div>
+</section>
+
+<section class="section contact-team">
+  <div class="container stack-lg">
+    {{ partial "section-header.html" (dict "title" (i18n "contact_people") "text" .Params.contact_people_text) }}
+    <div class="team-grid">
+      {{ range .Params.contact_ids }}
+        {{ with index site.Data.team . }}
+          {{ partial "team-member.html" (dict "person" . "page" $) }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>

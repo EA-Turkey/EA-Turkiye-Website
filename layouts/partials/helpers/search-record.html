@@ -86,6 +86,9 @@
 {{- if eq $sectionKey "get-involved" -}}
   {{- $intentTags = $intentTags | append "newcomer" "get-involved" -}}
 {{- end -}}
+{{- if eq $sectionKey "contact" -}}
+  {{- $intentTags = $intentTags | append "contact" "newcomer" -}}
+{{- end -}}
 {{- with $page.Params.accent -}}
   {{- $intentTags = $intentTags | append . -}}
 {{- end -}}

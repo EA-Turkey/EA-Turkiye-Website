@@ -11,6 +11,7 @@
   {{- else if or (in $path "/kaynaklar/") (in $path "/resources/") -}}resources
   {{- else if in $path "/blog/" -}}blog
   {{- else if or (in $path "/katil/") (in $path "/get-involved/") -}}get-involved
+  {{- else if or (in $path "/iletisim/") (in $path "/contact/") -}}contact
   {{- else if or (in $path "/odak-alanlari/") (in $path "/cause-areas/") -}}cause-areas
   {{- else if or (in $path "/haberler/") (in $path "/news/") -}}news
   {{- else -}}page

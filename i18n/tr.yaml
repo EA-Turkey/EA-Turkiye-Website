@@ -352,6 +352,9 @@
 - id: search_group_cause_areas
   translation: "Odak alanları"
 
+- id: search_group_contact
+  translation: "İletişim"
+
 - id: search_group_events
   translation: "Etkinlikler"
 
@@ -375,6 +378,9 @@
 
 - id: search_section_cause_areas
   translation: "Odak alanı"
+
+- id: search_section_contact
+  translation: "İletişim"
 
 - id: search_section_events
   translation: "Etkinlik"

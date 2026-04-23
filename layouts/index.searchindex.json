@@ -2,11 +2,12 @@
 {{- $langSite := .Scratch.Get "langSite" -}}
 {{- $searchConfig := site.Data.search | default dict -}}
 {{- $items := slice -}}
-{{- $landingSections := slice "about" "get-involved" "cause-areas" "resources" -}}
+{{- $landingSections := slice "about" "get-involved" "contact" "cause-areas" "resources" -}}
 {{- $typeLabels := dict
   "about" (i18n "search_section_about")
   "blog" (i18n "search_section_blog")
   "cause-areas" (i18n "search_section_cause_areas")
+  "contact" (i18n "search_section_contact")
   "events" (i18n "search_section_events")
   "get-involved" (i18n "search_section_get_involved")
   "news" (i18n "search_section_news")
@@ -40,6 +41,7 @@
   "about" (i18n "search_group_about")
   "blog" (i18n "search_group_blog")
   "cause-areas" (i18n "search_group_cause_areas")
+  "contact" (i18n "search_group_contact")
   "events" (i18n "search_group_events")
   "get-involved" (i18n "search_group_get_involved")
   "news" (i18n "search_group_news")
@@ -50,6 +52,7 @@
   "resources" 98
   "events" 96
   "cause-areas" 82
+  "contact" 78
   "get-involved" 76
   "blog" 48
   "news" 42

@@ -10,6 +10,8 @@
     {{ partial "pages/blog-list.html" . }}
   {{ else if eq $sectionKey "get-involved" }}
     {{ partial "pages/get-involved-list.html" . }}
+  {{ else if eq $sectionKey "contact" }}
+    {{ partial "pages/contact-list.html" . }}
   {{ else if eq $sectionKey "news" }}
     {{ partial "pages/news-list.html" . }}
   {{ else }}

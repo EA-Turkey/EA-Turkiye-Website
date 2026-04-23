@@ -352,6 +352,9 @@
 - id: search_group_cause_areas
   translation: "Cause areas"
 
+- id: search_group_contact
+  translation: "Contact"
+
 - id: search_group_events
   translation: "Events"
 
@@ -375,6 +378,9 @@
 
 - id: search_section_cause_areas
   translation: "Cause area"
+
+- id: search_section_contact
+  translation: "Contact"
 
 - id: search_section_events
   translation: "Event"

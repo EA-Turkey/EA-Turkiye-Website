@@ -4,13 +4,14 @@
 {{ $indexURL := printf "%ssearch-index.json" $homeURL }}
 {{ $locale := cond (eq $actualLang "en") "en-US" "tr-TR" }}
 {{ $searchData := site.Data.search | default dict }}
-{{ $filterKeys := $searchData.filters | default (slice "all" "resources" "events" "cause-areas" "blog" "get-involved" "about" "news") }}
-{{ $groupPriority := $searchData.group_priority | default (slice "resources" "events" "cause-areas" "get-involved" "blog" "news" "about" "page") }}
+{{ $filterKeys := $searchData.filters | default (slice "all" "resources" "events" "cause-areas" "blog" "get-involved" "contact" "about" "news") }}
+{{ $groupPriority := $searchData.group_priority | default (slice "resources" "events" "cause-areas" "contact" "get-involved" "blog" "news" "about" "page") }}
 {{ $zeroStateSuggestions := index $searchData.zero_state_suggestions $actualLang | default (slice) }}
 {{ $groupLabels := dict
   "about" (i18n "search_group_about")
   "blog" (i18n "search_group_blog")
   "cause-areas" (i18n "search_group_cause_areas")
+  "contact" (i18n "search_group_contact")
   "events" (i18n "search_group_events")
   "get-involved" (i18n "search_group_get_involved")
   "news" (i18n "search_group_news")

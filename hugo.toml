@@ -97,6 +97,11 @@ summaryLength = 40
       pageRef = "/blog"
       weight = 30
 
+    [[languages.tr.menus.main]]
+      name = "İletişim"
+      pageRef = "/contact"
+      weight = 40
+
   [languages.en]
     languageCode = "en-US"
     languageName = "English"
@@ -126,3 +131,8 @@ summaryLength = 40
       name = "Blog"
       pageRef = "/blog"
       weight = 30
+
+    [[languages.en.menus.main]]
+      name = "Contact"
+      pageRef = "/contact"
+      weight = 40
