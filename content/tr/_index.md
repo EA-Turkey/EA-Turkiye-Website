@@ -3,8 +3,8 @@ translationKey: home
 title: EA Türkiye
 description: Kanıt, akıl yürütme ve topluluk aracılığıyla dünyanın en acil sorunlarına daha iyi yanıtlar arayan bir topluluk.
 hero_eyebrow: Efektif Altruizm · Türkiye
-hero_title: Dünyanın en acil sorunları için daha iyi yollar arayan bir topluluk
-hero_lead: Kanıt, akıl yürütme ve topluluk aracılığıyla başkalarına mümkün olduğunca fazla fayda sağlamanın yollarını araştırıyoruz.
+hero_title: Başkalarına yardım etmenin en etkili yollarını bulun
+hero_lead: "Efektif Alturizm (Etkili İyilik) şu soruyu sorar: Zamanımızı, paramızı, yeteneklerimizi ve diğer kaynaklarımızı kullanarak en fazla iyiliği nasıl yapabiliriz?"
 hero_primary_label: Topluluğa katıl
 hero_primary_url: /katil/
 hero_secondary_label: EA nedir?
