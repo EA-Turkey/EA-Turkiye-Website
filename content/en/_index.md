@@ -14,8 +14,6 @@ stats:
     label: Founded
   - value: "300+"
     label: Community members
-  - value: "2"
-    label: Active cities
   - value: "5"
     label: University clubs
   - value: "50+"

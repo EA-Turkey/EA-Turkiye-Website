@@ -14,8 +14,6 @@ stats:
     label: Kuruluş
   - value: "300+"
     label: Topluluk üyesi
-  - value: "2"
-    label: Aktif şehir
   - value: "5"
     label: Üniversite kulübü
   - value: "50+"
