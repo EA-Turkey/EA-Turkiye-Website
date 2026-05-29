@@ -1,22 +1,22 @@
 ---
 translationKey: "efektif-altruizm-istanbul-zirvesi"
-title: "Applications for the Effective Altruism Istanbul Summit 2025 Are Open!"
-description: "📅 Effective Altruism Istanbul Summit 2025 will take place in Istanbul on October 18, 2025 at Kolektif House Maslak between 11.00–19.00. The event is open to everyone over the age of 18 and is free."
-slug: "effective-altruism-istanbul-summit-2025-applications-open"
-start: 2025-10-18T11:00:00+03:00
+title: "EA Summit: Istanbul 2026"
+description: "The Effective Altruism Istanbul Summit 2026 will take place on October 24, 2026 at HAN Spaces Etiler in Istanbul. Bringing together Turkey's EA community with talks, workshops, and networking opportunities."
+slug: "ea-summit-istanbul-2026"
+start: 2026-10-24T10:00:00+03:00
 timezone: "Europe/Istanbul"
-schedule_text: "18 October 2025 · 11.00–19.00"
+schedule_text: "24 October 2026"
 city: "İstanbul"
 event_mode: "in-person"
-venue: "Kolektif House Maslak, İstanbul"
-summary: "📅 Effective Altruism Istanbul Summit 2025 will take place in Istanbul on October 18, 2025 at Kolektif House Maslak between 11.00–19.00. The event is open to everyone over the age of 18 and is free."
+venue: "HAN Spaces Etiler, Istanbul"
+summary: "The Effective Altruism Istanbul Summit 2026 will take place on October 24, 2026 at HAN Spaces Etiler in Istanbul. Bringing together Turkey's EA community with talks, workshops, and networking opportunities."
 featured_image: "events/efektif-altruizm-istanbul-zirvesi/cover.jpg"
-source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-istanbul-zirvesi"
-calendar_start: 2025-10-18T11:00:00+03:00
-calendar_end: 2025-10-18T19:00:00+03:00
+source_url: "https://www.effectivealtruism.org/ea-global/events/ea-summit-istanbul"
+calendar_start: 2026-10-24T10:00:00+03:00
+calendar_end: 2026-10-24T18:00:00+03:00
 ---
-📅 Effective Altruism Istanbul Summit 2025 will take place in Istanbul on October 18, 2025 at Kolektif House Maslak between 11.00–19.00. The event is open to everyone over the age of 18 and is free.
+The Effective Altruism Istanbul Summit 2026 will take place on October 24, 2026 at HAN Spaces Etiler in Istanbul.
 
-📚 The program will include entry and intermediate level sessions, skill development workshops, social gatherings and networking opportunities.
+📚 The program will include talks, skill development workshops, social gatherings, and networking opportunities.
 
-🔗 For more details, you can review [our website](https://www.effectivealtruism.org/ea-global/events/ea-summit-istanbul-2025) and click [here](https://docs.google.com/forms/d/e/1FAIpQLScFOHgdJpkYBVLiNMfx1oAgnCvbwoi16Apx1jnU8DU8h52xjQ/viewform?usp=header) to reach the application form.
+🔗 For more details, visit the [event page](https://www.effectivealtruism.org/ea-global/events/ea-summit-istanbul) and click [here](https://docs.google.com/forms/d/e/1FAIpQLSdmRkrcV8i8-dSsepgUBxayy-4LEHy1XOUuxGYmYJmZtP4Q6A/viewform?usp=header) to access the application form.

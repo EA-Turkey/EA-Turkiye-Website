@@ -1,23 +1,23 @@
 ---
 translationKey: "efektif-altruizm-istanbul-zirvesi"
-title: "🎉 Efektif Altruizm İstanbul Zirvesi 2025 başvuruları açıldı! "
-description: "📅 Efektif Altruizm İstanbul Zirvesi 2025, 18 Ekim 2025 tarihinde İstanbul’da Kolektif House Maslak’ta saat 11.00–19.00 arasında gerçekleşecek. Etkinlik 18 yaşının üstündeki herkese açık ve ücretsizdir."
+title: "EA Summit: İstanbul 2026"
+description: "Efektif Altruizm İstanbul Zirvesi 2026, 24 Ekim 2026 tarihinde HAN Spaces Etiler'de gerçekleşecek. Türkiye'deki EA topluluğunu bir araya getiren bu etkinlikte sunumlar, atölyeler ve networking fırsatları yer alacak."
 url: "/etkinlikler/efektif-altruizm-istanbul-zirvesi/"
 slug: "efektif-altruizm-istanbul-zirvesi"
-start: 2025-10-18T11:00:00+03:00
+start: 2026-10-24T10:00:00+03:00
 timezone: "Europe/Istanbul"
-schedule_text: "18 Ekim 2025 · 11.00–19.00"
+schedule_text: "24 Ekim 2026"
 city: "İstanbul"
 event_mode: "in-person"
-venue: "Kolektif House Maslak, İstanbul"
-summary: "📅 Efektif Altruizm İstanbul Zirvesi 2025, 18 Ekim 2025 tarihinde İstanbul’da Kolektif House Maslak’ta saat 11.00–19.00 arasında gerçekleşecek. Etkinlik 18 yaşının üstündeki herkese açık ve ücretsizdir."
+venue: "HAN Spaces Etiler, İstanbul"
+summary: "Efektif Altruizm İstanbul Zirvesi 2026, 24 Ekim 2026 tarihinde HAN Spaces Etiler'de gerçekleşecek. Türkiye'deki EA topluluğunu bir araya getiren bu etkinlikte sunumlar, atölyeler ve networking fırsatları yer alacak."
 featured_image: "events/efektif-altruizm-istanbul-zirvesi/cover.jpg"
-source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-istanbul-zirvesi"
-calendar_start: 2025-10-18T11:00:00+03:00
-calendar_end: 2025-10-18T19:00:00+03:00
+source_url: "https://www.effectivealtruism.org/ea-global/events/ea-summit-istanbul"
+calendar_start: 2026-10-24T10:00:00+03:00
+calendar_end: 2026-10-24T18:00:00+03:00
 ---
-📅 Efektif Altruizm İstanbul Zirvesi 2025, 18 Ekim 2025 tarihinde İstanbul’da Kolektif House Maslak’ta saat 11.00–19.00 arasında gerçekleşecek. Etkinlik 18 yaşının üstündeki herkese açık ve ücretsizdir.
+Efektif Altruizm İstanbul Zirvesi 2026, 24 Ekim 2026 tarihinde İstanbul'da HAN Spaces Etiler'de gerçekleşecek.
 
-📚 Programda giriş ve orta seviye oturumlar, beceri geliştirme atölyeleri, sosyal buluşmalar ve networking fırsatları yer alacak.
+📚 Programda sunumlar, beceri geliştirme atölyeleri, sosyal buluşmalar ve networking fırsatları yer alacak.
 
-🔗 Detaylı bilgi almak için [websitemizi](https://www.effectivealtruism.org/ea-global/events/ea-summit-istanbul-2025) inceleyebilir ve başvuru formuna ulaşmak için [buraya](https://docs.google.com/forms/d/e/1FAIpQLScFOHgdJpkYBVLiNMfx1oAgnCvbwoi16Apx1jnU8DU8h52xjQ/viewform?usp=header) tıklayabilirsiniz.
+🔗 Detaylı bilgi almak için [etkinlik sayfasını](https://www.effectivealtruism.org/ea-global/events/ea-summit-istanbul) inceleyebilir ve başvuru formuna ulaşmak için [buraya](https://docs.google.com/forms/d/e/1FAIpQLSdmRkrcV8i8-dSsepgUBxayy-4LEHy1XOUuxGYmYJmZtP4Q6A/viewform?usp=header) tıklayabilirsiniz.
