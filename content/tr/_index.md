@@ -33,9 +33,9 @@ pillars:
 cause_section_label: Odak alanları
 cause_section_title: En çok fark yaratabileceğimiz problem alanlarına bakıyoruz
 cause_section_text: Küresel sağlık, yapay zekâ güvenliği, biyogüvenlik ve hayvan refahı gibi alanlarda hangi katkıların en etkili olabileceğini araştırıyoruz.
-events_section_label: Etkinlikler
+events_section_label: Yaklaşan Etkinlikler
 events_section_title: Topluluğa en kolay giriş genellikle bir etkinlikle başlar
-events_section_text: Okuma gruplarından tanışma oturumlarına ve kariyer sohbetlerine kadar farklı formatlarda buluşuyoruz.
+events_section_text: Farklı mücadele alanlarına ve deneyim seviyelerine yönelik etkinliklerimizi keşfedin.
 events_section_url: /etkinlikler/
 final_cta_eyebrow: Sonraki adım
 final_cta_title: Topluluğu tanımak için net bir başlangıç noktası seç

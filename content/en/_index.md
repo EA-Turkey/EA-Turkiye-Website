@@ -33,9 +33,9 @@ pillars:
 cause_section_label: Cause areas
 cause_section_title: We pay special attention to problems where additional effort may matter most
 cause_section_text: We highlight global health, AI safety, biosecurity, and animal welfare as accessible starting points for learning and contribution.
-events_section_label: Events
+events_section_label: Upcoming Events
 events_section_title: The clearest way to get a feel for the community is to join an event
-events_section_text: We host introductory sessions, reading groups, and conversations about high-impact careers.
+events_section_text: Explore our events designed for different cause areas and experience levels.
 events_section_url: /en/events/
 final_cta_eyebrow: Next step
 final_cta_title: Pick the clearest way to get started
