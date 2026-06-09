@@ -24,6 +24,7 @@ explainer_title: Bilim ve kanıta dayalı iyilik maksimizasyonu
 explainer_intro:
   - Efektif Altruizm, başkalarına yardım etmenin en iyi yollarını araştıran bir düşünce alanı ve topluluktur.
   - Soru yalnızca nasıl yardım edileceği değil, elimizdeki kaynaklarla nasıl en çok iyiliğin yapılabileceğidir.
+pillars_label: EA İlkeleri
 pillars:
   - title: Kanıt ve akıl yürütme
     text: Hangi müdahalelerin gerçekten işe yaradığını anlamak için dikkatli düşünmeyi ve veriyi ciddiye alırız.

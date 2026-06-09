@@ -24,6 +24,7 @@ explainer_title: Science-based goodness maximization
 explainer_intro:
   - Effective altruism is a field of inquiry and a community focused on finding the best ways to help others.
   - The question is not only how to do some good, but how to do the most good with the resources we have.
+pillars_label: EA Principles
 pillars:
   - title: Evidence and reason
     text: We take data and careful thinking seriously when asking which interventions actually help.

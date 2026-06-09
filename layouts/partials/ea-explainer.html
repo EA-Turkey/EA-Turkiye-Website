@@ -11,6 +11,7 @@
       {{ end }}
     </div>
 
+    {{ with .pillars_label }}<p class="section-header__eyebrow" style="margin-bottom: var(--space-16);">{{ . }}</p>{{ end }}
     <div class="pillar-list" data-reveal>
       {{ range $pillars }}
         <article class="pillar-card stack-sm">

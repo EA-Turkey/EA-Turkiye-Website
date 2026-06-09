@@ -3638,6 +3638,20 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   }
 }
 
+.page-home .pillar-card {
+  background: var(--color-brand-700);
+  border-color: var(--color-brand-700);
+  color: var(--color-surface);
+}
+
+.page-home .pillar-card h3 {
+  color: var(--color-surface);
+}
+
+.page-home .pillar-card .text-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .cause-grid--cta .cause-card {
   background: var(--color-brand-600);
   border-color: var(--color-brand-600);
