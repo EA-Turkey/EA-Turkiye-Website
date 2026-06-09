@@ -1,5 +1,8 @@
-{{ with . }}
+{{ $items := cond (reflect.IsSlice .) . .items }}
+{{ $label := cond (reflect.IsSlice .) "" .label }}
+{{ with $items }}
   <div class="stats-strip" data-reveal>
+    {{ with $label }}<p class="section-header__eyebrow" style="text-align:center; margin-bottom: var(--space-16);">{{ . }}</p>{{ end }}
     <div class="stats-strip__grid">
       {{ range . }}
         <div class="stats-strip__item">

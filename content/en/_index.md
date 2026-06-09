@@ -9,6 +9,7 @@ hero_primary_label: Join the community
 hero_primary_url: /en/get-involved/
 hero_secondary_label: What is EA?
 hero_secondary_url: /en/about/
+stats_label: EA Turkey by the numbers
 stats:
   - value: "2021"
     label: Founded

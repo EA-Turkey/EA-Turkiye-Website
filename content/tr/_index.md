@@ -9,6 +9,7 @@ hero_primary_label: Efektif Altruizm nedir?
 hero_primary_url: "#ea-nedir"
 hero_secondary_label: ""
 hero_secondary_url: ""
+stats_label: Rakamlarla EA Türkiye
 stats:
   - value: "2021"
     label: Kuruluş
