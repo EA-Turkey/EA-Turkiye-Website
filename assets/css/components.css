@@ -1259,6 +1259,10 @@ a.contact-hero__route:focus-visible {
   height: 100%;
 }
 
+.event-card__image[src*="etkili-hayvan-savunuculugu-istanbul-zirvesi"] {
+  object-position: top center;
+}
+
 .event-card__image {
   width: 100%;
   height: 100%;
