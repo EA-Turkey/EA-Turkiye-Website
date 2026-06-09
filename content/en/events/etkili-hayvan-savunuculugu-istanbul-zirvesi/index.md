@@ -10,6 +10,7 @@ city: "İstanbul"
 event_mode: "in-person"
 venue: "HAN Spaces Levent, Istanbul"
 summary: "Bringing together animal advocates in Istanbul to discuss strategic and high-impact ways of helping animals — driven by data, not intuition, and effective strategy, not good intentions."
+featured_image: "events/etkili-hayvan-savunuculugu-istanbul-zirvesi/cover.jpg"
 source_url: "https://docs.google.com/forms/d/e/1FAIpQLSdb-XXZ70YtQc4ALo00VSxL0XCTtpHt5veo7Hd9FbdBlJuL4w/viewform"
 calendar_start: 2026-07-11T10:00:00+03:00
 calendar_end: 2026-07-11T18:00:00+03:00

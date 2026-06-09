@@ -9,6 +9,7 @@ schedule_text: "Application deadline: 1 July"
 city: ""
 event_mode: "online"
 summary: "What are the world's most pressing problems — and how can we solve them? Explore effective altruism through readings and group discussions in this free 5-week program. Deadline: July 1."
+featured_image: "events/etkili-iyilik-giris-programi-2026/cover.jpg"
 source_url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
 calendar_start: 2026-07-06T00:00:00+03:00
 calendar_end: 2026-08-07T00:00:00+03:00

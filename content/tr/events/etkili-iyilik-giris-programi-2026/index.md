@@ -10,6 +10,7 @@ schedule_text: "Son başvuru: 1 Temmuz"
 city: ""
 event_mode: "online"
 summary: "Dünyanın en önemli problemleri neler ve bunları nasıl çözebiliriz? 5 haftalık ücretsiz bu programda okumalar ve grup tartışmalarıyla efektif altruizmi keşfet. Son başvuru: 1 Temmuz."
+featured_image: "events/etkili-iyilik-giris-programi-2026/cover.jpg"
 source_url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
 calendar_start: 2026-07-06T00:00:00+03:00
 calendar_end: 2026-08-07T00:00:00+03:00
