@@ -3638,6 +3638,23 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   }
 }
 
+/* Cause card accent colors */
+.cause-card:has([class*="cause-card__eyebrow"]) .cause-card__link,
+.cause-grid .cause-card:nth-child(1) { --card-accent: #1b5266; }
+.cause-grid .cause-card:nth-child(2) { --card-accent: #6d4c9e; }
+.cause-grid .cause-card:nth-child(3) { --card-accent: #2e7d5e; }
+.cause-grid .cause-card:nth-child(4) { --card-accent: #c05621; }
+.cause-grid .cause-card:nth-child(5) { --card-accent: #0c869b; }
+
+.home-section--causes .cause-card:nth-child(1) { background: #e6f7f8; border-color: #b2e3e8; }
+.home-section--causes .cause-card:nth-child(2) { background: #ede9f6; border-color: #d0c4ec; }
+.home-section--causes .cause-card:nth-child(3) { background: #e6f4ee; border-color: #b2d9c6; }
+.home-section--causes .cause-card:nth-child(4) { background: #fef0e6; border-color: #f9cba6; }
+.home-section--causes .cause-card:nth-child(5) { background: #e8f5f7; border-color: #b0dce3; }
+
+.home-section--causes .cause-card .cause-card__eyebrow { color: var(--color-ink-700); }
+.home-section--causes .cause-card::before { background: rgba(0,0,0,0.04); }
+
 .page-home .pillar-card {
   background: var(--color-brand-700);
   border-color: var(--color-brand-700);
