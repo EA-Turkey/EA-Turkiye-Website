@@ -1,10 +1,9 @@
 ---
 translationKey: "blog"
 title: "Blog"
-description: "EA Türkiye Substack arşivindeki bültenler ve yazılar."
+description: ""
 url: "/blog/"
 hero_eyebrow: "Blog"
-hero_title: "Substack arşivi ve topluluk yazıları"
-hero_lead: "Substack’te yayımlanan aylık bültenler, arşiv yazıları ve topluluk notları burada kronolojik olarak yer alır."
+hero_title: "Etkinlik duyurularından aylık bültenlere, kariyer fırsatlarından blog yazılarına kadar tüm içeriklerimizin arşivine bu sayfadan ulaşabilirsiniz."
+hero_lead: ""
 ---
-Bu bölüm, EA Türkiye Substack’inde yayımlanan bültenleri ve yazıları Hugo içeriği olarak arşivler.
