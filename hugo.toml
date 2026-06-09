@@ -53,9 +53,10 @@ summaryLength = 40
     whatsapp_url = ""
 
   [params.social]
-    linkedin = ""
-    substack = ""
-    instagram = ""
+    linkedin = "https://www.linkedin.com/company/effective-altruism-turkey/?viewAsMember=true"
+    substack = "https://eaturkiye.substack.com/"
+    instagram = "https://www.instagram.com/effectivealtruismturkey/"
+    linktree = "https://linktr.ee/eaturkey?utm_source=linktree_profile_share&ltsid=117346c7-9ab5-41d6-8eb0-ade596552d93"
 
   [params.events]
     luma_calendar_url = "https://luma.com/calendar/cal-mocaFiDctI8Om3c"

@@ -88,19 +88,4 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="final-cta" data-reveal>
-        <div class="stack-sm">
-          <span class="section-header__eyebrow">{{ .Params.final_cta_eyebrow }}</span>
-          <h2>{{ .Params.final_cta_title }}</h2>
-          <p class="text-muted">{{ .Params.final_cta_text }}</p>
-        </div>
-        <div class="cluster">
-          {{ partial "button.html" (dict "url" $finalPrimaryURL "label" .Params.final_cta_primary_label "variant" "primary" "size" "cta") }}
-          {{ partial "button.html" (dict "url" $finalSecondaryURL "label" .Params.final_cta_secondary_label "variant" "secondary" "size" "cta") }}
-        </div>
-      </div>
-    </div>
-  </section>
 {{ end }}
