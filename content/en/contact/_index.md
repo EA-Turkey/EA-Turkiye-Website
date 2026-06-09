@@ -3,8 +3,8 @@ translationKey: contact
 title: Contact
 description: Contact EA Turkey with questions, collaboration ideas, or a first note about joining the community.
 hero_eyebrow: Contact
-hero_title: Contact EA Turkey
-hero_lead: Write to us with a question, a collaboration idea, or a note about where you would like to start.
+hero_title: Get in touch with the Effective Altruism Turkey team.
+hero_lead: For your questions, suggestions, or to get acquainted, fill out the contact form below or send an email to bilgi@eaturkiye.org.
 hero_primary_label: Go to form
 hero_primary_anchor: "#iletisim-formu"
 hero_secondary_label: Send email

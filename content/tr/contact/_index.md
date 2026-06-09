@@ -4,8 +4,8 @@ title: İletişim
 description: EA Türkiye'ye soruların, iş birliği fikirlerin veya topluluğa katılmak için ulaş.
 url: /iletisim/
 hero_eyebrow: İletişim
-hero_title: EA Türkiye ile iletişime geç
-hero_lead: Bir soru, iş birliği fikri veya topluluğa nereden başlayacağını konuşmak için bize yaz.
+hero_title: Efektif Altruizm Türkiye ekibiyle iletişime geçin.
+hero_lead: Sorularınız, önerileriniz veya tanışmak için aşağıdaki iletişim formunu doldurabilir veya bilgi@eaturkiye.org adresine e-posta gönderebilirsiniz.
 hero_primary_label: Forma git
 hero_primary_anchor: "#iletisim-formu"
 hero_secondary_label: E-posta gönder
