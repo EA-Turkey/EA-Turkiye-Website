@@ -19,7 +19,7 @@ stats:
   - value: "50+"
     label: Düzenlenen etkinlik
 explainer_label: EA nedir?
-explainer_title: Kanıtla daha fazla iyilik yapmak
+explainer_title: Bilim ve kanıta dayalı iyilik maksimizasyonu
 explainer_intro:
   - Efektif Altruizm, başkalarına yardım etmenin en iyi yollarını araştıran bir düşünce alanı ve topluluktur.
   - Soru yalnızca nasıl yardım edileceği değil, elimizdeki kaynaklarla nasıl en çok iyiliğin yapılabileceğidir.

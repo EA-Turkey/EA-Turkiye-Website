@@ -19,7 +19,7 @@ stats:
   - value: "50+"
     label: Events held
 explainer_label: What is EA?
-explainer_title: Using evidence to do more good
+explainer_title: Science-based goodness maximization
 explainer_intro:
   - Effective altruism is a field of inquiry and a community focused on finding the best ways to help others.
   - The question is not only how to do some good, but how to do the most good with the resources we have.
