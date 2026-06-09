@@ -34,7 +34,7 @@ pillars:
     text: We care that the actions we take are measurable and can be evaluated with concrete data.
 cause_section_label: Cause areas
 cause_section_title: We pay special attention to problems where additional effort may matter most
-cause_section_text: We highlight global health, AI safety, biosecurity, and animal welfare as accessible starting points for learning and contribution.
+cause_section_text: As Effective Altruists, we focus on the cause areas that affect the greatest number of people and animals, where we can drive the most change, and which are most neglected.
 events_section_label: Upcoming Events
 events_section_title: We come together to build new connections, learn collectively, and take action.
 events_section_text: Explore our events designed for different cause areas and experience levels.
