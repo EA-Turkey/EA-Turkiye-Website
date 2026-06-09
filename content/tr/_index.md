@@ -39,12 +39,20 @@ events_section_label: Yaklaşan Etkinlikler
 events_section_title: Yeni bağlar kurmak, birlikte öğrenmek ve harekete geçmek için buluşuyoruz.
 events_section_text: Farklı mücadele alanlarına ve deneyim seviyelerine yönelik etkinliklerimizi keşfedin.
 events_section_url: /etkinlikler/
-final_cta_eyebrow: Sonraki adım
-final_cta_title: Topluluğu tanımak için net bir başlangıç noktası seç
-final_cta_text: İster efektif altruizme yeni bakıyor ol, ister yüksek etkili bir kariyer arıyor ol, EA Türkiye’de sana uygun bir giriş yolu var.
-final_cta_primary_label: Katıl
-final_cta_primary_url: /katil/
-final_cta_secondary_label: Etkinlikleri gör
-final_cta_secondary_url: /etkinlikler/
+cta_section_title: Daha fazlasını öğren ve harekete geç
+cta_learn_more: Keşfet →
+cta_cards:
+  - title: Efektif Altruizm’e Giriş
+    text: EA’nın temel fikirlerini, yaklaşımlarını ve topluluk kültürünü öğren.
+    url: "https://www.effectivealtruism.org/articles/introduction-to-effective-altruism"
+  - title: Etkili bağışçılık
+    text: Paranı en fazla fayda yaratacak şekilde nasıl kullanabileceğini keşfet.
+    url: "https://www.etkilibagis.org/"
+  - title: Yüksek etkili kariyer
+    text: Kariyerinle dünyada nasıl gerçek bir fark yaratabileceğini araştır.
+    url: "https://80000hours.org/"
+  - title: Etkinlikler
+    text: Okuma gruplarından zirvelerine kadar EA Türkiye etkinliklerini keşfet.
+    url: "/etkinlikler/"
 ---
 EA Türkiye, Türkiye'de efektif altruizm etrafında düşünen, öğrenen ve harekete geçen insanların buluşma noktasıdır.

@@ -39,12 +39,20 @@ events_section_label: Upcoming Events
 events_section_title: We come together to build new connections, learn collectively, and take action.
 events_section_text: Explore our events designed for different cause areas and experience levels.
 events_section_url: /en/events/
-final_cta_eyebrow: Next step
-final_cta_title: Pick the clearest way to get started
-final_cta_text: Whether you are new to effective altruism or already looking for high-impact work, EA Turkey should offer a clear entry point.
-final_cta_primary_label: Get involved
-final_cta_primary_url: /en/get-involved/
-final_cta_secondary_label: View events
-final_cta_secondary_url: /en/events/
+cta_section_title: Learn more and take action
+cta_learn_more: Explore →
+cta_cards:
+  - title: Introduction to EA
+    text: Learn the core ideas, approaches, and culture of the EA community.
+    url: "https://www.effectivealtruism.org/articles/introduction-to-effective-altruism"
+  - title: Effective giving
+    text: Discover how to make the most impact with your money.
+    url: "https://www.etkilibagis.org/"
+  - title: High-impact careers
+    text: Explore how your career can make a real difference in the world.
+    url: "https://80000hours.org/"
+  - title: Events
+    text: From reading groups to summits — explore EA Turkey events.
+    url: "/en/events/"
 ---
 EA Turkey is a meeting point for people in Turkey who want to learn, connect, and act around effective altruism.
