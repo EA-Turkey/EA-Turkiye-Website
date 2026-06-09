@@ -28,8 +28,10 @@ pillars:
     text: We take data and careful thinking seriously when asking which interventions actually help.
   - title: Scale and neglectedness
     text: We focus on problems that are large, solvable, and still under-addressed.
-  - title: Willingness to update
-    text: When the evidence changes, we are willing to change direction too.
+  - title: Scout mindset
+    text: We aim to find the truth, not to defend our current views. Updating beliefs in light of new evidence is a sign of intellectual honesty, not weakness.
+  - title: Measurability
+    text: We care that the actions we take are measurable and can be evaluated with concrete data.
 cause_section_label: Cause areas
 cause_section_title: We pay special attention to problems where additional effort may matter most
 cause_section_text: We highlight global health, AI safety, biosecurity, and animal welfare as accessible starting points for learning and contribution.

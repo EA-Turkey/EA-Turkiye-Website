@@ -28,8 +28,10 @@ pillars:
     text: Hangi müdahalelerin gerçekten işe yaradığını anlamak için dikkatli düşünmeyi ve veriyi ciddiye alırız.
   - title: Ölçek ve ihmal edilmişlik
     text: Büyük, çözülebilir ve yeterince ilgi görmeyen problemlere odaklanırız.
-  - title: Görüş güncelleme
-    text: Yeni kanıt geldiğinde yönümüzü değiştirmeyi entelektüel dürüstlüğün parçası sayarız.
+  - title: Kaşif zihniyeti
+    text: Haklı olmaya değil, doğruyu bulmaya odaklanırız. Yeni kanıt geldiğinde görüşlerimizi güncellemek bir zayıflık değil, entelektüel dürüstlüğün gereğidir.
+  - title: Ölçülebilirlik
+    text: Aldığımız aksiyonların somut verilerle ölçümlenebilir olmasına önem veririz.
 cause_section_label: Odak alanları
 cause_section_title: En çok fark yaratabileceğimiz problem alanlarına bakıyoruz
 cause_section_text: Küresel sağlık, yapay zekâ güvenliği, biyogüvenlik ve hayvan refahı gibi alanlarda hangi katkıların en etkili olabileceğini araştırıyoruz.
