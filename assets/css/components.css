@@ -3637,3 +3637,26 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
     font-size: 2rem;
   }
 }
+
+.cause-grid--cta .cause-card {
+  background: var(--color-brand-600);
+  border-color: var(--color-brand-600);
+  color: var(--color-surface);
+}
+
+.cause-grid--cta .cause-card::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cause-grid--cta .cause-card h3 {
+  color: var(--color-surface);
+}
+
+.cause-grid--cta .cause-card .text-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cause-grid--cta .cause-card__link:hover,
+.cause-grid--cta .cause-card__link:focus-visible {
+  background: #0891b2;
+}

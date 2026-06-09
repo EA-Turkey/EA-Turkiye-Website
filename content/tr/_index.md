@@ -52,7 +52,7 @@ cta_cards:
     text: Kariyerinle dünyada nasıl gerçek bir fark yaratabileceğini araştır.
     url: "https://80000hours.org/"
   - title: Etkinlikler
-    text: Okuma gruplarından zirvelerine kadar EA Türkiye etkinliklerini keşfet.
+    text: İlgi alanlarına göre sana uygun etkinliklerimize göz at.
     url: "/etkinlikler/"
 ---
 EA Türkiye, Türkiye'de efektif altruizm etrafında düşünen, öğrenen ve harekete geçen insanların buluşma noktasıdır.

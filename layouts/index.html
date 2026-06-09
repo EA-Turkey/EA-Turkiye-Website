@@ -93,7 +93,7 @@
       {{ partial "section-header.html" (dict
         "title" .Params.cta_section_title
       ) }}
-      <div class="cause-grid" style="margin-top: var(--space-32);" data-reveal>
+      <div class="cause-grid cause-grid--cta" style="margin-top: var(--space-32);" data-reveal>
         {{ range .Params.cta_cards }}
           <article class="cause-card">
             <a class="cause-card__link" href="{{ .url }}"{{ if not (hasPrefix .url "/") }} target="_blank" rel="noreferrer"{{ end }}>
