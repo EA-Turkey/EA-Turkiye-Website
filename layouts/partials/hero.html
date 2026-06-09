@@ -38,6 +38,7 @@
         {{ end }}
       </h1>
       {{ with $lead }}<p class="hero__lead">{{ . }}</p>{{ end }}
+      {{ with .sublead }}<p class="hero__lead" style="font-size: var(--text-base); color: var(--color-ink-700); margin-top: calc(var(--space-8) * -1);">{{ . }}</p>{{ end }}
       {{ if or $primaryURL $secondaryURL }}
         <div class="hero__actions">
           {{ with $primaryURL }}{{ partial "button.html" (dict "url" . "label" $primaryLabel "variant" "primary" "size" "cta") }}{{ end }}
