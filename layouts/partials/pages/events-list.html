@@ -1,11 +1,3 @@
-{{ partial "hero.html" (dict
-  "page" .
-  "variant" "page"
-  "eyebrow" .Params.hero_eyebrow
-  "title" (.Params.hero_title | default .Title)
-  "lead" (.Params.hero_lead | default .Params.description)
-) }}
-
 {{ partial "helpers/lang-context.html" . }}
 {{ $langSite := .Scratch.Get "langSite" }}
 {{ $events := slice }}
@@ -51,25 +43,6 @@
           </div>
         </div>
       {{ end }}
-      <aside class="events-archive__sidebar" data-reveal>
-        <div class="stack-md">
-          {{ with $.Params.upcoming_text }}
-            <p class="events-archive__sidebar-text">{{ . }}</p>
-          {{ end }}
-          {{ if gt (len $upcoming) 0 }}
-            {{ with $.Site.Params.events.luma_calendar_url }}
-              {{ partial "button.html" (dict "url" . "label" (i18n "open_luma") "variant" "secondary") }}
-            {{ end }}
-          {{ else }}
-            <div class="empty-state events-archive__empty">
-              <p>{{ i18n "no_upcoming_events" }}</p>
-            </div>
-            {{ with $.Site.Params.events.luma_calendar_url }}
-              {{ partial "button.html" (dict "url" . "label" (i18n "open_luma") "variant" "secondary") }}
-            {{ end }}
-          {{ end }}
-        </div>
-      </aside>
     </div>
     {{ if gt (len $upcoming) 0 }}
       <div class="event-grid event-grid--archive events-archive__grid events-archive__grid--upcoming">
