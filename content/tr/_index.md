@@ -23,11 +23,9 @@ stats:
     label: Düzenlenen etkinlik
 explainer_label: EA nedir?
 explainer_title: Bilim ve kanıta dayalı iyilik maksimizasyonu
-explainer_subtitle: "Efektif Altruizm, başkalarına yardım etmenin en iyi yollarını araştıran bir düşünce alanı ve topluluktur."
 explainer_intro:
-  - Dünyada çözülmeyi bekleyen sayısız sorun var ve bu sorunlarla mücadele etmek için sahip olduğumuz zaman ve kaynaklar sınırlı.
-  - Hepimiz iyilik yapmak ve olumlu bir etki yaratmak isteriz. Ancak dünyadaki tüm sorunlar eşit değil ve iyi niyetle yapılan pek çok müdahale, anlamlı ve kalıcı bir etki oluşturmakta başarısız oluyor.
-  - Efektif altruizm, hangi sorunların en acil ve ihmal edilmiş olduğunu ve hangi çözümlerin en fazla faydayı sağlayabileceğini anlamak için kanıtları ve akıl yürütmeyi kullanır. Böylece sınırlı kaynaklarımızı, mümkün olan en büyük olumlu etkiyi yaratacak şekilde yönlendirmeyi amaçlarız.
+  - Efektif altruizm, dünyaya en yüksek yararı sağlamaya çalışan felsefi bir yaklaşım ve sosyal bir harekettir. Amacı, dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak, öncelikli sorunlara ilişkin en etkili çözümleri geliştirmek ve bireylerin çözümlere yönelik sorumluluk almasını sağlamaktır. Efektif altruizm, hangi sorunların en acil ve ihmal edilmiş olduğunu ve hangi çözümlerin en fazla faydayı sağlayabileceğini anlamak için kanıtları ve akıl yürütmeyi kullanır. Böylece sınırlı kaynaklarımızı, mümkün olan en büyük olumlu etkiyi yaratacak şekilde yönlendirmeyi amaçlarız.
+  - Efektif altruistler gelirlerinin, zamanlarının, kariyerlerinin ve yaşamlarının kayda değer bir bölümünü öncelikli sorunların çözümüne ayırmanın bir etik yükümlülük olduğuna inanırlar.
 pillars_label: EA İlkeleri
 pillars:
   - title: Kanıt ve akıl yürütme
