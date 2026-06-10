@@ -13,17 +13,28 @@ team_text: Çekirdek ekip, topluluğun sürdürülebilir biçimde büyümesi iç
 team_ids:
   - devrim
   - firat
-values_eyebrow: İlkelerimiz
-values_text: Sorunlara yaklaşımımızı belirleyen birkaç temel alışkanlık ve değer var.
-values:
-  - title: Kanıta dayalı yaklaşım
-    text: En çok fayda sağlayan yolları belirlemek için veri ve dikkatli düşünmeyi ciddiye alırız.
-  - title: Problem alanı tarafsızlığı
-    text: Başlangıçta tek bir alana bağlanmak yerine kanıtı farklı problem alanları boyunca takip ederiz.
-  - title: İşbirliği
-    text: İnsanların birbirinden öğrenmesini ve uzun vadeli çalışma ilişkileri kurmasını kolaylaştırmak isteriz.
-  - title: Uzun vadeli düşünme
-    text: Bugünkü kararların yalnızca bugünü değil, gelecekteki insanları da etkilediğini hesaba katarız.
+activities_eyebrow: Ne yapıyoruz?
+activities:
+  - title: EA Programları
+    text: Türkiye'deki bireylerin efektif altruizm fikirlerini keşfetmelerine ve uygulamalarına yardımcı olmak için burs programları, çalışma grupları, atölyeler ve çeşitli projeler yürütüyoruz. Bu programlar, katılımcıların daha fazla fayda yaratabilmeleri için gerekli bilgi, beceri ve bağlantıları geliştirmeyi amaçlar.
+  - title: Topluluk Etkinlikleri
+    text: Efektif altruizme ilgi duyan insanları bir araya getiren konuşmalar, sosyal buluşmalar ve ağ oluşturma etkinlikleri düzenliyoruz. Bu etkinlikler, öğrenme, iş birliği yapma ve topluluğumuz içinde uzun süreli dostluklar kurma fırsatı sunar.
+  - title: Kariyer Danışmanlığı
+    text: Üyelerimizin yetenekleri, ilgi alanları ve değerleriyle uyumlu, yüksek etkili kariyer yollarını belirlemelerine yardımcı olmak için bireysel destek sunuyoruz. Bire bir görüşmeler ve çeşitli kaynaklar aracılığıyla, insanların kariyer kararlarını daha bilinçli ve daha yüksek etki yaratacak şekilde almalarına rehberlik ediyoruz.
+org_values_eyebrow: Değerlerimiz
+org_values:
+  - title: Kapsayıcı ve Açık Bir Topluluk
+    text: Türkiye'deki bireylerin efektif altruizm fikirlerine, kaynaklarına ve fırsatlarına kolayca erişebileceği; öğrenebileceği, tartışabileceği ve katkıda bulunabileceği kapsayıcı ve destekleyici ortamlar oluşturmayı amaçlıyoruz. Topluluğumuz, farklı geçmişlerden, ilgi alanlarından ve görüşlerden insanlara açıktır.
+  - title: Ölçek Duyarlılığı
+    text: Bir hayat kurtarmanın değerli olduğunu kabul ederken, on hayat kurtarmanın bir hayat kurtarmaktan çok daha büyük bir etki yarattığını kabul ederiz. Bu nedenle, mümkün olduğunca yüksek etki yaratabilecek fırsatlara öncelik vermeye çalışırız.
+  - title: Tarafsızlık
+    text: Yardım etmeyi seçtiğimiz kişiler arasında, bize yakın olmaları veya aynı coğrafyada yaşamaları nedeniyle ayrım yapmamaya çalışırız. Kaynaklarımızı en çok ihtiyaç duyanlara yönlendirmeyi hedefleriz.
+  - title: İzci Zihniyeti
+    text: Başkalarına daha iyi yardımcı olabilmek için gerçeği aramaya ve dünyayı olduğu gibi anlamaya çalışırız. Yeni kanıtlar ve güçlü argümanlar karşısında görüşlerimizi güncelleyebilmenin önemli olduğuna inanırız.
+  - title: Takasların Farkında Olmak
+    text: Zamanımızın, enerjimizin ve maddi kaynaklarımızın sınırlı olduğunu kabul ederiz. Bu nedenle, dünyayı iyileştirmenin farklı yolları arasında önceliklendirme yapmanın gerekli olduğuna inanır; kaynaklarımızı en yüksek etkiyi yaratabilecek alanlara yönlendirmeye çalışırız.
+  - title: Etkili İyilik Yapmayı Desteklemek
+    text: Efektif altruizm ilkeleriyle uyumlu kuruluşları ve yüksek etkili girişimler üzerinde çalışan bireyleri desteklemeyi önemsiyoruz. Amacımız, insanların daha fazla etki yaratabilecek kariyerler ve projeler geliştirmelerine yardımcı olmak ve Türkiye'deki efektif altruizm topluluğunu güçlendirmektir.
 ---
 ## Hikâyemiz
 
