@@ -7,25 +7,22 @@
 ) }}
 
 <section class="section">
-  <div class="container split grid-2">
-    <div class="stack-lg" data-reveal>
-      <div class="stack-sm">
-        <span class="section-header__eyebrow">{{ i18n "story_heading" }}</span>
-        <div class="prose">{{ .Content }}</div>
-      </div>
+  <div class="container stack-lg">
+    <div class="stack-sm" data-reveal>
+      <span class="section-header__eyebrow">{{ i18n "story_heading" }}</span>
+      <div class="prose">{{ .Content }}</div>
     </div>
-
-    <div class="stack-md" data-reveal>
-      {{ with .Params.hero_image }}
+    {{ with .Params.hero_image }}
+      <div data-reveal>
         {{ partial "picture.html" (dict
           "src" .
           "alt" $.Params.hero_image_alt
           "class" ""
           "variant" "hero"
-          "sizes" "(min-width: 64rem) 42rem, 100vw"
+          "sizes" "100vw"
         ) }}
-      {{ end }}
-    </div>
+      </div>
+    {{ end }}
   </div>
 </section>
 

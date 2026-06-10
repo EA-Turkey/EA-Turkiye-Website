@@ -27,6 +27,8 @@ values:
 ---
 ## Hikâyemiz
 
-EA Türkiye, Türkiye'de efektif altruizm çevresinde düşünen insanların birbirini bulmasını kolaylaştırmak için kuruldu. Amacımız tek bir etkinlik serisi üretmekten çok daha fazlası: insanların hangi sorunların en önemli olduğunu birlikte düşünmesini, daha iyi araçlarla karar vermesini ve daha yüksek etkili yollara yönelmesini desteklemek.
+Efektif Altruizm Türkiye, dünyadaki en önemli sorunlara nasıl daha etkili çözümler üretebileceğimizi araştıran ve bu konuda düşünen insanları bir araya getiren küresel Effective Altruism hareketinin Türkiye ayağıdır. Bu felsefenin temelinde, başkalarına yardım etme isteğini akıl yürütme, bilimsel kanıtlar ve dikkatli analizle birleştirme fikri yer alır. Amacımız yalnızca iyi niyetle hareket etmek değil, aynı zamanda zamanımızı, kariyerimizi, bağışlarımızı ve diğer kaynaklarımızı en yüksek olumlu etkiyi yaratacak şekilde nasıl kullanabileceğimizi anlamaktır.
 
-Bugün bunu şehir toplulukları, giriş programları, kariyer odaklı sohbetler ve çevrimiçi kaynaklar aracılığıyla yapıyoruz. Site de bu yüzden var: yeni gelen biri için net bir giriş noktası, düzenli katılımcı için güncel bir merkez ve iş birliği arayan biri için güvenilir bir temas yüzeyi olmak.
+Topluluğumuz; öğrenciler, araştırmacılar, girişimciler, profesyoneller ve daha etkili bir şekilde fayda sağlamak isteyen herkese açıktır. Düzenlediğimiz etkinlikler, okuma grupları, seminerler ve birebir görüşmeler aracılığıyla katılımcıların hem fikirlerle tanışmalarını hem de bu fikirleri kendi yaşamlarında nasıl uygulayabileceklerini keşfetmelerini destekliyoruz.
+
+Daha fazla etki yaratmak, anlamlı projeler üzerinde çalışmak veya bu fikirleri keşfetmek istiyorsanız, topluluğumuza katılmaya ve bizimle iletişime geçmeye davetlisiniz.
