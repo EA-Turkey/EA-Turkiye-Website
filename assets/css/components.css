@@ -2387,6 +2387,10 @@ a.contact-hero__route:focus-visible {
   margin-bottom: 0;
 }
 
+.events-archive .section-header__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
 .events-archive__upcoming-layout {
   display: grid;
   grid-template-columns: 1fr;
