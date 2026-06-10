@@ -3709,6 +3709,6 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 
 .home-community-photo img {
   object-fit: cover;
-  object-position: center;
+  object-position: center 80%;
   display: block;
 }
