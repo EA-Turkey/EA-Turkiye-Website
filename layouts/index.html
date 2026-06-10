@@ -56,21 +56,6 @@
     "stats_label" .Params.stats_label
   ) }}
 
-  <section class="section home-section home-section--events">
-    <div class="container">
-      {{ partial "section-header.html" (dict
-        "eyebrow" .Params.events_section_label
-        "title" .Params.events_section_title
-        "text" .Params.events_section_text
-        "action" (partial "button.html" (dict "url" $eventsSectionURL "label" (i18n "view_all_events") "variant" "ghost"))
-      ) }}
-      <div class="event-grid event-grid--home">
-        {{ range first 3 $homeEvents }}
-          {{ partial "event-card.html" (dict "page" . "variant" "home") }}
-        {{ end }}
-      </div>
-    </div>
-  </section>
 
   {{ partial "ea-explainer.html" (dict
     "label" .Params.explainer_label
