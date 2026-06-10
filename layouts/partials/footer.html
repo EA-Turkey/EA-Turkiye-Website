@@ -29,13 +29,13 @@
         >
       </picture>
       <p class="footer-copy">{{ i18n "footer_org_description" }}</p>
+      <p class="footer-copy"><a href="mailto:{{ $langSite.Params.contact.primary_email }}">{{ $langSite.Params.contact.primary_email }}</a></p>
       <p class="copyright">© {{ $year }} {{ i18n "footer_copyright" }}</p>
     </div>
 
     <div class="footer-column">
-      <p class="footer-label">{{ i18n "footer_connect" }}</p>
+      <p class="footer-label">{{ i18n "footer_follow" }}</p>
       <ul class="social-links">
-        <li><a href="mailto:{{ $langSite.Params.contact.primary_email }}">{{ $langSite.Params.contact.primary_email }}</a></li>
         {{ with $langSite.Params.social.instagram }}
           <li><a href="{{ . }}" target="_blank" rel="noreferrer">Instagram</a></li>
         {{ end }}

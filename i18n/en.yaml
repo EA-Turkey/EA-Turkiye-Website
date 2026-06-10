@@ -148,6 +148,9 @@
 - id: footer_connect
   translation: "Connect"
 
+- id: footer_follow
+  translation: "Follow us"
+
 - id: footer_copyright
   translation: "EA Turkey"
 

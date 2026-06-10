@@ -148,6 +148,9 @@
 - id: footer_connect
   translation: "Bağlan"
 
+- id: footer_follow
+  translation: "Bizi takip edin"
+
 - id: footer_copyright
   translation: "EA Türkiye"
 
