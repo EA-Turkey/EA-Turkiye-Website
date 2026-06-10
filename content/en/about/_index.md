@@ -24,7 +24,7 @@ values:
   - title: Long-term thinking
     text: We consider how present decisions affect not only people today, but also future generations.
 ---
-## Our story
+## About Us
 
 EA Turkey was started to make it easier for people in Turkey who are interested in effective altruism to find one another. Our goal is larger than running isolated events: we want to help people think together about which problems matter most, make better decisions with better tools, and move toward higher-impact paths.
 

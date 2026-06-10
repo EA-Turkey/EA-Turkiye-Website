@@ -1,15 +1,6 @@
-{{ partial "hero.html" (dict
-  "page" .
-  "variant" "page"
-  "eyebrow" .Params.hero_eyebrow
-  "title" (.Params.hero_title | default .Title)
-  "lead" (.Params.hero_lead | default .Params.description)
-) }}
-
 <section class="section">
   <div class="container stack-lg">
     <div class="stack-sm" data-reveal>
-      <span class="section-header__eyebrow">{{ i18n "story_heading" }}</span>
       <div class="prose">{{ .Content }}</div>
     </div>
     {{ with .Params.hero_image }}

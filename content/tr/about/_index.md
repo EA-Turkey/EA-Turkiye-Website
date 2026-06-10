@@ -36,7 +36,7 @@ org_values:
   - title: Etkili İyilik Yapmayı Desteklemek
     text: Efektif altruizm ilkeleriyle uyumlu kuruluşları ve yüksek etkili girişimler üzerinde çalışan bireyleri desteklemeyi önemsiyoruz. Amacımız, insanların daha fazla etki yaratabilecek kariyerler ve projeler geliştirmelerine yardımcı olmak ve Türkiye'deki efektif altruizm topluluğunu güçlendirmektir.
 ---
-## Hikâyemiz
+## Hakkımızda
 
 Efektif Altruizm Türkiye, dünyadaki en önemli sorunlara nasıl daha etkili çözümler üretebileceğimizi araştıran ve bu konuda düşünen insanları bir araya getiren küresel Effective Altruism hareketinin Türkiye ayağıdır. Bu felsefenin temelinde, başkalarına yardım etme isteğini akıl yürütme, bilimsel kanıtlar ve dikkatli analizle birleştirme fikri yer alır. Amacımız yalnızca iyi niyetle hareket etmek değil, aynı zamanda zamanımızı, kariyerimizi, bağışlarımızı ve diğer kaynaklarımızı en yüksek olumlu etkiyi yaratacak şekilde nasıl kullanabileceğimizi anlamaktır.
 
