@@ -42,20 +42,3 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container stack-lg">
-    {{ partial "section-header.html" (dict "eyebrow" .Params.values_eyebrow "title" (i18n "our_values") "text" .Params.values_text) }}
-    <div class="grid-2">
-      {{ range .Params.values }}
-        <article class="action-card" data-reveal>
-          <div class="action-card__body">
-            <div class="stack-sm">
-              <h3>{{ .title }}</h3>
-              <p class="text-muted">{{ .text }}</p>
-            </div>
-          </div>
-        </article>
-      {{ end }}
-    </div>
-  </div>
-</section>
