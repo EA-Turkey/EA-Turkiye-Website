@@ -3699,3 +3699,16 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 .cause-grid--cta .cause-card__link:focus-visible {
   background: #0891b2;
 }
+
+.home-community-photo,
+.home-community-photo .picture,
+.home-community-photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.home-community-photo img {
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
