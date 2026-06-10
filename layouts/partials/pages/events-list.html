@@ -44,13 +44,6 @@
         </div>
       {{ end }}
     </div>
-    {{ if gt (len $upcoming) 0 }}
-      <div class="event-grid event-grid--archive events-archive__grid events-archive__grid--upcoming">
-        {{ range $upcoming }}
-          {{ partial "event-card.html" (dict "page" . "variant" "archive") }}
-        {{ end }}
-      </div>
-    {{ end }}
   </div>
 </section>
 
