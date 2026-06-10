@@ -42,7 +42,7 @@
       {{ if or $primaryURL $secondaryURL }}
         <div class="hero__actions">
           {{ with $primaryURL }}{{ partial "button.html" (dict "url" . "label" $primaryLabel "variant" "primary" "size" "cta") }}{{ end }}
-          {{ with $secondaryURL }}{{ partial "button.html" (dict "url" . "label" $secondaryLabel "variant" "secondary") }}{{ end }}
+          {{ with $secondaryURL }}{{ partial "button.html" (dict "url" . "label" $secondaryLabel "variant" "secondary" "size" "cta" "external" (hasPrefix . "http")) }}{{ end }}
         </div>
       {{ end }}
     </div>

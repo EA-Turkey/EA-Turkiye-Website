@@ -7,8 +7,8 @@ hero_title: Başkalarına yardım etmenin en etkili yollarını keşfedin
 hero_lead: "Efektif Alturizm (Etkili İyilik) şu soruyu sorar: Zamanımızı, paramızı, yeteneklerimizi ve diğer kaynaklarımızı kullanarak en fazla iyiliği nasıl yapabiliriz?"
 hero_primary_label: Efektif Altruizm nedir?
 hero_primary_url: "#ea-nedir"
-hero_secondary_label: ""
-hero_secondary_url: ""
+hero_secondary_label: Giriş Programımıza Katıl
+hero_secondary_url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
 stats_label: Rakamlarla EA Türkiye
 stats:
   - value: "2021"
