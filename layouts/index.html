@@ -57,6 +57,19 @@
   ) }}
 
 
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap: var(--space-16);" data-reveal>
+        <div style="border-radius: var(--radius-xl); overflow: hidden;">
+          {{ partial "picture.html" (dict "src" "home/community-1.jpg" "alt" "EA Türkiye topluluğu" "sizes" "(min-width: 48rem) 50vw, 100vw" "variant" "hero") }}
+        </div>
+        <div style="border-radius: var(--radius-xl); overflow: hidden;">
+          {{ partial "picture.html" (dict "src" "home/community-2.jpg" "alt" "EA Türkiye topluluk buluşması" "sizes" "(min-width: 48rem) 50vw, 100vw" "variant" "hero") }}
+        </div>
+      </div>
+    </div>
+  </section>
+
   {{ partial "ea-explainer.html" (dict
     "label" .Params.explainer_label
     "title" .Params.explainer_title
