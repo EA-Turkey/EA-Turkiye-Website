@@ -5,10 +5,10 @@ description: A community looking for better ways to address the world's most urg
 hero_eyebrow: Effective Altruism · Turkey
 hero_title: A community looking for better ways to address the world's most urgent problems
 hero_lead: We use evidence, reasoning, and community to explore how to benefit others as much as possible.
-hero_primary_label: Join the community
-hero_primary_url: /en/get-involved/
-hero_secondary_label: What is EA?
-hero_secondary_url: /en/about/
+hero_primary_label: What is Effective Altruism?
+hero_primary_url: "#ea-nedir"
+hero_secondary_label: Join Our Intro Program
+hero_secondary_url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
 stats_label: EA Turkey by the numbers
 stats:
   - value: "2021"
