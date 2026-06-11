@@ -3,7 +3,7 @@ translationKey: "blog"
 title: "Blog"
 description: "Newsletters and posts from the Effective Altruism Turkey Substack archive."
 hero_eyebrow: "Blog"
-hero_title: "Posts and Announcements"
-hero_lead: "Event announcements, monthly newsletters, community notes, and reading recommendations — all writing from EA Turkey in one place."
+hero_title: "From event announcements to monthly newsletters, from career opportunities to blog posts — you can find the archive of all our content on this page."
+hero_lead: ""
 ---
 This section archives the newsletters and posts originally published on the Effective Altruism Turkey Substack.
