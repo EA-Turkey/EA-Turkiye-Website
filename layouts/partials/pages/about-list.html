@@ -29,8 +29,12 @@
               <h3>{{ .title }}</h3>
               <p class="text-muted">{{ .text }}</p>
             </div>
-            {{ with .url }}
-              <a class="cause-card__cta" href="{{ . }}" target="_blank" rel="noreferrer">{{ $.Params.activities_cta | default "Başvuru formu" }} →</a>
+            {{ with .links }}
+              <div class="stack-sm">
+                {{ range . }}
+                  <a class="cause-card__cta" href="{{ .url }}"{{ if not (hasPrefix .url "/") }} target="_blank" rel="noreferrer"{{ end }}>{{ .label }} →</a>
+                {{ end }}
+              </div>
             {{ end }}
           </div>
         </article>

@@ -14,15 +14,24 @@ team_ids:
   - devrim
   - firat
 activities_eyebrow: Ne yapıyoruz?
-activities_cta: Kariyer danışmanlığı başvuru formu
 activities:
   - title: EA Programları
     text: Yeni katılımcıların efektif altruizm hakkında sağlam bir temel edinmeleri için çevrimiçi Giriş Programı düzenliyoruz.
+    links:
+      - label: Giriş Programı başvuru formu
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
+      - label: Yapay Zekâ Güvenliği Programı ilgi formu
+        url: "https://docs.google.com/forms/d/e/1FAIpQLScW-UALwTNUDAOI7xPDui7iSZ-OTIZhMzL1NMbyHDfN8Emi3Q/viewform?usp=header"
   - title: Topluluk Etkinlikleri
     text: Farklı mücadele alanlarında çalışan ya da bu alanlara ilgi duyan herkes için yüz yüze sosyal buluşmalar, konferanslar ve çalıştaylar düzenliyoruz.
+    links:
+      - label: Etkinlikleri gör
+        url: "/etkinlikler/"
   - title: Kariyer Danışmanlığı
     text: Üyelerimizin yetenekleri, ilgi alanları ve değerleriyle uyumlu, yüksek etkili kariyer yolları bulmalarına yardımcı olmak için bireysel kariyer danışmanlığı sağlıyoruz.
-    url: "https://docs.google.com/forms/d/e/1FAIpQLSdIXyOBIyhYBSCWcGA4XARX1FqGUXUQoBB-prHcV-bQvYnrbQ/viewform?usp=header"
+    links:
+      - label: Kariyer danışmanlığı başvuru formu
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdIXyOBIyhYBSCWcGA4XARX1FqGUXUQoBB-prHcV-bQvYnrbQ/viewform?usp=header"
 org_values_eyebrow: Değerlerimiz
 org_values:
   - title: Kapsayıcı ve Açık Bir Topluluk

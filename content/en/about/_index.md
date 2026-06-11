@@ -13,15 +13,24 @@ team_ids:
   - devrim
   - firat
 activities_eyebrow: What we do
-activities_cta: Career coaching application form
 activities:
   - title: EA Programs
     text: We run an online Introduction Program to help newcomers build a solid foundation in effective altruism.
+    links:
+      - label: Introduction Program application form
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
+      - label: AI Safety Program interest form
+        url: "https://docs.google.com/forms/d/e/1FAIpQLScW-UALwTNUDAOI7xPDui7iSZ-OTIZhMzL1NMbyHDfN8Emi3Q/viewform?usp=header"
   - title: Community Events
     text: We host in-person social meetups, conferences, and workshops for anyone working in or curious about different cause areas.
+    links:
+      - label: View events
+        url: "/en/events/"
   - title: Career Coaching
     text: We provide one-on-one career coaching to help our members find high-impact career paths aligned with their skills, interests, and values.
-    url: "https://docs.google.com/forms/d/e/1FAIpQLSdIXyOBIyhYBSCWcGA4XARX1FqGUXUQoBB-prHcV-bQvYnrbQ/viewform?usp=header"
+    links:
+      - label: Career coaching application form
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdIXyOBIyhYBSCWcGA4XARX1FqGUXUQoBB-prHcV-bQvYnrbQ/viewform?usp=header"
 org_values_eyebrow: Our values
 org_values:
   - title: An Inclusive and Open Community
