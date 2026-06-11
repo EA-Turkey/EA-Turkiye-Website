@@ -3706,3 +3706,8 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 #ea-nedir {
   padding-top: var(--space-32);
 }
+
+#ea-nedir .stack-md > .text-muted {
+  font-size: var(--text-body-lg);
+  line-height: 1.6;
+}
