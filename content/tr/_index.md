@@ -35,7 +35,7 @@ pillars:
   - title: Ölçek ve ihmal edilmişlik
     text: Büyük, çözülebilir ve yeterince ilgi görmeyen problemlere odaklanırız.
   - title: İzci zihniyeti
-    text: Haklı olmaya değil, doğruyu bulmaya odaklanırız. Yeni bir kanıt karşısında görüşlerimizi güncellemek bir zayıflık değil, entelektüel dürüstlüğün gereğidir.
+    text: Haklı olmaya değil, doğruyu bulmaya odaklanırız. Yeni bir kanıt karşısında görüşlerimizi güncellemenin bir zayıflık değil, entelektüel dürüstlüğün bir gereği olduğuna inanırız.
   - title: Ölçülebilirlik
     text: Aldığımız aksiyonların somut verilerle ölçümlenebilir olmasına önem veririz.
 cause_section_label: Odak alanları
