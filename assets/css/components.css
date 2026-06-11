@@ -473,6 +473,10 @@
   background: linear-gradient(90deg, transparent, var(--color-brand-line), transparent);
 }
 
+.page-home .hero--home::after {
+  display: none;
+}
+
 .hero--home .hero__inner {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
