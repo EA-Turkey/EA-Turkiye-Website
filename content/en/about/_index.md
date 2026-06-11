@@ -12,20 +12,33 @@ team_text: The core team works on programs, partnerships, and local relationship
 team_ids:
   - devrim
   - firat
-values_eyebrow: Principles
-values_text: A small set of habits and values shapes how we approach problems and community building.
-values:
-  - title: Evidence-based thinking
-    text: We take data and careful reasoning seriously when asking how to help most effectively.
-  - title: Cause neutrality
-    text: We try to follow the evidence across problems rather than treating one cause area as automatically primary.
-  - title: Collaboration
-    text: We want people to learn from one another and build long-term working relationships.
-  - title: Long-term thinking
-    text: We consider how present decisions affect not only people today, but also future generations.
+activities_eyebrow: What we do
+activities:
+  - title: EA Programs
+    text: We run fellowship programs, reading groups, workshops, and various projects to help people in Turkey explore and apply the ideas of effective altruism. These programs aim to build the knowledge, skills, and connections participants need to create more impact.
+  - title: Community Events
+    text: We organize talks, social gatherings, and networking events that bring together people interested in effective altruism. These events offer a chance to learn, collaborate, and build lasting friendships within our community.
+  - title: Career Coaching
+    text: We offer one-on-one support to help our members identify high-impact career paths aligned with their skills, interests, and values. Through individual conversations and a range of resources, we guide people in making more informed, higher-impact career decisions.
+org_values_eyebrow: Our values
+org_values:
+  - title: An Inclusive and Open Community
+    text: We aim to create inclusive and supportive spaces where people in Turkey can easily access the ideas, resources, and opportunities of effective altruism, and where they can learn, discuss, and contribute. Our community is open to people from different backgrounds, interests, and perspectives.
+  - title: Scope Sensitivity
+    text: While we recognize that saving one life is valuable, we also recognize that saving ten lives creates a much greater impact than saving one. That is why we try to prioritize opportunities that can create as much impact as possible.
+  - title: Impartiality
+    text: We try not to discriminate among the people we choose to help based on whether they are close to us or live in the same place. We aim to direct our resources to those who need them most.
+  - title: Scout Mindset
+    text: To help others better, we try to seek the truth and understand the world as it is. We believe it is important to update our views in light of new evidence and strong arguments.
+  - title: Awareness of Trade-offs
+    text: We recognize that our time, energy, and material resources are limited. That is why we believe it is necessary to prioritize among different ways of improving the world, and we try to direct our resources toward the areas where they can create the most impact.
+  - title: Supporting Effective Doing-Good
+    text: We care about supporting organizations aligned with the principles of effective altruism and individuals working on high-impact initiatives. Our goal is to help people develop careers and projects that create more impact, and to strengthen the effective altruism community in Turkey.
 ---
 ## About Us
 
-EA Turkey was started to make it easier for people in Turkey who are interested in effective altruism to find one another. Our goal is larger than running isolated events: we want to help people think together about which problems matter most, make better decisions with better tools, and move toward higher-impact paths.
+Effective Altruism Turkey is the Turkish chapter of the global Effective Altruism movement, bringing together people who research and think about how we can produce more effective solutions to the world's most important problems. At the heart of this philosophy lies the idea of combining the desire to help others with reasoning, scientific evidence, and careful analysis. Our aim is not only to act with good intentions, but also to understand how we can use our time, careers, donations, and other resources to create the greatest positive impact.
 
-Today we do that through city communities, introductory programs, career-oriented conversations, and online resources. This website exists for the same reason: to offer a clear starting point for newcomers, a reliable home for regular participants, and a trustworthy contact surface for collaboration.
+Our community is open to students, researchers, entrepreneurs, professionals, and anyone who wants to do good more effectively. Through the events, reading groups, seminars, and one-on-one meetings we organize, we help participants both encounter these ideas and discover how to apply them in their own lives.
+
+If you want to create more impact, work on meaningful projects, or simply explore these ideas, you are warmly invited to join our community and get in touch with us.
