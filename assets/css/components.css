@@ -3448,22 +3448,8 @@ a.contact-hero__route:focus-visible {
   isolation: isolate;
   overflow: hidden;
   padding-block: var(--space-80) var(--space-48);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 250, 251, 0.72) 52%, rgba(238, 245, 247, 0.38) 100%),
-    repeating-linear-gradient(90deg, rgba(var(--color-brand-600-rgb), 0.055) 0 1px, transparent 1px 7.5rem),
-    repeating-linear-gradient(180deg, rgba(207, 138, 52, 0.055) 0 1px, transparent 1px 7.5rem);
 }
 
-.page-home .hero--text-only::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(115deg, transparent 0 26%, rgba(var(--color-brand-500-rgb), 0.08) 26% 26.12%, transparent 26.12% 100%),
-    linear-gradient(65deg, transparent 0 67%, rgba(207, 138, 52, 0.08) 67% 67.12%, transparent 67.12% 100%);
-  pointer-events: none;
-}
 
 .page-home .hero--text-only .hero__inner {
   display: block;
