@@ -27,7 +27,7 @@ explainer_intro:
   - Efektif altruizm, dünyaya en yüksek yararı sağlamaya çalışan felsefi bir yaklaşım ve sosyal bir harekettir.
   - Amacı, dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak, öncelikli sorunlara ilişkin en etkili çözümleri geliştirmek ve bireylerin çözümlere yönelik sorumluluk almasını sağlamaktır.
   - Hangi sorunların en büyük, ihmal edilmiş ve çözülebilir olduğunu tespit etmek için bilimsel verileri ve rasyonel akıl yürütmeyi kullanır.
-  - Böylece sınırlı kaynaklarımızı, mümkün olan en büyük olumlu etkiyi yaratacak şekilde yönlendirmeyi amaçlarız.
+  - Böylece sınırlı kaynaklarımızı, mümkün olan en büyük olumlu etkiyi yaratacak şekilde yönlendirebiliriz.
 pillars_label: EA İlkeleri
 pillars:
   - title: Kanıt ve akıl yürütme
