@@ -3,7 +3,6 @@
 {{ $homeURL := .Scratch.Get "homeURL" }}
 {{ $actualLang := .Scratch.Get "actualLang" }}
 {{ $orgName := cond (eq $actualLang "en") $langSite.Params.organization.name_en $langSite.Params.organization.name }}
-{{ $joinURL := partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $actualLang "key" "get-involved") | strings.TrimSpace) | strings.TrimSpace }}
 {{ $aboutURL := partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $actualLang "key" "about") | strings.TrimSpace) | strings.TrimSpace }}
 {{ $eventsURL := partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $actualLang "key" "events") | strings.TrimSpace) | strings.TrimSpace }}
 {{ $blogURL := partial "helpers/resolve-url.html" (partial "helpers/section-root.html" (dict "lang" $actualLang "key" "blog") | strings.TrimSpace) | strings.TrimSpace }}
@@ -64,8 +63,6 @@
       </ul>
 
       {{ partial "language-switcher.html" . }}
-
-      {{ partial "button.html" (dict "url" $joinURL "label" (i18n "join_us") "variant" "primary" "class" "button--header-cta") }}
     </nav>
 
     <button

@@ -2,7 +2,7 @@
 {{- $langSite := .Scratch.Get "langSite" -}}
 {{- $searchConfig := site.Data.search | default dict -}}
 {{- $items := slice -}}
-{{- $landingSections := slice "about" "get-involved" "contact" "cause-areas" "resources" -}}
+{{- $landingSections := slice "about" "contact" "cause-areas" "resources" -}}
 {{- $typeLabels := dict
   "about" (i18n "search_section_about")
   "blog" (i18n "search_section_blog")
