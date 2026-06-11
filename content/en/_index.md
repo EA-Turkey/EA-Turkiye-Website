@@ -3,7 +3,7 @@ translationKey: home
 title: Effective Altruism Turkey
 description: A community looking for better ways to address the world's most urgent problems through evidence, reason, and community.
 hero_eyebrow: Effective Altruism · Turkey
-hero_title: A community looking for better ways to address the world's most urgent problems
+hero_title: Discover the most effective ways to help others
 hero_lead: We use evidence, reasoning, and community to explore how to benefit others as much as possible.
 hero_primary_label: What is Effective Altruism?
 hero_primary_url: "#ea-nedir"
@@ -22,10 +22,12 @@ stats:
   - value: "50+"
     label: Events held
 explainer_label: What is EA?
-explainer_title: Science-based goodness maximization
+explainer_title: Doing the most good possible, guided by reason, science, and compassion.
 explainer_intro:
-  - Effective altruism is a field of inquiry and a community focused on finding the best ways to help others.
-  - The question is not only how to do some good, but how to do the most good with the resources we have.
+  - Effective altruism is a philosophical approach and a social movement that seeks to do the most good in the world.
+  - Its aim is to identify which of the world's problems are most pressing, to develop the most effective solutions to those priority problems, and to encourage individuals to take responsibility for putting those solutions into action.
+  - To determine which problems are the largest, most neglected, and most solvable, it draws on scientific evidence and rational reasoning.
+  - This way, we can direct our limited resources toward creating the greatest possible positive impact.
 pillars_label: EA Principles
 pillars:
   - title: Evidence and reason
@@ -37,7 +39,7 @@ pillars:
   - title: Measurability
     text: We care that the actions we take are measurable and can be evaluated with concrete data.
 cause_section_label: Cause areas
-cause_section_title: We pay special attention to problems where additional effort may matter most
+cause_section_title: We focus on the cause areas where we can make the most difference
 cause_section_text: As Effective Altruists, we focus on the cause areas that affect the greatest number of people and animals, where we can drive the most change, and which are most neglected.
 events_section_label: Upcoming Events
 events_section_title: We come together to build new connections, learn collectively, and take action.
