@@ -39,7 +39,7 @@ pillars:
   - title: Ölçülebilirlik
     text: Aldığımız aksiyonların somut verilerle ölçümlenebilir olmasına önem veririz.
 cause_section_label: Odak alanları
-cause_section_title: En çok fark yaratabileceğimiz mücadele alanlarına bakıyoruz
+cause_section_title: En çok fark yaratabileceğimiz mücadele alanlarına odaklanırız
 cause_section_text: Efektif Altruistler olarak, en fazla sayıda insan ve hayvanı etkileyen, en fazla değişim yaratabileceğimiz ve en ihmal edilmiş mücadele alanlarına odaklanırız.
 events_section_label: Yaklaşan Etkinlikler
 events_section_title: Yeni bağlar kurmak, birlikte öğrenmek ve harekete geçmek için buluşuyoruz.
