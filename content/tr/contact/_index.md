@@ -9,27 +9,27 @@ hero_lead: Sorularınız, önerileriniz veya tanışmak için aşağıdaki ileti
 hero_primary_label: Forma git
 hero_primary_anchor: "#iletisim-formu"
 hero_secondary_label: E-posta gönder
-topics_eyebrow: Hangi konuda yazabilirsin?
-topics_title: Doğru kapıyı aramana gerek yok
-topics_text: Kısa bir not yeterli. Mesajını doğru kişiye yönlendirmeye çalışırız.
+topics_eyebrow: Hangi konuda yazabilirsiniz?
+topics_title: Doğru kapıyı aramanıza gerek yok
+topics_text: Kısa bir not yeterli. Mesajınızı doğru kişiye yönlendirmeye çalışırız.
 topics:
   - title: Topluluğa katılmak
-    text: Efektif altruizme yeni bakıyorsan, ilk adım için birlikte uygun bir yol bulabiliriz.
+    text: Efektif altruizme yeni bakıyorsanız, ilk adım için birlikte uygun bir yol bulabiliriz.
   - title: Etkinlikler ve programlar
-    text: Giriş oturumları, fellowship'ler, okuma grupları veya şehir buluşmaları hakkında yazabilirsin.
+    text: Giriş oturumları, fellowship'ler, okuma grupları veya şehir buluşmaları hakkında yazabilirsiniz.
   - title: İş birliği ve genel sorular
-    text: Medya, kurumlar, üniversite kulüpleri ve potansiyel ortak çalışmalar için bize ulaşabilirsin.
+    text: Medya, kurumlar, üniversite kulüpleri ve potansiyel ortak çalışmalar için bize ulaşabilirsiniz.
   - title: Gönüllülük ve yerel gruplar
     text: Etkinlik, çeviri, topluluk inşası veya yeni bir yerel girişim için konuşabiliriz.
 direct_eyebrow: Doğrudan iletişim
 direct_title: E-posta da her zaman iyi bir başlangıç
-direct_text: Formu kullanmak istemezsen bize doğrudan yazabilirsin. Kısa, açık ve bağlam veren mesajlar en hızlı yönlendirmeyi sağlar.
+direct_text: Formu kullanmak istemezseniz bize doğrudan yazabilirsiniz. Kısa, açık ve bağlam veren mesajlar en hızlı yönlendirmeyi sağlar.
 response_title: Dönüş süresi
 response_text: Genellikle birkaç gün içinde yanıtlamaya çalışırız.
 email_title: E-posta
 form:
   heading: Bize yazın
-  lead: Kendini kısaca tanıtman ve ne hakkında konuşmak istediğini söylemen yeterli.
+  lead: Kendinizi kısaca tanıtmanız ve ne hakkında konuşmak istediğinizi söylemeniz yeterli.
   interests:
     - Genel soru
     - Topluluğa katılmak

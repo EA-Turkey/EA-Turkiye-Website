@@ -185,7 +185,7 @@
   translation: "Mesajı gönder"
 
 - id: form_fallback_prefix
-  translation: "Form çalışmazsa bize doğrudan e-posta yazabilirsin:"
+  translation: "Form çalışmazsa bize doğrudan e-posta yazabilirsiniz:"
 
 - id: form_status_sending
   translation: "Gönderiliyor..."
@@ -299,7 +299,7 @@
   translation: "Aradığın sayfayı bulamadık"
 
 - id: not_found_text
-  translation: "Bağlantı taşınmış olabilir. Ana sayfadan veya menüden devam edebilirsin."
+  translation: "Bağlantı taşınmış olabilir. Ana sayfadan veya menüden devam edebilirsiniz."
 
 - id: return_home
   translation: "Ana sayfaya dön"
@@ -329,10 +329,10 @@
   translation: "Başlamak için bir başlık, konu, kurum ya da şehir yaz."
 
 - id: search_zero_state_title
-  translation: "Öne çıkan aramalarla keşfet"
+  translation: "Öne çıkan aramalarla keşfedin"
 
 - id: search_zero_state_hint
-  translation: "İstersen önerilerden biriyle başlayabilir ya da kendi aramanı yazabilirsin."
+  translation: "İsterseniz önerilerden biriyle başlayabilir ya da kendi aramanızı yazabilirsiniz."
 
 - id: search_no_results
   translation: "Bu arama için sonuç bulunamadı."

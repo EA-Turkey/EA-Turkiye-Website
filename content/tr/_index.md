@@ -7,7 +7,7 @@ hero_title: Başkalarına yardım etmenin en etkili yollarını keşfedin
 hero_lead: "Efektif Alturizm (Etkili İyilik) şu soruyu sorar: Zamanımızı, paramızı, yeteneklerimizi ve diğer kaynaklarımızı kullanarak en fazla iyiliği nasıl yapabiliriz?"
 hero_primary_label: Efektif Altruizm nedir?
 hero_primary_url: "#ea-nedir"
-hero_secondary_label: Giriş Programımıza Katıl
+hero_secondary_label: Giriş Programımıza Katılın
 hero_secondary_url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
 stats_label: Rakamlarla EA Türkiye
 stats:
@@ -45,20 +45,20 @@ events_section_label: Yaklaşan Etkinlikler
 events_section_title: Yeni bağlar kurmak, birlikte öğrenmek ve harekete geçmek için buluşuyoruz.
 events_section_text: Farklı mücadele alanlarına ve deneyim seviyelerine yönelik etkinliklerimizi keşfedin.
 events_section_url: /etkinlikler/
-cta_section_title: Daha fazlasını öğren ve harekete geç
+cta_section_title: Daha fazlasını öğrenin ve harekete geçin
 cta_learn_more: Keşfet →
 cta_cards:
   - title: Efektif Altruizm’e Giriş
-    text: EA’nın temel fikirlerini, yaklaşımlarını ve topluluk kültürünü öğren.
+    text: EA’nın temel fikirlerini, yaklaşımlarını ve topluluk kültürünü öğrenin.
     url: "https://www.effectivealtruism.org/articles/introduction-to-effective-altruism"
   - title: Etkili bağışçılık
-    text: Paranı en fazla fayda yaratacak şekilde nasıl kullanabileceğini keşfet.
+    text: Paranızı en fazla fayda yaratacak şekilde nasıl kullanabileceğinizi keşfedin.
     url: "https://www.etkilibagis.org/"
   - title: Yüksek etkili kariyer
-    text: Kariyerinle dünyada nasıl gerçek bir fark yaratabileceğini araştır.
+    text: Kariyerinizle dünyada nasıl gerçek bir fark yaratabileceğinizi araştırın.
     url: "https://80000hours.org/"
   - title: Etkinlikler
-    text: İlgi alanlarına göre sana uygun etkinliklerimize göz at.
+    text: İlgi alanlarınıza göre size uygun etkinliklerimize göz atın.
     url: "https://ea-turkey.github.io/EA-Turkiye-Website/etkinlikler/"
 ---
 EA Türkiye, Türkiye'de efektif altruizm etrafında düşünen, öğrenen ve harekete geçen insanların buluşma noktasıdır.
