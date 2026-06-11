@@ -5,6 +5,7 @@ description: Güçlü yapay zekâ sistemlerinin güvenli, anlaşılır ve insan 
 url: /odak-alanlari/yapay-zeka-guvenligi/
 slug: yapay-zeka-guvenligi
 accent: ai-safety
+external_url: "https://aisafetyturkiye.org/"
 card_excerpt: Hızla gelişen yapay zekâ sistemlerinin topluma büyük fayda sağlamasını, ama aynı zamanda ciddi riskler üretmemesini nasıl sağlayacağımızı tartışıyoruz.
 featured_image: cause-areas/ai-safety/cover.jpg
 featured_image_credit: "Fotoğraf: [İsmail Enes Ayhan](https://unsplash.com/@ismailenesayhan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) / [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"

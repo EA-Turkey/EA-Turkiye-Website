@@ -4,6 +4,7 @@ title: Animal welfare
 description: Focusing on ways to improve the living conditions of very large numbers of animals in human-controlled systems.
 slug: animal-welfare
 accent: animal-welfare
+external_url: "https://80000hours.org/problem-profiles/factory-farming/"
 card_excerpt: We examine policy, corporate, and behavioural changes that could improve conditions for very large numbers of animals.
 featured_image: cause-areas/animal-welfare/cover.jpg
 featured_image_credit: "Photo by [Danielle Suijkerbuijk](https://unsplash.com/@vandaantje?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText)"

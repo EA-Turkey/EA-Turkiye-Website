@@ -30,10 +30,6 @@ org_values:
     text: We try not to discriminate among the people we choose to help based on whether they are close to us or live in the same place. We aim to direct our resources to those who need them most.
   - title: Scout Mindset
     text: To help others better, we try to seek the truth and understand the world as it is. We believe it is important to update our views in light of new evidence and strong arguments.
-  - title: Awareness of Trade-offs
-    text: We recognize that our time, energy, and material resources are limited. That is why we believe it is necessary to prioritize among different ways of improving the world, and we try to direct our resources toward the areas where they can create the most impact.
-  - title: Supporting Effective Doing-Good
-    text: We care about supporting organizations aligned with the principles of effective altruism and individuals working on high-impact initiatives. Our goal is to help people develop careers and projects that create more impact, and to strengthen the effective altruism community in Turkey.
 ---
 ## About Us
 

@@ -4,6 +4,7 @@ title: Global health and poverty
 description: Addressing large-scale problems in health and income with interventions that can be unusually cost-effective.
 slug: global-health-poverty
 accent: global-health-poverty
+external_url: "https://80000hours.org/problem-profiles/health-in-poor-countries/"
 card_excerpt: We try to understand how relatively low-cost interventions can matter in enormous problems such as preventable disease and extreme poverty.
 featured_image: cause-areas/global-health-poverty/cover.jpg
 featured_image_credit: "Photo by [Leks Quintero](https://unsplash.com/@aquintero210?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText)"

@@ -31,10 +31,6 @@ org_values:
     text: Yardım etmeyi seçtiğimiz kişiler arasında, bize yakın olmaları veya aynı coğrafyada yaşamaları nedeniyle ayrım yapmamaya çalışırız. Kaynaklarımızı en çok ihtiyaç duyanlara yönlendirmeyi hedefleriz.
   - title: İzci Zihniyeti
     text: Başkalarına daha iyi yardımcı olabilmek için gerçeği aramaya ve dünyayı olduğu gibi anlamaya çalışırız. Yeni kanıtlar ve güçlü argümanlar karşısında görüşlerimizi güncelleyebilmenin önemli olduğuna inanırız.
-  - title: Takasların Farkında Olmak
-    text: Zamanımızın, enerjimizin ve maddi kaynaklarımızın sınırlı olduğunu kabul ederiz. Bu nedenle, dünyayı iyileştirmenin farklı yolları arasında önceliklendirme yapmanın gerekli olduğuna inanır; kaynaklarımızı en yüksek etkiyi yaratabilecek alanlara yönlendirmeye çalışırız.
-  - title: Etkili İyilik Yapmayı Desteklemek
-    text: Efektif altruizm ilkeleriyle uyumlu kuruluşları ve yüksek etkili girişimler üzerinde çalışan bireyleri desteklemeyi önemsiyoruz. Amacımız, insanların daha fazla etki yaratabilecek kariyerler ve projeler geliştirmelerine yardımcı olmak ve Türkiye'deki efektif altruizm topluluğunu güçlendirmektir.
 ---
 ## Hakkımızda
 

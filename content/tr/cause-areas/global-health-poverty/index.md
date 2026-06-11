@@ -5,6 +5,7 @@ description: Sağlık ve gelir alanındaki büyük ölçekli sorunlara düşük 
 url: /odak-alanlari/kuresel-saglik-ve-yoksulluk/
 slug: kuresel-saglik-ve-yoksulluk
 accent: global-health-poverty
+external_url: "https://80000hours.org/problem-profiles/health-in-poor-countries/"
 card_excerpt: Önlenebilir hastalıklar ve aşırı yoksulluk gibi devasa sorunlarda düşük maliyetli müdahalelerin etkisini anlamaya çalışıyoruz.
 featured_image: cause-areas/global-health-poverty/cover.jpg
 featured_image_credit: "Fotoğraf: [Leks Quintero](https://unsplash.com/@aquintero210?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText) / [Unsplash](https://unsplash.com/?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText)"
