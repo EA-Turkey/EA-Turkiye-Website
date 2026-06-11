@@ -13,13 +13,15 @@ team_ids:
   - devrim
   - firat
 activities_eyebrow: What we do
+activities_cta: Career coaching application form
 activities:
   - title: EA Programs
-    text: We run fellowship programs, reading groups, workshops, and various projects to help people in Turkey explore and apply the ideas of effective altruism. These programs aim to build the knowledge, skills, and connections participants need to create more impact.
+    text: We run an online Introduction Program to help newcomers build a solid foundation in effective altruism.
   - title: Community Events
-    text: We organize talks, social gatherings, and networking events that bring together people interested in effective altruism. These events offer a chance to learn, collaborate, and build lasting friendships within our community.
+    text: We host in-person social meetups, conferences, and workshops for anyone working in or curious about different cause areas.
   - title: Career Coaching
-    text: We offer one-on-one support to help our members identify high-impact career paths aligned with their skills, interests, and values. Through individual conversations and a range of resources, we guide people in making more informed, higher-impact career decisions.
+    text: We provide one-on-one career coaching to help our members find high-impact career paths aligned with their skills, interests, and values.
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSdIXyOBIyhYBSCWcGA4XARX1FqGUXUQoBB-prHcV-bQvYnrbQ/viewform?usp=header"
 org_values_eyebrow: Our values
 org_values:
   - title: An Inclusive and Open Community

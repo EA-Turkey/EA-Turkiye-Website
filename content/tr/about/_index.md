@@ -14,13 +14,15 @@ team_ids:
   - devrim
   - firat
 activities_eyebrow: Ne yapıyoruz?
+activities_cta: Kariyer danışmanlığı başvuru formu
 activities:
   - title: EA Programları
-    text: Türkiye'deki bireylerin efektif altruizm fikirlerini keşfetmelerine ve uygulamalarına yardımcı olmak için burs programları, çalışma grupları, atölyeler ve çeşitli projeler yürütüyoruz. Bu programlar, katılımcıların daha fazla fayda yaratabilmeleri için gerekli bilgi, beceri ve bağlantıları geliştirmeyi amaçlar.
+    text: Yeni katılımcıların efektif altruizm hakkında sağlam bir temel edinmeleri için çevrimiçi Giriş Programı düzenliyoruz.
   - title: Topluluk Etkinlikleri
-    text: Efektif altruizme ilgi duyan insanları bir araya getiren konuşmalar, sosyal buluşmalar ve ağ oluşturma etkinlikleri düzenliyoruz. Bu etkinlikler, öğrenme, iş birliği yapma ve topluluğumuz içinde uzun süreli dostluklar kurma fırsatı sunar.
+    text: Farklı mücadele alanlarında çalışan ya da bu alanlara ilgi duyan herkes için yüz yüze sosyal buluşmalar, konferanslar ve çalıştaylar düzenliyoruz.
   - title: Kariyer Danışmanlığı
-    text: Üyelerimizin yetenekleri, ilgi alanları ve değerleriyle uyumlu, yüksek etkili kariyer yollarını belirlemelerine yardımcı olmak için bireysel destek sunuyoruz. Bire bir görüşmeler ve çeşitli kaynaklar aracılığıyla, insanların kariyer kararlarını daha bilinçli ve daha yüksek etki yaratacak şekilde almalarına rehberlik ediyoruz.
+    text: Üyelerimizin yetenekleri, ilgi alanları ve değerleriyle uyumlu, yüksek etkili kariyer yolları bulmalarına yardımcı olmak için bireysel kariyer danışmanlığı sağlıyoruz.
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSdIXyOBIyhYBSCWcGA4XARX1FqGUXUQoBB-prHcV-bQvYnrbQ/viewform?usp=header"
 org_values_eyebrow: Değerlerimiz
 org_values:
   - title: Kapsayıcı ve Açık Bir Topluluk
