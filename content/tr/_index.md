@@ -34,7 +34,7 @@ pillars:
     text: Hangi müdahalelerin gerçekten işe yaradığını anlamak için dikkatli düşünmeyi ve veriyi ciddiye alırız.
   - title: Ölçek ve ihmal edilmişlik
     text: Büyük, çözülebilir ve yeterince ilgi görmeyen problemlere odaklanırız.
-  - title: Kaşif zihniyeti
+  - title: İzci zihniyeti
     text: Haklı olmaya değil, doğruyu bulmaya odaklanırız. Yeni kanıt geldiğinde görüşlerimizi güncellemek bir zayıflık değil, entelektüel dürüstlüğün gereğidir.
   - title: Ölçülebilirlik
     text: Aldığımız aksiyonların somut verilerle ölçümlenebilir olmasına önem veririz.
