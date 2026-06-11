@@ -57,13 +57,9 @@
   ) }}
 
 
-  <section class="section">
-    <div class="container">
-      <div class="home-community-photo" data-reveal style="border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 16 / 9;">
-        {{ partial "picture.html" (dict "src" "home/community-2.jpg" "alt" "EA Türkiye topluluk buluşması" "sizes" "100vw" "variant" "hero") }}
-      </div>
-    </div>
-  </section>
+  <div class="home-community-photo" data-reveal style="overflow: hidden; aspect-ratio: 21 / 9;">
+    {{ partial "picture.html" (dict "src" "home/community-2.jpg" "alt" "EA Türkiye topluluk buluşması" "sizes" "100vw" "variant" "hero") }}
+  </div>
 
   {{ partial "ea-explainer.html" (dict
     "label" .Params.explainer_label
