@@ -3711,3 +3711,9 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   font-size: var(--text-body-lg);
   line-height: 1.6;
 }
+
+.home-section--causes .section-header__text {
+  font-size: var(--text-body-lg);
+  line-height: 1.6;
+  max-width: 42rem;
+}
