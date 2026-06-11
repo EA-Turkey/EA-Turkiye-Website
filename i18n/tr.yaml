@@ -338,7 +338,7 @@
   translation: "Bu arama için sonuç bulunamadı."
 
 - id: search_no_results_hint
-  translation: "Daha kısa ya da farklı bir ifade deneyebilirsin."
+  translation: "Daha kısa ya da farklı bir ifade deneyebilirsiniz."
 
 - id: search_error
   translation: "Arama şu anda yüklenemiyor. Lütfen birazdan tekrar dene."

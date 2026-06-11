@@ -13,9 +13,9 @@ summary: "Hayvan haklarına, etik tartışmalara ya da toplumsal değişim konul
 featured_image: "events/etkili-hayvan-savunuculugu-okuma/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/etkili-hayvan-savunuculugu-okuma"
 ---
-Hayvan haklarına, etik tartışmalara ya da toplumsal değişim konularına ilgin var mı?
+Hayvan haklarına, etik tartışmalara ya da toplumsal değişim konularına ilginiz var mı?
 
-O zaman bu program tam sana göre:
+O zaman bu program tam size göre:
 
 Etkili Hayvan Savunuculuğu Okuma Grubu yeniden başlıyor!
 

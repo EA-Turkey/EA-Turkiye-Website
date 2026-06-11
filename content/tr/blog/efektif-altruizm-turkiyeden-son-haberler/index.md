@@ -66,7 +66,7 @@ Yapay Zeka Yönetişimi uzmanları tarafından tasarlanan **[12 haftalık bu onl
 
 #### Fon Fırsatları
 
-Efektif Altruizmden yola çıkan fikir ve hedeflerle motive edilen araştırmalar ve projeler için **[fon](https://forum.effectivealtruism.org/topics/funding-opportunities)** sağlamanın çeşitli yollarını bulabilirsinz.
+Efektif Altruizmden yola çıkan fikir ve hedeflerle motive edilen araştırmalar ve projeler için **[fon](https://forum.effectivealtruism.org/topics/funding-opportunities)** sağlamanın çeşitli yollarını bulabilirsiniz.
 
 ♾️ Başvurular sürekli kabul edilir.
 

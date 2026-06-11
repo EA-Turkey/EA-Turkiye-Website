@@ -79,7 +79,7 @@ Ahlaki olarak neye değer vermeliyim? Kısa vadeli etkiye mi yoksa uzun vadeli e
 
 #### 💵 Fon Fırsatları
 
-Efektif Altruizmden yola çıkan fikir ve hedeflerle motive edilen araştırmalar ve projeler için **[fon](https://forum.effectivealtruism.org/topics/funding-opportunities)** sağlamanın çeşitli yollarını bulabilirsinz.
+Efektif Altruizmden yola çıkan fikir ve hedeflerle motive edilen araştırmalar ve projeler için **[fon](https://forum.effectivealtruism.org/topics/funding-opportunities)** sağlamanın çeşitli yollarını bulabilirsiniz.
 
 ♾️ Başvurular sürekli kabul edilir.
 

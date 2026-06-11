@@ -42,9 +42,9 @@ form:
     - Ankara
     - İzmir
     - Diğer
-contact_people_text: Belirli bir kişiyle konuşmak istersen ekiple de doğrudan tanışabilirsin.
+contact_people_text: Belirli bir kişiyle konuşmak isterseniz ekiple de doğrudan tanışabilirsiniz.
 contact_ids:
   - devrim
   - firat
 ---
-EA Türkiye'ye ulaşmak için hazır bir proje planına ihtiyacın yok. Merak ettiğin bir soru ya da tanışma isteği de yeterli.
+EA Türkiye'ye ulaşmak için hazır bir proje planına ihtiyacınız yok. Merak ettiğiniz bir soru ya da tanışma isteği de yeterli.
