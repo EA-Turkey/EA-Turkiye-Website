@@ -22,7 +22,7 @@ stats:
   - value: "50+"
     label: Düzenlenen etkinlik
 explainer_label: EA nedir?
-explainer_title: Bilim ve kanıta dayalı iyilik maksimizasyonu
+explainer_title: Akıl yürütme, bilim ve merhametin ışığında mümkün olan en fazla iyiliği yapmak.
 explainer_intro:
   - Efektif altruizm, dünyaya en yüksek yararı sağlamaya çalışan felsefi bir yaklaşım ve sosyal bir harekettir.
   - Amacı, dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak, öncelikli sorunlara ilişkin en etkili çözümleri geliştirmek ve bireylerin çözümlere yönelik sorumluluk almasını sağlamaktır.
