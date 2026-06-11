@@ -4,6 +4,7 @@ title: Biyogüvenlik
 description: Biyolojik riskleri azaltmak için hazırlık, yönetişim ve erken uyarı kapasitesini güçlendirmek.
 url: /odak-alanlari/biyoguvenlik/
 slug: biyoguvenlik
+weight: 50
 accent: biosecurity
 card_excerpt: Pandemiler ve diğer biyolojik tehditler karşısında daha hazırlıklı kurumlar ve daha iyi önleme kapasitesi nasıl kurulur sorusuna bakıyoruz.
 featured_image: cause-areas/biosecurity/cover.jpg

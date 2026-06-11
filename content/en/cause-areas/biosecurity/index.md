@@ -3,6 +3,7 @@ translationKey: biosecurity
 title: Biosecurity
 description: Strengthening preparedness, governance, and early warning capacity to reduce biological risks.
 slug: biosecurity
+weight: 50
 accent: biosecurity
 card_excerpt: We look at how to build stronger institutions and prevention capacity for pandemics and other biological threats.
 featured_image: cause-areas/biosecurity/cover.jpg
