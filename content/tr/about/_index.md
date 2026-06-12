@@ -15,7 +15,7 @@ team_ids:
   - firat
 activities_eyebrow: Ne yapıyoruz?
 activities:
-  - title: EA Programları
+  - title: Çevrim İçi Programlar
     text: Yeni katılımcıların efektif altruizm hakkında sağlam bir temel edinmeleri için çevrimiçi bir Giriş Programı; yapay zekânın güvenli gelişimine ilgi duyanlar için ise bir Yapay Zekâ Güvenliği Programı düzenliyoruz.
     links:
       - label: Giriş Programı başvuru formu

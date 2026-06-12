@@ -14,7 +14,7 @@ team_ids:
   - firat
 activities_eyebrow: What we do
 activities:
-  - title: EA Programs
+  - title: Online Programs
     text: We run an online Introduction Program to help newcomers build a solid foundation in effective altruism, and an AI Safety Program for those interested in the safe development of AI.
     links:
       - label: Introduction Program application form
