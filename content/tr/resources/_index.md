@@ -7,7 +7,7 @@ hero_eyebrow: Kaynaklar
 hero_title: Daha fazlasını öğrenmek ve harekete geçmek için aşağıdaki kaynakları inceleyebilirsiniz.
 resources:
   - title: EA'ya Giriş Rehberi
-    text: "Efektif altruizm nedir, nasıl düşünülür, nereden başlanır? Tüm bunları adım adım anlayan bu el kitabına göz atın."
+    text: "Efektif altruizm nedir, hangi prensipleri benimser, nereden başlanır? Tüm bunları adım adım anlatan bu el kitabına göz atın."
     url: "https://forum.effectivealtruism.org/handbook"
   - title: Mücadele Alanları
     text: "Hangi problemler en önemli, en büyük ve en çok göz ardı edilen? 80.000 Hours'un kapsamlı mücadele alanı analizlerini inceleyin."
