@@ -50,7 +50,7 @@ cta_learn_more: Explore →
 cta_cards:
   - title: Introduction to EA
     text: Learn the core ideas, approaches, and culture of the EA community.
-    url: "https://www.effectivealtruism.org/articles/introduction-to-effective-altruism"
+    url: "https://forum.effectivealtruism.org/handbook"
   - title: Effective giving
     text: Discover how to make the most impact with your money.
     url: "https://www.etkilibagis.org/"

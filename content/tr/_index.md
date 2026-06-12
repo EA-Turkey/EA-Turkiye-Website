@@ -50,7 +50,7 @@ cta_learn_more: Keşfet →
 cta_cards:
   - title: Efektif Altruizm’e Giriş
     text: EA’nın temel fikirlerini, yaklaşımlarını ve topluluk kültürünü öğrenin.
-    url: "https://www.effectivealtruism.org/articles/introduction-to-effective-altruism"
+    url: "https://forum.effectivealtruism.org/handbook"
   - title: Etkili bağışçılık
     text: Paranızı en fazla fayda yaratacak şekilde nasıl kullanabileceğinizi keşfedin.
     url: "https://www.etkilibagis.org/"
