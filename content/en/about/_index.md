@@ -8,14 +8,14 @@ hero_lead: We are a national community connecting city groups, learning spaces, 
 hero_image: about/mission.jpg
 hero_image_alt: EA Turkey community members posing together at the Etkili Iyilik Istanbul Summit
 team_eyebrow: Team
-team_text: The core team works on programs, partnerships, and local relationships that help the community grow sustainably.
+team_text: ""
 team_ids:
   - devrim
   - firat
 activities_eyebrow: What we do
 activities:
   - title: EA Programs
-    text: We run an online Introduction Program to help newcomers build a solid foundation in effective altruism.
+    text: We run an online Introduction Program to help newcomers build a solid foundation in effective altruism, and an AI Safety Program for those interested in the safe development of AI.
     links:
       - label: Introduction Program application form
         url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
@@ -48,4 +48,4 @@ Effective Altruism Turkey is the Turkish chapter of the global Effective Altruis
 
 Our community is open to students, researchers, entrepreneurs, professionals, and anyone who wants to do good more effectively. Through the events, reading groups, seminars, and one-on-one meetings we organize, we help participants both encounter these ideas and discover how to apply them in their own lives.
 
-If you want to create more impact, work on meaningful projects, or simply explore these ideas, you are warmly invited to join our community and get in touch with us.
+Whatever your level, if these ideas spark your interest, we'd be delighted to welcome you among us!

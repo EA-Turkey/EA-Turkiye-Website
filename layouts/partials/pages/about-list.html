@@ -48,15 +48,11 @@
 <section class="section">
   <div class="container stack-lg">
     {{ partial "section-header.html" (dict "eyebrow" $.Params.org_values_eyebrow) }}
-    <div class="grid-2">
+    <div class="values-accordion">
       {{ range . }}
-        <article class="action-card" data-reveal>
-          <div class="action-card__body">
-            <div class="stack-sm">
-              <h3>{{ .title }}</h3>
-              <p class="text-muted">{{ .text }}</p>
-            </div>
-          </div>
+        <article class="value-row" data-reveal>
+          <h3 class="value-row__title">{{ .title }}</h3>
+          <p class="value-row__text text-muted">{{ .text }}</p>
         </article>
       {{ end }}
     </div>

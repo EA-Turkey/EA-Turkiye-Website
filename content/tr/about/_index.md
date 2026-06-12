@@ -9,14 +9,14 @@ hero_lead: Şehir topluluklarını, öğrenme alanlarını ve yüksek etkili kar
 hero_image: about/mission.jpg
 hero_image_alt: EA Türkiye topluluk üyeleri Etkili İyilik İstanbul Zirvesi'nde birlikte poz veriyor
 team_eyebrow: Ekip
-team_text: Çekirdek ekip, topluluğun sürdürülebilir biçimde büyümesi için programlar, ortaklıklar ve yerel bağlantılar üzerinde çalışıyor.
+team_text: ""
 team_ids:
   - devrim
   - firat
 activities_eyebrow: Ne yapıyoruz?
 activities:
   - title: EA Programları
-    text: Yeni katılımcıların efektif altruizm hakkında sağlam bir temel edinmeleri için çevrimiçi Giriş Programı düzenliyoruz.
+    text: Yeni katılımcıların efektif altruizm hakkında sağlam bir temel edinmeleri için çevrimiçi bir Giriş Programı; yapay zekânın güvenli gelişimine ilgi duyanlar için ise bir Yapay Zekâ Güvenliği Programı düzenliyoruz.
     links:
       - label: Giriş Programı başvuru formu
         url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
@@ -49,4 +49,4 @@ Efektif Altruizm Türkiye, dünyadaki en önemli sorunlara nasıl daha etkili ç
 
 Topluluğumuz; öğrenciler, araştırmacılar, girişimciler, profesyoneller ve daha etkili bir şekilde fayda sağlamak isteyen herkese açıktır. Düzenlediğimiz etkinlikler, okuma grupları, seminerler ve birebir görüşmeler aracılığıyla katılımcıların hem fikirlerle tanışmalarını hem de bu fikirleri kendi yaşamlarında nasıl uygulayabileceklerini keşfetmelerini destekliyoruz.
 
-Daha fazla etki yaratmak, anlamlı projeler üzerinde çalışmak veya bu fikirleri keşfetmek istiyorsanız, topluluğumuza katılmaya ve bizimle iletişime geçmeye davetlisiniz.
+Seviyeniz ne olursa olsun, bu fikirler ilginizi çekiyorsa sizleri aramızda görmekten mutluluk duyarız!

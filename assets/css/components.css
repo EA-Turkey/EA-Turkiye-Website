@@ -3746,3 +3746,43 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
     grid-template-columns: 1fr;
   }
 }
+
+.values-accordion {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(216, 229, 233, 0.86);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.values-accordion .value-row {
+  padding: var(--space-24);
+  border-top: 1px solid rgba(216, 229, 233, 0.86);
+}
+
+.values-accordion .value-row:first-child {
+  border-top: 0;
+}
+
+.value-row__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  margin-bottom: var(--space-8);
+}
+
+.value-row__title::before {
+  content: "";
+  flex: none;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid var(--color-brand-600);
+  border-bottom: 2px solid var(--color-brand-600);
+  transform: rotate(45deg);
+}
+
+.value-row__text {
+  margin: 0;
+  max-width: 60rem;
+}
