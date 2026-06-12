@@ -1618,9 +1618,9 @@ a.contact-hero__route:focus-visible {
 }
 
 .blog-landing__title {
-  max-width: 14ch;
-  font-size: 2.9rem;
-  line-height: 1;
+  max-width: 52rem;
+  font-size: 2.2rem;
+  line-height: 1.15;
   text-wrap: balance;
 }
 
@@ -3115,7 +3115,7 @@ a.contact-hero__route:focus-visible {
   }
 
   .blog-landing__title {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
   }
 
   .blog-featured__title {
