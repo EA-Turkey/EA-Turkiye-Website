@@ -7,19 +7,15 @@
 
 <section class="section">
   <div class="container">
-    <div class="cause-grid cause-grid--cta" style="margin-top: 0;" data-reveal>
+    <div class="resource-list" data-reveal>
       {{ range .Params.resources }}
-        <article class="cause-card">
-          <a class="cause-card__link" href="{{ .url }}" target="_blank" rel="noreferrer">
-            <div class="stack-md">
-              <div class="stack-sm">
-                <h3>{{ .title }}</h3>
-                <p class="text-muted" style="color: rgba(255,255,255,0.8);">{{ .text }}</p>
-              </div>
-              <span class="cause-card__cta" style="color: rgba(255,255,255,0.9);">Keşfet →</span>
-            </div>
-          </a>
-        </article>
+        <a class="resource-row" href="{{ .url }}" target="_blank" rel="noreferrer">
+          <div class="resource-row__main">
+            <h3 class="resource-row__title">{{ .title }}</h3>
+            <p class="resource-row__text text-muted">{{ .text }}</p>
+          </div>
+          <span class="resource-row__arrow" aria-hidden="true">→</span>
+        </a>
       {{ end }}
     </div>
   </div>

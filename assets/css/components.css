@@ -3786,3 +3786,54 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   margin: 0;
   max-width: 60rem;
 }
+
+.resource-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+  padding: var(--space-24) 0;
+  border-top: 1px solid rgba(216, 229, 233, 0.86);
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+.resource-row:first-child {
+  border-top: 0;
+}
+
+.resource-row__main {
+  display: grid;
+  gap: var(--space-8);
+  max-width: 52rem;
+}
+
+.resource-row__title {
+  transition: color var(--transition-fast);
+}
+
+.resource-row__text {
+  margin: 0;
+}
+
+.resource-row__arrow {
+  flex: none;
+  font-size: 1.5rem;
+  color: var(--color-brand-600);
+  transition: transform var(--transition-fast);
+}
+
+.resource-row:hover .resource-row__title,
+.resource-row:focus-visible .resource-row__title {
+  color: var(--color-brand-700);
+}
+
+.resource-row:hover .resource-row__arrow,
+.resource-row:focus-visible .resource-row__arrow {
+  transform: translateX(4px);
+}
