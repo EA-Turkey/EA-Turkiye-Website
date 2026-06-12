@@ -1,16 +1,16 @@
 <section class="section">
-  <div class="container stack-lg">
+  <div class="container about-intro">
     <div class="stack-sm" data-reveal>
-      <div class="prose">{{ .Content }}</div>
+      <div class="prose about-intro__text">{{ .Content }}</div>
     </div>
     {{ with .Params.hero_image }}
-      <div data-reveal>
+      <div class="about-intro__photo" data-reveal>
         {{ partial "picture.html" (dict
           "src" .
           "alt" $.Params.hero_image_alt
           "class" ""
           "variant" "hero"
-          "sizes" "100vw"
+          "sizes" "(min-width: 56rem) 45vw, 100vw"
         ) }}
       </div>
     {{ end }}

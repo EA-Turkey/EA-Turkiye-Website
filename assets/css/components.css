@@ -3837,3 +3837,34 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 .resource-row:focus-visible .resource-row__arrow {
   transform: translateX(4px);
 }
+
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: var(--space-40);
+  align-items: center;
+}
+
+.about-intro__text p {
+  font-size: var(--text-body-lg);
+  line-height: 1.7;
+}
+
+.about-intro__photo {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.about-intro__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 56rem) {
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: var(--space-24);
+  }
+}
