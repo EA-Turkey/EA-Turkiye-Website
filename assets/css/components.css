@@ -3721,3 +3721,28 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   line-height: 1.6;
   max-width: 42rem;
 }
+
+.about-activities {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-20);
+}
+
+.about-activities .action-card:nth-child(1) {
+  background: #e6f7f8;
+  border-color: #b2e3e8;
+}
+.about-activities .action-card:nth-child(2) {
+  background: #ede9f6;
+  border-color: #d0c4ec;
+}
+.about-activities .action-card:nth-child(3) {
+  background: #fef0e6;
+  border-color: #f9cba6;
+}
+
+@media (max-width: 60rem) {
+  .about-activities {
+    grid-template-columns: 1fr;
+  }
+}
