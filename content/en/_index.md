@@ -24,7 +24,7 @@ stats:
 explainer_label: What is EA?
 explainer_title: Doing the most good possible, guided by reason, science, and compassion.
 explainer_intro:
-  - Effective altruism is a philosophical approach and a social movement that seeks to do the most good in the world.
+  - Effective altruism is a field of inquiry and a social movement that explores the best ways to help others.
   - Its aim is to identify which of the world's problems are most pressing, to develop the most effective solutions to those priority problems, and to encourage individuals to take responsibility for putting those solutions into action.
   - To determine which problems are the largest, most neglected, and most solvable, it draws on scientific evidence and rational reasoning.
   - This way, we can direct our limited resources toward creating the greatest possible positive impact.

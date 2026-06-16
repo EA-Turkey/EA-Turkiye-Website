@@ -24,14 +24,14 @@ stats:
 explainer_label: EA nedir?
 explainer_title: Akıl yürütme, bilim ve merhametin ışığında mümkün olan en fazla iyiliği yapmak.
 explainer_intro:
-  - Efektif altruizm, dünyaya en yüksek yararı sağlamaya çalışan felsefi bir yaklaşım ve sosyal bir harekettir.
+  - Efektif altruizm, başkalarına yardım etmenin en iyi yollarını araştıran bir düşünce alanı ve sosyal harekettir.
   - Amacı, dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak, öncelikli sorunlara ilişkin en etkili çözümleri geliştirmek ve bireylerin çözümlere yönelik sorumluluk almasını sağlamaktır.
   - Hangi sorunların en büyük, ihmal edilmiş ve çözülebilir olduğunu tespit etmek için ise bilimsel verileri ve rasyonel akıl yürütmeyi kullanır.
   - Böylece sınırlı kaynaklarımızı, mümkün olan en büyük olumlu etkiyi yaratacak şekilde yönlendirebiliriz.
 pillars_label: EA İlkeleri
 pillars:
   - title: Kanıt ve akıl yürütme
-    text: Hangi müdahalelerin gerçekten işe yaradığını anlamak için dikkatli düşünmeyi ve veriyi ciddiye alırız.
+    text: Hangi çözüm önerilerinin işe yaradığını anlamak için bilimsel düşünceden ve veriden hareket ederiz.
   - title: Ölçek ve ihmal edilmişlik
     text: Büyük, çözülebilir ve yeterince ilgi görmeyen problemlere odaklanırız.
   - title: İzci zihniyeti
