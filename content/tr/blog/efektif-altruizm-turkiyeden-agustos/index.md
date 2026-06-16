@@ -1,24 +1,24 @@
 ---
 translationKey: "efektif-altruizm-turkiyeden-agustos"
 title: "Efektif Altruizm Türkiye'den Ağustos Haberleri 🗞️"
-description: "30 Ağustos Cuma günü Ankara’da yüz yüze buluşuyoruz! Efektif Altruizm ile ilgileniyorsanız, ister öğrenci olun ister profesyonel bir çalışan, sizi aramızda görmekten büyük mutluluk duyarız. Katılmak için bu linkten kayıt yaptırabilirsiniz."
+description: "30 Ağustos Cuma günü Ankara’da yüz yüze buluşuyoruz! Efektif altruizm ile ilgileniyorsanız, ister öğrenci olun ister profesyonel bir çalışan, sizi aramızda görmekten büyük mutluluk duyarız. Katılmak için bu linkten kayıt yaptırabilirsiniz."
 url: "/blog/efektif-altruizm-turkiyeden-agustos/"
 slug: "efektif-altruizm-turkiyeden-agustos"
 date: 2024-08-22
-summary: "30 Ağustos Cuma günü Ankara’da yüz yüze buluşuyoruz! Efektif Altruizm ile ilgileniyorsanız, ister öğrenci olun ister profesyonel bir çalışan, sizi aramızda görmekten büyük mutluluk duyarız. Katılmak için bu linkten kayıt yaptırabilirsiniz."
+summary: "30 Ağustos Cuma günü Ankara’da yüz yüze buluşuyoruz! Efektif altruizm ile ilgileniyorsanız, ister öğrenci olun ister profesyonel bir çalışan, sizi aramızda görmekten büyük mutluluk duyarız. Katılmak için bu linkten kayıt yaptırabilirsiniz."
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-agustos"
 ---
 ### **DUYURULAR 🔊**
 
 #### 🫂[EA Ankara Buluşması](https://lu.ma/2lnh4vq6)
 
-30 Ağustos Cuma günü Ankara’da yüz yüze buluşuyoruz! Efektif Altruizm ile ilgileniyorsanız, ister öğrenci olun ister profesyonel bir çalışan, sizi aramızda görmekten büyük mutluluk duyarız. Katılmak için bu [linkten](https://lu.ma/2lnh4vq6) kayıt yaptırabilirsiniz.
+30 Ağustos Cuma günü Ankara’da yüz yüze buluşuyoruz! Efektif altruizm ile ilgileniyorsanız, ister öğrenci olun ister profesyonel bir çalışan, sizi aramızda görmekten büyük mutluluk duyarız. Katılmak için bu [linkten](https://lu.ma/2lnh4vq6) kayıt yaptırabilirsiniz.
 
 ---
 
 #### **📈[Impact Accelerator Program](https://www.highimpactprofessionals.org/impact-accelerator-program)**
 
-Altı hafta süren bu çevrimiçi program, halihazırda yüksek maliyet etkinliği gösteren bir organizasyonda çalışmayan ancak Efektif Altruizm prensiplerini benimseyen profesyonellere, dünyayı daha iyi bir yer haline getirmek için gerekli araçları sunmayı hedefliyor.
+Altı hafta süren bu çevrim içi program, halihazırda yüksek maliyet etkinliği gösteren bir organizasyonda çalışmayan ancak Efektif altruizm prensiplerini benimseyen profesyonellere, dünyayı daha iyi bir yer haline getirmek için gerekli araçları sunmayı hedefliyor.
 
 🗓️ **Son başvuru tarihi: 5 Eylül**
 
@@ -34,7 +34,7 @@ Program, yapay zeka, biyoteknoloji ve diğer gelişmekte olan teknolojilere dair
 
 #### **🐟[Sucul Yaşam Konferansı](https://www.ali.fish/alc24)**
 
-9-10 Eylül tarihlerinde çevrimiçi olarak düzenlenecek olan bu konferans, deniz yaşamını koruma ve deniz ürünleri üretiminde daha sürdürülebilir, etik bir gelecek inşa etme çabalarını vurgulayan önemli tartışmalara ve sunumlara ev sahipliği yapacak.
+9-10 Eylül tarihlerinde çevrim içi olarak düzenlenecek olan bu konferans, deniz yaşamını koruma ve deniz ürünleri üretiminde daha sürdürülebilir, etik bir gelecek inşa etme çabalarını vurgulayan önemli tartışmalara ve sunumlara ev sahipliği yapacak.
 
 **🗓️ Son başvuru tarihi: 8 Eylül**
 
@@ -42,7 +42,7 @@ Program, yapay zeka, biyoteknoloji ve diğer gelişmekte olan teknolojilere dair
 
 #### **[Alt Protein Kariyerinizi İnşa Etmek](https://gfi.org/event/ask-gfi-alt-protein-careers-9-10-2024/)**
 
-10 Eylül’de Good Food Institute tarafından düzenlenecek bu çevrimiçi etkinlikte, alternatif protein sektöründe kariyer yapmayı düşünenler için, bu alanın sunduğu akademik ve endüstriyel fırsatlar hakkında kapsamlı bilgiler verilecek ve katılımcıların soruları yanıtlanacak.
+10 Eylül’de Good Food Institute tarafından düzenlenecek bu çevrim içi etkinlikte, alternatif protein sektöründe kariyer yapmayı düşünenler için, bu alanın sunduğu akademik ve endüstriyel fırsatlar hakkında kapsamlı bilgiler verilecek ve katılımcıların soruları yanıtlanacak.
 
 **🗓️ Son başvuru tarihi: 9 Eylül**
 
@@ -50,7 +50,7 @@ Program, yapay zeka, biyoteknoloji ve diğer gelişmekte olan teknolojilere dair
 
 #### **[EAGx Berlin Konferansı](https://www.effectivealtruism.org/ea-global/events/eagxberlin-2024)**
 
-13-15 Eylül tarihlerinde **[Berlin’de gerçekleşecek bu konferansa](https://www.effectivealtruism.org/ea-global/events/eagxberlin-2024)** katılım sağlayarak, dünya genelindeki efektif altruizm topluluklarıyla bağlantı kurabilir, çeşitli atölyelere ve konuşmalara katılabilir, sizinle benzer ilgi alanlarına veya kariyer yollarına sahip insanlarla sohbet etme fırsatı yakalayabilir ve Efektif Altruizm’e olan bağınızı derinleştirebilirsiniz.
+13-15 Eylül tarihlerinde **[Berlin’de gerçekleşecek bu konferansa](https://www.effectivealtruism.org/ea-global/events/eagxberlin-2024)** katılım sağlayarak, dünya genelindeki efektif altruizm topluluklarıyla bağlantı kurabilir, çeşitli atölyelere ve konuşmalara katılabilir, sizinle benzer ilgi alanlarına veya kariyer yollarına sahip insanlarla sohbet etme fırsatı yakalayabilir ve Efektif altruizme olan bağınızı derinleştirebilirsiniz.
 
 **🗓️ Son başvuru tarihi: 28 Ağustos**
 
@@ -110,7 +110,7 @@ Bu yazıda Katja Grace ve Nathan Young, yapay zekanın nasıl insanlık için va
 
 ## **🤍Gönüllülük Fırsatları**
 
-Bu bölümde, hem Türkiye’de hem de dünya genelinde karşılaştığımız önemli sorunların çözümüne katkıda bulunmanıza yardımcı olacak gönüllülük fırsatlarını sizlerle paylaşacağız. Bu fırsatlar, mevcut bilgi ve becerilerinizi en etkili şekilde değerlendirmenize ve yeni yetenekler kazanmanıza olanak tanırken, anlamlı bir etki yaratmanıza ve Efektif Altruizm topluluğu içinde güçlü bağlar kurmanıza da destek olacak!
+Bu bölümde, hem Türkiye’de hem de dünya genelinde karşılaştığımız önemli sorunların çözümüne katkıda bulunmanıza yardımcı olacak gönüllülük fırsatlarını sizlerle paylaşacağız. Bu fırsatlar, mevcut bilgi ve becerilerinizi en etkili şekilde değerlendirmenize ve yeni yetenekler kazanmanıza olanak tanırken, anlamlı bir etki yaratmanıza ve Efektif altruizm topluluğu içinde güçlü bağlar kurmanıza da destek olacak!
 
 [AI Safety Türkiye Gönüllü Formu](https://docs.google.com/forms/d/e/1FAIpQLSfo7n8GGB8rOaMQuS0A_hZlPKRS9eh1SVTLHDBIXtBfNh8nDA/viewform)
 

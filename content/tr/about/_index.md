@@ -16,7 +16,7 @@ team_ids:
 activities_eyebrow: Ne yapıyoruz?
 activities:
   - title: Çevrim İçi Programlar
-    text: Yeni katılımcıların efektif altruizm hakkında sağlam bir temel edinmeleri için çevrimiçi bir Giriş Programı; yapay zekânın güvenli gelişimine ilgi duyanlar için ise bir Yapay Zekâ Güvenliği Programı düzenliyoruz.
+    text: Yeni katılımcıların efektif altruizm hakkında sağlam bir temel edinmeleri için çevrim içi bir Giriş Programı; yapay zekânın güvenli gelişimine ilgi duyanlar için ise bir Yapay Zekâ Güvenliği Programı düzenliyoruz.
     links:
       - label: Giriş Programı başvuru formu
         url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
@@ -45,7 +45,7 @@ org_values:
 ---
 ## Hakkımızda
 
-Efektif Altruizm Türkiye, dünyadaki en önemli sorunlara nasıl daha etkili çözümler üretebileceğimizi araştıran ve bu konuda düşünen insanları bir araya getiren küresel Effective Altruism hareketinin Türkiye ayağıdır. Bu felsefenin temelinde, başkalarına yardım etme isteğini akıl yürütme, bilimsel kanıtlar ve dikkatli analizle birleştirme fikri yer alır. Amacımız yalnızca iyi niyetle hareket etmek değil, aynı zamanda zamanımızı, kariyerimizi, bağışlarımızı ve diğer kaynaklarımızı en yüksek olumlu etkiyi yaratacak şekilde nasıl kullanabileceğimizi anlamaktır.
+Efektif Altruizm Türkiye, dünyadaki en önemli sorunlara nasıl daha etkili çözümler üretebileceğimizi araştıran ve bu konuda düşünen insanları bir araya getiren "etkili iyilik" (effective altruism) hareketinin Türkiye ayağıdır. Bu felsefenin temelinde, başkalarına yardım etme isteğini akıl yürütme, bilimsel kanıtlar ve dikkatli analizle birleştirme fikri yer alır. Amacımız yalnızca iyi niyetle hareket etmek değil, aynı zamanda zamanımızı, kariyerimizi, bağışlarımızı ve diğer kaynaklarımızı en yüksek olumlu etkiyi yaratacak şekilde nasıl kullanabileceğimizi anlamaktır.
 
 Topluluğumuz; öğrenciler, araştırmacılar, girişimciler, profesyoneller ve daha etkili bir şekilde fayda sağlamak isteyen herkese açıktır. Düzenlediğimiz etkinlikler, okuma grupları, seminerler ve birebir görüşmeler aracılığıyla katılımcıların hem fikirlerle tanışmalarını hem de bu fikirleri kendi yaşamlarında nasıl uygulayabileceklerini keşfetmelerini destekliyoruz.
 

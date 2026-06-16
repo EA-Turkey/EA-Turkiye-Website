@@ -1,14 +1,14 @@
 ---
 translationKey: "efektif-altruizm-istanbul-zirvesi"
-title: "Efektif Altruizm İstanbul Zirvesi 2025 Başvuruları Açıldı!"
-description: "Türkiye'de ilk kez düzenlenecek Efektif Altruizm Zirvesi, 18 Ekim 2025'te Kolektif House Maslak'ta. Ücretsiz ve 18 yaş üstü herkese açık."
+title: "Efektif altruizm İstanbul Zirvesi 2025 Başvuruları Açıldı!"
+description: "Türkiye'de ilk kez düzenlenecek Efektif altruizm Zirvesi, 18 Ekim 2025'te Kolektif House Maslak'ta. Ücretsiz ve 18 yaş üstü herkese açık."
 url: "/blog/efektif-altruizm-istanbul-zirvesi/"
 slug: "efektif-altruizm-istanbul-zirvesi"
 date: 2025-07-29
-summary: "Türkiye'de ilk kez düzenlenecek Efektif Altruizm Zirvesi, 18 Ekim 2025'te Kolektif House Maslak'ta. Ücretsiz ve 18 yaş üstü herkese açık."
+summary: "Türkiye'de ilk kez düzenlenecek Efektif altruizm Zirvesi, 18 Ekim 2025'te Kolektif House Maslak'ta. Ücretsiz ve 18 yaş üstü herkese açık."
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-istanbul-zirvesi"
 ---
-Türkiye'nin ilk Efektif Altruizm Zirvesi için başvurular açıldı!
+Türkiye'nin ilk Efektif altruizm Zirvesi için başvurular açıldı!
 
 **Etkinlik detayları:**
 - **Tarih:** 18 Ekim 2025, Cumartesi, 11:00–19:00

@@ -2,10 +2,10 @@
 translationKey: home
 title: EA Türkiye
 description: Kanıt, akıl yürütme ve topluluk aracılığıyla dünyanın en acil sorunlarına daha iyi yanıtlar arayan bir topluluk.
-hero_eyebrow: Efektif Altruizm · Türkiye
+hero_eyebrow: Efektif altruizm · Türkiye
 hero_title: Başkalarına yardım etmenin en etkili yollarını keşfedin
 hero_lead: "Efektif altruizm şu soruyu sorar: Zamanımızı, gelirimizi ve yeteneklerimizi kullanarak en fazla iyiliği nasıl yapabiliriz?"
-hero_primary_label: Efektif Altruizm nedir?
+hero_primary_label: Efektif altruizm nedir?
 hero_primary_url: "#ea-nedir"
 hero_secondary_label: Giriş Programımıza Katılın
 hero_secondary_url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
@@ -33,14 +33,14 @@ pillars:
   - title: Kanıt ve akıl yürütme
     text: Hangi çözüm önerilerinin işe yaradığını anlamak için bilimsel düşünceden ve veriden hareket ederiz.
   - title: Ölçek ve ihmal edilmişlik
-    text: Büyük, çözülebilir ve yeterince ilgi görmeyen problemlere odaklanırız.
+    text: Büyük, çözülebilir ve yeterince ilgi görmeyen sorunlara odaklanırız.
   - title: İzci zihniyeti
     text: Haklı olmaya değil, doğruyu bulmaya odaklanırız. Yeni bir kanıt karşısında görüşlerimizi güncellemenin bir zayıflık değil, entelektüel dürüstlüğün bir gereği olduğuna inanırız.
   - title: Ölçülebilirlik
     text: Aldığımız aksiyonların somut verilerle ölçümlenebilir olmasına önem veririz.
 cause_section_label: Odak alanları
 cause_section_title: En çok fark yaratabileceğimiz mücadele alanlarına odaklanırız
-cause_section_text: Efektif Altruistler olarak, en fazla sayıda insan ve hayvanı etkileyen, en fazla değişim yaratabileceğimiz ve en ihmal edilmiş mücadele alanlarına odaklanırız.
+cause_section_text: Efektif altruistler olarak, en fazla sayıda insan ve hayvanı etkileyen, en fazla değişim yaratabileceğimiz ve en ihmal edilmiş mücadele alanlarına odaklanırız.
 events_section_label: Yaklaşan Etkinlikler
 events_section_title: Yeni bağlar kurmak, birlikte öğrenmek ve harekete geçmek için buluşuyoruz.
 events_section_text: Farklı mücadele alanlarına ve deneyim seviyelerine yönelik etkinliklerimizi keşfedin.
@@ -48,7 +48,7 @@ events_section_url: /etkinlikler/
 cta_section_title: Daha fazlasını öğrenin ve harekete geçin
 cta_learn_more: Keşfet →
 cta_cards:
-  - title: Efektif Altruizm’e Giriş
+  - title: Efektif altruizme giriş
     text: EA’nın temel fikirlerini, yaklaşımlarını ve topluluk kültürünü öğrenin.
     url: "https://forum.effectivealtruism.org/handbook"
   - title: Etkili bağışçılık

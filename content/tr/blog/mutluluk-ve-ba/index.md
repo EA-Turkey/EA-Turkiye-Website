@@ -19,7 +19,7 @@ Dünyanın birçok yerinde adına “Effective Altruism Fellowship” denen ve e
 
 ### Kısa dönemciliğin tehlikeleri
 
-En güncel haber akışından ötesine geçmekte, geleceği düşünerek şimdiki aksiyonlarımızı şekillendirmekte güçlük çektiğimiz söylenebilir. Hangimiz gelecek kuşakların refahını ve iyiliğini gerçekten hakkıyla düşündüğümüzü ve buna göre hareket ettiğimizi söyleyebiliriz ki? Bu biraz da bir dikkat problemi. Şimdiki zamanda olan her şey çok daha fazla dikkat çekiyor. Birçok alanda bu zamansal önyargıyla karşılaşıyoruz.
+En güncel haber akışından ötesine geçmekte, geleceği düşünerek şimdiki aksiyonlarımızı şekillendirmekte güçlük çektiğimiz söylenebilir. Hangimiz gelecek kuşakların refahını ve iyiliğini gerçekten hakkıyla düşündüğümüzü ve buna göre hareket ettiğimizi söyleyebiliriz ki? Bu biraz da bir dikkat sorunu. Şimdiki zamanda olan her şey çok daha fazla dikkat çekiyor. Birçok alanda bu zamansal önyargıyla karşılaşıyoruz.
 
 Siyasette öne çıkan baskın zaman dilimi bir dönemlik görev süresine karşılık geliyor (4-5 yıl). Popüler kültür ve modada bir mevsimden, şirketlerde 3 aylık dönemlerden, internette dakikalardan, piyasalarda bir saniyenin binde birinden söz ediyoruz. Şimdinin ya da yakın zamanın sorunlarıyla o kadar çok boğuşmak durumunda kalıyoruz ki geleceği tasarlayacak ne zamanımız, ne de enerjimiz kalıyor. Öte yandan, [kısa dönemci düşünme](https://www.bbc.com/future/article/20190109-the-perils-of-short-termism-civilisations-greatest-threat)nin yadsınamaz sonuçları ve tehlikeleri var.
 

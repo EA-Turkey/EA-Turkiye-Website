@@ -17,11 +17,11 @@ Boğaziçi, Bilkent, Koç ve Hacettepe Üniversitelerindeki efektif altruizm top
 
 #### ***[Etkili Hayvan Savunuculuğu Okuma Grubu](https://docs.google.com/forms/d/e/1FAIpQLSeQ8oV_5e259uZS9wEWvOFAObcpePXh96Da4GV4rshq5Z-UrQ/viewform?usp=dialog)***
 
-Hayvan savunuculuğu hareketinin gücünü artırmak için ne yapabiliriz? Daha etkili stratejiler geliştirmek, mevcut yaklaşımları eleştirel bir gözle değerlendirmek ve hayvanlar için gerçek bir fark yaratmak mümkün mü? Bu sorular, Etkili Hayvan Savunuculuğu Okuma Grubunun temelini oluşturuyor. 8 hafta sürecek bu çevrimiçi okuma grubu, hayvanlar için daha iyi bir dünya yaratmak isteyen herkese bir öğrenme ve tartışma platformu sunuyor. Katılımcılar bu programla alandaki önemli kavramlara ve tartışmalara temel seviyeden başlayıp kapsamlı bir şekilde erişim sağlayacak. Samimi ve destekleyici bir ortamda farklı bakış açılarını keşfetme ve kendi aktivizm pratiğinizi geliştirme fırsatı bulacaksınız.
+Hayvan savunuculuğu hareketinin gücünü artırmak için ne yapabiliriz? Daha etkili stratejiler geliştirmek, mevcut yaklaşımları eleştirel bir gözle değerlendirmek ve hayvanlar için gerçek bir fark yaratmak mümkün mü? Bu sorular, Etkili Hayvan Savunuculuğu Okuma Grubunun temelini oluşturuyor. 8 hafta sürecek bu çevrim içi okuma grubu, hayvanlar için daha iyi bir dünya yaratmak isteyen herkese bir öğrenme ve tartışma platformu sunuyor. Katılımcılar bu programla alandaki önemli kavramlara ve tartışmalara temel seviyeden başlayıp kapsamlı bir şekilde erişim sağlayacak. Samimi ve destekleyici bir ortamda farklı bakış açılarını keşfetme ve kendi aktivizm pratiğinizi geliştirme fırsatı bulacaksınız.
 
 **🗓️Son başvuru tarihi: 18 Şubat**
 
-#### ***[EA Ankara’nın Efektif Altruizme Giriş Programı](https://docs.google.com/forms/d/e/1FAIpQLSdl-nBBE1nvLuTSRr98X1N1M96j3evds-QAOpMIlydimsnCIg/viewform?usp=dialog)***
+#### ***[EA Ankara’nın Efektif altruizme Giriş Programı](https://docs.google.com/forms/d/e/1FAIpQLSdl-nBBE1nvLuTSRr98X1N1M96j3evds-QAOpMIlydimsnCIg/viewform?usp=dialog)***
 
 Dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak, en etkili çözümleri geliştirmek ve bireylerin çözümlere yönelik sorumluluk almasını sağlamak için geliştirilen altı haftalık tartışma grubu. EA Ankara tarafından yüz yüze yürütülecek bu programda insanlara ve diğer canlılara nasıl daha iyi yardım edebiliriz sorusunu hem teorik hem de pratik bir temelde tartışabilir, samimi ve destekleyici bir ortamda farklı bakış açılarını keşfetme ve kendi etki yolunuzu geliştirme fırsatı bulabilirsiniz. İlk buluşma, 1 Mart Cumartesi günü saat 16:00’da Kızılay Selanik Route Cafe’de gerçekleşecek ve ilgili herkese açık olacak.
 
@@ -29,13 +29,13 @@ Dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak
 
 #### ***[AIM Araştırma Programı 2025](https://www.aimresearchprogram.com/)***
 
-AIM Research Program 2025 başvuruları açıldı. Bu 12 haftalık, çevrimiçi ve ücretsiz program, katılımcılara etkili hayır kurumlarını ve müdahaleleri analiz etme, karşılaştırma ve stratejilerini geliştirme becerisi kazandırmayı amaçlıyor. Katılımcılar, etkili hayırseverlik ve etki odaklı araştırma alanlarında derinlemesine bilgi edinecek ve bu alandaki kariyerlerini şekillendirme fırsatına sahip olacaklar.
+AIM Research Program 2025 başvuruları açıldı. Bu 12 haftalık, çevrim içi ve ücretsiz program, katılımcılara etkili hayır kurumlarını ve müdahaleleri analiz etme, karşılaştırma ve stratejilerini geliştirme becerisi kazandırmayı amaçlıyor. Katılımcılar, etkili hayırseverlik ve etki odaklı araştırma alanlarında derinlemesine bilgi edinecek ve bu alandaki kariyerlerini şekillendirme fırsatına sahip olacaklar.
 
 **🗓️Son başvuru tarihi: 2 Şubat**
 
 #### ***[Yapay Zeka Güvenliği, Etik ve Toplum Programı](https://www.aisafetybook.com/virtual-course?utm_source=substack&utm_medium=email)***
 
-AI Safety Center, 24 Şubat - 16 Mayıs 2025 tarihleri arasında gerçekleşecek ücretsiz ve çevrimiçi "Yapay Zeka Güvenliği, Etik ve Toplum" kursu için başvuruları açtı. Kurs, Yapay Zeka’nın kötüye kullanımı ve uluslararası rekabet nedeniyle güvenlik standartlarının zayıflaması gibi Yapay Zeka ile ilgili zorlukları ele almak için katılımcılara bilgi ve pratik araçlar sunmayı amaçlıyor. 12 hafta süren ve haftada 5 saatlik bir zaman taahhüdü gerektiren kurs için başvurular 5 Şubat 2025'e kadar açık olsa da 31 Ocak’a kadar başvuranlara öncelik verilecek.
+AI Safety Center, 24 Şubat - 16 Mayıs 2025 tarihleri arasında gerçekleşecek ücretsiz ve çevrim içi "Yapay Zeka Güvenliği, Etik ve Toplum" kursu için başvuruları açtı. Kurs, Yapay Zeka’nın kötüye kullanımı ve uluslararası rekabet nedeniyle güvenlik standartlarının zayıflaması gibi Yapay Zeka ile ilgili zorlukları ele almak için katılımcılara bilgi ve pratik araçlar sunmayı amaçlıyor. 12 hafta süren ve haftada 5 saatlik bir zaman taahhüdü gerektiren kurs için başvurular 5 Şubat 2025'e kadar açık olsa da 31 Ocak’a kadar başvuranlara öncelik verilecek.
 
 **🗓️Son başvuru tarihi: 5 Şubat**
 
@@ -53,7 +53,7 @@ Yapay zekanın toplum üzerindeki etkilerini şekillendiren gazetecilerden biri 
 
 #### ***[Dönüştürücü Yapay Zekaya Giriş Programı](https://aisafetyfundamentals.com/intro-to-tai/?_gl=1*1q9pnzy*_gcl_au*MTEyODQ1MDY1NC4xNzM3OTE3NzMx*_ga*MTMyOTQ3NDk3OC4xNzM3OTE3NzMy*_ga_LGQ75B1P00*MTczNzkxNzczMi4xLjEuMTczNzkxNzc1Mi4wLjAuMA..)***
 
-Yapay zeka teknolojileri hızla değişiyor ve gelişiyor. BlueDot Impact’in 5 günlük bu yoğun ve hızlı çevrimiçi programı, dönüştürücü YZ’nın ne olduğunu anlamak ve insanlık üzerindeki etkilerini değerlendirmek isteyenler için giriş seviyesinde tasarlanmıştır. Katılımcılar, YZ’nın teknik temellerini keşfedecek, olası gelecek senaryolarını inceleyecek ve YZ güvenliğini sağlama amacına yönelik önemli fikirler üzerine interaktif bir ortamda tartışma yapacaklardır.
+Yapay zeka teknolojileri hızla değişiyor ve gelişiyor. BlueDot Impact’in 5 günlük bu yoğun ve hızlı çevrim içi programı, dönüştürücü YZ’nın ne olduğunu anlamak ve insanlık üzerindeki etkilerini değerlendirmek isteyenler için giriş seviyesinde tasarlanmıştır. Katılımcılar, YZ’nın teknik temellerini keşfedecek, olası gelecek senaryolarını inceleyecek ve YZ güvenliğini sağlama amacına yönelik önemli fikirler üzerine interaktif bir ortamda tartışma yapacaklardır.
 
 **Son başvuru tarihi: Kontenjanla sınırlı**
 

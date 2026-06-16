@@ -14,7 +14,7 @@ source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-aralk"
 
 #### ***[Bağış Sezonu](https://givingmultiplier.org/?utm_source=The+EA+Newsletter&utm_campaign=2ca90bea1c-EMAIL_CAMPAIGN_2024_12_20_08_59&utm_medium=email&utm_term=0_-2ca90bea1c-319371333)***
 
-Eğer bağış yaparak dünyadaki öncelikli problemleri çözmede etkinizin olabileceğini düşünüyorsanız, şu an niyetinizi eyleme dönüştürmek için tam zamanı! Hem en sevdiğiniz hayır kurumuna hem de uzmanlar tarafından önerilen yüksek etkili bir hayır kurumlarına bağışta bulunarak, bu miktarın iki katına çıkmasını sağlayabilirsiniz!
+Eğer bağış yaparak dünyadaki öncelikli sorunları çözmede etkinizin olabileceğini düşünüyorsanız, şu an niyetinizi eyleme dönüştürmek için tam zamanı! Hem en sevdiğiniz hayır kurumuna hem de uzmanlar tarafından önerilen yüksek etkili bir hayır kurumlarına bağışta bulunarak, bu miktarın iki katına çıkmasını sağlayabilirsiniz!
 
 **🗓️ Bağış sezonunun son günü: 31 Aralık 2024**
 
@@ -36,15 +36,15 @@ Dünyanın her yerinden herkesin katılabileceği 8 haftalık bu ücretsiz ve on
 
 **🗓️ Son başvuru tarihi: 5 Ocak 2025**
 
-#### ***[Effective Altruism Çevrimiçi Programları - “The Precipice” Okuma Grubu](https://www.effectivealtruism.org/virtual-programs/the-precipice-reading-group)***
+#### ***[Effective Altruism Çevrim İçi Programları - “The Precipice” Okuma Grubu](https://www.effectivealtruism.org/virtual-programs/the-precipice-reading-group)***
 
-The Precipice" kitabı, nükleer silahlar, iklim değişikliği, yapay pandemiler ve kontrolden çıkmış yapay zeka gibi insanlığın karşılaştığı büyük riskleri ele alıyor. Bu risklerin azaltılmasının, günümüzün en önemli ahlaki sorumluluklarından biri olduğunu savunuyor. 8 hafta sürecek bu çevrimiçi okuma grubuna katılarak, insanlığın geleceğini koruma konusunda bilgi sahibi olabilir ve bu tehlikelerle nasıl başa çıkılabileceğini öğrenebilirsiniz.
+The Precipice" kitabı, nükleer silahlar, iklim değişikliği, yapay pandemiler ve kontrolden çıkmış yapay zeka gibi insanlığın karşılaştığı büyük riskleri ele alıyor. Bu risklerin azaltılmasının, günümüzün en önemli ahlaki sorumluluklarından biri olduğunu savunuyor. 8 hafta sürecek bu çevrim içi okuma grubuna katılarak, insanlığın geleceğini koruma konusunda bilgi sahibi olabilir ve bu tehlikelerle nasıl başa çıkılabileceğini öğrenebilirsiniz.
 
 **🗓️ Son başvuru tarihi: 2 Şubat 2025**
 
 #### ***[Yapay Zeka Yönetişim Kursu](https://aisafetyfundamentals.com/governance/)***
 
-12 haftalık çevrimiçi olan bu kurs, yapay zeka sistemlerinden kaynaklanan riskler ve yönetişim çözümleri üzerine kapsamlı bir bakış sunuyor. Biyogüvenlik, siber güvenlik, insan karar vericilerin güçsüzleştirilmesi ve YZ'nin kontrol sorunları ele alınmaktadır. Programın son 4 haftasında bir proje üzerine çalışmanız beklenmektedir.
+12 haftalık çevrim içi olan bu kurs, yapay zeka sistemlerinden kaynaklanan riskler ve yönetişim çözümleri üzerine kapsamlı bir bakış sunuyor. Biyogüvenlik, siber güvenlik, insan karar vericilerin güçsüzleştirilmesi ve YZ'nin kontrol sorunları ele alınmaktadır. Programın son 4 haftasında bir proje üzerine çalışmanız beklenmektedir.
 
 **🗓️ Son başvuru tarihi: 5 Ocak 2025**
 

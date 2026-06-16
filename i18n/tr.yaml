@@ -212,7 +212,7 @@
   translation: "Yüz yüze"
 
 - id: mode_online
-  translation: "Çevrimiçi"
+  translation: "Çevrim İçi"
 
 - id: mode_hybrid
   translation: "Hibrit"
@@ -239,7 +239,7 @@
   translation: "Öneriler"
 
 - id: resource_type_problem_profile
-  translation: "Problem profili"
+  translation: "Sorun profili"
 
 - id: resource_type_explainer
   translation: "Açıklayıcı metin"

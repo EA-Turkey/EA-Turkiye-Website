@@ -7,7 +7,7 @@ slug: "peter-singer-turkiyede"
 start: 2021-05-05T12:30:00+03:00
 timezone: "Europe/Istanbul"
 schedule_text: "5 Mayıs Çarşamba · 12.30"
-city: "Çevrimiçi"
+city: "Çevrim İçi"
 event_mode: "online"
 venue: "Bilkent Üniversitesi Felsefe Bölümü YouTube kanalı"
 summary: "Efektif altruizmin kurucularından Peter Singer, 5 Mayıs Çarşamba 12.30’da Bilkent Üniversitesi Felsefe Bölümü’nün davetiyle bir söyleşi veriyor. Etkinlik, bölümün YouTube kanalı üstünden gerçekleştirilecek."

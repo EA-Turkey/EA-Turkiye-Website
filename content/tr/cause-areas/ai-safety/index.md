@@ -15,6 +15,6 @@ Yapay zekâ güvenliği, gelişmiş yapay zekâ sistemlerinin yetenekleri arttı
 
 İlgi duyuyorsan düşünmeye değer sorular:
 
-- Teknik uyum ve değerlendirme problemleri nelerdir?
+- Teknik uyum ve değerlendirme sorunları nelerdir?
 - Kurumsal karar vericiler hangi bilgi eksikleriyle hareket ediyor?
 - Hangi beceriler bu alana katkı sunmak için en değerli olabilir?

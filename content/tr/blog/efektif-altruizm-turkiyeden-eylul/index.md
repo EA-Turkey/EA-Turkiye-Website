@@ -18,9 +18,9 @@ Yeni akademik dönem, birçok EA üniversite grupları için yılın en yoğun v
 
 Gelişmiş yapay zeka modellerinin yaratabileceği riskleri ve insanlığın bu risklere nasıl hazırlanabileceğini inceleyen Uncontrollable kitabının yazarı Darren McKee İstanbul’a geliyor. 1 Ekim Salı günü saat 19:00 [Vasalisa Çukurcuma](https://g.co/kgs/YPm4ADK)’da gerçekleşecek buluşmaya davetlisiniz!
 
-#### Efektif Altruizm Hacettepe Kuruldu!
+#### Efektif altruizm Hacettepe Kuruldu!
 
-Efektif Altruizm (EA) Hacettepe’de! [EA Hacettepe](https://www.instagram.com/eahacettepe/), dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak, en etkili çözümleri geliştirmek ve bireylerin çözümlere yönelik sorumluluk almasını sağlamayı amaçlayan insanlardan oluşan bir topluluk olmayı amaçlamaktadır.
+Efektif altruizm (EA) Hacettepe’de! [EA Hacettepe](https://www.instagram.com/eahacettepe/), dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak, en etkili çözümleri geliştirmek ve bireylerin çözümlere yönelik sorumluluk almasını sağlamayı amaçlayan insanlardan oluşan bir topluluk olmayı amaçlamaktadır.
 
 #### Future Impact Group’s Araştırma Programı
 
@@ -54,7 +54,7 @@ Dünyanın her yerinden herkesin katılabileceği 8 haftalık [bu ücretsiz ve o
 
 #### Effective Altruism Virtual Programs - “The Precipice” Okuma Grubu
 
-The Precipice kitabı, nükleer silahlar, iklim değişikliği, yapay pandemiler ve kontrolden çıkmış yapay zeka gibi insanlığın karşılaştığı büyük riskleri ele alıyor. Bu risklerin azaltılmasının, günümüzün en önemli ahlaki sorumluluklarından biri olduğunu savunuyor. 8 hafta sürecek [bu çevrimiçi okuma grubuna](https://www.effectivealtruism.org/virtual-programs/the-precipice-reading-group) katılarak, insanlığın geleceğini koruma konusunda bilgi sahibi olabilir ve bu tehlikelerle nasıl başa çıkılabileceğini öğrenebilirsiniz.
+The Precipice kitabı, nükleer silahlar, iklim değişikliği, yapay pandemiler ve kontrolden çıkmış yapay zeka gibi insanlığın karşılaştığı büyük riskleri ele alıyor. Bu risklerin azaltılmasının, günümüzün en önemli ahlaki sorumluluklarından biri olduğunu savunuyor. 8 hafta sürecek [bu çevrim içi okuma grubuna](https://www.effectivealtruism.org/virtual-programs/the-precipice-reading-group) katılarak, insanlığın geleceğini koruma konusunda bilgi sahibi olabilir ve bu tehlikelerle nasıl başa çıkılabileceğini öğrenebilirsiniz.
 
 **🗓️ Son başvuru tarihi: 10 Kasım**
 

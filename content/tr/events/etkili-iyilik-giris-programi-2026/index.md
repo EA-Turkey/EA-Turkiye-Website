@@ -1,7 +1,7 @@
 ---
 translationKey: "etkili-iyilik-giris-programi-2026"
 title: "Etkili İyilik Giriş Programı"
-description: "Dünyanın en önemli problemleri neler ve bunları nasıl çözebiliriz? 5 haftalık ücretsiz bu programda okumalar ve grup tartışmalarıyla efektif altruizmi keşfedin. Son başvuru: 1 Temmuz."
+description: "Dünyanın en önemli sorunları neler ve bunları nasıl çözebiliriz? 5 haftalık ücretsiz bu programda okumalar ve grup tartışmalarıyla efektif altruizmi keşfedin. Son başvuru: 1 Temmuz."
 url: "/etkinlikler/etkili-iyilik-giris-programi-2026/"
 slug: "etkili-iyilik-giris-programi-2026"
 start: 2026-07-06T00:00:00+03:00
@@ -9,7 +9,7 @@ timezone: "Europe/Istanbul"
 schedule_text: "Son başvuru: 1 Temmuz"
 city: ""
 event_mode: "online"
-summary: "Dünyanın en önemli problemleri neler ve bunları nasıl çözebiliriz? 5 haftalık ücretsiz bu programda okumalar ve grup tartışmalarıyla efektif altruizmi keşfedin. Son başvuru: 1 Temmuz."
+summary: "Dünyanın en önemli sorunları neler ve bunları nasıl çözebiliriz? 5 haftalık ücretsiz bu programda okumalar ve grup tartışmalarıyla efektif altruizmi keşfedin. Son başvuru: 1 Temmuz."
 featured_image: "events/etkili-iyilik-giris-programi-2026/cover.jpg"
 source_url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
 calendar_start: 2026-07-06T00:00:00+03:00

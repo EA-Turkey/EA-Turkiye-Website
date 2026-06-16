@@ -7,7 +7,7 @@ slug: "etkili-hayvan-savunuculugu-okuma"
 start: 2025-11-02T23:59:00+03:00
 timezone: "Europe/Istanbul"
 schedule_text: "Son başvuru: 2 Kasım"
-city: "Çevrimiçi"
+city: "Çevrim İçi"
 event_mode: "online"
 summary: "Hayvan haklarına, etik tartışmalara ya da toplumsal değişim konularına ilgin var mı?"
 featured_image: "events/etkili-hayvan-savunuculugu-okuma/cover.jpg"

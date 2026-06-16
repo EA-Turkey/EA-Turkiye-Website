@@ -18,10 +18,10 @@ Türkiye’deki çeşitli üniversitelerde efektif altruizm ile ilgilenen öğre
 *Tüm katılımcılara teşekkür ederiz, bir sonraki etkinliğimizde tekrar görüşmek dileğiyle!✨*
 2. **[Etkili Hayvan Savunuculuğu Okuma Grubu](https://docs.google.com/forms/d/e/1FAIpQLSeQ8oV_5e259uZS9wEWvOFAObcpePXh96Da4GV4rshq5Z-UrQ/viewform?usp=dialog)**
 
-Hayvan savunuculuğu hareketinin gücünü artırmak için ne yapabiliriz? Daha etkili stratejiler geliştirmek, mevcut yaklaşımları eleştirel bir gözle değerlendirmek ve hayvanlar için gerçek bir fark yaratmak mümkün mü? İşte bu sorular, Etkili Hayvan Savunuculuğu Okuma Grubunun temelini oluşturuyor. 8 hafta sürecek bu çevrimiçi okuma grubu, hayvanlar için daha iyi bir dünya yaratmak isteyen herkese bir öğrenme ve tartışma platformu sunuyor. Katılımcılar bu programla alandaki önemli kavramlara ve tartışmalara temel seviyeden başlayıp kapsamlı bir şekilde erişim sağlayacak. Samimi ve destekleyici bir ortamda farklı bakış açılarını keşfetme ve kendi aktivizm pratiğinizi geliştirme fırsatı bulacaksınız.
+Hayvan savunuculuğu hareketinin gücünü artırmak için ne yapabiliriz? Daha etkili stratejiler geliştirmek, mevcut yaklaşımları eleştirel bir gözle değerlendirmek ve hayvanlar için gerçek bir fark yaratmak mümkün mü? İşte bu sorular, Etkili Hayvan Savunuculuğu Okuma Grubunun temelini oluşturuyor. 8 hafta sürecek bu çevrim içi okuma grubu, hayvanlar için daha iyi bir dünya yaratmak isteyen herkese bir öğrenme ve tartışma platformu sunuyor. Katılımcılar bu programla alandaki önemli kavramlara ve tartışmalara temel seviyeden başlayıp kapsamlı bir şekilde erişim sağlayacak. Samimi ve destekleyici bir ortamda farklı bakış açılarını keşfetme ve kendi aktivizm pratiğinizi geliştirme fırsatı bulacaksınız.
 
 **Son başvuru tarihi: 4 Mart**
-3. **[EA Ankara’nın Efektif Altruizme Giriş Programı](https://docs.google.com/forms/d/e/1FAIpQLSdl-nBBE1nvLuTSRr98X1N1M96j3evds-QAOpMIlydimsnCIg/viewform?usp=dialog)**
+3. **[EA Ankara’nın Efektif altruizme Giriş Programı](https://docs.google.com/forms/d/e/1FAIpQLSdl-nBBE1nvLuTSRr98X1N1M96j3evds-QAOpMIlydimsnCIg/viewform?usp=dialog)**
 
 Dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak, en etkili çözümleri geliştirmek ve bireylerin çözümlere yönelik sorumluluk almasını sağlamak için geliştirilen altı haftalık tartışma grubu. EA Ankara tarafından yüz yüze yürütülecek bu programda insanlara ve diğer canlılara nasıl daha iyi yardım edebiliriz sorusunu hem teorik hem de pratik bir temelde tartışabilir, samimi ve destekleyici bir ortamda farklı bakış açılarını keşfetme ve kendi etki yolunuzu geliştirme fırsatı bulabilirsiniz. İlk buluşma, 1 Mart Cumartesi günü saat 16:00’da Kızılay Selanik Route Cafe’de Fırat Akova’nın sunumuyla gerçekleşecek ve ilgili herkese açık olacak.
 
@@ -33,19 +33,19 @@ Oxford merkezli araştırma grubu, yapay zekâ güvenliği, politikası ve felse
 **Son başvuru tarihi: 8 Mart**
 5. **[Ambitious Impact (AIM) Programları](https://eu.jotform.com/form/250215598255157)**
 
-[AIM Araştırma Programı](https://www.aimresearchprogram.com/) 2025 başvuruları açıldı. Bu 12 haftalık, çevrimiçi ve ücretsiz program, katılımcılara etkili hayır kurumlarını ve müdahaleleri analiz etme, karşılaştırma ve stratejilerini geliştirme becerisi kazandırmayı amaçlıyor.
+[AIM Araştırma Programı](https://www.aimresearchprogram.com/) 2025 başvuruları açıldı. Bu 12 haftalık, çevrim içi ve ücretsiz program, katılımcılara etkili hayır kurumlarını ve müdahaleleri analiz etme, karşılaştırma ve stratejilerini geliştirme becerisi kazandırmayı amaçlıyor.
 
-[AIM Hayır Girişimciliği Programı](https://www.charityentrepreneurship.com/apply), yüksek etkili bir organizasyon kurmak isteyenler için tasarlanmış, iki ay süren, tam zamanlı ve çevrimiçi yürütülen hibe destekli bir programdır. Program boyunca, küresel sorunlara en etkili çözümleri geliştirmek için gerekli bilgi ve becerileri edinebilir, uzman rehberliği ve topluluk desteği ile kendi girişiminizi başlatma fırsatı yakalayabilirsiniz.
+[AIM Hayır Girişimciliği Programı](https://www.charityentrepreneurship.com/apply), yüksek etkili bir organizasyon kurmak isteyenler için tasarlanmış, iki ay süren, tam zamanlı ve çevrim içi yürütülen hibe destekli bir programdır. Program boyunca, küresel sorunlara en etkili çözümleri geliştirmek için gerekli bilgi ve becerileri edinebilir, uzman rehberliği ve topluluk desteği ile kendi girişiminizi başlatma fırsatı yakalayabilirsiniz.
 
 **Son başvuru tarihleri: 24 Mart**
 6. **[Hayvan Savunuculuğunda Beceri Geliştirme Webinar Serisi](https://thehumaneleague.zoom.us/meeting/register/doYgAKs3QAK-qdG8qCLiSg#/registration)**
 
-Mercy For Animals, New Roots Institute ve The Humane League işbirliğiyle düzenlenen beş bölümlük bu çevrimiçi eğitim serisi, topluluğun içerisinde iç çatışmalardan kaçınarak savunuculuk yapmanın temel becerilerini öğrenmek ve uygulamak isteyen yeni aktivistler için tasarlandı. Hayvan hakları hareketinin kolektif gücünü artırmayı amaçlayan bu program, adım adım ilerleyen bir öğrenme süreci sunuyor; her oturum bir öncekinin üzerine inşa ediliyor.
+Mercy For Animals, New Roots Institute ve The Humane League işbirliğiyle düzenlenen beş bölümlük bu çevrim içi eğitim serisi, topluluğun içerisinde iç çatışmalardan kaçınarak savunuculuk yapmanın temel becerilerini öğrenmek ve uygulamak isteyen yeni aktivistler için tasarlandı. Hayvan hakları hareketinin kolektif gücünü artırmayı amaçlayan bu program, adım adım ilerleyen bir öğrenme süreci sunuyor; her oturum bir öncekinin üzerine inşa ediliyor.
 
 **Son başvuru tarihi: 6 Mart**
 7. **[Hi-Med Kariyer Planlama Kursu](https://docs.google.com/document/d/17VaN7JM3xvLzc6sHwShcQl37izfZhkj8ADj7SY0r0kA/edit?tab=t.0#heading=h.t6pkbl253s18)**
 
-Sağlık alanında nasıl daha fazla iyilik yapabileceğinizi öğrenmek ister misiniz? Altı haftalık çevrimiçi yürütülecek olan bu program, tıp öğrencileri ve sağlık alanında kariyerini inşa etmek isteyenler için bu alanda yüksek etki yaratmanın yollarını keşfetmeye ve somut hedefler koymaya yönelik rehberlik sunuyor.
+Sağlık alanında nasıl daha fazla iyilik yapabileceğinizi öğrenmek ister misiniz? Altı haftalık çevrim içi yürütülecek olan bu program, tıp öğrencileri ve sağlık alanında kariyerini inşa etmek isteyenler için bu alanda yüksek etki yaratmanın yollarını keşfetmeye ve somut hedefler koymaya yönelik rehberlik sunuyor.
 
 **Son başvuru tarihi: 19 Mart**
 8. **[Bilimsel İlerlemeye İlişkin Yazarak Etki Oluşturma Programı](https://www.worksinprogress.news/p/a-writing-fellowship-on-scientific?utm_source=The%2BEA%2BNewsletter&utm_campaign=4a427df6f6-EMAIL_CAMPAIGN_2025_02_18_01_22&utm_medium=email&utm_term=0_-4a427df6f6-319371333)**
@@ -60,7 +60,7 @@ Works in Progress ve Asimov Press tarafından düzenlenen bu altı aylık yazı 
 **Son başvuru tarihi: 18 Mayıs**
 10. **[Effective Altruism Virtual Programs - Ayrıntılı EA Programı](https://www.effectivealtruism.org/virtual-programs/in-depth-program)**
 
-Dünyanın her yerinden katılımcılara açık olan bu 8 haftalık ücretsiz ve çevrimiçi program, efektif altruizmin temel ilkelerinden karmaşık etik sorulara kadar geniş bir yelpazede derinlemesine bir keşif sunuyor. Program süresince, insan neslinin tükenme riski gibi kritik konular üzerine düşünme, küresel sorunlara yönelik etkili çözümleri tartışma ve bu alanda kariyer yollarını keşfetme fırsatına sahip olabilirsiniz.
+Dünyanın her yerinden katılımcılara açık olan bu 8 haftalık ücretsiz ve çevrim içi program, efektif altruizmin temel ilkelerinden karmaşık etik sorulara kadar geniş bir yelpazede derinlemesine bir keşif sunuyor. Program süresince, insan neslinin tükenme riski gibi kritik konular üzerine düşünme, küresel sorunlara yönelik etkili çözümleri tartışma ve bu alanda kariyer yollarını keşfetme fırsatına sahip olabilirsiniz.
 
 **Son başvuru tarihi: 2 Mart 2025**
 

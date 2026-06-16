@@ -10,13 +10,13 @@ source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-son-ha
 ---
 Merhabalar, Efektif Altruizm Türkiye bültenine hoşgeldiniz. Sizi aramızda görmek mutluluk verici!
 
-Efektif Altruizm, insanlara ve diğer canlılara yardım etmenin en iyi yollarını bulmayı ve bunları hayata geçirmeyi amaçlayan bir araştırma alanı ve küresel topluluktur.
+Efektif altruizm, insanlara ve diğer canlılara yardım etmenin en iyi yollarını bulmayı ve bunları hayata geçirmeyi amaçlayan bir araştırma alanı ve küresel topluluktur.
 
 #### Bu **Bültenin Amacı Nedir?**
 
-Efektif Altruizm ile alakalı en güncel programları ve etkinlikleri derleyip aylık olarak sizlerle buluşturacağımız bu bültende; ayrıyeten okunmasını önerdiğimiz seçili faydalı içerikleri, bu alanda ulaşabileceğiniz güncel iş ilanlarını ve güncel imza kampanyalarını da sizinle paylaşıyor olacağız.
+Efektif altruizm ile alakalı en güncel programları ve etkinlikleri derleyip aylık olarak sizlerle buluşturacağımız bu bültende; ayrıyeten okunmasını önerdiğimiz seçili faydalı içerikleri, bu alanda ulaşabileceğiniz güncel iş ilanlarını ve güncel imza kampanyalarını da sizinle paylaşıyor olacağız.
 
-Türkiye’deki Efektif Altruizm topluluklarından Efektif Altruizm Türkiye, **[Boğaziçi Üniversitesi](https://www.instagram.com/eabogazici/)**, **[Bilkent Üniversitesi](https://www.instagram.com/ea.bilkent/?hl=bn)**, **[Koç Üniversitesi](https://www.instagram.com/eakocuni/)** ve **[Efektif Altruizm Ankara](https://www.instagram.com/effectivealtruismankara/?hl=en)** aktif olarak faaliyetlerini sürdürüyor. İletişime geçmek için Instagram hesapları üzerinden mesaj gönderebilirsiniz.
+Türkiye’deki Efektif altruizm topluluklarından Efektif Altruizm Türkiye, **[Boğaziçi Üniversitesi](https://www.instagram.com/eabogazici/)**, **[Bilkent Üniversitesi](https://www.instagram.com/ea.bilkent/?hl=bn)**, **[Koç Üniversitesi](https://www.instagram.com/eakocuni/)** ve **[Efektif altruizm Ankara](https://www.instagram.com/effectivealtruismankara/?hl=en)** aktif olarak faaliyetlerini sürdürüyor. İletişime geçmek için Instagram hesapları üzerinden mesaj gönderebilirsiniz.
 
 ---
 
@@ -32,17 +32,17 @@ Katılımınızı ve sizlerle tanışmayı sabırsızlıkla bekliyoruz!
 
 ---
 
-#### Efektif Altruizm Ankara’nın Efektif Altruizme Giriş Programı
+#### Efektif altruizm Ankara’nın Efektif altruizme Giriş Programı
 
-Dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak, en etkili çözümleri geliştirmek ve bireylerin çözümlere yönelik sorumluluk almasını sağlamak için geliştirilen altı haftalık online tartışma grubu. **[EA Ankara tarafından yürütülecek bu programda](https://forms.gle/x98vbQYVVipm9sAE9)** insanlara ve diğer canlılara nasıl daha iyi yardım edebiliriz sorusunu hem teorik hem de pratik bir temelde tartışabilirsiniz. İster öğrenci olun ister profesyonel bir çalışan, eğer Efektif Altruizm ilginizi çekiyorsa, nerede yaşadığınızdan bağımsız olarak bu programa başvurabilirsiniz.
+Dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak, en etkili çözümleri geliştirmek ve bireylerin çözümlere yönelik sorumluluk almasını sağlamak için geliştirilen altı haftalık online tartışma grubu. **[EA Ankara tarafından yürütülecek bu programda](https://forms.gle/x98vbQYVVipm9sAE9)** insanlara ve diğer canlılara nasıl daha iyi yardım edebiliriz sorusunu hem teorik hem de pratik bir temelde tartışabilirsiniz. İster öğrenci olun ister profesyonel bir çalışan, eğer Efektif altruizm ilginizi çekiyorsa, nerede yaşadığınızdan bağımsız olarak bu programa başvurabilirsiniz.
 
 🗓️ Son kayıt tarihi: 3 Temmuz
 
 ---
 
-#### Effective Altruism Virtual Programs’ın Efektif Altruizme Giriş Programı
+#### Effective Altruism Virtual Programs’ın Efektif altruizme Giriş Programı
 
-Dünyanın her yerinden herkesin katılabileceği 8 haftalık **[bu ücretsiz online programda](https://www.effectivealtruism.org/virtual-programs/in-depth-program)** Efektif Altruizm’in temel prensiplerini öğrenebilir ve sahip olduğumuz kısıtlı kaynakları kullanarak nasıl en çok iyilik yapabiliriz sorusu üzerine derinlemesine düşünebilirsiniz.
+Dünyanın her yerinden herkesin katılabileceği 8 haftalık **[bu ücretsiz online programda](https://www.effectivealtruism.org/virtual-programs/in-depth-program)** Efektif altruizm’in temel prensiplerini öğrenebilir ve sahip olduğumuz kısıtlı kaynakları kullanarak nasıl en çok iyilik yapabiliriz sorusu üzerine derinlemesine düşünebilirsiniz.
 
 🗓️ Son kayıt tarihi: 30 Haziran
 
@@ -66,7 +66,7 @@ Yapay Zeka Yönetişimi uzmanları tarafından tasarlanan **[12 haftalık bu onl
 
 #### Fon Fırsatları
 
-Efektif Altruizmden yola çıkan fikir ve hedeflerle motive edilen araştırmalar ve projeler için **[fon](https://forum.effectivealtruism.org/topics/funding-opportunities)** sağlamanın çeşitli yollarını bulabilirsiniz.
+Efektif altruizmden yola çıkan fikir ve hedeflerle motive edilen araştırmalar ve projeler için **[fon](https://forum.effectivealtruism.org/topics/funding-opportunities)** sağlamanın çeşitli yollarını bulabilirsiniz.
 
 ♾️ Başvurular sürekli kabul edilir.
 
@@ -82,7 +82,7 @@ Aşağıda ***"Kariyerimi kullanarak nasıl etki yaratabilirim?"*** sorusunun ce
 
 #### 80,000 Hours
 
-**[80,000 Hours](https://80000hours.org/?int_campaign=job-board)** dünyanın karşı karşıya olduğu en önemli problemleri tespit edip, insanlara bu problemlerin çözümüne nasıl katkıda bulunabileceklerine dair kaynaklar sunmaya çalışan bir organizasyon.
+**[80,000 Hours](https://80000hours.org/?int_campaign=job-board)** dünyanın karşı karşıya olduğu en önemli sorunları tespit edip, insanlara bu sorunların çözümüne nasıl katkıda bulunabileceklerine dair kaynaklar sunmaya çalışan bir organizasyon.
 
 Eğer siz de kariyerinizi kullanarak nasıl çok fazla etki yaratabileceğinizi merak ediyorsanız, **[80,000 Hours’un kariyer rehberi](https://80000hours.org/career-guide/?int_campaign=job-board)** bu konudaki en iyi kaynaklardan biri.
 
