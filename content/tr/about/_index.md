@@ -49,4 +49,4 @@ Efektif Altruizm Türkiye, dünyadaki en önemli sorunlara nasıl daha etkili ç
 
 Topluluğumuz; öğrenciler, araştırmacılar, girişimciler, profesyoneller ve daha etkili bir şekilde fayda sağlamak isteyen herkese açıktır. Düzenlediğimiz etkinlikler, okuma grupları, seminerler ve birebir görüşmeler aracılığıyla katılımcıların hem fikirlerle tanışmalarını hem de bu fikirleri kendi yaşamlarında nasıl uygulayabileceklerini keşfetmelerini destekliyoruz.
 
-Seviyeniz ne olursa olsun, bu fikirler ilginizi çekiyorsa sizleri aramızda görmekten mutluluk duyarız!
+Bu fikirler ilginizi çekiyorsa sizleri aramızda görmekten mutluluk duyarız!

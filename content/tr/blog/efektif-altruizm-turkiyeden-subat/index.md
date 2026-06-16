@@ -33,7 +33,7 @@ Oxford merkezli araştırma grubu, yapay zekâ güvenliği, politikası ve felse
 **Son başvuru tarihi: 8 Mart**
 5. **[Ambitious Impact (AIM) Programları](https://eu.jotform.com/form/250215598255157)**
 
-[AIM Araştırma Programı](https://www.aimresearchprogram.com/) 2025 başvuruları açıldı. Bu 12 haftalık, çevrim içi ve ücretsiz program, katılımcılara etkili hayır kurumlarını ve müdahaleleri analiz etme, karşılaştırma ve stratejilerini geliştirme becerisi kazandırmayı amaçlıyor.
+[AIM Araştırma Programı](https://www.aimresearchprogram.com/) 2025 başvuruları açıldı. Bu 12 haftalık, çevrim içi ve ücretsiz program, katılımcılara etkili hayır kurumlarını ve çözümleri analiz etme, karşılaştırma ve stratejilerini geliştirme becerisi kazandırmayı amaçlıyor.
 
 [AIM Hayır Girişimciliği Programı](https://www.charityentrepreneurship.com/apply), yüksek etkili bir organizasyon kurmak isteyenler için tasarlanmış, iki ay süren, tam zamanlı ve çevrim içi yürütülen hibe destekli bir programdır. Program boyunca, küresel sorunlara en etkili çözümleri geliştirmek için gerekli bilgi ve becerileri edinebilir, uzman rehberliği ve topluluk desteği ile kendi girişiminizi başlatma fırsatı yakalayabilirsiniz.
 

@@ -29,7 +29,7 @@ Dünyada var olan sorunlar arasından hangilerinin öncelikli olduğunu saptamak
 
 #### ***[AIM Araştırma Programı 2025](https://www.aimresearchprogram.com/)***
 
-AIM Research Program 2025 başvuruları açıldı. Bu 12 haftalık, çevrim içi ve ücretsiz program, katılımcılara etkili hayır kurumlarını ve müdahaleleri analiz etme, karşılaştırma ve stratejilerini geliştirme becerisi kazandırmayı amaçlıyor. Katılımcılar, etkili hayırseverlik ve etki odaklı araştırma alanlarında derinlemesine bilgi edinecek ve bu alandaki kariyerlerini şekillendirme fırsatına sahip olacaklar.
+AIM Research Program 2025 başvuruları açıldı. Bu 12 haftalık, çevrim içi ve ücretsiz program, katılımcılara etkili hayır kurumlarını ve çözümleri analiz etme, karşılaştırma ve stratejilerini geliştirme becerisi kazandırmayı amaçlıyor. Katılımcılar, etkili hayırseverlik ve etki odaklı araştırma alanlarında derinlemesine bilgi edinecek ve bu alandaki kariyerlerini şekillendirme fırsatına sahip olacaklar.
 
 **🗓️Son başvuru tarihi: 2 Şubat**
 

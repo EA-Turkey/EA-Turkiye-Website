@@ -38,9 +38,9 @@ pillars:
     text: Haklı olmaya değil, doğruyu bulmaya odaklanırız. Yeni bir kanıt karşısında görüşlerimizi güncellemenin bir zayıflık değil, entelektüel dürüstlüğün bir gereği olduğuna inanırız.
   - title: Ölçülebilirlik
     text: Aldığımız aksiyonların somut verilerle ölçümlenebilir olmasına önem veririz.
-cause_section_label: Odak alanları
-cause_section_title: En çok fark yaratabileceğimiz mücadele alanlarına odaklanırız
-cause_section_text: Efektif altruistler olarak, en fazla sayıda insan ve hayvanı etkileyen, en fazla değişim yaratabileceğimiz ve en ihmal edilmiş mücadele alanlarına odaklanırız.
+cause_section_label: Odaklandığımız konular
+cause_section_title: En çok fark yaratabileceğimiz sorunlara odaklanırız
+cause_section_text: Efektif altruistler olarak, en fazla sayıda insan ve hayvanı etkileyen, en fazla değişim yaratabileceğimiz ve en ihmal edilmiş sorunlara odaklanırız.
 events_section_label: Yaklaşan Etkinlikler
 events_section_title: Yeni bağlar kurmak, birlikte öğrenmek ve harekete geçmek için buluşuyoruz.
 events_section_text: Farklı mücadele alanlarına ve deneyim seviyelerine yönelik etkinliklerimizi keşfedin.
