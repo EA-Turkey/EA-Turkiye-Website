@@ -18,7 +18,7 @@ calendar_end: 2026-07-11T18:00:00+03:00
 ---
 Etkili Hayvan Savunuculuğu İstanbul Zirvesi, 11 Temmuz 2026'da HAN Spaces Levent'te hayvan savunucularını bir araya getiriyor.
 
-Sezgiden değil veriden, iyi niyetten değil etkili stratejiden yana olan bu zirve; aktivistleri, yeni vegan bireyleri ve hayvan refahına etkin altruizm perspektifinden yaklaşan profesyonelleri ağırlıyor.
+Sezgiden değil veriden, iyi niyetten değil etkili stratejiden yana olan bu zirve; aktivistleri, yeni vegan bireyleri ve hayvan refahına efektif altruizm perspektifinden yaklaşan profesyonelleri ağırlıyor.
 
 📍 HAN Spaces Levent, İstanbul
 
