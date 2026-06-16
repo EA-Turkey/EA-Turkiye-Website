@@ -40,7 +40,7 @@ org_values:
     text: Bir hayat kurtarmanın değerli olduğunu kabul ederken, on hayat kurtarmanın bir hayat kurtarmaktan çok daha büyük bir etki yarattığını kabul ederiz. Bu nedenle, mümkün olduğunca yüksek etki yaratabilecek fırsatlara öncelik vermeye çalışırız.
   - title: Tarafsızlık
     text: Yardım etmeyi seçtiğimiz kişiler arasında, bize yakın olmaları veya aynı coğrafyada yaşamaları nedeniyle ayrım yapmamaya çalışırız. Kaynaklarımızı en çok ihtiyaç duyanlara yönlendirmeyi hedefleriz.
-  - title: İzci Zihniyeti
+  - title: İzci zihniyeti
     text: Başkalarına daha iyi yardımcı olabilmek için gerçeği aramaya ve dünyayı olduğu gibi anlamaya çalışırız. Yeni kanıtlar ve güçlü argümanlar karşısında görüşlerimizi güncelleyebilmenin önemli olduğuna inanırız.
 ---
 ## Hakkımızda

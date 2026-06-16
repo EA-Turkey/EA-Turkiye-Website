@@ -39,7 +39,7 @@ org_values:
     text: While we recognize that saving one life is valuable, we also recognize that saving ten lives creates a much greater impact than saving one. That is why we try to prioritize opportunities that can create as much impact as possible.
   - title: Impartiality
     text: We try not to discriminate among the people we choose to help based on whether they are close to us or live in the same place. We aim to direct our resources to those who need them most.
-  - title: Scout Mindset
+  - title: Scout mindset
     text: To help others better, we try to seek the truth and understand the world as it is. We believe it is important to update our views in light of new evidence and strong arguments.
 ---
 ## About Us
