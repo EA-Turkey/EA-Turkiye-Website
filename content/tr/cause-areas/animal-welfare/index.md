@@ -6,7 +6,7 @@ url: /odak-alanlari/hayvan-refahi/
 slug: hayvan-refahi
 accent: animal-welfare
 external_url: "https://80000hours.org/problem-profiles/factory-farming/"
-card_excerpt: Çok fazla sayıda hayvanın yaşadığı koşulları iyileştirebilecek politika, kurumsal ve tüketim değişimlerini inceliyoruz.
+card_excerpt: Çok fazla sayıda hayvanın yaşadığı koşulları iyileştirebilecek politika, kurum ve tüketim alanındaki değişimleri inceliyoruz.
 featured_image: cause-areas/animal-welfare/cover.jpg
 featured_image_credit: "Fotoğraf: [Danielle Suijkerbuijk](https://unsplash.com/@vandaantje?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText) / [Unsplash](https://unsplash.com/?utm_source=ea_turkiye&utm_medium=referral&utm_content=creditCopyText)"
 summary: Etkilenen birey sayısının çok büyük olduğu ve nispeten ihmal edilmiş kalan alanlardan biri.
