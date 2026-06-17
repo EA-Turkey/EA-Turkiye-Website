@@ -18,11 +18,12 @@ Editorial requests (the common case) only need `content/CONTENT.md`. Don't run H
 hugo server                        # local preview
 hugo --gc --minify                 # production build (also Cloudflare's build cmd)
 npx wrangler pages dev public      # local Pages Function (contact form) testing
+node --test tests/contact-function.test.mjs
 ./scripts/generate-avif.sh         # rebuild static/avif/ from assets/images/
 ./scripts/generate-jpeg.sh         # rebuild static/jpg/ from assets/images/
 ```
 
-There are no tests, linters, or Node build steps. Don't add any.
+There are no linters or Node build steps. The contact Pages Function has Node's built-in test coverage in `tests/contact-function.test.mjs`.
 
 ## Architecture
 
@@ -41,7 +42,7 @@ Hugo static site, no theme, no JS framework, no CMS. All layout logic lives in r
 
 **Search.** The home page emits a `searchIndex` output (`index.searchindex.json` template, served as `/search-index.json`). The search overlay is a vanilla JS partial.
 
-**Contact form.** Posts to `/api/contact`, implemented as a Cloudflare Pages Function in `functions/api/contact.js`. Requires env vars `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`, plus `HUGO_VERSION` for the build.
+**Contact form.** Posts to `/api/contact`, implemented as a Cloudflare Pages Function in `functions/api/contact.js`. Submissions are stored in D1 via `CONTACT_DB`; D1 is the source of truth. After a successful insert, the function can send a Resend notification to the single fixed recipient `bilgi@eaturkiye.org`. The submitter never controls the notification recipient and no autoresponder is sent. Required runtime configuration is documented in `README.md`; do not commit `RESEND_API_KEY`, `.env`, or `.dev.vars`.
 
 **Deployment.** Cloudflare Pages, output `public/`. `cleanDestinationDir = true` is set, so committed `public/` artifacts are not authoritative.
 

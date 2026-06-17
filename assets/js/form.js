@@ -23,6 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
     status.classList.remove("is-error", "is-success");
   };
 
+  const resetTurnstile = () => {
+    if (!window.turnstile || typeof window.turnstile.reset !== "function") {
+      return;
+    }
+
+    form.querySelectorAll(".cf-turnstile").forEach((widget) => {
+      window.turnstile.reset(widget);
+    });
+  };
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     resetStatus();
@@ -57,12 +67,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!response.ok || !data.ok) {
         status.textContent = data.message || fallbackMessage;
         status.classList.add("is-error");
+        resetTurnstile();
         return;
       }
 
       status.textContent = data.message;
       status.classList.add("is-success");
       form.reset();
+      resetTurnstile();
 
       if (languageInput) {
         languageInput.value = language;
@@ -71,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error(error);
       status.textContent = fallbackMessage;
       status.classList.add("is-error");
+      resetTurnstile();
     } finally {
       submitButton.disabled = false;
       submitButton.removeAttribute("aria-busy");

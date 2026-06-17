@@ -26,6 +26,11 @@
     <input id="email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false" required>
   </div>
 
+  <div class="form-field">
+    <label for="organization">{{ i18n "form_organization" }}</label>
+    <input id="organization" name="organization" type="text" autocomplete="organization">
+  </div>
+
   <div class="form-grid form-grid--2">
     <div class="form-field">
       <label for="city">{{ i18n "form_city" }}</label>
@@ -49,6 +54,19 @@
   </div>
 
   <input type="hidden" name="language" value="{{ $lang }}">
+
+  <div class="form-field form-field--checkbox">
+    <input id="consent" name="consent" type="checkbox" required>
+    <label for="consent">{{ i18n "form_consent" }}</label>
+  </div>
+
+  {{ with $langSite.Params.turnstile.site_key }}
+    <div class="form-field form-field--turnstile">
+      <span class="form-label">{{ i18n "form_verification" }}</span>
+      <div class="cf-turnstile" data-sitekey="{{ . }}"></div>
+    </div>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  {{ end }}
 
   <div class="form-honeypot" aria-hidden="true">
     <label for="company">Company</label>

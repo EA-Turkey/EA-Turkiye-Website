@@ -1,0 +1,8 @@
+CONTACT_NOTIFICATION_TO=bilgi@eaturkiye.org
+CONTACT_NOTIFICATION_FROM="EA Turkiye Website <contact-form@forms.eaturkiye.org>"
+CONTACT_NOTIFICATION_REPLY_TO_ENABLED=true
+CONTACT_NOTIFICATION_SUBJECT_PREFIX=[Website]
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+
+# Leave unset locally unless you intentionally want to send a real test email.
+# RESEND_API_KEY=

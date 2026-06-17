@@ -172,6 +172,9 @@
 - id: form_email
   translation: "Email"
 
+- id: form_organization
+  translation: "Organization (optional)"
+
 - id: form_city
   translation: "City"
 
@@ -180,6 +183,12 @@
 
 - id: form_message
   translation: "Message"
+
+- id: form_consent
+  translation: "I consent to EA Turkey storing my contact details to reply to this message."
+
+- id: form_verification
+  translation: "Verification"
 
 - id: form_submit
   translation: "Send message"

@@ -1,10 +1,14 @@
 .env
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
 .hugo_build.lock
 .DS_Store
 public
 /resources
 /org-logos
 .wrangler
+.wrangler-home/
 .vscode
 new_logos/
 

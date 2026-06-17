@@ -172,6 +172,9 @@
 - id: form_email
   translation: "E-posta"
 
+- id: form_organization
+  translation: "Kurum (isteğe bağlı)"
+
 - id: form_city
   translation: "Şehir"
 
@@ -180,6 +183,12 @@
 
 - id: form_message
   translation: "Mesaj"
+
+- id: form_consent
+  translation: "Mesajıma yanıt vermek için verdiğim iletişim bilgilerinin saklanmasını kabul ediyorum."
+
+- id: form_verification
+  translation: "Doğrulama"
 
 - id: form_submit
   translation: "Mesajı gönder"

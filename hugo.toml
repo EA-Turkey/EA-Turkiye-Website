@@ -52,6 +52,9 @@ summaryLength = 40
     primary_email = "bilgi@eaturkiye.org"
     whatsapp_url = ""
 
+  [params.turnstile]
+    site_key = "0x4AAAAAADmlvqm3EJFTTlnq"
+
   [params.social]
     linkedin = "https://www.linkedin.com/company/effective-altruism-turkey/?viewAsMember=true"
     substack = "https://eaturkiye.substack.com/"

@@ -2263,6 +2263,12 @@ a.contact-hero__route:focus-visible {
   color: var(--color-ink-950);
 }
 
+.form-label {
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-ink-950);
+}
+
 .form-field input,
 .form-field select,
 .form-field textarea {
@@ -2283,6 +2289,29 @@ a.contact-hero__route:focus-visible {
 
 .form-field textarea {
   resize: vertical;
+}
+
+.form-field--checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+}
+
+.form-field--checkbox input {
+  width: 1rem;
+  min-height: 1rem;
+  margin-top: 0.2rem;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+.form-field--checkbox label {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.form-field--turnstile {
+  min-height: 4.25rem;
 }
 
 .form-status {
