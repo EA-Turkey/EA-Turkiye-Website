@@ -194,34 +194,56 @@ function buildSubmitterName(submission) {
   return [submission.first_name, submission.last_name].map(sanitize).filter(Boolean).join(" ");
 }
 
+function formatTimestamp(value) {
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return sanitize(value) || "(not provided)";
+  }
+
+  return date.toISOString().replace("T", " ").replace(/\.\d{3}Z$/, " UTC");
+}
+
+function pushField(lines, label, value, fallback = "(not provided)") {
+  lines.push(`${label}: ${sanitize(value) || fallback}`);
+}
+
 function buildNotificationText(submission) {
   const name = buildSubmitterName(submission) || "(not provided)";
   const lines = [
-    "New contact form submission",
+    "EA Turkiye website contact form",
+    "==============================",
     "",
-    `Submission ID: ${submission.id}`,
-    `Created at: ${submission.created_at}`,
-    `Form: ${submission.form_name}`,
-    `Locale: ${submission.language}`,
-    `Name: ${name}`,
-    `Email: ${submission.email}`
+    "A new message was submitted through the website contact form.",
+    "",
+    "SUMMARY",
+    "-------"
   ];
 
-  if (submission.organization) {
-    lines.push(`Organization: ${submission.organization}`);
-  }
+  pushField(lines, "Name", name);
+  pushField(lines, "Email", submission.email);
+  pushField(lines, "Interest", submission.interest);
+  pushField(lines, "Submitted", formatTimestamp(submission.created_at));
 
   lines.push(
-    `City: ${submission.city || "(not provided)"}`,
-    `Interest: ${submission.interest}`,
-    ""
+    "",
+    "DETAILS",
+    "-------"
   );
 
-  if (submission.referer) {
-    lines.push(`Referer: ${submission.referer}`, "");
-  }
+  pushField(lines, "Organization", submission.organization);
+  pushField(lines, "City", submission.city);
+  pushField(lines, "Language", submission.language);
+  pushField(lines, "Form", submission.form_name);
 
-  lines.push("Message:", submission.message || "(empty)");
+  lines.push("", "MESSAGE", "-------", submission.message || "(empty)", "", "RECORD", "------");
+
+  pushField(lines, "Submission ID", submission.id);
+  pushField(lines, "Created at", submission.created_at);
+
+  if (submission.referer) {
+    pushField(lines, "Source", submission.referer);
+  }
 
   return lines.join("\n");
 }
