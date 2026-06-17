@@ -61,9 +61,10 @@ public
 Required environment variables:
 
 - `HUGO_VERSION`
-- `RESEND_API_KEY`
-- `CONTACT_TO_EMAIL`
-- `CONTACT_FROM_EMAIL`
+
+Required Cloudflare Pages bindings:
+
+- D1 database binding: `CONTACT_DB`
 
 ## Repo rules
 
@@ -101,4 +102,4 @@ Required environment variables:
 
 ## Form
 
-The contact form posts to `/api/contact`, implemented as a Cloudflare Pages Function in `functions/api/contact.js`.
+The contact form posts to `/api/contact`, implemented as a Cloudflare Pages Function in `functions/api/contact.js`. Submissions are stored in the D1 table defined in `db/contact_submissions.sql`.

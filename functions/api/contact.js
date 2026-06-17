@@ -12,17 +12,33 @@ function sanitize(value) {
   return String(value || "").trim();
 }
 
-function escapeHtml(value) {
-  return sanitize(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-
 function validEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+async function storeSubmission(db, payload) {
+  await db
+    .prepare(
+      `insert into contact_submissions (
+        first_name,
+        last_name,
+        email,
+        city,
+        interest,
+        message,
+        language
+      ) values (?, ?, ?, ?, ?, ?, ?)`
+    )
+    .bind(
+      payload.first_name,
+      payload.last_name,
+      payload.email,
+      payload.city,
+      payload.interest,
+      payload.message,
+      payload.language
+    )
+    .run();
 }
 
 export async function onRequestPost(context) {
@@ -90,70 +106,14 @@ export async function onRequestPost(context) {
     );
   }
 
-  if (!env.RESEND_API_KEY || !env.CONTACT_TO_EMAIL || !env.CONTACT_FROM_EMAIL) {
-    return json({ ok: false, message: "Server is missing email configuration." }, 500);
+  if (!env.CONTACT_DB) {
+    return json({ ok: false, message: "Server is missing contact storage configuration." }, 500);
   }
 
-  const subject = `[EA Türkiye] ${payload.interest} — ${payload.first_name} ${payload.last_name}`.trim();
-  const html = `
-    <h1>New EA Türkiye contact form submission</h1>
-    <p><strong>First name:</strong> ${escapeHtml(payload.first_name)}</p>
-    <p><strong>Last name:</strong> ${escapeHtml(payload.last_name)}</p>
-    <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
-    <p><strong>City:</strong> ${escapeHtml(payload.city)}</p>
-    <p><strong>Interest:</strong> ${escapeHtml(payload.interest)}</p>
-    <p><strong>Language:</strong> ${escapeHtml(payload.language)}</p>
-    <hr>
-    <p><strong>Message:</strong></p>
-    <p>${escapeHtml(payload.message).replaceAll("\n", "<br>")}</p>
-  `;
-  const text = `
-New EA Türkiye contact form submission
-
-First name: ${payload.first_name}
-Last name: ${payload.last_name}
-Email: ${payload.email}
-City: ${payload.city}
-Interest: ${payload.interest}
-Language: ${payload.language}
-
-Message:
-${payload.message}
-  `.trim();
-
-  let resendResponse;
   try {
-    resendResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${env.RESEND_API_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        from: env.CONTACT_FROM_EMAIL,
-        to: [env.CONTACT_TO_EMAIL],
-        subject,
-        html,
-        text
-      })
-    });
+    await storeSubmission(env.CONTACT_DB, payload);
   } catch (error) {
-    console.error("Resend request failed", error);
-    return json(
-      {
-        ok: false,
-        message: localizedMessage(
-          "Mesaj şu anda gönderilemedi. Lütfen e-posta bağlantısını kullan.",
-          "The message could not be sent right now. Please use the email link instead."
-        )
-      },
-      500
-    );
-  }
-
-  if (!resendResponse.ok) {
-    const errorText = await resendResponse.text();
-    console.error("Resend error:", errorText);
+    console.error("D1 contact submission failed", error);
     return json(
       {
         ok: false,
