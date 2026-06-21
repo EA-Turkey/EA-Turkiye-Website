@@ -23,7 +23,7 @@ activities:
       - label: Yapay Zekâ Güvenliği Programı ilgi formu
         url: "https://docs.google.com/forms/d/e/1FAIpQLScW-UALwTNUDAOI7xPDui7iSZ-OTIZhMzL1NMbyHDfN8Emi3Q/viewform?usp=header"
   - title: Topluluk Etkinlikleri
-    text: Farklı mücadele alanlarında çalışan ya da bu alanlara ilgi duyan herkes için yüz yüze sosyal buluşmalar, konferanslar ve çalıştaylar düzenliyoruz.
+    text: Farklı alanlardaki projelerde çalışan ya da bu alanlara ilgi duyan herkes için yüz yüze sosyal buluşmalar, konferanslar ve çalıştaylar düzenliyoruz.
     links:
       - label: Etkinlikleri gör
         url: "/etkinlikler/"
