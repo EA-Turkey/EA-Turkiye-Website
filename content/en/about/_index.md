@@ -22,7 +22,7 @@ activities:
       - label: AI Safety Program interest form
         url: "https://docs.google.com/forms/d/e/1FAIpQLScW-UALwTNUDAOI7xPDui7iSZ-OTIZhMzL1NMbyHDfN8Emi3Q/viewform?usp=header"
   - title: Community Events
-    text: We host in-person social meetups, conferences, and workshops for anyone working in or curious about different cause areas.
+    text: We host in-person social meetups, conferences, and workshops for anyone working on projects in different fields or curious about them.
     links:
       - label: View events
         url: "/en/events/"
