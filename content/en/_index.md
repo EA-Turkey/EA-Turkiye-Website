@@ -3,7 +3,7 @@ translationKey: home
 title: Effective Altruism Turkey
 description: A community looking for better ways to address the world's most urgent problems through evidence, reason, and community.
 hero_eyebrow: Effective Altruism · Turkey
-hero_title: Discover the most effective ways to help others
+hero_title: Find the most effective ways to help others
 hero_lead: "Effective altruism asks: how can we do the most good with our time, income, and talents?"
 hero_primary_label: What is Effective Altruism?
 hero_primary_url: "#ea-nedir"
