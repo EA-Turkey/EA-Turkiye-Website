@@ -17,7 +17,7 @@
   {{ $heroClasses = $heroClasses | append "hero--text-only" }}
   {{ $heroClasses = $heroClasses | append "hero--centered" }}
   {{ $showEyebrow = false }}
-  {{ if hasPrefix $page.RelPermalink "/en/" }}
+  {{ if eq (partial "helpers/lang-from-url.html" $page.RelPermalink) "en" }}
     {{ $titleLines = slice "Find the most" "effective ways" "to help others" }}
   {{ else }}
     {{ $titleLines = slice "Başkalarına yardım" "etmenin en etkili" "yollarını keşfedin" }}
