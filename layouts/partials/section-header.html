@@ -6,7 +6,7 @@
 <div class="section-header" data-reveal>
   <div class="stack-sm">
     {{ with $eyebrow }}<span class="section-header__eyebrow">{{ . }}</span>{{ end }}
-    <h2 class="section-header__title">{{ $title }}</h2>
+    {{ with $title }}<h2 class="section-header__title">{{ . }}</h2>{{ end }}
   </div>
   {{ if or $text $action }}
     <div class="stack-sm">

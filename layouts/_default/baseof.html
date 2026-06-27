@@ -12,13 +12,10 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
-    {{ partial "search-overlay.html" . }}
     {{ $mainJS := resources.Get "js/main.js" | minify }}
     {{ $formJS := resources.Get "js/form.js" | minify }}
-    {{ $searchJS := resources.Get "js/search.js" | minify }}
     <script src="{{ $mainJS.RelPermalink }}?v={{ md5 $mainJS.Content }}" defer></script>
     <script src="{{ $formJS.RelPermalink }}?v={{ md5 $formJS.Content }}" defer></script>
-    <script src="{{ $searchJS.RelPermalink }}?v={{ md5 $searchJS.Content }}" defer></script>
     <!-- Designed by Sayhan Yalvacer -->
   </body>
 </html>
