@@ -59,6 +59,6 @@ cta_cards:
     url: "https://80000hours.org/"
   - title: Etkinlikler
     text: İlgi alanlarınıza göre size uygun etkinliklerimize göz atın.
-    url: "https://ea-turkey.github.io/EA-Turkiye-Website/etkinlikler/"
+    url: "/etkinlikler/"
 ---
 EA Türkiye, Türkiye'de efektif altruizm etrafında düşünen, öğrenen ve harekete geçen insanların buluşma noktasıdır.
