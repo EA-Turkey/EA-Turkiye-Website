@@ -3,8 +3,8 @@ translationKey: home
 title: Effective Altruism Turkey
 description: A community looking for better ways to address the world's most urgent problems through evidence, reason, and community.
 hero_eyebrow: Effective Altruism · Turkey
-hero_title: Discover the most effective ways to help others
-hero_lead: We use evidence, reasoning, and community to explore how to benefit others as much as possible.
+hero_title: Find the most effective ways to help others
+hero_lead: "Effective altruism asks: how can we do the most good with our time, income, and talents?"
 hero_primary_label: What is Effective Altruism?
 hero_primary_url: "#ea-nedir"
 hero_secondary_label: Join Our Intro Program
@@ -31,7 +31,7 @@ explainer_intro:
 pillars_label: EA Principles
 pillars:
   - title: Evidence and reason
-    text: We take data and careful thinking seriously when asking which interventions actually help.
+    text: We draw on scientific thinking and data to understand which solutions actually work.
   - title: Scale and neglectedness
     text: We focus on problems that are large, solvable, and still under-addressed.
   - title: Scout mindset
@@ -40,10 +40,10 @@ pillars:
     text: We care that the actions we take are measurable and can be evaluated with concrete data.
 cause_section_label: Topics we focus on
 cause_section_title: We focus on the problems where we can make the most difference
-cause_section_text: As Effective Altruists, we focus on the cause areas that affect the greatest number of people and animals, where we can drive the most change, and which are most neglected.
+cause_section_text: As effective altruists, we focus on the problems that affect the greatest number of people and animals, where we can drive the most change, and which are most neglected.
 events_section_label: Upcoming Events
 events_section_title: We come together to build new connections, learn collectively, and take action.
-events_section_text: Explore our events designed for different cause areas and experience levels.
+events_section_text: Explore events tailored to different problems and experience levels.
 events_section_url: /en/events/
 cta_section_title: Learn more and take action
 cta_learn_more: Explore →

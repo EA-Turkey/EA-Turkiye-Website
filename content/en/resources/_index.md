@@ -9,8 +9,8 @@ resources:
   - title: Introduction to EA Handbook
     text: "What is effective altruism, how does it work, and where do you start? Take a look at this step-by-step handbook."
     url: "https://forum.effectivealtruism.org/handbook"
-  - title: Problem Profiles
-    text: "Which problems are the most important, most neglected, and most solvable? Explore 80,000 Hours' in-depth cause area analyses."
+  - title: Problems We Focus On
+    text: "Which problems are the most important, most neglected, and most solvable? Explore 80,000 Hours' in-depth problem analyses."
     url: "https://80000hours.org/problem-profiles/"
   - title: EA Opportunities Board
     text: "Want to donate, join a program, or volunteer? Browse an up-to-date list of high-impact opportunities around the world."
