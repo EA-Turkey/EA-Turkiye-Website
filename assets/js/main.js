@@ -168,4 +168,28 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
   }
+
+  const lumaFrames = document.querySelectorAll("iframe[data-luma-src]");
+
+  if (lumaFrames.length) {
+    const desktopQuery = window.matchMedia("(min-width: 561px)");
+
+    const loadLumaFrames = () => {
+      if (!desktopQuery.matches) {
+        return;
+      }
+
+      lumaFrames.forEach((frame) => {
+        if (!frame.getAttribute("src")) {
+          frame.setAttribute("src", frame.dataset.lumaSrc);
+        }
+      });
+    };
+
+    loadLumaFrames();
+
+    if (typeof desktopQuery.addEventListener === "function") {
+      desktopQuery.addEventListener("change", loadLumaFrames);
+    }
+  }
 });

@@ -438,3 +438,6 @@
 
 - id: newsletter_text
   translation: "Aylık haberler, etkinlik duyuruları ve seçtiğimiz içerikler e-postanıza gelsin."
+
+- id: luma_calendar_title
+  translation: "Yaklaşan etkinlikler takvimi (Luma)"

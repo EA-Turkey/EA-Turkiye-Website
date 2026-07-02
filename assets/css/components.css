@@ -2207,6 +2207,10 @@ a.contact-hero__route:focus-visible {
   border: 0;
 }
 
+.luma-embed iframe[data-luma-src]:not([src]) {
+  display: none;
+}
+
 .newsletter-embed {
   overflow: hidden;
   max-width: 34rem;
@@ -2930,7 +2934,11 @@ a.contact-hero__route:focus-visible {
   }
 
   .events-archive__calendar {
-    height: 22rem;
+    display: none;
+  }
+
+  .events-archive__calendar-teaser {
+    display: block;
   }
 
   .stats-strip {

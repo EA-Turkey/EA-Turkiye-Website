@@ -438,3 +438,6 @@
 
 - id: newsletter_text
   translation: "Monthly updates, event announcements, and hand-picked reading in your inbox."
+
+- id: luma_calendar_title
+  translation: "Upcoming events calendar (Luma)"

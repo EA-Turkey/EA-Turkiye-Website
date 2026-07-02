@@ -27,8 +27,12 @@
     {{ partial "section-header.html" (dict "title" (i18n "upcoming_events") "text" .Params.upcoming_text) }}
     <div class="events-archive__upcoming-layout">
       {{ with .Site.Params.events.luma_embed_url }}
+        <link rel="preconnect" href="https://luma.com">
         <div class="luma-embed events-archive__calendar" data-reveal>
-          <iframe src="{{ . }}" title="Luma" loading="lazy"></iframe>
+          <iframe data-luma-src="{{ . }}" title="{{ i18n "luma_calendar_title" }}"></iframe>
+          <noscript>
+            <iframe src="{{ . }}" title="{{ i18n "luma_calendar_title" }}" loading="lazy"></iframe>
+          </noscript>
         </div>
         <div class="events-archive__calendar-teaser" data-reveal>
           <div class="stack-md">

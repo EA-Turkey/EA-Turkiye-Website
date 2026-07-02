@@ -66,7 +66,7 @@ summaryLength = 40
 
   [params.events]
     luma_calendar_url = "https://luma.com/calendar/cal-mocaFiDctI8Om3c"
-    luma_embed_url = "https://luma.com/embed/calendar/cal-mocaFiDctI8Om3c/events"
+    luma_embed_url = "https://luma.com/embed/calendar/cal-mocaFiDctI8Om3c/events?lt=light"
 
   [params.brand]
     logo_header = "brand/logo-header-organizer-14-full.png"
