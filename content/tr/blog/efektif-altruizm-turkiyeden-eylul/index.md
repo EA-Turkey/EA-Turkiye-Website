@@ -36,7 +36,7 @@ AI Safety Türkiye, Türkiye’de yapay zeka ile ilgilenen üniversite öğrenci
 
 #### Effective Altruism Virtual Programs - EA Giriş Programı
 
-Dünyanın her yerinden herkesin katılabileceği 8 haftalık [bu ücretsiz ve online programda](https://www.effectivealtruism.org/virtual-programs/introductory-program) efektif altruizmin temel prensiplerini öğrenebilir ve sahip olduğumuz kısıtlı kaynakları kullanarak nasıl en çok iyilik yapabiliriz konusunda derinlemesine düşünebilirsiniz.
+Dünyanın her yerinden herkesin katılabileceği 8 haftalık [bu ücretsiz ve online programda](https://www.effectivealtruism.org/courses/introductory-program) efektif altruizmin temel prensiplerini öğrenebilir ve sahip olduğumuz kısıtlı kaynakları kullanarak nasıl en çok iyilik yapabiliriz konusunda derinlemesine düşünebilirsiniz.
 
 **🗓️ Son başvuru tarihi: 13 Ekim**
 

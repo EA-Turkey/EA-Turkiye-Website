@@ -24,7 +24,7 @@ Eğer bağış yaparak dünyadaki öncelikli sorunları çözmede etkinizin olab
 
 **🗓️ Son başvuru tarihi: 18 Mayıs 2025**
 
-#### ***[Effective Altruism Virtual Programs - EA Giriş Programı](https://www.effectivealtruism.org/virtual-programs/introductory-program)***
+#### ***[Effective Altruism Virtual Programs - EA Giriş Programı](https://www.effectivealtruism.org/courses/introductory-program)***
 
 Dünyanın her yerinden herkesin katılabileceği 8 haftalık bu ücretsiz ve online programda efektif altruizmin temel prensiplerini öğrenebilir ve sahip olduğumuz kısıtlı kaynakları kullanarak nasıl en çok iyilik yapabiliriz konusunda derinlemesine düşünebilirsiniz.
 

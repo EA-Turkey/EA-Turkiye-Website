@@ -23,7 +23,7 @@ You can apply until February 2 for EA Global Bay Area 2025, which will take plac
 
 **🗓️ Application deadline: May 18, 2025**
 
-#### ***[Effective Altruism Virtual Programs - EA Entry Program](https://www.effectivealtruism.org/virtual-programs/introductory-program)***
+#### ***[Effective Altruism Virtual Programs - EA Entry Program](https://www.effectivealtruism.org/courses/introductory-program)***
 
 In this free, 8-week online program that anyone from all over the world can attend, you can learn the basic principles of effective altruism and think deeply about how we can do the most good by using the limited resources we have.
 

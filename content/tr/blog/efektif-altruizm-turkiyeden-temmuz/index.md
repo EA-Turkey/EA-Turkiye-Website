@@ -31,9 +31,9 @@ Küresel yoksulluk üzerine yazılmış en etkili kitaplardan biri olan Peter Si
 
 ---
 
-#### **👨🏽‍💻[Effective Altruism Virtual Programs - EA Giriş Programı](https://www.effectivealtruism.org/virtual-programs/introductory-program)**
+#### **👨🏽‍💻[Effective Altruism Virtual Programs - EA Giriş Programı](https://www.effectivealtruism.org/courses/introductory-program)**
 
-Dünyanın her yerinden herkesin katılabileceği 8 haftalık **[bu ücretsiz ve online programda](https://www.effectivealtruism.org/virtual-programs/introductory-program)** Efektif altruizm’in temel prensiplerini öğrenebilir ve sahip olduğumuz kısıtlı kaynakları kullanarak nasıl en çok iyilik yapabiliriz konusunda derinlemesine düşünebilirsiniz.
+Dünyanın her yerinden herkesin katılabileceği 8 haftalık **[bu ücretsiz ve online programda](https://www.effectivealtruism.org/courses/introductory-program)** Efektif altruizm’in temel prensiplerini öğrenebilir ve sahip olduğumuz kısıtlı kaynakları kullanarak nasıl en çok iyilik yapabiliriz konusunda derinlemesine düşünebilirsiniz.
 
 🗓️ **Son başvuru tarihi: 28 Temmuz**
 

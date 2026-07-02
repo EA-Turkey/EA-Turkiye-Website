@@ -30,9 +30,9 @@ Peter Singer's book 'The Life You Can Save', one of the most influential books w
 
 ---
 
-#### **👨🏽‍💻[Effective Altruism Virtual Programs - EA Entry Program](https://www.effectivealtruism.org/virtual-programs/introductory-program)**
+#### **👨🏽‍💻[Effective Altruism Virtual Programs - EA Entry Program](https://www.effectivealtruism.org/courses/introductory-program)**
 
-In **[this free, online 8-week program](https://www.effectivealtruism.org/virtual-programs/introductory-program)**, anyone from anywhere in the world can learn the basic principles of Effective Altruism and think deeply about how we can do the most good with the limited resources we have.
+In **[this free, online 8-week program](https://www.effectivealtruism.org/courses/introductory-program)**, anyone from anywhere in the world can learn the basic principles of Effective Altruism and think deeply about how we can do the most good with the limited resources we have.
 
 🗓️ **Application deadline: July 28**
 

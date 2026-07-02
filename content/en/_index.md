@@ -8,7 +8,7 @@ hero_lead: "Effective altruism asks: how can we do the most good with our time, 
 hero_primary_label: What is Effective Altruism?
 hero_primary_url: "#ea-nedir"
 hero_secondary_label: Join Our Intro Program
-hero_secondary_url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
+hero_secondary_url: "https://www.effectivealtruism.org/courses/introductory-program"
 stats_label: EA Turkey by the numbers
 stats:
   - value: "2021"

@@ -19,7 +19,7 @@ activities:
     text: Yeni katılımcıların efektif altruizm hakkında sağlam bir temel edinmeleri için çevrim içi bir Giriş Programı; yapay zekânın güvenli gelişimine ilgi duyanlar için ise bir Yapay Zekâ Güvenliği Programı düzenliyoruz.
     links:
       - label: Giriş Programı başvuru formu
-        url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
+        url: "https://www.effectivealtruism.org/courses/introductory-program"
       - label: Yapay Zekâ Güvenliği Programı ilgi formu
         url: "https://docs.google.com/forms/d/e/1FAIpQLScW-UALwTNUDAOI7xPDui7iSZ-OTIZhMzL1NMbyHDfN8Emi3Q/viewform?usp=header"
   - title: Topluluk Etkinlikleri

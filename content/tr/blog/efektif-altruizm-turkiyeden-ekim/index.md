@@ -33,7 +33,7 @@ The Precipice" kitabı, nükleer silahlar, iklim değişikliği, yapay pandemile
 
 **🗓️Son başvuru tarihi: 10 Kasım**
 
-#### **4) [Effective Altruism Virtual Programs’ın Efektif altruizme Giriş Programı](https://www.effectivealtruism.org/virtual-programs/introductory-program)**
+#### **4) [Effective Altruism Virtual Programs’ın Efektif altruizme Giriş Programı](https://www.effectivealtruism.org/courses/introductory-program)**
 
 Dünyanın her yerinden herkesin katılabileceği 8 haftalık bu ücretsiz ve çevrim içi programda efektif altruizmin temel prensiplerini öğrenebilir ve sahip olduğumuz kısıtlı kaynakları kullanarak nasıl en çok iyilik yapabiliriz sorusu üzerine derinlemesine düşünebilirsiniz.
 

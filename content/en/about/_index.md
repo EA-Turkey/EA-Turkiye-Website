@@ -18,7 +18,7 @@ activities:
     text: We run an online Introduction Program to help newcomers build a solid foundation in effective altruism, and an AI Safety Program for those interested in the safe development of AI.
     links:
       - label: Introduction Program application form
-        url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
+        url: "https://www.effectivealtruism.org/courses/introductory-program"
       - label: AI Safety Program interest form
         url: "https://docs.google.com/forms/d/e/1FAIpQLScW-UALwTNUDAOI7xPDui7iSZ-OTIZhMzL1NMbyHDfN8Emi3Q/viewform?usp=header"
   - title: Community Events

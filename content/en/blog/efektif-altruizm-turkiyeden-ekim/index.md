@@ -32,7 +32,7 @@ The book "The Precipice" discusses the major risks facing humanity, such as nucl
 
 **🗓️Deadline: November 10**
 
-#### **4) [Effective Altruism Virtual Programs' Introduction to Effective Altruism Program](https://www.effectivealtruism.org/virtual-programs/introductory-program)**
+#### **4) [Effective Altruism Virtual Programs' Introduction to Effective Altruism Program](https://www.effectivealtruism.org/courses/introductory-program)**
 
 In this free, 8-week online program that anyone from all over the world can attend, you can learn the basic principles of effective altruism and think deeply about the question of how we can do the most good by using the limited resources we have.
 

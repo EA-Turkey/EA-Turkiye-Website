@@ -35,7 +35,7 @@ To strengthen its connection with university students and academics interested i
 
 #### Effective Altruism Virtual Programs - EA Entry Program
 
-In [this free, online 8-week program](https://www.effectivealtruism.org/virtual-programs/introductory-program), anyone from anywhere in the world can learn the basic principles of effective altruism and think deeply about how we can do the most good with the limited resources we have.
+In [this free, online 8-week program](https://www.effectivealtruism.org/courses/introductory-program), anyone from anywhere in the world can learn the basic principles of effective altruism and think deeply about how we can do the most good with the limited resources we have.
 
 **🗓️ Application deadline: October 13**
 

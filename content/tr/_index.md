@@ -8,7 +8,7 @@ hero_lead: "Efektif altruizm şu soruyu sorar: Zamanımızı, gelirimizi ve yete
 hero_primary_label: Efektif altruizm nedir?
 hero_primary_url: "#ea-nedir"
 hero_secondary_label: Giriş Programımıza Katılın
-hero_secondary_url: "https://docs.google.com/forms/d/e/1FAIpQLSdiDLumEDf930r9kORisrrZcr3noKRDEjP8XrqT7JoieMqZ3Q/viewform?usp=header"
+hero_secondary_url: "https://www.effectivealtruism.org/courses/introductory-program"
 stats_label: Rakamlarla EA Türkiye
 stats:
   - value: "2021"
