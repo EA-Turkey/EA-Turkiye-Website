@@ -62,6 +62,10 @@
         {{ end }}
       </ul>
 
+      {{ with $langSite.Params.programs.intro_url }}
+        {{ partial "button.html" (dict "url" . "label" (i18n "join_us") "variant" "primary" "class" "button--header-cta" "external" (hasPrefix . "http")) }}
+      {{ end }}
+
       {{ partial "language-switcher.html" . }}
     </nav>
 
