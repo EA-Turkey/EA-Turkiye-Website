@@ -26,7 +26,7 @@
 
 <section class="{{ delimit $heroClasses " " }}">
   <div class="{{ if eq $variant "home" }}container--wide{{ else }}container{{ end }} hero__inner">
-    <div class="hero__content stack-md"{{ if eq $variant "home" }} data-reveal{{ end }}>
+    <div class="hero__content stack-md">
       {{ if $showEyebrow }}{{ with $eyebrow }}<span class="hero__eyebrow">{{ . }}</span>{{ end }}{{ end }}
       <h1 class="hero__title">
         {{ if gt (len $titleLines) 0 }}
@@ -49,7 +49,7 @@
   </div>
 
   {{ if and (eq $variant "home") $stats }}
-    <div class="container hero__proof" data-reveal>
+    <div class="container hero__proof">
       {{ partial "stats-strip.html" (dict "items" $stats "label" .stats_label) }}
     </div>
   {{ end }}

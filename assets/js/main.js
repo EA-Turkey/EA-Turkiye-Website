@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.classList.add("is-ready");
-
   const focusableSelector = [
     "a[href]",
     "button:not([disabled])",
@@ -150,16 +148,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
             entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.14 }
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
 
-    document.querySelectorAll("[data-reveal]").forEach((element) => observer.observe(element));
+    document.querySelectorAll("[data-reveal]").forEach((element) => {
+      if (element.getBoundingClientRect().bottom < 0) {
+        element.classList.add("is-visible");
+        return;
+      }
+
+      observer.observe(element);
+    });
   } else {
     document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
   }

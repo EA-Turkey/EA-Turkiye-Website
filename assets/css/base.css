@@ -157,13 +157,13 @@ ol {
   scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 
-[data-reveal] {
+html.js [data-reveal] {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 520ms ease, transform 520ms ease;
+  transition: opacity 350ms ease, transform 350ms ease;
 }
 
-[data-reveal].is-visible {
+html.js [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -200,7 +200,7 @@ ol {
     transition: none;
   }
 
-  [data-reveal] {
+  html.js [data-reveal] {
     opacity: 1;
     transform: none;
     transition: none;
