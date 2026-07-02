@@ -2400,18 +2400,6 @@ a.contact-hero__route:focus-visible {
     width: 100%;
   }
 
-  .site-nav__item--events {
-    order: 1;
-  }
-
-  .site-nav__item--about {
-    order: 2;
-  }
-
-  .site-nav__item--blog {
-    order: 3;
-  }
-
   .site-nav__list a {
     display: block;
     width: 100%;
