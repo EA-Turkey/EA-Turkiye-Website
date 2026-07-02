@@ -432,3 +432,9 @@
 
 - id: resources_start_here
   translation: "Buradan başlayın"
+
+- id: newsletter_title
+  translation: "Bültenimize abone olun"
+
+- id: newsletter_text
+  translation: "Aylık haberler, etkinlik duyuruları ve seçtiğimiz içerikler e-postanıza gelsin."
