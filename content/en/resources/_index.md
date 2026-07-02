@@ -1,7 +1,7 @@
 ---
 translationKey: resources
 title: Resources
-description: Four essential resources to start exploring effective altruism.
+description: Our curated library of resources for exploring effective altruism.
 url: /en/resources/
 hero_eyebrow: Resources
 hero_title: Explore these resources to learn more and take action.

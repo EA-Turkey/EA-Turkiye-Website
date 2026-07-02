@@ -429,3 +429,6 @@
 
 - id: cause_careers_giving
   translation: "Kariyer ve bağışçılık"
+
+- id: resources_start_here
+  translation: "Buradan başlayın"

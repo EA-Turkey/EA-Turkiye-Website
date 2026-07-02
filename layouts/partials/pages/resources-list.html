@@ -1,3 +1,15 @@
+{{ partial "helpers/lang-context.html" . }}
+{{ $langSite := .Scratch.Get "langSite" }}
+{{ $items := slice }}
+{{ range $langSite.RegularPages }}
+  {{ $item := . }}
+  {{ with .File }}
+    {{ if hasPrefix .Path "resources/" }}
+      {{ $items = $items | append $item }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 {{ partial "hero.html" (dict
   "page" .
   "variant" "page"
@@ -7,16 +19,44 @@
 
 <section class="section">
   <div class="container">
-    <div class="resource-list" data-reveal>
-      {{ range .Params.resources }}
-        <a class="resource-row" href="{{ .url }}" target="_blank" rel="noreferrer">
-          <div class="resource-row__main">
-            <h3 class="resource-row__title">{{ .title }}</h3>
-            <p class="resource-row__text text-muted">{{ .text }}</p>
-          </div>
-          <span class="resource-row__arrow" aria-hidden="true">→</span>
-        </a>
-      {{ end }}
+    <div class="stack-md" data-reveal>
+      <h2>{{ i18n "resources_start_here" }}</h2>
+      <div class="resource-list">
+        {{ range .Params.resources }}
+          <a class="resource-row" href="{{ .url }}" target="_blank" rel="noreferrer">
+            <div class="resource-row__main">
+              <h3 class="resource-row__title">{{ .title }}</h3>
+              <p class="resource-row__text text-muted">{{ .text }}</p>
+            </div>
+            <span class="resource-row__arrow" aria-hidden="true">→</span>
+          </a>
+        {{ end }}
+      </div>
     </div>
   </div>
 </section>
+
+{{ if gt (len $items) 0 }}
+  <section class="section section--surface">
+    <div class="container">
+      {{ range $level := slice "intro" "intermediate" "advanced" }}
+        {{ $group := slice }}
+        {{ range $items }}
+          {{ if eq (.Params.level | default "intro") $level }}
+            {{ $group = $group | append . }}
+          {{ end }}
+        {{ end }}
+        {{ if gt (len $group) 0 }}
+          <div class="resource-group stack-md">
+            <h2>{{ i18n (printf "level_%s" $level) }}</h2>
+            <div class="list-shell">
+              {{ range sort $group "Title" }}
+                {{ partial "resource-item.html" . }}
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
