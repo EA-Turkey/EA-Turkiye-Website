@@ -837,13 +837,6 @@ a.contact-hero__route:focus-visible {
   background: var(--color-brand-wash);
 }
 
-.cause-card__eyebrow {
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-ink-700);
-}
-
 .cause-card__link,
 .action-card__link {
   display: grid;
@@ -3230,7 +3223,6 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 }
 
 /* Cause card accent colors */
-.cause-card:has([class*="cause-card__eyebrow"]) .cause-card__link,
 .cause-grid .cause-card:nth-child(1) { --card-accent: #1b5266; }
 .cause-grid .cause-card:nth-child(2) { --card-accent: #6d4c9e; }
 .cause-grid .cause-card:nth-child(3) { --card-accent: #2e7d5e; }

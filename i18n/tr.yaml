@@ -450,3 +450,6 @@
 
 - id: footer_explore
   translation: "Keşfet"
+
+- id: cause_external_cta
+  translation: "Konunun detaylı analizini okuyun"

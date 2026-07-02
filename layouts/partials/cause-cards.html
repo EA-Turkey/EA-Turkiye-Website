@@ -1,9 +1,7 @@
 <div class="cause-grid" data-reveal>
   {{ range . }}
-    {{ $accentKey := replace (.Params.accent | default "general") "-" "_" }}
     <article class="cause-card">
-      <a class="cause-card__link" href="{{ with .Params.external_url }}{{ . }}{{ else }}{{ .RelPermalink }}{{ end }}"{{ with .Params.external_url }} target="_blank" rel="noreferrer"{{ end }}>
-        {{ if .Params.accent }}<span class="cause-card__eyebrow">{{ i18n (printf "cause_%s" $accentKey) }}</span>{{ end }}
+      <a class="cause-card__link" href="{{ .RelPermalink }}">
         <div class="stack-md">
           <div class="stack-sm">
             <h3>{{ .Title }}</h3>
