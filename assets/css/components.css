@@ -1944,6 +1944,16 @@ a.contact-hero__route:focus-visible {
   box-shadow: var(--shadow-sm);
 }
 
+.form-required-legend {
+  margin: 0;
+  font-size: var(--text-small);
+}
+
+.required-mark {
+  color: var(--color-brand-600);
+  font-weight: 600;
+}
+
 .form-grid {
   display: grid;
   gap: var(--space-16);

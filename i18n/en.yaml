@@ -441,3 +441,9 @@
 
 - id: luma_calendar_title
   translation: "Upcoming events calendar (Luma)"
+
+- id: form_required_legend
+  translation: "* required fields"
+
+- id: form_interest_placeholder
+  translation: "Select an option"

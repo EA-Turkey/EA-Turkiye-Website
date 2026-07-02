@@ -441,3 +441,9 @@
 
 - id: luma_calendar_title
   translation: "Yaklaşan etkinlikler takvimi (Luma)"
+
+- id: form_required_legend
+  translation: "* zorunlu alanlar"
+
+- id: form_interest_placeholder
+  translation: "Seçiniz"
