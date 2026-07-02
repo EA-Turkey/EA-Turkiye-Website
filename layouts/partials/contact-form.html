@@ -63,7 +63,7 @@
   {{ with $langSite.Params.turnstile.site_key }}
     <div class="form-field form-field--turnstile">
       <span class="form-label">{{ i18n "form_verification" }}</span>
-      <div class="cf-turnstile" data-sitekey="{{ . }}"></div>
+      <div class="cf-turnstile" data-sitekey="{{ . }}" data-theme="light" data-language="{{ $lang }}"></div>
     </div>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   {{ end }}
