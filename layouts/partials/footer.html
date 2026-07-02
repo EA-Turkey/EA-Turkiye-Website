@@ -34,6 +34,15 @@
     </div>
 
     <div class="footer-column">
+      <p class="footer-label">{{ i18n "footer_explore" }}</p>
+      <ul class="footer-nav">
+        {{ range $langSite.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="footer-column">
       <p class="footer-label">{{ i18n "footer_follow" }}</p>
       <ul class="social-links">
         {{ with $langSite.Params.social.instagram }}

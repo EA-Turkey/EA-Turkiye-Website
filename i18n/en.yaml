@@ -447,3 +447,6 @@
 
 - id: form_interest_placeholder
   translation: "Select an option"
+
+- id: footer_explore
+  translation: "Explore"

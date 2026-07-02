@@ -2086,10 +2086,10 @@ a.contact-hero__route:focus-visible {
 }
 
 .site-footer {
-  margin-top: var(--space-80);
+  margin-top: 0;
   padding-block: var(--space-48);
   border-top: 1px solid rgba(216, 229, 233, 0.9);
-  background: rgba(255, 255, 255, 0.68);
+  background: var(--color-surface);
 }
 
 .footer-grid {

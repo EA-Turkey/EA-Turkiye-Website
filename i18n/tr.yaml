@@ -447,3 +447,6 @@
 
 - id: form_interest_placeholder
   translation: "Seçiniz"
+
+- id: footer_explore
+  translation: "Keşfet"
