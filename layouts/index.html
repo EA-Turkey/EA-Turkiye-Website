@@ -21,21 +21,12 @@
     {{ end }}
   {{ end }}
   {{ $upcoming := slice }}
-  {{ $past := slice }}
   {{ $now := now }}
   {{ range sort $events "Params.start" }}
     {{ $end := cond .Params.end (time.AsTime .Params.end) (time.AsTime .Params.start) }}
     {{ if ge $end.Unix $now.Unix }}
       {{ $upcoming = $upcoming | append . }}
-    {{ else }}
-      {{ $past = $past | append . }}
     {{ end }}
-  {{ end }}
-  {{ $fallbackEvents := sort $past "Params.start" "desc" }}
-  {{ $homeEvents := cond (gt (len $upcoming) 0) $upcoming $fallbackEvents }}
-  {{ $featuredEvent := false }}
-  {{ if gt (len $upcoming) 0 }}
-    {{ $featuredEvent = index $upcoming 0 }}
   {{ end }}
   {{ $eventsSectionURL := partial "helpers/resolve-url.html" .Params.events_section_url | strings.TrimSpace }}
   {{ $finalPrimaryURL := partial "helpers/resolve-url.html" .Params.final_cta_primary_url | strings.TrimSpace }}
@@ -82,6 +73,30 @@
         "text" .Params.cause_section_text
       ) }}
       {{ partial "cause-cards.html" (first 5 $sortedCauses) }}
+    </div>
+  </section>
+
+  <section class="section section--surface home-section home-section--events">
+    <div class="container">
+      {{ partial "section-header.html" (dict
+        "eyebrow" .Params.events_section_label
+        "title" .Params.events_section_title
+        "text" .Params.events_section_text
+      ) }}
+      {{ if gt (len $upcoming) 0 }}
+        <div class="event-grid event-grid--home" data-reveal>
+          {{ range first 3 $upcoming }}
+            {{ partial "event-card.html" (dict "page" . "variant" "home") }}
+          {{ end }}
+        </div>
+      {{ else }}
+        <p class="text-muted">{{ i18n "no_upcoming_events" }}</p>
+      {{ end }}
+      {{ if $eventsSectionURL }}
+        <div style="margin-top: var(--space-32); display: flex; justify-content: center;">
+          {{ partial "button.html" (dict "url" .Params.events_section_url "label" (i18n "view_all_events") "variant" "secondary") }}
+        </div>
+      {{ end }}
     </div>
   </section>
 
