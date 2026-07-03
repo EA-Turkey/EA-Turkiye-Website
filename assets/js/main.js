@@ -157,19 +157,10 @@ document.addEventListener("DOMContentLoaded", () => {
       { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
 
-    const revealElements = Array.from(document.querySelectorAll("[data-reveal]"));
-    const alreadyPassed = new Set(
-      revealElements.filter((element) => element.getBoundingClientRect().bottom < 0)
-    );
-
-    revealElements.forEach((element) => {
-      if (alreadyPassed.has(element)) {
-        element.classList.add("is-visible");
-        return;
-      }
-
-      observer.observe(element);
-    });
+    // No synchronous geometry reads here: the observer's first callback
+    // reports every element's position asynchronously, and the
+    // top < 0 branch above already reveals anything scrolled past.
+    document.querySelectorAll("[data-reveal]").forEach((element) => observer.observe(element));
   } else {
     document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
   }
