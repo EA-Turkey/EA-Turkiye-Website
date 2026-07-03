@@ -52,9 +52,6 @@ summaryLength = 40
     primary_email = "bilgi@eaturkiye.org"
     whatsapp_url = ""
 
-  [params.programs]
-    intro_url = "https://www.effectivealtruism.org/courses/introductory-program"
-
   [params.turnstile]
     site_key = "0x4AAAAAADmlvqm3EJFTTlnq"
 
