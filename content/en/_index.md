@@ -52,17 +52,17 @@ cta_cards:
     eyebrow: Learn
     text: Learn the core ideas, approaches, and culture of the EA community.
     url: "https://forum.effectivealtruism.org/handbook"
-    cta_label: "Read the handbook →"
+    cta_label: "Read the handbook"
   - title: Effective giving
     eyebrow: Give
     text: Discover how to make the most impact with your money.
     url: "https://www.etkilibagis.org/"
-    cta_label: "Visit the giving guide →"
+    cta_label: "Visit the giving guide"
   - title: High-impact careers
     eyebrow: Career
     text: Explore how your career can make a real difference in the world.
     url: "https://80000hours.org/"
-    cta_label: "Explore the career guide →"
+    cta_label: "Explore the career guide"
   - title: Events
     eyebrow: Community
     text: From reading groups to summits — explore EA Turkey events.
