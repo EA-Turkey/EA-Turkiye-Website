@@ -11,22 +11,22 @@ action_cards:
   - title: Introduction Program
     badge: Online
     text: A free online program where you discuss the core ideas of effective altruism in small, facilitated groups.
-    cta_label: Application form →
+    cta_label: Application form
     cta_url: "https://www.effectivealtruism.org/courses/introductory-program"
   - title: AI Safety Program
     badge: Online
     text: Interested in the safe development of AI? Register your interest in our AI safety program.
-    cta_label: Interest form →
+    cta_label: Interest form
     cta_url: "https://docs.google.com/forms/d/e/1FAIpQLScW-UALwTNUDAOI7xPDui7iSZ-OTIZhMzL1NMbyHDfN8Emi3Q/viewform?usp=header"
   - title: Career Coaching
     badge: One-on-one
     text: Get individual coaching to find high-impact career paths aligned with your skills, interests, and values.
-    cta_label: Application form →
+    cta_label: Application form
     cta_url: "https://docs.google.com/forms/d/e/1FAIpQLSdIXyOBIyhYBSCWcGA4XARX1FqGUXUQoBB-prHcV-bQvYnrbQ/viewform?usp=header"
   - title: Events
     badge: In person and online
     text: From reading groups to summits — get to know the community by joining an event that matches your interests.
-    cta_label: View events →
+    cta_label: View events
     cta_url: "/en/events/"
 form:
   heading: Write to us

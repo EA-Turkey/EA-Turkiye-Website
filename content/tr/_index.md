@@ -46,7 +46,7 @@ events_section_title: Yeni bağlar kurmak, birlikte öğrenmek ve harekete geçm
 events_section_text: Farklı sorunlara ve deneyim seviyelerine yönelik etkinliklerimizi keşfedin.
 events_section_url: /etkinlikler/
 cta_section_title: Daha fazlasını öğrenin ve harekete geçin
-cta_learn_more: Keşfet →
+cta_learn_more: Keşfet
 cta_cards:
   - title: Efektif altruizme giriş
     eyebrow: Öğren
@@ -67,6 +67,6 @@ cta_cards:
     eyebrow: Topluluk
     text: İlgi alanlarınıza göre size uygun etkinliklerimize göz atın.
     url: "/etkinlikler/"
-    cta_label: "Etkinlik takvimine bak →"
+    cta_label: "Etkinlik takvimine bak"
 ---
 EA Türkiye, Türkiye'de efektif altruizm etrafında düşünen, öğrenen ve harekete geçen insanların buluşma noktasıdır.

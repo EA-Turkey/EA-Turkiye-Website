@@ -824,6 +824,14 @@ a.contact-hero__route:focus-visible {
   box-shadow: var(--shadow-md);
 }
 
+.cause-card:hover,
+.cause-card:focus-within,
+.action-card:has(> .action-card__link):hover,
+.action-card:has(> .action-card__link):focus-within {
+  background: color-mix(in srgb, var(--card-accent, var(--color-brand-500)) 5%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--card-accent, var(--color-brand-500)) 32%, var(--color-border));
+}
+
 .pillar-card,
 .action-card,
 .final-cta,
@@ -847,20 +855,33 @@ a.contact-hero__route:focus-visible {
   overflow: hidden;
 }
 
-.cause-card::before {
+/* Accent rule: the short bar that opens every linked card. */
+.cause-card__link::before,
+.action-card__link::before {
   content: "";
-  position: absolute;
-  inset: auto -2rem -2rem auto;
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  background: var(--color-brand-wash);
-  transition: transform var(--transition-base);
+  display: block;
+  width: 2.75rem;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--card-accent, var(--color-brand-500));
+  transition: width var(--transition-base);
 }
 
-.cause-card:hover::before,
-.cause-card:focus-within::before {
-  transform: scale(1.18);
+.cause-card:hover .cause-card__link::before,
+.cause-card:focus-within .cause-card__link::before,
+.action-card:hover .action-card__link::before,
+.action-card:focus-within .action-card__link::before {
+  width: 4.25rem;
+}
+
+.cause-card h3,
+.action-card h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 1.7vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
 .cause-card__link,
@@ -893,36 +914,40 @@ a.contact-hero__route:focus-visible {
 .action-card__cta {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.45rem;
   width: fit-content;
-  min-height: 2.9rem;
-  padding: 0.8rem 1.15rem;
-  border: 1px solid var(--color-brand-stroke-soft);
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.82);
+  min-height: 2.75rem;
   color: var(--color-brand-700);
   font-size: var(--text-small);
   font-weight: 700;
   line-height: 1.2;
-  transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: color var(--transition-fast);
 }
 
 .cause-card__link:hover .cause-card__cta,
 .cause-card__link:focus-visible .cause-card__cta,
 .action-card__link:hover .action-card__cta,
 .action-card__link:focus-visible .action-card__cta {
-  background: var(--color-brand-700);
-  border-color: var(--color-brand-700);
-  color: var(--color-surface);
-  transform: translateY(-1px);
+  color: var(--color-brand-600);
 }
 
-/* On the deep-tinted CTA cards the pill inverts to white instead. */
-.cause-grid--cta .cause-card__link:hover .cause-card__cta,
-.cause-grid--cta .cause-card__link:focus-visible .cause-card__cta {
-  background: var(--color-surface);
-  border-color: var(--color-surface);
-  color: var(--color-brand-700);
+.cta-arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.cause-card__link:hover .cta-arrow,
+.cause-card__link:focus-visible .cta-arrow,
+.action-card__link:hover .cta-arrow,
+.action-card__link:focus-visible .cta-arrow {
+  transform: translateX(3px);
+}
+
+.cause-card__link:hover .cta-arrow--up,
+.cause-card__link:focus-visible .cta-arrow--up,
+.action-card__link:hover .cta-arrow--up,
+.action-card__link:focus-visible .cta-arrow--up {
+  transform: translate(2px, -2px);
 }
 
 .event-grid {
@@ -1026,28 +1051,6 @@ a.contact-hero__route:focus-visible {
   background:
     radial-gradient(circle at top right, rgba(var(--color-brand-500-rgb), 0.11), transparent 32%),
     linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(var(--color-brand-100-rgb), 0.74));
-}
-
-.event-card__media--fallback::before,
-.event-card__media--fallback::after {
-  content: "";
-  position: absolute;
-  border-radius: 999px;
-  pointer-events: none;
-}
-
-.event-card__media--fallback::before {
-  inset: 1.5rem auto auto -1.5rem;
-  width: 8rem;
-  height: 8rem;
-  background: var(--color-brand-wash);
-}
-
-.event-card__media--fallback::after {
-  inset: auto -1.25rem 1rem auto;
-  width: 7rem;
-  height: 7rem;
-  border: 1px solid var(--color-brand-stroke-soft);
 }
 
 .event-card__fallback {
@@ -1920,7 +1923,7 @@ a.contact-hero__route:focus-visible {
 .action-card__badge {
   display: inline-flex;
   margin-bottom: var(--space-16);
-  color: var(--color-brand-700);
+  color: var(--card-accent, var(--color-brand-700));
   font-size: var(--text-xs);
   font-weight: 700;
   text-transform: uppercase;
@@ -3352,13 +3355,11 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   border-radius: calc(var(--radius-xl) - var(--mat));
 }
 
-.home-section--causes .cause-card:nth-child(1) { background: #e6f7f8; border-color: #b2e3e8; }
-.home-section--causes .cause-card:nth-child(2) { background: #ede9f6; border-color: #d0c4ec; }
-.home-section--causes .cause-card:nth-child(3) { background: #e6f4ee; border-color: #b2d9c6; }
-.home-section--causes .cause-card:nth-child(4) { background: #fef0e6; border-color: #f9cba6; }
-.home-section--causes .cause-card:nth-child(5) { background: #e8f5f7; border-color: #b0dce3; }
-
-.home-section--causes .cause-card::before { background: rgba(0, 0, 0, 0.04); }
+/* Accent per card: drives the rule, eyebrow, numeral, and hover wash. */
+.home-section--causes .cause-card:nth-child(1) { --card-accent: var(--color-cause-animal-welfare); }
+.home-section--causes .cause-card:nth-child(2) { --card-accent: var(--color-cause-global-health); }
+.home-section--causes .cause-card:nth-child(3) { --card-accent: var(--color-cause-ai-safety); }
+.home-section--causes .cause-card:nth-child(4) { --card-accent: var(--color-ink-500); }
 
 .page-home .pillar-card {
   background: var(--color-brand-700);
@@ -3374,41 +3375,55 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* Each step of the take-action path keeps its own deep accent,
+   applied as typography and detail instead of a slab background.
+   All four measure >=6.9:1 on white. */
+.cause-grid--cta .cause-card:nth-child(1) { --card-accent: #1b5266; }
+.cause-grid--cta .cause-card:nth-child(2) { --card-accent: #4a3d73; }
+.cause-grid--cta .cause-card:nth-child(3) { --card-accent: #2a5d47; }
+.cause-grid--cta .cause-card:nth-child(4) { --card-accent: #7a4118; }
+
+/* Ghost index numerals: the grid reads as an ordered path (01-04). */
+.cause-grid--cta {
+  counter-reset: cta-step;
+}
+
 .cause-grid--cta .cause-card {
-  background: var(--color-brand-700);
-  border-color: var(--color-brand-700);
-  color: var(--color-surface);
+  counter-increment: cta-step;
 }
 
-.cause-grid--cta .cause-card::before {
-  background: rgba(255, 255, 255, 0.1);
+.cause-grid--cta .cause-card::after {
+  content: counter(cta-step, decimal-leading-zero);
+  position: absolute;
+  top: var(--space-16);
+  right: var(--space-20);
+  z-index: 0;
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--card-accent, var(--color-brand-500));
+  opacity: 0.16;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
 }
 
-.cause-grid--cta .cause-card h3 {
-  color: var(--color-surface);
+.cause-grid--cta .cause-card:hover::after,
+.cause-grid--cta .cause-card:focus-within::after {
+  opacity: 0.32;
 }
 
-.cause-grid--cta .cause-card .text-muted {
-  color: rgba(255, 255, 255, 0.8);
+.cause-grid--cta .cause-card__link {
+  position: relative;
+  z-index: 1;
 }
-
-/* Per-card tints; 80%-white body text measures >=5.5:1 on each. */
-.cause-grid--cta .cause-card:nth-child(1) { background: #1b5266; border-color: #1b5266; }
-.cause-grid--cta .cause-card:nth-child(2) { background: #4a3d73; border-color: #4a3d73; }
-.cause-grid--cta .cause-card:nth-child(3) { background: #2a5d47; border-color: #2a5d47; }
-.cause-grid--cta .cause-card:nth-child(4) { background: #7a4118; border-color: #7a4118; }
 
 .cta-card__eyebrow {
   font-size: var(--text-xs);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.cause-grid--cta .cause-card__link:hover,
-.cause-grid--cta .cause-card__link:focus-visible {
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--card-accent, var(--color-brand-700));
 }
 
 .home-community-photo,

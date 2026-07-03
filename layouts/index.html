@@ -120,7 +120,7 @@
                   <h3>{{ .title }}</h3>
                   <p class="text-muted">{{ .text }}</p>
                 </div>
-                <span class="cause-card__cta">{{ .cta_label | default $.Params.cta_learn_more | default (printf "%s →" (i18n "learn_more")) }}{{ if $isExternal }} <span aria-hidden="true">↗</span><span class="sr-only">{{ i18n "opens_in_new_tab" }}</span>{{ end }}</span>
+                <span class="cause-card__cta">{{ .cta_label | default $.Params.cta_learn_more | default (i18n "learn_more") }} <span class="cta-arrow{{ if $isExternal }} cta-arrow--up{{ end }}" aria-hidden="true">{{ if $isExternal }}↗{{ else }}→{{ end }}</span>{{ if $isExternal }}<span class="sr-only">{{ i18n "opens_in_new_tab" }}</span>{{ end }}</span>
               </div>
             </a>
           </article>

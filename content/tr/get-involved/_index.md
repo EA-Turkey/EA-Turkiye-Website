@@ -11,22 +11,22 @@ action_cards:
   - title: Giriş Programı
     badge: Çevrim içi
     text: Efektif altruizmin temel fikirlerini küçük gruplarla, rehber eşliğinde tartışacağınız ücretsiz çevrim içi program.
-    cta_label: Başvuru formu →
+    cta_label: Başvuru formu
     cta_url: "https://www.effectivealtruism.org/courses/introductory-program"
   - title: Yapay Zekâ Güvenliği Programı
     badge: Çevrim içi
     text: Yapay zekânın güvenli gelişimine ilgi duyanlar için düzenlediğimiz programa ilginizi iletebilirsiniz.
-    cta_label: İlgi formu →
+    cta_label: İlgi formu
     cta_url: "https://docs.google.com/forms/d/e/1FAIpQLScW-UALwTNUDAOI7xPDui7iSZ-OTIZhMzL1NMbyHDfN8Emi3Q/viewform?usp=header"
   - title: Kariyer Danışmanlığı
     badge: Birebir
     text: Yetenekleriniz, ilgi alanlarınız ve değerlerinizle uyumlu yüksek etkili kariyer yolları için bireysel danışmanlık alın.
-    cta_label: Başvuru formu →
+    cta_label: Başvuru formu
     cta_url: "https://docs.google.com/forms/d/e/1FAIpQLSdIXyOBIyhYBSCWcGA4XARX1FqGUXUQoBB-prHcV-bQvYnrbQ/viewform?usp=header"
   - title: Etkinlikler
     badge: Yüz yüze ve çevrim içi
     text: Okuma gruplarından zirvelere — ilgi alanınıza uygun bir etkinliğe katılarak topluluğu yakından tanıyın.
-    cta_label: Etkinlikleri gör →
+    cta_label: Etkinlikleri gör
     cta_url: "/etkinlikler/"
 form:
   heading: Bize yazın
