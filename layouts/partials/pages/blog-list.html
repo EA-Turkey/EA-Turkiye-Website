@@ -30,8 +30,9 @@
     {{ with $featured }}
       {{ $featuredPage := . }}
       <article class="blog-featured{{ if not .Params.featured_image }} blog-featured--text{{ end }}" data-reveal>
+        <a class="blog-featured__link" href="{{ .RelPermalink }}" aria-label="{{ .Title }}"></a>
         {{ with .Params.featured_image }}
-          <a class="blog-featured__media" href="{{ $featuredPage.RelPermalink }}">
+          <div class="blog-featured__media" aria-hidden="true">
             {{ partial "picture.html" (dict
               "src" .
               "alt" $featuredPage.Title
@@ -41,7 +42,7 @@
               "loading" "eager"
               "fetchpriority" "high"
             ) }}
-          </a>
+          </div>
         {{ end }}
         <div class="blog-featured__content stack-md">
           <div class="blog-featured__meta cluster">
@@ -50,15 +51,14 @@
             {{ if .Params.newsletter }}<span class="updates-badge">{{ i18n "newsletter_badge" }}</span>{{ end }}
           </div>
           <h2 class="blog-featured__title">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ .Title }}
           </h2>
           <p class="blog-featured__summary">{{ .Params.summary | default .Params.description }}</p>
-          <div class="blog-featured__actions cluster">
-            <a class="card-cta" href="{{ .RelPermalink }}">{{ i18n "read_more" }} <span class="cta-arrow" aria-hidden="true">→</span></a>
-            {{ with .Params.source_url }}
+          {{ with .Params.source_url }}
+            <div class="blog-featured__actions cluster">
               <a class="card-cta" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ i18n "open_on_substack" }} <span class="cta-arrow cta-arrow--up" aria-hidden="true">↗</span><span class="sr-only">{{ i18n "opens_in_new_tab" }}</span></a>
-            {{ end }}
-          </div>
+            </div>
+          {{ end }}
         </div>
       </article>
     {{ end }}
