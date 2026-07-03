@@ -109,14 +109,16 @@
       ) }}
       <div class="cause-grid cause-grid--cta" style="margin-top: var(--space-32);" data-reveal>
         {{ range .Params.cta_cards }}
+          {{ $isExternal := not (hasPrefix .url "/") }}
           <article class="cause-card">
-            <a class="cause-card__link" href="{{ .url }}"{{ if not (hasPrefix .url "/") }} target="_blank" rel="noreferrer"{{ end }}>
+            <a class="cause-card__link" href="{{ .url }}"{{ if $isExternal }} target="_blank" rel="noreferrer"{{ end }}>
               <div class="stack-md">
                 <div class="stack-sm">
+                  {{ with .eyebrow }}<span class="cta-card__eyebrow">{{ . }}</span>{{ end }}
                   <h3>{{ .title }}</h3>
                   <p class="text-muted">{{ .text }}</p>
                 </div>
-                <span class="cause-card__cta">{{ $.Params.cta_learn_more | default "Keşfet →" }}</span>
+                <span class="cause-card__cta">{{ .cta_label | default $.Params.cta_learn_more | default (printf "%s →" (i18n "learn_more")) }}{{ if $isExternal }} <span aria-hidden="true">↗</span><span class="sr-only">{{ i18n "opens_in_new_tab" }}</span>{{ end }}</span>
               </div>
             </a>
           </article>

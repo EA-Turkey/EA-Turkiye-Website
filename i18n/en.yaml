@@ -456,3 +456,6 @@
 
 - id: privacy_notice
   translation: "Privacy notice"
+
+- id: opens_in_new_tab
+  translation: "opens in a new tab"

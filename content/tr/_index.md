@@ -49,16 +49,24 @@ cta_section_title: Daha fazlasını öğrenin ve harekete geçin
 cta_learn_more: Keşfet →
 cta_cards:
   - title: Efektif altruizme giriş
+    eyebrow: Öğren
     text: EA’nın temel fikirlerini, yaklaşımlarını ve topluluk kültürünü öğrenin.
     url: "https://forum.effectivealtruism.org/handbook"
+    cta_label: "Rehberi oku →"
   - title: Etkili bağışçılık
+    eyebrow: Bağış
     text: Paranızı en fazla fayda yaratacak şekilde nasıl kullanabileceğinizi keşfedin.
     url: "https://www.etkilibagis.org/"
+    cta_label: "Bağış rehberine git →"
   - title: Yüksek etkili kariyer
+    eyebrow: Kariyer
     text: Kariyerinizle dünyada nasıl gerçek bir fark yaratabileceğinizi araştırın.
     url: "https://80000hours.org/"
+    cta_label: "Kariyer rehberini incele →"
   - title: Etkinlikler
+    eyebrow: Topluluk
     text: İlgi alanlarınıza göre size uygun etkinliklerimize göz atın.
     url: "/etkinlikler/"
+    cta_label: "Etkinlik takvimine bak →"
 ---
 EA Türkiye, Türkiye'de efektif altruizm etrafında düşünen, öğrenen ve harekete geçen insanların buluşma noktasıdır.
