@@ -1082,10 +1082,21 @@ a.contact-hero__route:focus-visible {
 
 .team-card {
   display: grid;
-  grid-template-columns: 3.6rem minmax(0, 1fr);
-  gap: var(--space-16);
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: var(--space-20);
   align-items: start;
   padding: var(--space-20);
+}
+
+.team-card__more summary {
+  cursor: pointer;
+  color: var(--color-brand-700);
+  font-weight: 600;
+  font-size: var(--text-small);
+}
+
+.team-card__more[open] summary {
+  margin-bottom: var(--space-8);
 }
 
 .event-card__date {
@@ -1879,15 +1890,16 @@ a.contact-hero__route:focus-visible {
 }
 
 .team-card__avatar {
-  width: 3.6rem;
-  height: 3.6rem;
-  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  border-radius: var(--radius-lg);
   object-fit: cover;
   overflow: hidden;
   flex-shrink: 0;
   background: linear-gradient(135deg, var(--color-brand-wash-strong), var(--color-brand-wash-subtle));
   color: var(--color-brand-700);
   font-weight: 700;
+  font-size: 1.75rem;
   display: grid;
   place-items: center;
   font-size: 1.1rem;
@@ -2961,6 +2973,10 @@ a.contact-hero__route:focus-visible {
     display: block;
   }
 
+  .team-card {
+    grid-template-columns: 1fr;
+  }
+
   .stats-strip {
     padding: var(--space-16);
   }
@@ -3363,7 +3379,7 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   }
 }
 
-.values-accordion {
+.values-list {
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(216, 229, 233, 0.86);
@@ -3372,12 +3388,12 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   background: rgba(255, 255, 255, 0.82);
 }
 
-.values-accordion .value-row {
+.values-list .value-row {
   padding: var(--space-24);
   border-top: 1px solid rgba(216, 229, 233, 0.86);
 }
 
-.values-accordion .value-row:first-child {
+.values-list .value-row:first-child {
   border-top: 0;
 }
 
@@ -3393,9 +3409,8 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   flex: none;
   width: 0.55rem;
   height: 0.55rem;
-  border-right: 2px solid var(--color-brand-600);
-  border-bottom: 2px solid var(--color-brand-600);
-  transform: rotate(45deg);
+  border-radius: 50%;
+  background: var(--color-brand-600);
 }
 
 .value-row__text {
