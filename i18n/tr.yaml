@@ -465,3 +465,6 @@
 
 - id: newsletter_badge
   translation: "Bülten"
+
+- id: community_photo_caption
+  translation: "Topluluk buluşmalarımızdan bir kare"

@@ -465,3 +465,6 @@
 
 - id: newsletter_badge
   translation: "Newsletter"
+
+- id: community_photo_caption
+  translation: "A moment from one of our community meetups"

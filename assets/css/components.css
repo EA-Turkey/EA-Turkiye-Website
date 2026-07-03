@@ -3319,7 +3319,7 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 
 .community-photo-section {
   padding-top: 0;
-  padding-bottom: var(--space-16);
+  padding-bottom: var(--space-32);
   margin-top: calc(var(--space-16) * -1);
 }
 
@@ -3329,30 +3329,113 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   margin: 0 auto;
 }
 
+/* Depth layers behind the print: a brand wash falling to the lower
+   right, a hairline outline peeking out of the upper left. Both stay
+   axis-aligned while the print itself sits at a slight tilt. */
 .community-photo::before {
   content: "";
   position: absolute;
-  inset: 14% -0.875rem -0.875rem 3rem;
+  inset: 14% -1.125rem -1.25rem 3rem;
   border-radius: var(--radius-xl);
   background: linear-gradient(135deg, var(--color-brand-wash-strong), var(--color-brand-wash) 72%);
+}
+
+.community-photo::after {
+  content: "";
+  position: absolute;
+  inset: -0.875rem 32% 52% -0.875rem;
+  border: 1.5px solid var(--color-brand-line);
+  border-radius: var(--radius-xl);
 }
 
 .community-photo__frame {
   --mat: clamp(0.625rem, 1.6vw, 1rem);
   position: relative;
+  z-index: 1;
   padding: var(--mat);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    0 1px 2px rgba(22, 33, 38, 0.06),
+    0 14px 28px rgba(22, 33, 38, 0.07),
+    0 36px 72px rgba(var(--color-brand-700-rgb), 0.14);
+  transform: rotate(-0.75deg);
+  transition: transform 480ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 480ms ease;
 }
 
-.community-photo__frame .picture,
-.community-photo__frame img {
+.community-photo:hover .community-photo__frame,
+.community-photo:focus-within .community-photo__frame {
+  transform: rotate(0deg) translateY(-6px);
+  box-shadow:
+    0 1px 2px rgba(22, 33, 38, 0.05),
+    0 20px 40px rgba(22, 33, 38, 0.08),
+    0 48px 96px rgba(var(--color-brand-700-rgb), 0.16);
+}
+
+.community-photo__media {
+  overflow: hidden;
+  border-radius: calc(var(--radius-xl) - var(--mat));
+}
+
+.community-photo__media .picture,
+.community-photo__media img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: calc(var(--radius-xl) - var(--mat));
+}
+
+.community-photo__media img {
+  transform: scale(1.01);
+  transition: transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.community-photo:hover .community-photo__media img,
+.community-photo:focus-within .community-photo__media img {
+  transform: scale(1.045);
+}
+
+.community-photo__caption {
+  position: absolute;
+  bottom: -1.125rem;
+  left: clamp(1rem, 4vw, 2.5rem);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  max-width: calc(100% - 2rem);
+  padding: 0.7rem 1.15rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-md);
+  color: var(--color-ink-700);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.community-photo__caption-rule {
+  flex: none;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--color-brand-500), var(--color-brand-700));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .community-photo__frame,
+  .community-photo__media img {
+    transform: none;
+    transition: none;
+  }
+
+  .community-photo:hover .community-photo__frame,
+  .community-photo:focus-within .community-photo__frame,
+  .community-photo:hover .community-photo__media img,
+  .community-photo:focus-within .community-photo__media img {
+    transform: none;
+  }
 }
 
 /* Accent per card: drives the rule, eyebrow, numeral, and hover wash. */

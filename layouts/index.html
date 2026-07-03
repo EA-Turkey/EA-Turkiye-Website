@@ -52,8 +52,14 @@
     <div class="container">
       <figure class="community-photo" data-reveal>
         <div class="community-photo__frame">
-          {{ partial "picture.html" (dict "src" "home/community-2.jpg" "alt" "EA Türkiye topluluk buluşması" "sizes" "(min-width: 52rem) 50rem, 100vw" "variant" "hero") }}
+          <div class="community-photo__media">
+            {{ partial "picture.html" (dict "src" "home/community-2.jpg" "alt" "EA Türkiye topluluk buluşması" "sizes" "(min-width: 52rem) 50rem, 100vw" "variant" "hero") }}
+          </div>
         </div>
+        <figcaption class="community-photo__caption">
+          <span class="community-photo__caption-rule" aria-hidden="true"></span>
+          {{ i18n "community_photo_caption" }}
+        </figcaption>
       </figure>
     </div>
   </section>
