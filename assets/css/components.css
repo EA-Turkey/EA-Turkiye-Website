@@ -910,8 +910,10 @@ a.contact-hero__route:focus-visible {
   color: inherit;
 }
 
-/* One CTA idiom inside every card: a text link with a sliding arrow.
-   Pill buttons stay reserved for standalone, page-level actions. */
+/* One CTA idiom inside every card: a compact pill, the same shape
+   family as the page-level buttons, with a sliding arrow. On hover it
+   fills solid — brand-700 by default, the card's own deep accent on
+   the take-action grid. */
 .card-cta,
 .cause-card__cta,
 .action-card__cta,
@@ -921,11 +923,15 @@ a.contact-hero__route:focus-visible {
   gap: 0.45rem;
   width: fit-content;
   min-height: 2.75rem;
+  padding: 0.65rem 1.1rem;
+  border: 1px solid var(--color-brand-stroke-soft);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
   color: var(--color-brand-700);
   font-size: var(--text-small);
   font-weight: 700;
   line-height: 1.2;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
 }
 
 .card-cta:hover,
@@ -936,7 +942,17 @@ a.contact-hero__route:focus-visible {
 .action-card__link:focus-visible .action-card__cta,
 .event-card:hover .event-card__cta,
 .event-card:focus-within .event-card__cta {
-  color: var(--color-brand-600);
+  background: var(--color-brand-700);
+  border-color: var(--color-brand-700);
+  color: var(--color-surface);
+}
+
+/* The take-action pills fill with their card's accent; all four tones
+   measure >=6.9:1 under white text. */
+.cause-grid--cta .cause-card__link:hover .cause-card__cta,
+.cause-grid--cta .cause-card__link:focus-visible .cause-card__cta {
+  background: var(--card-accent);
+  border-color: var(--card-accent);
 }
 
 .cta-arrow {
@@ -3444,30 +3460,31 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   background: linear-gradient(90deg, var(--color-brand-500), var(--color-brand-700));
 }
 
-/* On small screens the tilt reads as misalignment and the offset
-   layers crowd the container edge: the print sits straight, the wash
-   pulls in, the outline goes, and the caption re-centers under it. */
+/* At phone width the print goes back to its plain form: no tilt, no
+   offset depth layers (they crowd the edge and can poke past the
+   container), a calmer shadow, and the caption centered underneath
+   instead of hanging off the frame. */
 @media (max-width: 560px) {
   .community-photo__frame,
   .community-photo:hover .community-photo__frame,
   .community-photo:focus-within .community-photo__frame {
     transform: none;
+    box-shadow:
+      0 1px 2px rgba(22, 33, 38, 0.06),
+      0 14px 28px rgba(22, 33, 38, 0.09);
   }
 
-  .community-photo::before {
-    inset: 22% -0.5rem -0.625rem 1.5rem;
-  }
-
+  .community-photo::before,
   .community-photo::after {
     display: none;
   }
 
   .community-photo__caption {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    margin: calc(var(--space-12) * -1) auto 0;
+    position: static;
+    display: flex;
+    margin: var(--space-12) auto 0;
     width: fit-content;
+    box-shadow: var(--shadow-sm);
   }
 }
 
