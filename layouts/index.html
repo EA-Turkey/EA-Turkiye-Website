@@ -48,11 +48,13 @@
   ) }}
 
 
-  <section class="section" style="padding-top: 0; padding-bottom: 0; margin-top: calc(var(--space-16) * -1);">
+  <section class="section community-photo-section">
     <div class="container">
-      <div data-reveal style="border-radius: var(--radius-xl); overflow: hidden; max-width: 50rem; margin: 0 auto;">
-        {{ partial "picture.html" (dict "src" "home/community-2.jpg" "alt" "EA Türkiye topluluk buluşması" "sizes" "(min-width: 52rem) 50rem, 100vw" "variant" "hero") }}
-      </div>
+      <figure class="community-photo" data-reveal>
+        <div class="community-photo__frame">
+          {{ partial "picture.html" (dict "src" "home/community-2.jpg" "alt" "EA Türkiye topluluk buluşması" "sizes" "(min-width: 52rem) 50rem, 100vw" "variant" "hero") }}
+        </div>
+      </figure>
     </div>
   </section>
 

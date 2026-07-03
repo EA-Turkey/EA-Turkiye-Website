@@ -3287,6 +3287,44 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 .cause-grid .cause-card:nth-child(4) { --card-accent: #c05621; }
 .cause-grid .cause-card:nth-child(5) { --card-accent: #0c869b; }
 
+.community-photo-section {
+  padding-top: 0;
+  padding-bottom: var(--space-16);
+  margin-top: calc(var(--space-16) * -1);
+}
+
+.community-photo {
+  position: relative;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.community-photo::before {
+  content: "";
+  position: absolute;
+  inset: 14% -0.875rem -0.875rem 3rem;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--color-brand-wash-strong), var(--color-brand-wash) 72%);
+}
+
+.community-photo__frame {
+  --mat: clamp(0.625rem, 1.6vw, 1rem);
+  position: relative;
+  padding: var(--mat);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.community-photo__frame .picture,
+.community-photo__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-xl) - var(--mat));
+}
+
 .home-section--causes .cause-card:nth-child(1) { background: #e6f7f8; border-color: #b2e3e8; }
 .home-section--causes .cause-card:nth-child(2) { background: #ede9f6; border-color: #d0c4ec; }
 .home-section--causes .cause-card:nth-child(3) { background: #e6f4ee; border-color: #b2d9c6; }
