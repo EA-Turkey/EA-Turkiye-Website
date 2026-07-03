@@ -55,11 +55,47 @@
   <div class="container--wide stack-lg">
     {{ partial "section-header.html" (dict "title" (i18n "past_events") "text" .Params.past_text) }}
     {{ if gt (len $past) 0 }}
-      <div class="event-grid event-grid--archive events-archive__grid">
-        {{ range $past }}
-          {{ partial "event-card.html" (dict "page" . "variant" "archive") }}
+      {{ $pastYears := slice }}
+      {{ range $past }}
+        {{ $year := (time.AsTime .Params.start).Format "2006" }}
+        {{ if not (in $pastYears $year) }}
+          {{ $pastYears = $pastYears | append $year }}
         {{ end }}
-      </div>
+      {{ end }}
+      {{ $recentYears := first 2 $pastYears }}
+      {{ range $pastYears }}
+        {{ $year := . }}
+        <section class="events-archive__year stack-md" id="events-year-{{ $year }}">
+          <h3 class="events-archive__year-label">{{ $year }}</h3>
+          {{ if in $recentYears $year }}
+            <div class="event-grid event-grid--archive events-archive__grid">
+              {{ range $past }}
+                {{ if eq ((time.AsTime .Params.start).Format "2006") $year }}
+                  {{ partial "event-card.html" (dict "page" . "variant" "archive") }}
+                {{ end }}
+              {{ end }}
+            </div>
+          {{ else }}
+            <div class="blog-archive__year-list">
+              {{ range $past }}
+                {{ if eq ((time.AsTime .Params.start).Format "2006") $year }}
+                  <article class="blog-archive-item">
+                    <a class="blog-archive-item__link" href="{{ .RelPermalink }}">
+                      <div class="blog-archive-item__meta">
+                        <span class="blog-date">{{ (time.AsTime .Params.start) | time.Format ":date_long" }}</span>
+                      </div>
+                      <div class="blog-archive-item__body">
+                        <h4 class="blog-archive-item__title">{{ .Title }}</h4>
+                        <p class="blog-archive-item__summary">{{ .Params.summary | default .Params.description }}</p>
+                      </div>
+                    </a>
+                  </article>
+                {{ end }}
+              {{ end }}
+            </div>
+          {{ end }}
+        </section>
+      {{ end }}
     {{ else }}
       <div class="empty-state events-archive__empty" data-reveal>
         <p>{{ i18n "no_past_events" }}</p>

@@ -9,7 +9,7 @@
 {{ $avifBase := replaceRE "\\.[^.]+$" "" $src }}
 
 {{ if not $resource }}
-  <img src="" alt="{{ $alt }}" class="{{ $class }}">
+  {{ warnf "picture.html: missing image resource %q" $src }}
 {{ else }}
   {{ $widths := slice 640 960 1200 }}
   {{ if eq $variant "hero" }}

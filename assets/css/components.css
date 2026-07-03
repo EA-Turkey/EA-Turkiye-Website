@@ -1033,19 +1033,6 @@ a.contact-hero__route:focus-visible {
   font-weight: 600;
 }
 
-.event-card__fallback-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.45rem, 2vw, 1.85rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
-  overflow-wrap: anywhere;
-}
-
-.event-card__chips--cover {
-  margin-top: var(--space-4);
-}
-
 .faq-item,
 .meta-panel {
   padding: var(--space-20);
@@ -1066,10 +1053,6 @@ a.contact-hero__route:focus-visible {
 .event-card--archive .event-card__body {
   gap: var(--space-8);
   padding: var(--space-16);
-}
-
-.event-card__body--compact {
-  padding-top: var(--space-12);
 }
 
 .event-card__meta {
@@ -1164,9 +1147,7 @@ a.contact-hero__route:focus-visible {
 .event-card:hover .event-card__title a,
 .event-card:focus-within .event-card__title a,
 .event-card__title a:hover,
-.event-card__title a:focus-visible,
-.event-card__media--fallback:hover .event-card__fallback-title,
-.event-card__media--fallback:focus-visible .event-card__fallback-title {
+.event-card__title a:focus-visible {
   color: var(--color-brand-700);
 }
 
@@ -2147,6 +2128,14 @@ a.contact-hero__route:focus-visible {
 
 .events-archive .section-header {
   margin-bottom: 0;
+}
+
+.events-archive__year-label {
+  color: var(--color-ink-700);
+  font-size: var(--text-small);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .events-archive .section-header__title {
