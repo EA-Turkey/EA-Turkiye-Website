@@ -519,6 +519,7 @@ a.contact-hero__route:focus-visible {
 .contact-topic__index {
   color: var(--color-brand-700);
   font-family: var(--font-serif);
+  font-weight: 700;
   font-size: 1.55rem;
   line-height: 1;
 }
@@ -769,6 +770,7 @@ a.contact-hero__route:focus-visible {
 
 .stats-strip__value {
   font-family: var(--font-serif);
+  font-weight: 700;
   font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1;
 }
@@ -1173,6 +1175,7 @@ a.contact-hero__route:focus-visible {
 
 .event-card__title {
   font-family: var(--font-serif);
+  font-weight: 700;
   letter-spacing: -0.03em;
   text-wrap: balance;
   overflow-wrap: anywhere;
@@ -1657,7 +1660,7 @@ a.contact-hero__route:focus-visible {
   color: rgba(var(--color-brand-700-rgb), 0.72);
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 5vw, 5.2rem);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: 0.9;
 }
@@ -1726,7 +1729,7 @@ a.contact-hero__route:focus-visible {
   max-width: 46rem;
   font-family: var(--font-serif);
   font-size: clamp(1.38rem, 1.9vw, 1.88rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.14;
   text-wrap: balance;
 }
@@ -2065,7 +2068,7 @@ a.contact-hero__route:focus-visible {
 }
 
 .form-field--checkbox label {
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -2523,7 +2526,7 @@ a.contact-hero__route:focus-visible {
     color: var(--color-ink-950);
     font-family: var(--font-sans);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.2;
     border-radius: calc(var(--radius-lg) - 0.25rem);
   }
@@ -2531,7 +2534,7 @@ a.contact-hero__route:focus-visible {
   .site-nav__list a.is-active {
     background: rgba(var(--color-brand-500-rgb), 0.1);
     color: var(--color-brand-700);
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .site-nav__list a:hover,
@@ -2560,7 +2563,7 @@ a.contact-hero__route:focus-visible {
     background: transparent;
     color: var(--color-ink-500);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.02em;
   }
 

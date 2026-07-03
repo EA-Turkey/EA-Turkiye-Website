@@ -9,4 +9,4 @@
   (resources.Get "css/utilities.css")
   | resources.Concat "css/main.css" | minify
 }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}?v={{ md5 $css.Content }}">
+<style>{{ $css.Content | safeCSS }}</style>

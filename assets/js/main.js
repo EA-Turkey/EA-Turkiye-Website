@@ -157,8 +157,13 @@ document.addEventListener("DOMContentLoaded", () => {
       { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
 
-    document.querySelectorAll("[data-reveal]").forEach((element) => {
-      if (element.getBoundingClientRect().bottom < 0) {
+    const revealElements = Array.from(document.querySelectorAll("[data-reveal]"));
+    const alreadyPassed = new Set(
+      revealElements.filter((element) => element.getBoundingClientRect().bottom < 0)
+    );
+
+    revealElements.forEach((element) => {
+      if (alreadyPassed.has(element)) {
         element.classList.add("is-visible");
         return;
       }
