@@ -32,7 +32,7 @@
   {{ $webpSet := slice }}
   {{ $jpgSet := slice }}
   {{ range $validWidths }}
-    {{ $webp := $resource.Resize (printf "%dx webp q90" .) }}
+    {{ $webp := $resource.Resize (printf "%dx webp q80" .) }}
     {{ $avifFile := printf "static/avif/%s-%d.avif" $avifBase . }}
     {{ $avifPath := printf "avif/%s-%d.avif" $avifBase . }}
     {{ $jpgStaticFile := printf "static/jpg/%s-%d.jpg" $avifBase . }}
@@ -44,7 +44,7 @@
     {{ if fileExists $jpgStaticFile }}
       {{ $jpgSet = $jpgSet | append (printf "%s %dw" ($jpgStaticPath | relURL) .) }}
     {{ else }}
-      {{ $jpg := $resource.Resize (printf "%dx jpg q90" .) }}
+      {{ $jpg := $resource.Resize (printf "%dx jpg q80" .) }}
       {{ $jpgSet = $jpgSet | append (printf "%s %dw" $jpg.RelPermalink $jpg.Width) }}
     {{ end }}
   {{ end }}
@@ -59,7 +59,7 @@
   {{ if fileExists $fallbackStaticFile }}
     {{ $fallbackSrc = $fallbackStaticPath | relURL }}
   {{ else }}
-    {{ $fallback := $resource.Resize (printf "%dx jpg q90" $largestWidth) }}
+    {{ $fallback := $resource.Resize (printf "%dx jpg q80" $largestWidth) }}
     {{ $fallbackSrc = $fallback.RelPermalink }}
     {{ $fallbackWidth = $fallback.Width }}
     {{ $fallbackHeight = $fallback.Height }}

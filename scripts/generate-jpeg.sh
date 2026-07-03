@@ -18,7 +18,15 @@ for src in assets/images/**/*.(jpg|jpeg)(N); do
   mkdir -p "static/jpg/${base:h}"
 
   for width in 320 480 520 560 600 640 768 800 960 1280 1440 1600; do
+    out="static/jpg/${base}-${width}.jpg"
+    tmp="${out}.tmp.jpg"
     magick "$src" -resize "${width}x" -strip ppm:- | \
-      cjpeg -quality 90 -progressive -optimize -outfile "static/jpg/${base}-${width}.jpg"
+      cjpeg -quality 80 -progressive -optimize -outfile "$tmp"
+    if [[ ! -s "$tmp" ]]; then
+      rm -f "$tmp"
+      echo "empty output for ${out}" >&2
+      exit 1
+    fi
+    mv "$tmp" "$out"
   done
 done
