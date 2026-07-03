@@ -3,7 +3,9 @@
 {{ with $langSite.Params.social.substack }}
   <section class="section section--surface newsletter-section">
     <div class="container">
-      <div class="newsletter-cta" data-reveal>
+      {{- /* Deliberately not reveal-gated: the page's one conversion band
+           must never depend on JS to become visible. */}}
+      <div class="newsletter-cta">
         <div class="newsletter-cta__body stack-sm">
           <p class="newsletter-cta__eyebrow">{{ i18n "newsletter_badge" }}</p>
           <h2>{{ i18n "newsletter_title" }}</h2>
