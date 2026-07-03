@@ -1,15 +1,24 @@
 {{ partial "helpers/lang-context.html" . }}
 {{ $langSite := .Scratch.Get "langSite" }}
 {{ with $langSite.Params.social.substack }}
+  {{ $latest := first 1 (sort (where $langSite.RegularPages "Params.newsletter" true) "Date" "desc") }}
   <section class="section section--surface updates-band">
     <div class="container">
       {{- /* Deliberately not reveal-gated: the page's one conversion band
            must never depend on JS to become visible. */}}
       <div class="updates-cta">
+        <span class="updates-cta__glyph" aria-hidden="true">@</span>
         <div class="updates-cta__body stack-sm">
+          <span class="updates-cta__rule" aria-hidden="true"></span>
           <p class="updates-cta__eyebrow">{{ i18n "newsletter_badge" }}</p>
           <h2>{{ i18n "newsletter_title" }}</h2>
           <p class="text-muted">{{ i18n "newsletter_text" }}</p>
+          {{ range $latest }}
+            <a class="updates-cta__latest" href="{{ .RelPermalink }}">
+              <span class="updates-cta__latest-label">{{ i18n "updates_latest" }}</span>
+              {{ .Title }} <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+          {{ end }}
         </div>
         <div class="updates-cta__action">
           {{ partial "button.html" (dict "url" (printf "%ssubscribe" .) "label" (i18n "newsletter_cta") "variant" "primary" "external" true) }}

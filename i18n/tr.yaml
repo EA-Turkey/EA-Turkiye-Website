@@ -445,6 +445,9 @@
 - id: newsletter_note
   translation: "Ücretsiz · İstediğiniz zaman abonelikten çıkabilirsiniz"
 
+- id: updates_latest
+  translation: "Son sayı"
+
 - id: luma_calendar_title
   translation: "Yaklaşan etkinlikler takvimi (Luma)"
 

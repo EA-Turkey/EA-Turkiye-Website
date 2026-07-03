@@ -445,6 +445,9 @@
 - id: newsletter_note
   translation: "Free · Unsubscribe anytime"
 
+- id: updates_latest
+  translation: "Latest issue"
+
 - id: luma_calendar_title
   translation: "Upcoming events calendar (Luma)"
 

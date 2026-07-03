@@ -2289,21 +2289,62 @@ a.contact-hero__route:focus-visible {
   display: none;
 }
 
-/* The one conversion band on the page: deep brand surface so it can't
-   be scrolled past unnoticed. White headline measures 8.9:1, the body
-   and note stay above 5:1. */
+/* The one conversion band on the page, styled as a dark invitation
+   card: inner keyline, accent rule, a ghost serif @ in the corner, and
+   a link to the latest real issue. White headline measures 8.9:1, the
+   body and note stay above 5:1. */
 .updates-cta {
+  position: relative;
   display: grid;
   gap: var(--space-24);
   align-items: center;
-  padding: clamp(1.75rem, 4vw, 3rem);
+  padding: clamp(2rem, 4.5vw, 3.25rem);
+  overflow: hidden;
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-brand-700);
   background:
-    radial-gradient(120% 200% at 100% 0%, rgba(255, 255, 255, 0.12) 0%, transparent 55%),
-    linear-gradient(135deg, var(--color-brand-700) 0%, #143d4c 100%);
+    radial-gradient(90% 160% at 100% 0%, rgba(var(--color-brand-500-rgb), 0.28) 0%, transparent 55%),
+    radial-gradient(70% 120% at 0% 100%, rgba(255, 255, 255, 0.07) 0%, transparent 60%),
+    linear-gradient(120deg, var(--color-brand-700) 0%, #143d4c 55%, #0f3440 100%);
   box-shadow: var(--shadow-md);
   color: var(--color-surface);
+}
+
+.updates-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: calc(var(--radius-xl) - 0.75rem);
+  pointer-events: none;
+}
+
+.updates-cta__glyph {
+  position: absolute;
+  top: -1.5rem;
+  right: 1.25rem;
+  z-index: 0;
+  font-family: var(--font-serif);
+  font-size: 9rem;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(var(--color-brand-500-rgb), 0.2);
+  pointer-events: none;
+  user-select: none;
+}
+
+.updates-cta__body,
+.updates-cta__action {
+  position: relative;
+  z-index: 1;
+}
+
+.updates-cta__rule {
+  display: block;
+  width: 2.75rem;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--color-brand-500), rgba(255, 255, 255, 0.65));
 }
 
 .updates-cta__eyebrow {
@@ -2328,9 +2369,43 @@ a.contact-hero__route:focus-visible {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.updates-cta__latest {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  margin-top: var(--space-8);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+.updates-cta__latest:hover,
+.updates-cta__latest:focus-visible {
+  color: var(--color-surface);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.updates-cta__latest:hover .cta-arrow,
+.updates-cta__latest:focus-visible .cta-arrow {
+  transform: translateX(3px);
+}
+
+.updates-cta__latest-label {
+  padding: 0.15rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 .updates-cta .button--primary {
   background: var(--color-surface);
   color: var(--color-brand-700);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
 }
 
 .updates-cta .button--primary:hover,
