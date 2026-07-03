@@ -7,6 +7,16 @@
 {{ $baseURL := $langSite.BaseURL }}
 {{ $ogImage := printf "%s%s" $baseURL (strings.TrimPrefix "/" $langSite.Params.default_og_image) }}
 
+{{ with .Params.featured_image }}
+  {{ $base := replaceRE "\\.[^.]+$" "" . }}
+  {{ range slice 800 960 1280 }}
+    {{ $jpgPath := printf "jpg/%s-%d.jpg" $base . }}
+    {{ if fileExists (printf "static/%s" $jpgPath) }}
+      {{ $ogImage = printf "%s%s" $baseURL $jpgPath }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 {{ with .Params.social_image }}
   {{ $ogImage = printf "%s%s" $baseURL (strings.TrimPrefix "/" .) }}
 {{ end }}
