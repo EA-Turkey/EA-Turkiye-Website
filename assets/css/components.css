@@ -3741,17 +3741,21 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   gap: var(--space-20);
 }
 
-.about-activities .action-card:nth-child(1) {
-  background: #e6f7f8;
-  border-color: #b2e3e8;
+.about-activities .action-card:nth-child(1) { --card-accent: #1b5266; }
+.about-activities .action-card:nth-child(2) { --card-accent: #6d4c9e; }
+.about-activities .action-card:nth-child(3) { --card-accent: #c05621; }
+
+.about-activities .action-card__body {
+  align-content: start;
 }
-.about-activities .action-card:nth-child(2) {
-  background: #ede9f6;
-  border-color: #d0c4ec;
-}
-.about-activities .action-card:nth-child(3) {
-  background: #fef0e6;
-  border-color: #f9cba6;
+
+.about-activities .action-card__body::before {
+  content: "";
+  display: block;
+  width: 2.75rem;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--card-accent, var(--color-brand-500));
 }
 
 @media (max-width: 60rem) {

@@ -25,17 +25,20 @@
       {{ range . }}
         <article class="action-card" data-reveal>
           <div class="action-card__body">
-            <div class="stack-sm">
-              <h3>{{ .title }}</h3>
-              <p class="text-muted">{{ .text }}</p>
-            </div>
-            {{ with .links }}
+            <div class="stack-md">
               <div class="stack-sm">
-                {{ range . }}
-                  <a class="cause-card__cta" href="{{ .url }}"{{ if not (hasPrefix .url "/") }} target="_blank" rel="noreferrer"{{ end }}>{{ .label }} →</a>
-                {{ end }}
+                <h3>{{ .title }}</h3>
+                <p class="text-muted">{{ .text }}</p>
               </div>
-            {{ end }}
+              {{ with .links }}
+                <div class="stack-sm">
+                  {{ range . }}
+                    {{ $isExternal := not (hasPrefix .url "/") }}
+                    <a class="card-cta" href="{{ .url }}"{{ if $isExternal }} target="_blank" rel="noreferrer"{{ end }}>{{ .label }} <span class="cta-arrow{{ if $isExternal }} cta-arrow--up{{ end }}" aria-hidden="true">{{ if $isExternal }}↗{{ else }}→{{ end }}</span>{{ if $isExternal }}<span class="sr-only">{{ i18n "opens_in_new_tab" }}</span>{{ end }}</a>
+                  {{ end }}
+                </div>
+              {{ end }}
+            </div>
           </div>
         </article>
       {{ end }}
