@@ -7,6 +7,7 @@ date: 2024-10-25
 summary: "Health Progress Hub, founded by Berke Çelik from the Bulletin team within the Global Policy Research Group; It aims to serve as a bridge between students and professionals in low- and middle-income countries and effective health policy organizations to accelerate the solution of important but neglected public health problems. In the 10-week pilot program, which is open to applications from all over the world, participants will receive both theoretical training and the opportunity to gain experience with projects they will carry out with institutions such as Fortify Health and Lead Exposure Elimination Project. If you wish, you can voluntarily become a part of the Health Progress Hub team or leave your contact information in this form to be notified when pilot program applications open."
 featured_image: "blog/efektif-altruizm-turkiyeden-ekim/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-ekim"
+newsletter: true
 ---
 ## **Announcements**
 

@@ -459,3 +459,6 @@
 
 - id: opens_in_new_tab
   translation: "yeni sekmede açılır"
+
+- id: newsletter_badge
+  translation: "Bülten"

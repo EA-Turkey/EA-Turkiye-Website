@@ -6,6 +6,7 @@ slug: "august-updates-from-effective-altruism-turkey"
 date: 2024-08-22
 summary: "We are meeting face to face in Ankara on Friday, August 30th! If you are interested in Effective Altruism, whether you are a student or a professional, we would be delighted to have you among us. You can register to participate from this link."
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-agustos"
+newsletter: true
 ---
 ### **ANNOUNCEMENTS 🔊**
 

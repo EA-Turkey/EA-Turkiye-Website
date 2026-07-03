@@ -7,6 +7,7 @@ date: 2024-07-25
 summary: "Hello, welcome to Effective Altruism Turkey July newsletter!"
 featured_image: "blog/efektif-altruizm-turkiyeden-temmuz/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-temmuz"
+newsletter: true
 ---
 Hello, welcome to Effective Altruism Turkey July newsletter!
 

@@ -29,9 +29,9 @@
 
     {{ with $featured }}
       {{ $featuredPage := . }}
-      <article class="blog-featured" data-reveal>
-        <a class="blog-featured__media{{ if not .Params.featured_image }} blog-featured__media--fallback{{ end }}" href="{{ .RelPermalink }}">
-          {{ with .Params.featured_image }}
+      <article class="blog-featured{{ if not .Params.featured_image }} blog-featured--text{{ end }}" data-reveal>
+        {{ with .Params.featured_image }}
+          <a class="blog-featured__media" href="{{ $featuredPage.RelPermalink }}">
             {{ partial "picture.html" (dict
               "src" .
               "alt" $featuredPage.Title
@@ -41,17 +41,13 @@
               "loading" "eager"
               "fetchpriority" "high"
             ) }}
-          {{ else }}
-            <div class="blog-featured__fallback">
-              <span class="blog-featured__fallback-date">{{ .Date | time.Format ":date_long" }}</span>
-              <strong class="blog-featured__fallback-title">{{ .Title }}</strong>
-            </div>
-          {{ end }}
-        </a>
+          </a>
+        {{ end }}
         <div class="blog-featured__content stack-md">
           <div class="blog-featured__meta cluster">
             <span class="blog-kicker">{{ i18n "featured_story" }}</span>
             <span class="blog-date">{{ .Date | time.Format ":date_long" }}</span>
+            {{ if .Params.newsletter }}<span class="newsletter-badge">{{ i18n "newsletter_badge" }}</span>{{ end }}
           </div>
           <h2 class="blog-featured__title">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -95,6 +91,7 @@
                     <a class="blog-archive-item__link" href="{{ .RelPermalink }}">
                       <div class="blog-archive-item__meta">
                         <span class="blog-date">{{ .Date | time.Format ":date_long" }}</span>
+                        {{ if .Params.newsletter }}<span class="newsletter-badge">{{ i18n "newsletter_badge" }}</span>{{ end }}
                       </div>
                       <div class="blog-archive-item__body">
                         <h4 class="blog-archive-item__title">{{ .Title }}</h4>

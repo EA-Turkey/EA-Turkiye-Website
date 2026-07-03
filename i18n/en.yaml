@@ -459,3 +459,6 @@
 
 - id: opens_in_new_tab
   translation: "opens in a new tab"
+
+- id: newsletter_badge
+  translation: "Newsletter"

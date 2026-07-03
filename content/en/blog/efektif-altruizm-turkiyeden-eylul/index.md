@@ -6,6 +6,7 @@ slug: "september-updates-from-effective-altruism-turkey"
 date: 2024-09-26
 summary: "The new academic term is well underway as one of the busiest and most exciting times of the year for many EA university groups. University groups provide an environment where many people learn about EA ideas and meet individuals motivated by the idea of doing good and taking important steps to tackle the world's most pressing problems. EA Boğaziçi, EA Koç and EA Bilkent also said hello to the new era."
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-eylul"
+newsletter: true
 ---
 ### ANNOUNCEMENTS📢
 

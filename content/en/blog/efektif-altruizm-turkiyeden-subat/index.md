@@ -7,6 +7,7 @@ date: 2025-02-27
 summary: "At the Effective Altruism Turkey University Students Retreat, we brought together students interested in effective altruism from various universities in Turkey and organized workshops on topics such as impactful careers, rationality, and community building. Nineteen participants who filled out the feedback form rated the retreat 8.9 out of 10 on average for meeting their expectations."
 featured_image: "blog/efektif-altruizm-turkiyeden-subat/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-subat"
+newsletter: true
 ---
 ## **Announcements**
 
