@@ -3373,6 +3373,14 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
     0 48px 96px rgba(var(--color-brand-700-rgb), 0.16);
 }
 
+/* Before its reveal fires the print waits at a stronger tilt, then
+   settles into place as the figure fades in. */
+@media (prefers-reduced-motion: no-preference) and (min-width: 561px) {
+  html.js .community-photo:not(.is-visible) .community-photo__frame {
+    transform: rotate(-2.5deg) scale(0.965);
+  }
+}
+
 .community-photo__media {
   overflow: hidden;
   border-radius: calc(var(--radius-xl) - var(--mat));

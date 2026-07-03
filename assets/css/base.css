@@ -168,6 +168,37 @@ html.js [data-reveal].is-visible {
   transform: translateY(0);
 }
 
+/* Cards inside a revealed grid rise one after another. The entrance is
+   an animation (not a transition) so it never delays hover states. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js [data-reveal].is-visible > :is(.cause-card, .event-card, .action-card) {
+    animation: card-rise 480ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+
+  html.js [data-reveal].is-visible > :is(.cause-card, .event-card, .action-card):nth-child(2) {
+    animation-delay: 75ms;
+  }
+
+  html.js [data-reveal].is-visible > :is(.cause-card, .event-card, .action-card):nth-child(3) {
+    animation-delay: 150ms;
+  }
+
+  html.js [data-reveal].is-visible > :is(.cause-card, .event-card, .action-card):nth-child(4) {
+    animation-delay: 225ms;
+  }
+
+  html.js [data-reveal].is-visible > :is(.cause-card, .event-card, .action-card):nth-child(n + 5) {
+    animation-delay: 300ms;
+  }
+}
+
+@keyframes card-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
 .prose {
   max-width: var(--container-narrow);
 }
