@@ -454,9 +454,6 @@
 - id: cause_external_cta
   translation: "Konunun detaylı analizini okuyun"
 
-- id: privacy_notice
-  translation: "KVKK Aydınlatma Metni"
-
 - id: opens_in_new_tab
   translation: "yeni sekmede açılır"
 

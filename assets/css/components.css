@@ -2116,14 +2116,9 @@ a.contact-hero__route:focus-visible {
   font-size: var(--text-xs);
 }
 
-.footer-legal {
-  font-size: var(--text-xs);
-}
-
 .social-links a,
 .footer-nav a,
-.footer-copy a,
-.footer-legal a {
+.footer-copy a {
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 0.25rem;

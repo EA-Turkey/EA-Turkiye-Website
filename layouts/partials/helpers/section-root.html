@@ -10,7 +10,6 @@
   "contact" "/iletisim/"
   "cause-areas" "/odak-alanlari/"
   "news" "/haberler/"
-  "privacy" "/kvkk-aydinlatma-metni/"
 -}}
 {{- $en := dict
   "home" "/en/"
@@ -22,7 +21,6 @@
   "contact" "/en/contact/"
   "cause-areas" "/en/cause-areas/"
   "news" "/en/news/"
-  "privacy" "/en/privacy-notice/"
 -}}
 {{- if eq $lang "en" -}}
   {{- index $en $key | default "/en/" -}}
