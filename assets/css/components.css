@@ -2289,17 +2289,21 @@ a.contact-hero__route:focus-visible {
   display: none;
 }
 
+/* The one conversion band on the page: deep brand surface so it can't
+   be scrolled past unnoticed. White headline measures 8.9:1, the body
+   and note stay above 5:1. */
 .newsletter-cta {
   display: grid;
   gap: var(--space-24);
   align-items: center;
   padding: clamp(1.75rem, 4vw, 3rem);
   border-radius: var(--radius-xl);
-  border: 1px solid var(--color-brand-stroke-soft);
+  border: 1px solid var(--color-brand-700);
   background:
-    radial-gradient(110% 190% at 100% 0%, var(--color-brand-wash-strong) 0%, transparent 58%),
-    linear-gradient(180deg, var(--color-surface) 0%, var(--color-brand-100) 140%);
-  box-shadow: var(--shadow-sm);
+    radial-gradient(120% 200% at 100% 0%, rgba(255, 255, 255, 0.12) 0%, transparent 55%),
+    linear-gradient(135deg, var(--color-brand-700) 0%, #143d4c 100%);
+  box-shadow: var(--shadow-md);
+  color: var(--color-surface);
 }
 
 .newsletter-cta__eyebrow {
@@ -2308,15 +2312,31 @@ a.contact-hero__route:focus-visible {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-brand-700);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .newsletter-cta__body h2 {
   margin: 0;
+  color: var(--color-surface);
 }
 
 .newsletter-cta__body p {
   max-width: 34rem;
+}
+
+.newsletter-cta .text-muted {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.newsletter-cta .button--primary {
+  background: var(--color-surface);
+  color: var(--color-brand-700);
+}
+
+.newsletter-cta .button--primary:hover,
+.newsletter-cta .button--primary:active {
+  background: var(--color-brand-100);
+  color: var(--color-brand-700);
 }
 
 .newsletter-cta__action {
