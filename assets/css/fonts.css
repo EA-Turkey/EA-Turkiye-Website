@@ -1,3 +1,25 @@
+/* Metric-matched local fallbacks: while the web fonts download, text
+   renders in Arial/Georgia adjusted to occupy the same space, so the
+   swap changes pixels but not layout (no shift, no late LCP repaint).
+   Values computed from the shipped font files' glyph advances. */
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial");
+  size-adjust: 108.14%;
+  ascent-override: 89.58%;
+  descent-override: 22.3%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Playfair Fallback";
+  src: local("Georgia");
+  size-adjust: 102.48%;
+  ascent-override: 105.58%;
+  descent-override: 24.49%;
+  line-gap-override: 0%;
+}
+
 @font-face {
   font-family: "Inter";
   font-style: normal;
