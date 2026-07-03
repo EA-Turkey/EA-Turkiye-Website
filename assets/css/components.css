@@ -3423,6 +3423,33 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   background: linear-gradient(90deg, var(--color-brand-500), var(--color-brand-700));
 }
 
+/* On small screens the tilt reads as misalignment and the offset
+   layers crowd the container edge: the print sits straight, the wash
+   pulls in, the outline goes, and the caption re-centers under it. */
+@media (max-width: 560px) {
+  .community-photo__frame,
+  .community-photo:hover .community-photo__frame,
+  .community-photo:focus-within .community-photo__frame {
+    transform: none;
+  }
+
+  .community-photo::before {
+    inset: 22% -0.5rem -0.625rem 1.5rem;
+  }
+
+  .community-photo::after {
+    display: none;
+  }
+
+  .community-photo__caption {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin: calc(var(--space-12) * -1) auto 0;
+    width: fit-content;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .community-photo__frame,
   .community-photo__media img {
