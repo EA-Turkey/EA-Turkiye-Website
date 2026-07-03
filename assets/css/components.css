@@ -812,7 +812,8 @@ a.contact-hero__route:focus-visible {
 
 .cause-card,
 .event-card,
-.action-card:has(> .action-card__link) {
+.action-card:has(> .action-card__link),
+.about-activities .action-card {
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-fast);
 }
 
@@ -821,7 +822,9 @@ a.contact-hero__route:focus-visible {
 .event-card:hover,
 .event-card:focus-within,
 .action-card:has(> .action-card__link):hover,
-.action-card:has(> .action-card__link):focus-within {
+.action-card:has(> .action-card__link):focus-within,
+.about-activities .action-card:hover,
+.about-activities .action-card:focus-within {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
@@ -829,7 +832,9 @@ a.contact-hero__route:focus-visible {
 .cause-card:hover,
 .cause-card:focus-within,
 .action-card:has(> .action-card__link):hover,
-.action-card:has(> .action-card__link):focus-within {
+.action-card:has(> .action-card__link):focus-within,
+.about-activities .action-card:hover,
+.about-activities .action-card:focus-within {
   background: color-mix(in srgb, var(--card-accent, var(--color-brand-500)) 5%, var(--color-surface));
   border-color: color-mix(in srgb, var(--card-accent, var(--color-brand-500)) 32%, var(--color-border));
 }
@@ -859,7 +864,8 @@ a.contact-hero__route:focus-visible {
 
 /* Accent rule: the short bar that opens every linked card. */
 .cause-card__link::before,
-.action-card__link::before {
+.action-card__link::before,
+.about-activities .action-card__body::before {
   content: "";
   display: block;
   width: 2.75rem;
@@ -872,7 +878,9 @@ a.contact-hero__route:focus-visible {
 .cause-card:hover .cause-card__link::before,
 .cause-card:focus-within .cause-card__link::before,
 .action-card:hover .action-card__link::before,
-.action-card:focus-within .action-card__link::before {
+.action-card:focus-within .action-card__link::before,
+.action-card:hover .action-card__body::before,
+.action-card:focus-within .action-card__body::before {
   width: 4.25rem;
 }
 
@@ -3747,15 +3755,6 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 
 .about-activities .action-card__body {
   align-content: start;
-}
-
-.about-activities .action-card__body::before {
-  content: "";
-  display: block;
-  width: 2.75rem;
-  height: 3px;
-  border-radius: var(--radius-pill);
-  background: var(--card-accent, var(--color-brand-500));
 }
 
 @media (max-width: 60rem) {
