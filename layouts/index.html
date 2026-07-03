@@ -21,21 +21,12 @@
     {{ end }}
   {{ end }}
   {{ $upcoming := slice }}
-  {{ $past := slice }}
   {{ $now := now }}
   {{ range sort $events "Params.start" }}
     {{ $end := cond .Params.end (time.AsTime .Params.end) (time.AsTime .Params.start) }}
     {{ if ge $end.Unix $now.Unix }}
       {{ $upcoming = $upcoming | append . }}
-    {{ else }}
-      {{ $past = $past | append . }}
     {{ end }}
-  {{ end }}
-  {{ $fallbackEvents := sort $past "Params.start" "desc" }}
-  {{ $homeEvents := cond (gt (len $upcoming) 0) $upcoming $fallbackEvents }}
-  {{ $featuredEvent := false }}
-  {{ if gt (len $upcoming) 0 }}
-    {{ $featuredEvent = index $upcoming 0 }}
   {{ end }}
   {{ $eventsSectionURL := partial "helpers/resolve-url.html" .Params.events_section_url | strings.TrimSpace }}
   {{ $finalPrimaryURL := partial "helpers/resolve-url.html" .Params.final_cta_primary_url | strings.TrimSpace }}
@@ -57,11 +48,19 @@
   ) }}
 
 
-  <section class="section" style="padding-top: 0; padding-bottom: 0; margin-top: calc(var(--space-16) * -1);">
+  <section class="section community-photo-section">
     <div class="container">
-      <div data-reveal style="border-radius: var(--radius-xl); overflow: hidden; max-width: 50rem; margin: 0 auto;">
-        {{ partial "picture.html" (dict "src" "home/community-2.jpg" "alt" "EA Türkiye topluluk buluşması" "sizes" "(min-width: 52rem) 50rem, 100vw" "variant" "hero") }}
-      </div>
+      <figure class="community-photo" data-reveal>
+        <div class="community-photo__frame">
+          <div class="community-photo__media">
+            {{ partial "picture.html" (dict "src" "home/community-2.jpg" "alt" "EA Türkiye topluluk buluşması" "sizes" "(min-width: 52rem) 50rem, 100vw" "variant" "hero") }}
+          </div>
+        </div>
+        <figcaption class="community-photo__caption">
+          <span class="community-photo__caption-rule" aria-hidden="true"></span>
+          {{ i18n "community_photo_caption" }}
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -85,6 +84,32 @@
     </div>
   </section>
 
+  <section class="section section--surface home-section home-section--events">
+    <div class="container">
+      {{ partial "section-header.html" (dict
+        "eyebrow" .Params.events_section_label
+        "title" .Params.events_section_title
+        "text" .Params.events_section_text
+      ) }}
+      {{ if gt (len $upcoming) 0 }}
+        <div class="event-grid event-grid--home" data-reveal>
+          {{ range first 3 $upcoming }}
+            {{ partial "event-card.html" (dict "page" . "variant" "home") }}
+          {{ end }}
+        </div>
+      {{ else }}
+        <p class="text-muted">{{ i18n "no_upcoming_events" }}</p>
+      {{ end }}
+      {{ if $eventsSectionURL }}
+        <div style="margin-top: var(--space-32); display: flex; justify-content: center;">
+          {{ partial "button.html" (dict "url" .Params.events_section_url "label" (i18n "view_all_events") "variant" "secondary") }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ partial "newsletter-signup.html" . }}
+
   <section class="section section--surface">
     <div class="container">
       {{ partial "section-header.html" (dict
@@ -92,14 +117,16 @@
       ) }}
       <div class="cause-grid cause-grid--cta" style="margin-top: var(--space-32);" data-reveal>
         {{ range .Params.cta_cards }}
+          {{ $isExternal := not (hasPrefix .url "/") }}
           <article class="cause-card">
-            <a class="cause-card__link" href="{{ .url }}"{{ if not (hasPrefix .url "/") }} target="_blank" rel="noreferrer"{{ end }}>
+            <a class="cause-card__link" href="{{ .url }}"{{ if $isExternal }} target="_blank" rel="noreferrer"{{ end }}>
               <div class="stack-md">
                 <div class="stack-sm">
+                  {{ with .eyebrow }}<span class="cta-card__eyebrow">{{ . }}</span>{{ end }}
                   <h3>{{ .title }}</h3>
                   <p class="text-muted">{{ .text }}</p>
                 </div>
-                <span class="cause-card__cta">{{ $.Params.cta_learn_more | default "Keşfet →" }}</span>
+                <span class="cause-card__cta">{{ .cta_label | default $.Params.cta_learn_more | default (i18n "learn_more") }} <span class="cta-arrow{{ if $isExternal }} cta-arrow--up{{ end }}" aria-hidden="true">{{ if $isExternal }}↗{{ else }}→{{ end }}</span>{{ if $isExternal }}<span class="sr-only">{{ i18n "opens_in_new_tab" }}</span>{{ end }}</span>
               </div>
             </a>
           </article>

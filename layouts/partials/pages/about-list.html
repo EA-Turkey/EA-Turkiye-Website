@@ -48,7 +48,7 @@
 <section class="section">
   <div class="container stack-lg">
     {{ partial "section-header.html" (dict "eyebrow" $.Params.org_values_eyebrow) }}
-    <div class="values-accordion">
+    <div class="values-list">
       {{ range . }}
         <article class="value-row" data-reveal>
           <h3 class="value-row__title">{{ .title }}</h3>

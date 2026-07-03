@@ -8,6 +8,7 @@ date: 2025-02-27
 summary: "Efektif Altruizm Türkiye Üniversiteliler İnzivası Türkiye’deki çeşitli üniversitelerde efektif altruizm ile ilgilenen öğrencileri bir araya getirerek etkili kariyerler, rasyonalite ve komünite inşası gibi konular üzerine atölyeler düzenledik. Program sonrası geri bildirim formunu dolduran 19 katılımcı, etkinliğin beklentilerini karşılama düzeyini 10 üzerinden ortalama 8.9 olarak değerlendirdi. Tüm katılımcılara teşekkür ederiz, bir sonraki etkinliğimizde tekrar görüşmek dileğiyle!✨"
 featured_image: "blog/efektif-altruizm-turkiyeden-subat/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-subat"
+newsletter: true
 ---
 ## **Duyurular**
 

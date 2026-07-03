@@ -62,6 +62,12 @@
 
     <div class="prose" data-reveal>{{ .Content }}</div>
 
+    {{ with .Params.external_url }}
+      <div data-reveal>
+        {{ partial "button.html" (dict "url" . "label" (i18n "cause_external_cta") "variant" "secondary" "external" true) }}
+      </div>
+    {{ end }}
+
     {{ if gt (len $relatedResources) 0 }}
       <section class="stack-md" data-reveal>
         <h2>{{ i18n "related_resources" }}</h2>

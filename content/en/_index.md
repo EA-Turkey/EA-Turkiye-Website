@@ -46,19 +46,27 @@ events_section_title: We come together to build new connections, learn collectiv
 events_section_text: Explore events tailored to different problems and experience levels.
 events_section_url: /en/events/
 cta_section_title: Learn more and take action
-cta_learn_more: Explore →
+cta_learn_more: Explore
 cta_cards:
   - title: Introduction to EA
+    eyebrow: Learn
     text: Learn the core ideas, approaches, and culture of the EA community.
     url: "https://forum.effectivealtruism.org/handbook"
+    cta_label: "Read the handbook"
   - title: Effective giving
+    eyebrow: Give
     text: Discover how to make the most impact with your money.
     url: "https://www.etkilibagis.org/"
+    cta_label: "Visit the giving guide"
   - title: High-impact careers
+    eyebrow: Career
     text: Explore how your career can make a real difference in the world.
     url: "https://80000hours.org/"
+    cta_label: "Explore the career guide"
   - title: Events
+    eyebrow: Community
     text: From reading groups to summits — explore EA Turkey events.
     url: "/en/events/"
+    cta_label: "Browse events"
 ---
 EA Turkey is a meeting point for people in Turkey who want to learn, connect, and act around effective altruism.

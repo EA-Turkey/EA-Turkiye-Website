@@ -8,6 +8,7 @@ date: 2025-01-30
 summary: "Boğaziçi, Bilkent, Koç ve Hacettepe Üniversitelerindeki efektif altruizm topluluklarının liderleri, yaklaşan bahar dönemine hazırlanmak ve topluluklar arası iş birliğini güçlendirmek amacıyla bir araya geldi. Toplantıda, her topluluk önceki dönemdeki deneyimlerini paylaşarak etkinlik planlaması, üye katılımını artırma yöntemleri ve kampüslerde farkındalık yaratma stratejileri üzerine fikir alışverişinde bulundu."
 featured_image: "blog/efektif-altruizm-turkiyeden-ocak/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-ocak"
+newsletter: true
 ---
 ## **📢 Duyurular**
 

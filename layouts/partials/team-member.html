@@ -4,12 +4,16 @@
 {{ $lang := $page.Scratch.Get "actualLang" }}
 {{ $role := cond (eq $lang "en") $person.role.en $person.role.tr }}
 {{ $bio := cond (eq $lang "en") $person.bio.en $person.bio.tr }}
+{{ $bioShort := "" }}
+{{ with $person.bio_short }}
+  {{ $bioShort = cond (eq $lang "en") .en .tr }}
+{{ end }}
 
 <article class="team-card">
   {{ with $person.photo }}
     {{ $photo := resources.Get (printf "images/%s" .) }}
     {{ if $photo }}
-      {{ $avatar := $photo.Fill "144x144 Center" }}
+      {{ $avatar := $photo.Fill "288x288 Center" }}
       <img
         class="team-card__avatar"
         src="{{ $avatar.RelPermalink }}"
@@ -30,7 +34,15 @@
       <h3>{{ $person.name }}</h3>
       <p class="text-muted">{{ $role }}</p>
     </div>
-    <p class="team-card__bio">{{ $bio }}</p>
+    {{ if $bioShort }}
+      <p class="team-card__bio">{{ $bioShort }}</p>
+      <details class="team-card__more">
+        <summary>{{ i18n "read_more" }}</summary>
+        <p class="team-card__bio">{{ $bio }}</p>
+      </details>
+    {{ else }}
+      <p class="team-card__bio">{{ $bio }}</p>
+    {{ end }}
     <div class="cluster">
       {{ with $person.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
       {{ with $person.linkedin }}<a href="{{ . }}" target="_blank" rel="noreferrer">{{ i18n "social_linkedin" }}</a>{{ end }}

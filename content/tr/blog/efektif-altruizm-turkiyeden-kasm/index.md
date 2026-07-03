@@ -8,6 +8,7 @@ date: 2024-11-28
 summary: "Koç Üniversitesi Efektif altruizm Topluluğu’nun düzenlediği giriş konuşmasına 90 kişi katıldı! 🎉 Türkiye'deki tüm topluluk inşası (community-building) çalışmalarını yürüten ekiplerin emeklerini yürekten destekliyor ve kolaylıklar diliyoruz."
 featured_image: "blog/efektif-altruizm-turkiyeden-kasm/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-kasm"
+newsletter: true
 ---
 Koç Üniversitesi Efektif altruizm Topluluğu’nun düzenlediği giriş konuşmasına 90 kişi katıldı! 🎉 Türkiye'deki tüm topluluk inşası (community-building) çalışmalarını yürüten ekiplerin emeklerini yürekten destekliyor ve kolaylıklar diliyoruz.
 

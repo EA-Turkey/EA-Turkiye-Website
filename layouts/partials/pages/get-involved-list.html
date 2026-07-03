@@ -9,7 +9,7 @@
 <section class="section">
   <div class="container stack-lg">
     {{ partial "section-header.html" (dict "title" (i18n "action_paths") "text" .Params.action_cards_text) }}
-    <div class="grid-2">
+    <div class="grid-2" data-reveal>
       {{ range .Params.action_cards }}
         {{ partial "action-card.html" . }}
       {{ end }}

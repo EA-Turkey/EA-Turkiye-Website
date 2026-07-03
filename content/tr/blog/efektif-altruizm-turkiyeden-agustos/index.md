@@ -7,6 +7,7 @@ slug: "efektif-altruizm-turkiyeden-agustos"
 date: 2024-08-22
 summary: "30 Ağustos Cuma günü Ankara’da yüz yüze buluşuyoruz! Efektif altruizm ile ilgileniyorsanız, ister öğrenci olun ister profesyonel bir çalışan, sizi aramızda görmekten büyük mutluluk duyarız. Katılmak için bu linkten kayıt yaptırabilirsiniz."
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-agustos"
+newsletter: true
 ---
 ### **DUYURULAR 🔊**
 

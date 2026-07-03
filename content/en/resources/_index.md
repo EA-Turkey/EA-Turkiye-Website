@@ -1,7 +1,16 @@
 ---
 translationKey: resources
+# Section is unpublished for now; content is kept. To relaunch, remove the
+# build/cascade blocks and restore the menu entry in hugo.toml.
+build:
+  render: never
+  list: never
+cascade:
+  build:
+    render: never
+    list: never
 title: Resources
-description: Four essential resources to start exploring effective altruism.
+description: Our curated library of resources for exploring effective altruism.
 url: /en/resources/
 hero_eyebrow: Resources
 hero_title: Explore these resources to learn more and take action.

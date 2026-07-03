@@ -1,7 +1,16 @@
 ---
 translationKey: resources
+# Bölüm şimdilik yayında değil; içerik korunuyor. Yeniden açmak için
+# build/cascade bloklarını ve hugo.toml'daki menü girdisini geri ekleyin.
+build:
+  render: never
+  list: never
+cascade:
+  build:
+    render: never
+    list: never
 title: Kaynaklar
-description: Efektif altruizmi keşfetmek için dört temel kaynak.
+description: Efektif altruizmi keşfetmek için derlediğimiz kaynak kütüphanesi.
 url: /kaynaklar/
 hero_eyebrow: Kaynaklar
 hero_title: Daha fazlasını öğrenmek ve harekete geçmek için aşağıdaki kaynakları inceleyebilirsiniz.

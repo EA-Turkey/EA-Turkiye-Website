@@ -6,6 +6,7 @@ slug: "latest-updates-from-effective-altruism-turkey"
 date: 2024-06-27
 summary: "Hello, welcome to Effective Altruism Turkey newsletter. It's a pleasure to have you among us!"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-son-haberler"
+newsletter: true
 ---
 Hello, welcome to Effective Altruism Turkey newsletter. It's a pleasure to have you among us!
 

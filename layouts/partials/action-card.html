@@ -1,14 +1,15 @@
 {{ $url := partial "helpers/resolve-url.html" (.cta_url | default .cta_anchor) | strings.TrimSpace }}
+{{ $isExternal := and $url (not (hasPrefix $url "/")) }}
 <article class="action-card">
   {{ if $url }}
-    <a class="action-card__link" href="{{ $url }}">
+    <a class="action-card__link" href="{{ $url }}"{{ if $isExternal }} target="_blank" rel="noreferrer"{{ end }}>
       {{ with .badge }}<span class="action-card__badge">{{ . }}</span>{{ end }}
       <div class="stack-md">
         <div class="stack-sm">
           <h3>{{ .title }}</h3>
           <p class="action-card__text">{{ .text }}</p>
         </div>
-        <span class="action-card__cta">{{ .cta_label }}</span>
+        <span class="action-card__cta">{{ .cta_label }} <span class="cta-arrow{{ if $isExternal }} cta-arrow--up{{ end }}" aria-hidden="true">{{ if $isExternal }}↗{{ else }}→{{ end }}</span>{{ if $isExternal }}<span class="sr-only">{{ i18n "opens_in_new_tab" }}</span>{{ end }}</span>
       </div>
     </a>
   {{ else }}

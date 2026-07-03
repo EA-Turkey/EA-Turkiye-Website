@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.classList.add("is-ready");
-
   const focusableSelector = [
     "a[href]",
     "button:not([disabled])",
@@ -150,17 +148,44 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
             entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.14 }
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
 
+    // No synchronous geometry reads here: the observer's first callback
+    // reports every element's position asynchronously, and the
+    // top < 0 branch above already reveals anything scrolled past.
     document.querySelectorAll("[data-reveal]").forEach((element) => observer.observe(element));
   } else {
     document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
+  }
+
+  const lumaFrames = document.querySelectorAll("iframe[data-luma-src]");
+
+  if (lumaFrames.length) {
+    const desktopQuery = window.matchMedia("(min-width: 561px)");
+
+    const loadLumaFrames = () => {
+      if (!desktopQuery.matches) {
+        return;
+      }
+
+      lumaFrames.forEach((frame) => {
+        if (!frame.getAttribute("src")) {
+          frame.setAttribute("src", frame.dataset.lumaSrc);
+        }
+      });
+    };
+
+    loadLumaFrames();
+
+    if (typeof desktopQuery.addEventListener === "function") {
+      desktopQuery.addEventListener("change", loadLumaFrames);
+    }
   }
 });

@@ -429,3 +429,48 @@
 
 - id: cause_careers_giving
   translation: "Kariyer ve bağışçılık"
+
+- id: resources_start_here
+  translation: "Buradan başlayın"
+
+- id: newsletter_title
+  translation: "Bültenimize abone olun"
+
+- id: newsletter_text
+  translation: "Aylık haberler, etkinlik duyuruları ve seçtiğimiz içerikler e-postanıza gelsin."
+
+- id: newsletter_cta
+  translation: "Substack'te abone olun"
+
+- id: newsletter_note
+  translation: "Ücretsiz · İstediğiniz zaman abonelikten çıkabilirsiniz"
+
+- id: updates_latest
+  translation: "Son sayı"
+
+- id: luma_calendar_title
+  translation: "Yaklaşan etkinlikler takvimi (Luma)"
+
+- id: form_required_legend
+  translation: "* zorunlu alanlar"
+
+- id: form_interest_placeholder
+  translation: "Seçiniz"
+
+- id: footer_explore
+  translation: "Keşfet"
+
+- id: cause_external_cta
+  translation: "Konunun detaylı analizini okuyun"
+
+- id: opens_in_new_tab
+  translation: "yeni sekmede açılır"
+
+- id: newsletter_badge
+  translation: "Bülten"
+
+- id: community_photo_caption
+  translation: "Topluluk buluşmalarımızdan bir kare"
+
+- id: event_card_cta
+  translation: "Detayları gör"

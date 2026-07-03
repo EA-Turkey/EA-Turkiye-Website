@@ -10,9 +10,11 @@
   data-error-message="{{ i18n "form_status_error_generic" }}"
   novalidate
 >
+  <p class="form-required-legend text-muted">{{ i18n "form_required_legend" }}</p>
+
   <div class="form-grid form-grid--2">
     <div class="form-field">
-      <label for="first_name">{{ i18n "form_first_name" }}</label>
+      <label for="first_name">{{ i18n "form_first_name" }} <span class="required-mark" aria-hidden="true">*</span></label>
       <input id="first_name" name="first_name" type="text" autocomplete="given-name" required>
     </div>
     <div class="form-field">
@@ -22,7 +24,7 @@
   </div>
 
   <div class="form-field">
-    <label for="email">{{ i18n "form_email" }}</label>
+    <label for="email">{{ i18n "form_email" }} <span class="required-mark" aria-hidden="true">*</span></label>
     <input id="email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false" required>
   </div>
 
@@ -39,8 +41,9 @@
     </div>
 
     <div class="form-field">
-      <label for="interest">{{ i18n "form_interest" }}</label>
+      <label for="interest">{{ i18n "form_interest" }} <span class="required-mark" aria-hidden="true">*</span></label>
       <select id="interest" name="interest" autocomplete="off" required>
+        <option value="" selected disabled>{{ i18n "form_interest_placeholder" }}</option>
         {{ range .Params.form.interests }}
           <option value="{{ . }}">{{ . }}</option>
         {{ end }}
@@ -57,13 +60,13 @@
 
   <div class="form-field form-field--checkbox">
     <input id="consent" name="consent" type="checkbox" required>
-    <label for="consent">{{ i18n "form_consent" }}</label>
+    <label for="consent">{{ i18n "form_consent" }} <span class="required-mark" aria-hidden="true">*</span></label>
   </div>
 
   {{ with $langSite.Params.turnstile.site_key }}
     <div class="form-field form-field--turnstile">
       <span class="form-label">{{ i18n "form_verification" }}</span>
-      <div class="cf-turnstile" data-sitekey="{{ . }}"></div>
+      <div class="cf-turnstile" data-sitekey="{{ . }}" data-theme="light" data-language="{{ $lang }}"></div>
     </div>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   {{ end }}

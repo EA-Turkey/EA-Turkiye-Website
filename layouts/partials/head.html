@@ -1,10 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
 {{ partial "seo-meta.html" . }}
 
-<link rel="preload" href="{{ "fonts/inter-400-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "fonts/inter-600-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "fonts/playfair-700-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/playfair-700-latin.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/inter-400-latin.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+{{ if eq (partial "helpers/lang-from-url.html" .RelPermalink) "tr" }}
+  <link rel="preload" href="{{ "fonts/playfair-700-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "fonts/inter-400-latin-ext.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+{{ end }}
 
 {{ partial "site-styles.html" . }}
 

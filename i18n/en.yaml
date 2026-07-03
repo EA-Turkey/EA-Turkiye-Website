@@ -429,3 +429,48 @@
 
 - id: cause_careers_giving
   translation: "Careers and giving"
+
+- id: resources_start_here
+  translation: "Start here"
+
+- id: newsletter_title
+  translation: "Subscribe to our newsletter"
+
+- id: newsletter_text
+  translation: "Monthly updates, event announcements, and hand-picked reading in your inbox."
+
+- id: newsletter_cta
+  translation: "Subscribe on Substack"
+
+- id: newsletter_note
+  translation: "Free · Unsubscribe anytime"
+
+- id: updates_latest
+  translation: "Latest issue"
+
+- id: luma_calendar_title
+  translation: "Upcoming events calendar (Luma)"
+
+- id: form_required_legend
+  translation: "* required fields"
+
+- id: form_interest_placeholder
+  translation: "Select an option"
+
+- id: footer_explore
+  translation: "Explore"
+
+- id: cause_external_cta
+  translation: "Read the in-depth analysis"
+
+- id: opens_in_new_tab
+  translation: "opens in a new tab"
+
+- id: newsletter_badge
+  translation: "Newsletter"
+
+- id: community_photo_caption
+  translation: "A moment from one of our community meetups"
+
+- id: event_card_cta
+  translation: "View details"

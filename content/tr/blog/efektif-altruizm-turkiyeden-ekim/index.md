@@ -8,6 +8,7 @@ date: 2024-10-25
 summary: "Bülten ekibinden Berke Çelik’in Global Policy Research Group bünyesinde kurduğu Health Progress Hub ; önemli fakat ihmal edilen kamu sağlığı sorunlarının çözümünü hızlandırmak amacıyla, düşük ve orta gelirli ülkelerdeki öğrenci ve profesyoneller ile etkili sağlık politikası organizasyonları arasında bir köprü görevi görmeyi amaçlıyor. Dünyanın her yerinden başvuruya açık olan 10 haftalık pilot programda katılımcılar hem teorik eğitim alacak hem de Fortify Health ve Lead Exposure Elimination Project gibi kurumlarla birlikte yürütecekleri projeler ile deneyim kazanma fırsatına sahip olacaklar. Siz de dilerseniz gönüllü olarak Health Progress Hub ekibinin bir parçası olabilir veya pilot program başvuruları açıldığında haberdar olmak için bu forma iletişim bilgilerinizi bırakabilirsiniz."
 featured_image: "blog/efektif-altruizm-turkiyeden-ekim/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-ekim"
+newsletter: true
 ---
 ## **Duyurular**
 

@@ -7,6 +7,7 @@ slug: "efektif-altruizm-turkiyeden-aralk"
 date: 2024-12-27
 summary: "Yeni yıla birlikte adım atarken, bizi takip ettiğiniz için teşekkür ederiz! 2025’te daha iyi bir bülten deneyimi için yorum ve önerilerinizi bizimle paylaşabilirsiniz. 🗳️"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-aralk"
+newsletter: true
 ---
 *Yeni yıla birlikte adım atarken, bizi takip ettiğiniz için teşekkür ederiz! 2025’te daha iyi bir bülten deneyimi için yorum ve önerilerinizi [bizimle paylaşabilirsiniz.](https://forms.gle/PxWCek9S4Emudvn47)🗳️*
 

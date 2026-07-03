@@ -6,6 +6,7 @@ slug: "december-updates-from-effective-altruism-turkey"
 date: 2024-12-27
 summary: "Thank you for following us as we step into the new year together! You can share your comments and suggestions with us for a better newsletter experience in 2025. 🗳️"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-aralk"
+newsletter: true
 ---
 *Thank you for following us as we step into the new year with us. You can share your comments and suggestions for a better newsletter experience in 2025 [through this form](https://forms.gle/PxWCek9S4Emudvn47). 🗳️*
 

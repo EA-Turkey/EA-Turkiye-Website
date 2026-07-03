@@ -8,6 +8,7 @@ date: 2024-07-25
 summary: "Merhabalar, Efektif Altruizm Türkiye Temmuz ayı bültenine hoşgeldiniz!"
 featured_image: "blog/efektif-altruizm-turkiyeden-temmuz/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-temmuz"
+newsletter: true
 ---
 Merhabalar, Efektif Altruizm Türkiye Temmuz ayı bültenine hoşgeldiniz!
 

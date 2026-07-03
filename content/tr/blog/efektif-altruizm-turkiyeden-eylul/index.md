@@ -7,6 +7,7 @@ slug: "efektif-altruizm-turkiyeden-eylul"
 date: 2024-09-26
 summary: "Yeni akademik dönem, birçok EA üniversite grupları için yılın en yoğun ve heyecan verici zamanlarından biri olarak hızla devam ediyor. Üniversite grupları, birçok kişinin EA fikirlerini öğrenip iyilik yapma fikriyle motive olmuş bireylerle tanıştığı ve dünya üzerindeki en acil sorunlarla başa çıkmak için önemli adımlar atan bir ortam sunmaktadır. EA Boğaziçi, EA Koç ve EA Bilkent de yeni döneme merhaba dedi."
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-eylul"
+newsletter: true
 ---
 ### DUYURULAR📢
 

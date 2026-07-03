@@ -7,6 +7,7 @@ slug: "efektif-altruizm-turkiyeden-son-haberler"
 date: 2024-06-27
 summary: "Merhabalar, Efektif Altruizm Türkiye bültenine hoşgeldiniz. Sizi aramızda görmek mutluluk verici!"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-son-haberler"
+newsletter: true
 ---
 Merhabalar, Efektif Altruizm Türkiye bültenine hoşgeldiniz. Sizi aramızda görmek mutluluk verici!
 

@@ -1,15 +1,14 @@
 <div class="cause-grid" data-reveal>
   {{ range . }}
-    {{ $accentKey := replace (.Params.accent | default "general") "-" "_" }}
+    {{ $external := .Params.external_url }}
     <article class="cause-card">
-      <a class="cause-card__link" href="{{ with .Params.external_url }}{{ . }}{{ else }}{{ .RelPermalink }}{{ end }}"{{ with .Params.external_url }} target="_blank" rel="noreferrer"{{ end }}>
-        {{ if .Params.accent }}<span class="cause-card__eyebrow">{{ i18n (printf "cause_%s" $accentKey) }}</span>{{ end }}
+      <a class="cause-card__link" href="{{ with $external }}{{ . }}{{ else }}{{ .RelPermalink }}{{ end }}"{{ if $external }} target="_blank" rel="noreferrer"{{ end }}>
         <div class="stack-md">
           <div class="stack-sm">
             <h3>{{ .Title }}</h3>
             <p class="text-muted">{{ .Params.card_excerpt | default .Params.description }}</p>
           </div>
-          <span class="cause-card__cta">{{ i18n "learn_more" }}</span>
+          <span class="cause-card__cta">{{ i18n "learn_more" }} <span class="cta-arrow{{ if $external }} cta-arrow--up{{ end }}" aria-hidden="true">{{ if $external }}↗{{ else }}→{{ end }}</span>{{ if $external }}<span class="sr-only">{{ i18n "opens_in_new_tab" }}</span>{{ end }}</span>
         </div>
       </a>
     </article>

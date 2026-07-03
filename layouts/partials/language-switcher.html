@@ -4,6 +4,6 @@
   {{ range sort site.Sites "Language.Weight" }}
     {{ $lang := .Language.Lang }}
     {{ $url := partial "helpers/find-translation.html" (dict "page" $ "targetLang" $lang) | strings.TrimSpace }}
-    <a href="{{ $url }}" {{ if eq $lang $currentLang }}aria-current="true"{{ end }}>{{- .Params.language_label -}}</a>
+    <a href="{{ $url }}" lang="{{ $lang }}" hreflang="{{ $lang }}" {{ if eq $lang $currentLang }}aria-current="page"{{ end }}>{{- .Params.language_label -}}</a>
   {{ end }}
 </div>

@@ -7,6 +7,7 @@ date: 2025-01-30
 summary: "Leaders of effective altruism communities at Boğaziçi, Bilkent, Koç and Hacettepe Universities came together to prepare for the upcoming spring semester and strengthen cooperation between communities. At the meeting, each community shared their experiences from the previous semester and exchanged ideas on event planning, methods of increasing member participation, and strategies for raising awareness on campuses."
 featured_image: "blog/efektif-altruizm-turkiyeden-ocak/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-ocak"
+newsletter: true
 ---
 ## **📢 Announcements**
 

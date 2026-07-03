@@ -7,6 +7,7 @@ date: 2024-11-28
 summary: "Ninety people attended the introductory talk organized by the Effective Altruism community at Koç University. 🎉 We wholeheartedly support the teams carrying out community-building activities across Turkey and wish them the best."
 featured_image: "blog/efektif-altruizm-turkiyeden-kasm/cover.jpg"
 source_url: "https://eaturkiye.substack.com/p/efektif-altruizm-turkiyeden-kasm"
+newsletter: true
 ---
 Ninety people attended the introductory talk organized by the Effective Altruism community at Koç University. 🎉 We wholeheartedly support the efforts of the teams carrying out community-building activities across Turkey and wish them the best.
 
