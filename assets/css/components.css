@@ -910,8 +910,12 @@ a.contact-hero__route:focus-visible {
   color: inherit;
 }
 
+/* One CTA idiom inside every card: a text link with a sliding arrow.
+   Pill buttons stay reserved for standalone, page-level actions. */
+.card-cta,
 .cause-card__cta,
-.action-card__cta {
+.action-card__cta,
+.event-card__cta {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -924,10 +928,14 @@ a.contact-hero__route:focus-visible {
   transition: color var(--transition-fast);
 }
 
+.card-cta:hover,
+.card-cta:focus-visible,
 .cause-card__link:hover .cause-card__cta,
 .cause-card__link:focus-visible .cause-card__cta,
 .action-card__link:hover .action-card__cta,
-.action-card__link:focus-visible .action-card__cta {
+.action-card__link:focus-visible .action-card__cta,
+.event-card:hover .event-card__cta,
+.event-card:focus-within .event-card__cta {
   color: var(--color-brand-600);
 }
 
@@ -936,18 +944,34 @@ a.contact-hero__route:focus-visible {
   transition: transform var(--transition-fast);
 }
 
+.card-cta:hover .cta-arrow,
+.card-cta:focus-visible .cta-arrow,
 .cause-card__link:hover .cta-arrow,
 .cause-card__link:focus-visible .cta-arrow,
 .action-card__link:hover .cta-arrow,
-.action-card__link:focus-visible .cta-arrow {
+.action-card__link:focus-visible .cta-arrow,
+.event-card:hover .cta-arrow,
+.event-card:focus-within .cta-arrow {
   transform: translateX(3px);
 }
 
+.card-cta:hover .cta-arrow--up,
+.card-cta:focus-visible .cta-arrow--up,
 .cause-card__link:hover .cta-arrow--up,
 .cause-card__link:focus-visible .cta-arrow--up,
 .action-card__link:hover .cta-arrow--up,
 .action-card__link:focus-visible .cta-arrow--up {
   transform: translate(2px, -2px);
+}
+
+.event-card__cta {
+  margin-top: auto;
+  padding-top: var(--space-16);
+}
+
+.event-card__chips + .event-card__cta {
+  margin-top: 0;
+  padding-top: var(--space-8);
 }
 
 .event-grid {
@@ -1488,17 +1512,6 @@ a.contact-hero__route:focus-visible {
   gap: var(--space-16);
 }
 
-.blog-featured__actions .button--primary {
-  background: var(--color-brand-600);
-  box-shadow: 0 16px 34px rgba(var(--color-brand-700-rgb), 0.16);
-}
-
-.blog-featured__actions .button--primary:hover,
-.blog-featured__actions .button--primary:active {
-  background: var(--color-brand-700);
-}
-
-.blog-featured__actions .button--text,
 .blog-post__actions .button--text {
   font-weight: 700;
 }

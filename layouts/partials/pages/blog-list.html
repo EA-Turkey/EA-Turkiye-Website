@@ -54,9 +54,9 @@
           </h2>
           <p class="blog-featured__summary">{{ .Params.summary | default .Params.description }}</p>
           <div class="blog-featured__actions cluster">
-            {{ partial "button.html" (dict "url" .RelPermalink "label" (i18n "read_more") "variant" "primary") }}
+            <a class="card-cta" href="{{ .RelPermalink }}">{{ i18n "read_more" }} <span class="cta-arrow" aria-hidden="true">→</span></a>
             {{ with .Params.source_url }}
-              {{ partial "button.html" (dict "url" . "label" (i18n "open_on_substack") "variant" "text" "external" true) }}
+              <a class="card-cta" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ i18n "open_on_substack" }} <span class="cta-arrow cta-arrow--up" aria-hidden="true">↗</span><span class="sr-only">{{ i18n "opens_in_new_tab" }}</span></a>
             {{ end }}
           </div>
         </div>

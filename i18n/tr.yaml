@@ -468,3 +468,6 @@
 
 - id: community_photo_caption
   translation: "Topluluk buluşmalarımızdan bir kare"
+
+- id: event_card_cta
+  translation: "Detayları gör"

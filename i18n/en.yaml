@@ -468,3 +468,6 @@
 
 - id: community_photo_caption
   translation: "A moment from one of our community meetups"
+
+- id: event_card_cta
+  translation: "View details"
