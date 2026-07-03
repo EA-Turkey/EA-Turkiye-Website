@@ -453,3 +453,6 @@
 
 - id: cause_external_cta
   translation: "Read the in-depth analysis"
+
+- id: privacy_notice
+  translation: "Privacy notice"

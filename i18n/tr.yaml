@@ -453,3 +453,6 @@
 
 - id: cause_external_cta
   translation: "Konunun detaylı analizini okuyun"
+
+- id: privacy_notice
+  translation: "KVKK Aydınlatma Metni"

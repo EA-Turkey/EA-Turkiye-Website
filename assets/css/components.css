@@ -2120,6 +2120,10 @@ a.contact-hero__route:focus-visible {
   font-size: var(--text-xs);
 }
 
+.footer-legal {
+  font-size: var(--text-xs);
+}
+
 .events-archive .section-header {
   margin-bottom: 0;
 }

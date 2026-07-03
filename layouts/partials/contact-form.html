@@ -59,8 +59,9 @@
   <input type="hidden" name="language" value="{{ $lang }}">
 
   <div class="form-field form-field--checkbox">
+    {{ $privacyURL := partial "helpers/section-root.html" (dict "lang" $lang "key" "privacy") | strings.TrimSpace }}
     <input id="consent" name="consent" type="checkbox" required>
-    <label for="consent">{{ i18n "form_consent" }} <span class="required-mark" aria-hidden="true">*</span></label>
+    <label for="consent">{{ i18n "form_consent" }} (<a href="{{ $privacyURL | relURL }}" target="_blank" rel="noreferrer">{{ i18n "privacy_notice" }}</a>) <span class="required-mark" aria-hidden="true">*</span></label>
   </div>
 
   {{ with $langSite.Params.turnstile.site_key }}

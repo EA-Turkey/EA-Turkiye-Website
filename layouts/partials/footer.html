@@ -31,6 +31,8 @@
       <p class="footer-copy">{{ i18n "footer_org_description" }}</p>
       <p class="footer-copy"><a href="mailto:{{ $langSite.Params.contact.primary_email }}">{{ $langSite.Params.contact.primary_email }}</a></p>
       <p class="copyright">© {{ $year }} {{ i18n "footer_copyright" }}</p>
+      {{ $privacyURL := partial "helpers/section-root.html" (dict "lang" $actualLang "key" "privacy") | strings.TrimSpace }}
+      <p class="footer-legal"><a href="{{ $privacyURL | relURL }}">{{ i18n "privacy_notice" }}</a></p>
     </div>
 
     <div class="footer-column">
