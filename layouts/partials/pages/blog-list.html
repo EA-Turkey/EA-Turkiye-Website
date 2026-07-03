@@ -47,7 +47,7 @@
           <div class="blog-featured__meta cluster">
             <span class="blog-kicker">{{ i18n "featured_story" }}</span>
             <span class="blog-date">{{ .Date | time.Format ":date_long" }}</span>
-            {{ if .Params.newsletter }}<span class="newsletter-badge">{{ i18n "newsletter_badge" }}</span>{{ end }}
+            {{ if .Params.newsletter }}<span class="updates-badge">{{ i18n "newsletter_badge" }}</span>{{ end }}
           </div>
           <h2 class="blog-featured__title">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -91,7 +91,7 @@
                     <a class="blog-archive-item__link" href="{{ .RelPermalink }}">
                       <div class="blog-archive-item__meta">
                         <span class="blog-date">{{ .Date | time.Format ":date_long" }}</span>
-                        {{ if .Params.newsletter }}<span class="newsletter-badge">{{ i18n "newsletter_badge" }}</span>{{ end }}
+                        {{ if .Params.newsletter }}<span class="updates-badge">{{ i18n "newsletter_badge" }}</span>{{ end }}
                       </div>
                       <div class="blog-archive-item__body">
                         <h4 class="blog-archive-item__title">{{ .Title }}</h4>

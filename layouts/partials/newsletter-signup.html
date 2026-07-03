@@ -1,19 +1,19 @@
 {{ partial "helpers/lang-context.html" . }}
 {{ $langSite := .Scratch.Get "langSite" }}
 {{ with $langSite.Params.social.substack }}
-  <section class="section section--surface newsletter-section">
+  <section class="section section--surface updates-band">
     <div class="container">
       {{- /* Deliberately not reveal-gated: the page's one conversion band
            must never depend on JS to become visible. */}}
-      <div class="newsletter-cta">
-        <div class="newsletter-cta__body stack-sm">
-          <p class="newsletter-cta__eyebrow">{{ i18n "newsletter_badge" }}</p>
+      <div class="updates-cta">
+        <div class="updates-cta__body stack-sm">
+          <p class="updates-cta__eyebrow">{{ i18n "newsletter_badge" }}</p>
           <h2>{{ i18n "newsletter_title" }}</h2>
           <p class="text-muted">{{ i18n "newsletter_text" }}</p>
         </div>
-        <div class="newsletter-cta__action">
+        <div class="updates-cta__action">
           {{ partial "button.html" (dict "url" (printf "%ssubscribe" .) "label" (i18n "newsletter_cta") "variant" "primary" "external" true) }}
-          <p class="newsletter-cta__note text-muted">{{ i18n "newsletter_note" }}</p>
+          <p class="updates-cta__note text-muted">{{ i18n "newsletter_note" }}</p>
         </div>
       </div>
     </div>
