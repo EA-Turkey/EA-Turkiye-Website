@@ -1,7 +1,7 @@
 ---
 translationKey: "efektif-altruizm-istanbul-zirvesi"
 title: "EA Summit: İstanbul 2026"
-description: "Efektif altruizm İstanbul Zirvesi 2026, 24 Ekim 2026 tarihinde HAN Spaces Etiler'de gerçekleşecek. Türkiye'deki EA topluluğunu bir araya getiren bu etkinlikte sunumlar, atölyeler ve bağlantı kurma fırsatları yer alacak."
+description: "Etkili İyilik (Efektif Altruizm) İstanbul Zirvesi 2026, 24 Ekim 2026 tarihinde HAN Spaces Etiler'de gerçekleşecek. Türkiye'deki EA topluluğunu bir araya getiren bu etkinlikte sunumlar, atölyeler ve bağlantı kurma fırsatları yer alacak."
 url: "/etkinlikler/efektif-altruizm-istanbul-zirvesi/"
 slug: "efektif-altruizm-istanbul-zirvesi"
 start: 2026-10-24T10:00:00+03:00
@@ -10,15 +10,14 @@ schedule_text: "24 Ekim 2026"
 city: "İstanbul"
 event_mode: "in-person"
 venue: "HAN Spaces Etiler, İstanbul"
-summary: "Efektif altruizm İstanbul Zirvesi 2026, 24 Ekim 2026 tarihinde HAN Spaces Etiler'de gerçekleşecek. Türkiye'deki EA topluluğunu bir araya getiren bu etkinlikte sunumlar, atölyeler ve bağlantı kurma fırsatları yer alacak."
+summary: "Etkili İyilik (Efektif Altruizm) İstanbul Zirvesi 2026, 24 Ekim 2026 tarihinde HAN Spaces Etiler'de gerçekleşecek. Türkiye'deki EA topluluğunu bir araya getiren bu etkinlikte sunumlar, atölyeler ve bağlantı kurma fırsatları yer alacak."
 featured_image: "events/efektif-altruizm-istanbul-zirvesi/cover.jpg"
-luma_url: "https://luma.com/hm8n2pnr"
 calendar_start: 2026-10-24T10:00:00+03:00
 calendar_end: 2026-10-24T18:00:00+03:00
 ---
 ## Etkinlik Hakkında
 
-Etkili İyilik (Effective Altruism) İstanbul Zirvesi 2026, 24 Ekim 2026 tarihinde İstanbul'da HAN Spaces Etiler'de gerçekleşecek.
+Etkili İyilik (Efektif Altruizm) İstanbul Zirvesi 2026, 24 Ekim 2026 tarihinde İstanbul'da HAN Spaces Etiler'de gerçekleşecek.
 
 Etkili iyilik; küresel yoksulluk, hayvan refahı ve yapay zekâ gibi konular üstüne çalışan ve dünyanın sorunlarına en etkili şekilde çözüm bulmanın yollarını arayan bir felsefe ve sosyal hareket. Efektif Altruizm Türkiye'nin üyelerini de bir araya getirecek olan etkinlik, hem etkili iyilik ilkeleriyle uzun süredir ilgilenen kişileri hem de kariyerleriyle, zamanlarıyla ve bağışlarıyla dünyaya daha etkili bir şekilde nasıl katkı sağlayabileceklerini keşfetmeye yeni başlayan bireyleri hedefliyor.
 
@@ -54,7 +53,7 @@ Etkinlik detaylarının tamamı konferans tarihine yakın bir zamanda Swapcard u
 
 ## Ulaşım desteği
 
-Seyahat desteği için çok sınırlı bir bütçemiz olduğunu belirtmek isteriz. Seyahat desteği talep etmek için doldurulacak belge başvurularla aynı anda açılacak.
+Seyahat desteği için çok sınırlı bir bütçemiz olduğunu belirtmek isteriz. Seyahat desteği talebinizin değerlendirilmesi için [bilgi@eaturkiye.org](mailto:bilgi@eaturkiye.org) adresine e-posta gönderebilirsiniz.
 
 ## Bize Ulaşın
 
