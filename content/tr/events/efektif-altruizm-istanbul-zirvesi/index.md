@@ -31,7 +31,7 @@ Etkinliğimiz ücretsizdir.
 
 ## Başvuru Süreci
 
-Etkinlik başvuruları yakında açılacak. Eğer etkinliğimiz başvuruya açıldığında sizi haberdar etmemizi isterseniz, [lütfen bu ilgi belgesini doldurun](https://docs.google.com/forms/d/e/1FAIpQLSdmRkrcV8i8-dSsepgUBxayy-4LEHy1XOUuxGYmYJmZtP4Q6A/viewform?usp=header).
+Etkinlik başvuruları açıldı! Başvurunuzu yapmak için [Luma sayfamızı](https://luma.com/hm8n2pnr) ziyaret etmeniz yeterli; başvuru formu yalnızca birkaç dakikanızı alacak.
 
 ### Kimler başvurabilir?
 
