@@ -3883,3 +3883,8 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
     gap: var(--space-24);
   }
 }
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}

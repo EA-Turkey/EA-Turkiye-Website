@@ -1,0 +1,7 @@
+{{- partial "button.html" (dict
+  "url" (.Get "url")
+  "label" (.Get "label")
+  "variant" (.Get "variant" | default "primary")
+  "size" (.Get "size" | default "cta")
+  "external" (hasPrefix (.Get "url") "http")
+) -}}

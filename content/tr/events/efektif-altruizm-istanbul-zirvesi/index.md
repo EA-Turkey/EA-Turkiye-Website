@@ -33,9 +33,11 @@ Etkinliğimiz ücretsizdir.
 
 Etkinlik başvuruları açıldı ve süreç aşağıdaki şekilde ilerleyecek:
 
-1. [Başvuru belgesinin](https://luma.com/hm8n2pnr) doldurulması: Kişisel bilgilerinizi ve ilgi alanlarınızı içeren bir başvuru belgesi doldurmanızı isteyeceğiz.
+1. [**Başvuru belgesinin**](https://luma.com/hm8n2pnr) doldurulması: Kişisel bilgilerinizi ve ilgi alanlarınızı içeren bir başvuru belgesi doldurmanızı isteyeceğiz.
 2. Başvuru değerlendirmesi: Tüm başvuruları dikkatlice inceleyeceğiz ve 15 iş günü içinde size olumlu-olumsuz dönüş yapacağız.
 3. Etkinlik kaydının tamamlanması: Başvurunuzun kabul edilmesi durumunda size etkinlik ayrıntılarını içeren bir e-posta göndereceğiz.
+
+{{< button url="https://luma.com/hm8n2pnr" label="Hemen başvur" >}}
 
 ### Kimler başvurabilir?
 

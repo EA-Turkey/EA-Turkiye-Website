@@ -32,9 +32,11 @@ Our event is free of charge.
 
 Applications for the event are now open, and the process will proceed as follows:
 
-1. Completing the [application document](https://luma.com/hm8n2pnr): We will ask you to fill out an application document with your personal information and areas of interest.
+1. Completing the [**application document**](https://luma.com/hm8n2pnr): We will ask you to fill out an application document with your personal information and areas of interest.
 2. Application review: We will carefully review all applications and respond with a positive or negative decision within 15 business days.
 3. Completing your registration: If your application is accepted, we will send you an email containing the event details.
+
+{{< button url="https://luma.com/hm8n2pnr" label="Apply now" >}}
 
 ### Who can apply?
 
