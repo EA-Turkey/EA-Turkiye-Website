@@ -4028,3 +4028,8 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
     padding: var(--space-20);
   }
 }
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
