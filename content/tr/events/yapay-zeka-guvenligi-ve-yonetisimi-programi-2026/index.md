@@ -59,14 +59,16 @@ facilitators:
     role: "Kolaylaştırıcı"
     bio: "Boğaziçi Üniversitesi Felsefe Bölümü mezunu olan Berke, AI Safety Türkiye'nin eş kurucusu ve direktörüdür. Global Policy Research Group'ta kalkınma programının direktörlüğünü yapan Berke'nin diğer ilgi alanları gelişmekte olan ülkelerdeki yapay zekâ politikaları ve karar teorisidir."
 ---
-Yapay Zekâ Güvenliği ve Yönetişimi Programı, ileri yapay zekâ sistemlerinin güvenliği ve yönetişimi üstüne 4 haftalık ücretsiz bir okuma ve tartışma programıdır. Program EA Türkiye tarafından düzenlenmektedir.
+Yapay Zekâ Güvenliği ve Yönetişimi Programı, 23 Eylül, 30 Eylül, 7 Ekim ve 14 Ekim Çarşamba akşamları 19.30–21.00 arasında gerçekleştirilecek. Giriş niteliğinde olan program, herkese açık ve ücretsiz.
 
-Her hafta kısa İngilizce okumalar yapıp Çarşamba akşamları çevrim içi oturumlarda Türkçe tartışacağız. Oturumlar Dr. Fırat Akova ve Berke Çelik kolaylaştırıcılığında ilerleyecek; program hizalama probleminden güç yoğunlaşmasına, biyogüvenlik risklerinden kariyer planlamasına uzanan bir yay çizecek.
+İlk oturumda alanın temel kavramları ele alınacak. Yapay zekâ uyumlandırması ne anlama geliyor? Modeller eğitim verisine sızan küçük ölçekli saldırılara karşı neden kırılgan olabiliyor? Ödül korsanlığı bugünün modellerinde kendini nasıl gösteriyor?
 
-Teknik önbilgi gerekmez; yapay zekânın toplumsal etkilerini ciddiye alan herkes başvurabilir. Okumalar İngilizce olduğu için İngilizce okuma becerisi gereklidir. Katılım ücretsizdir; kayıtlar onaya tabidir.
+İkinci oturumda katılımcılar güvenlik ve yönetişim alanında öne çıkan risklerle tanışacak: Güç yoğunlaşması, aşamalı güçten düşme, üretilmiş salgınlar ve kritik altyapıların çöküşü.
 
-🗓 23 Eylül – 14 Ekim 2026 · 4 Çarşamba oturumu
+Üçüncü hafta yapay zekânın baş döndürücü ilerlemesi ve söz konusu ilerlemenin dünyanın çoğunluğu için ne anlama geldiği incelenecek.
 
-⏰ 19.30–21.00 (İstanbul saati)
+Son oturum yapay zekâ güvenliği ve yönetişimi alanındaki kariyerlere odaklanacak ve dört hafta boyunca edinilen kavramsal zeminin katılımcıların kendi kariyer planlarına nasıl bağlanabileceği somutlaştırılacak.
+
+Etkinlikte GovAI dönemsel araştırmacısı Dr. Fırat Akova ve AI Safety Türkiye'nin eş kurucusu Berke Çelik konuşma yapacaktır. BlueDot, Anthropic ve METR kaynaklı okumalar üzerinden hem teknik hem de yönetişim alanları birlikte ele alınacak ve etkinlik katılımcı tartışmalarıyla da yürütülecektir.
 
 🔗 Kayıt için [Luma sayfasını ziyaret edin](https://luma.com/o0b3vk4x). Başvurunuz onaylandığında kaydınız kesinleşir.

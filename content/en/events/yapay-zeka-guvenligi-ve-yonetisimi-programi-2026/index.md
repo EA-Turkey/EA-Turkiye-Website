@@ -58,14 +58,16 @@ facilitators:
     role: "Facilitator"
     bio: "A graduate of the Boğaziçi University Department of Philosophy, Berke is the co-founder and director of AI Safety Türkiye and directs the development program at the Global Policy Research Group. Berke's other interests include AI policy in developing countries and decision theory."
 ---
-The AI Safety and Governance Program is a free 4-week reading and discussion program on the safety and governance of advanced AI systems, organized by EA Türkiye.
+The AI Safety and Governance Program will take place on Wednesday evenings, 19:30–21:00, on 23 September, 30 September, 7 October and 14 October. The program is introductory in nature, open to everyone and free of charge.
 
-Each week we read short English-language texts and discuss them in Turkish during online sessions on Wednesday evenings, facilitated by Dr. Fırat Akova and Berke Çelik. The program moves from the alignment problem through power concentration and biosecurity risks to career planning.
+The first session covers the field's core concepts. What does AI alignment mean? Why can models be fragile against small-scale attacks that poison their training data? How does reward hacking show up in today's models?
 
-No technical background is required; anyone who takes the societal effects of AI seriously can apply. Since the readings are in English, English reading ability is required. The program is free; registrations are subject to approval.
+In the second session, participants will meet the most prominent risks in safety and governance: power concentration, gradual disempowerment, engineered pandemics and the collapse of critical infrastructure.
 
-🗓 23 September – 14 October 2026 · 4 Wednesday sessions
+The third week examines AI's dizzying progress and what that progress means for the majority of the world.
 
-⏰ 19:30–21:00 (Istanbul time)
+The final session focuses on careers in AI safety and governance, making concrete how the conceptual ground built over the four weeks can connect to participants' own career plans.
+
+Dr. Fırat Akova, visiting researcher at GovAI, and Berke Çelik, co-founder of AI Safety Türkiye, will be speaking at the event. Working through readings from BlueDot, Anthropic and METR, the program covers the technical and governance sides together, and sessions are driven by participant discussion.
 
 🔗 [Register on Luma](https://luma.com/o0b3vk4x). Your spot is confirmed once your application is approved.
