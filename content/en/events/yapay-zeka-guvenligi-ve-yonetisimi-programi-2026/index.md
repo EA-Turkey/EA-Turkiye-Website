@@ -54,7 +54,6 @@ facilitators:
   - name: "Dr. Fırat Akova"
     role: "Facilitator"
     bio: "Completed his PhD in Philosophy at the University of Warwick with a thesis on effective altruism. He is a researcher at the Centre for the Governance of AI (GovAI); previously he lectured in philosophy at Koç University, was an Oxford Global Priorities Fellow, and researched AI sentience and digital minds at Future Impact Group."
-    url: "https://poedat.org/firat-akova"
   - name: "Berke Çelik"
     role: "Facilitator"
     bio: "A graduate of the Boğaziçi University Department of Philosophy, Berke is the co-founder and director of AI Safety Türkiye and directs the development program at the Global Policy Research Group. Berke's other interests include AI policy in developing countries and decision theory."
