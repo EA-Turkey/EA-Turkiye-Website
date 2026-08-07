@@ -3883,3 +3883,148 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
     gap: var(--space-24);
   }
 }
+
+/* Program schedule: one bordered shell of numbered session rows.
+   Shell mirrors .values-list; rows mirror .contact-topic; reading
+   links reuse .card-cta. Accent follows the --card-accent idiom. */
+.session-list {
+  --card-accent: var(--color-cause-ai-safety);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(216, 229, 233, 0.86);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.session {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: var(--space-24);
+  padding: var(--space-24);
+  border-top: 1px solid rgba(216, 229, 233, 0.86);
+}
+
+.session:first-child {
+  border-top: 0;
+}
+
+.session__index {
+  color: var(--color-brand-700);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.session__body {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.session__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.chip--accent {
+  background: color-mix(in srgb, var(--card-accent, var(--color-brand-500)) 12%, var(--color-surface));
+}
+
+.session__facilitator {
+  color: var(--color-ink-700);
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+.session__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 1.5vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.session__text {
+  margin: 0;
+  max-width: 60rem;
+}
+
+.session__readings {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.session__readings-label {
+  color: var(--color-ink-500);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.session__reading-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+/* Facilitators: light photo-less cards on the shared card surface. */
+.facilitator-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-20);
+}
+
+.facilitator-card {
+  display: grid;
+  align-content: start;
+  gap: var(--space-8);
+  padding: var(--space-24);
+  background: var(--color-surface);
+  border: 1px solid rgba(216, 229, 233, 0.86);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.facilitator-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.facilitator-card__role {
+  color: var(--color-ink-500);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.facilitator-card__bio {
+  margin: 0;
+  color: var(--color-ink-700);
+}
+
+.facilitator-card .card-cta {
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 700px) {
+  .facilitator-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .session {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    padding: var(--space-20);
+  }
+}

@@ -50,9 +50,62 @@
 
     <div class="prose" data-reveal>{{ .Content }}</div>
 
+    {{ with .Params.sessions }}
+      <div class="stack-lg">
+        {{ partial "section-header.html" (dict "eyebrow" (i18n "program_schedule")) }}
+        <div class="session-list" data-reveal>
+          {{ range $i, $s := . }}
+            <article class="session">
+              <span class="session__index" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
+              <div class="session__body">
+                <div class="session__meta">
+                  <span class="chip chip--accent">{{ $s.date }}</span>
+                  {{ with $s.facilitator }}<span class="session__facilitator">{{ i18n "session_facilitator" }}: {{ . }}</span>{{ end }}
+                </div>
+                <h3 class="session__title">{{ $s.title }}</h3>
+                {{ with $s.text }}<p class="session__text text-muted">{{ . }}</p>{{ end }}
+                {{ with $s.readings }}
+                  <div class="session__readings">
+                    <span class="session__readings-label">{{ i18n "session_readings" }}{{ with $s.readings_note }} · {{ . }}{{ end }}</span>
+                    <div class="session__reading-links">
+                      {{ range . }}
+                        <a class="card-cta" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title }} <span class="cta-arrow cta-arrow--up" aria-hidden="true">↗</span><span class="sr-only">{{ i18n "opens_in_new_tab" }}</span></a>
+                      {{ end }}
+                    </div>
+                  </div>
+                {{ end }}
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    {{ with .Params.facilitators }}
+      <div class="stack-lg">
+        {{ partial "section-header.html" (dict "eyebrow" (i18n "program_facilitators")) }}
+        <div class="facilitator-grid" data-reveal>
+          {{ range . }}
+            <article class="facilitator-card">
+              <span class="facilitator-card__role">{{ .role }}</span>
+              <h3>{{ .name }}</h3>
+              <p class="facilitator-card__bio">{{ .bio }}</p>
+              {{ with .url }}<a class="card-cta" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ i18n "learn_more" }} <span class="cta-arrow cta-arrow--up" aria-hidden="true">↗</span><span class="sr-only">{{ i18n "opens_in_new_tab" }}</span></a>{{ end }}
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    {{ $luma := .Params.luma_url }}
+    {{ $sourceIsLuma := and $luma (eq .Params.source_url $luma) }}
     <div class="cluster" data-reveal>
-      {{ with .Params.source_url }}{{ partial "button.html" (dict "url" . "label" (i18n "view_on_substack") "variant" "primary" "external" true) }}{{ end }}
-      {{ with .Params.luma_url }}{{ partial "button.html" (dict "url" . "label" (i18n "open_luma") "variant" "secondary" "external" true) }}{{ end }}
+      {{ if $sourceIsLuma }}
+        {{ partial "button.html" (dict "url" $luma "label" (i18n "register_now") "variant" "primary" "external" true) }}
+      {{ else }}
+        {{ with .Params.source_url }}{{ partial "button.html" (dict "url" . "label" (i18n "view_on_substack") "variant" "primary" "external" true) }}{{ end }}
+        {{ with $luma }}{{ partial "button.html" (dict "url" . "label" (i18n "open_luma") "variant" "secondary" "external" true) }}{{ end }}
+      {{ end }}
       {{ with $calendarURL }}{{ partial "button.html" (dict "url" . "label" (i18n "add_to_calendar") "variant" "secondary" "external" true) }}{{ end }}
       {{ partial "helpers/lang-context.html" . }}
       {{ partial "button.html" (dict "url" (partial "helpers/section-root.html" (dict "lang" (.Scratch.Get "actualLang") "key" "events") | strings.TrimSpace) "label" (i18n "back_to_events") "variant" "ghost") }}
