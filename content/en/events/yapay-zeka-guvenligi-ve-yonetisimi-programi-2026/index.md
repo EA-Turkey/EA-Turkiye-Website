@@ -57,16 +57,16 @@ facilitators:
     url: "https://poedat.org/firat-akova"
   - name: "Berke Çelik"
     role: "Facilitator"
-    bio: "Co-founder of AI Safety Türkiye."
+    bio: "A graduate of the Boğaziçi University Department of Philosophy, Berke is the co-founder and director of AI Safety Türkiye and directs the development program at the Global Policy Research Group. Berke's other interests include AI policy in developing countries and decision theory."
 ---
 The AI Safety and Governance Program is a free 4-week reading and discussion program on the safety and governance of advanced AI systems, organized by EA Türkiye.
 
 Each week we read short English-language texts and discuss them in Turkish during online sessions on Wednesday evenings, facilitated by Dr. Fırat Akova and Berke Çelik. The program moves from the alignment problem through power concentration and biosecurity risks to career planning.
 
-No technical background is required — anyone who takes the societal effects of AI seriously can apply. Since the readings are in English, English reading ability is required. The program is free; registrations are subject to approval.
+No technical background is required; anyone who takes the societal effects of AI seriously can apply. Since the readings are in English, English reading ability is required. The program is free; registrations are subject to approval.
 
 🗓 23 September – 14 October 2026 · 4 Wednesday sessions
 
 ⏰ 19:30–21:00 (Istanbul time)
 
-🔗 [Register on Luma](https://luma.com/o0b3vk4x) — your spot is confirmed once your application is approved.
+🔗 [Register on Luma](https://luma.com/o0b3vk4x). Your spot is confirmed once your application is approved.

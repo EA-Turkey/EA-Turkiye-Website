@@ -58,7 +58,7 @@ facilitators:
     url: "https://poedat.org/firat-akova"
   - name: "Berke Çelik"
     role: "Kolaylaştırıcı"
-    bio: "AI Safety Türkiye'nin kurucu ortağıdır."
+    bio: "Boğaziçi Üniversitesi Felsefe Bölümü mezunu olan Berke, AI Safety Türkiye'nin eş kurucusu ve direktörüdür. Global Policy Research Group'ta kalkınma programının direktörlüğünü yapan Berke'nin diğer ilgi alanları gelişmekte olan ülkelerdeki yapay zekâ politikaları ve karar teorisidir."
 ---
 Yapay Zekâ Güvenliği ve Yönetişimi Programı, ileri yapay zekâ sistemlerinin güvenliği ve yönetişimi üstüne 4 haftalık ücretsiz bir okuma ve tartışma programıdır. Program EA Türkiye tarafından düzenlenmektedir.
 
@@ -70,4 +70,4 @@ Teknik önbilgi gerekmez; yapay zekânın toplumsal etkilerini ciddiye alan herk
 
 ⏰ 19.30–21.00 (İstanbul saati)
 
-🔗 Kayıt için [Luma sayfasını ziyaret edin](https://luma.com/o0b3vk4x) — başvurunuz onaylandığında kaydınız kesinleşir.
+🔗 Kayıt için [Luma sayfasını ziyaret edin](https://luma.com/o0b3vk4x). Başvurunuz onaylandığında kaydınız kesinleşir.
