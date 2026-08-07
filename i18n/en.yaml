@@ -82,6 +82,18 @@
 - id: view_on_substack
   translation: "View on Substack"
 
+- id: program_schedule
+  translation: "Program schedule"
+
+- id: session_readings
+  translation: "Readings"
+
+- id: session_facilitator
+  translation: "Facilitator"
+
+- id: program_facilitators
+  translation: "Facilitators"
+
 - id: featured_story
   translation: "Featured story"
 

@@ -82,6 +82,18 @@
 - id: view_on_substack
   translation: "Substack'te görüntüle"
 
+- id: program_schedule
+  translation: "Program akışı"
+
+- id: session_readings
+  translation: "Okumalar"
+
+- id: session_facilitator
+  translation: "Kolaylaştırıcı"
+
+- id: program_facilitators
+  translation: "Kolaylaştırıcılar"
+
 - id: featured_story
   translation: "Öne çıkan yazı"
 
