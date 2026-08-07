@@ -17,7 +17,7 @@ source_url: "https://luma.com/o0b3vk4x"
 sessions:
   - date: "23 September 2026"
     facilitator: "Dr. Fırat Akova"
-    title: "Introduction: safety and governance"
+    title: "Introduction: AI Alignment, Reward Hacking and Model Capabilities"
     readings:
       - title: "What is AI alignment? · BlueDot"
         url: "https://blog.bluedot.org/p/what-is-ai-alignment"
@@ -27,7 +27,7 @@ sessions:
         url: "https://metr.org/blog/2025-06-05-recent-reward-hacking/"
   - date: "30 September 2026"
     facilitator: "Dr. Fırat Akova"
-    title: "Choosing and introducing the key topics"
+    title: "Power Concentration, Gradual Disempowerment, Engineered Pandemics and Critical Infrastructure Collapse"
     text: "Participants split into groups; everyone picks one of the readings below."
     readings_note: "pick one"
     readings:
@@ -41,7 +41,7 @@ sessions:
         url: "https://blog.bluedot.org/p/how-ai-could-enable-critical-infrastructure-collapse"
   - date: "7 October 2026"
     facilitator: "Berke Çelik"
-    title: "Rapid AI progress and its societal effects"
+    title: "What Happens to the Majority of the World? The Trajectory of Frontier Models"
     readings:
       - title: "The twilight of the chatbots · One Useful Thing"
         url: "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots"
@@ -49,7 +49,7 @@ sessions:
         url: "https://newsletter.deenamousa.com/p/ai-wont-be-the-next-leapfrog-miracle"
   - date: "14 October 2026"
     facilitator: "Dr. Fırat Akova"
-    title: "Career readings and a career exercise"
+    title: "AI Careers"
 facilitators:
   - name: "Dr. Fırat Akova"
     role: "Facilitator"

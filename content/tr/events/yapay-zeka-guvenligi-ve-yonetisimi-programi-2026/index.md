@@ -18,7 +18,7 @@ source_url: "https://luma.com/o0b3vk4x"
 sessions:
   - date: "23 Eylül 2026"
     facilitator: "Dr. Fırat Akova"
-    title: "Giriş: güvenlik ve yönetişim"
+    title: "Giriş: Yapay Zekâ Uyumlandırması, Ödül Korsanlığı ve Modellerin Yetenekleri"
     readings:
       - title: "What is AI alignment? · BlueDot"
         url: "https://blog.bluedot.org/p/what-is-ai-alignment"
@@ -28,7 +28,7 @@ sessions:
         url: "https://metr.org/blog/2025-06-05-recent-reward-hacking/"
   - date: "30 Eylül 2026"
     facilitator: "Dr. Fırat Akova"
-    title: "Önemli konuların seçimi ve tanıtımı"
+    title: "Güç Yoğunlaşması, Aşamalı Güçten Düşme, Üretilmiş Salgınlar ve Kritik Altyapıların Çöküşü"
     text: "Katılımcılar gruplara ayrılır; herkes aşağıdaki okumalardan birini seçer."
     readings_note: "birini seçin"
     readings:
@@ -42,7 +42,7 @@ sessions:
         url: "https://blog.bluedot.org/p/how-ai-could-enable-critical-infrastructure-collapse"
   - date: "7 Ekim 2026"
     facilitator: "Berke Çelik"
-    title: "Yapay zekânın hızlı gelişimi ve toplumsal etkileri"
+    title: "Dünyanın Çoğunluğuna Ne Olacak? Öncü Modellerin Gelişim Süreci"
     readings:
       - title: "The twilight of the chatbots · One Useful Thing"
         url: "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots"
@@ -50,7 +50,7 @@ sessions:
         url: "https://newsletter.deenamousa.com/p/ai-wont-be-the-next-leapfrog-miracle"
   - date: "14 Ekim 2026"
     facilitator: "Dr. Fırat Akova"
-    title: "Kariyer okumaları ve kariyer egzersizi"
+    title: "Yapay Zekâ Kariyerleri"
 facilitators:
   - name: "Dr. Fırat Akova"
     role: "Kolaylaştırıcı"
