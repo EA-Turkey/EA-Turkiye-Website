@@ -9,18 +9,29 @@
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $events = sort $events "Params.start" "desc" }}
-{{ $years := slice }}
-{{ range $events }}
-  {{ $year := (time.AsTime .Params.start).Format "2006" }}
-  {{ if not (in $years $year) }}
-    {{ $years = $years | append $year }}
+{{ $upcoming := slice }}
+{{ $past := slice }}
+{{ $now := now }}
+{{ range sort $events "Params.start" }}
+  {{ $end := cond .Params.end (time.AsTime .Params.end) (time.AsTime .Params.start) }}
+  {{ if ge $end.Unix $now.Unix }}
+    {{ $upcoming = $upcoming | append . }}
+  {{ else }}
+    {{ $past = $past | append . }}
   {{ end }}
 {{ end }}
+{{ $past = sort $past "Params.start" "desc" }}
 
 <section class="section events-archive events-archive__upcoming">
   <div class="container--wide stack-lg">
     {{ partial "section-header.html" (dict "title" (i18n "upcoming_events") "text" .Params.upcoming_text) }}
+    {{ if gt (len $upcoming) 0 }}
+      <div class="event-grid event-grid--home" data-reveal>
+        {{ range $upcoming }}
+          {{ partial "event-card.html" (dict "page" . "variant" "home") }}
+        {{ end }}
+      </div>
+    {{ end }}
     <div class="events-archive__upcoming-layout">
       {{ with .Site.Params.events.luma_embed_url }}
         <link rel="preconnect" href="https://luma.com">
@@ -47,31 +58,51 @@
   </div>
 </section>
 
-<section class="section section--surface events-archive events-archive__all">
+<section class="section section--surface events-archive events-archive__past">
   <div class="container--wide stack-lg">
-    {{ partial "section-header.html" (dict "title" (i18n "all_events") "text" .Params.past_text) }}
-    {{ if gt (len $events) 0 }}
-      <div class="events-filter" data-event-filter role="group" aria-label="{{ i18n "events_filter_label" }}">
-        <button type="button" class="events-filter__button is-active" data-filter-mode="all" aria-pressed="true">{{ i18n "events_filter_all" }}</button>
-        <button type="button" class="events-filter__button" data-filter-mode="upcoming" aria-pressed="false">{{ i18n "events_filter_upcoming" }}</button>
-        <label class="events-filter__year">
-          <span class="visually-hidden">{{ i18n "events_filter_year" }}</span>
-          <select class="events-filter__select" data-filter-year>
-            <option value="">{{ i18n "events_filter_year" }}</option>
-            {{ range $years }}
-              <option value="{{ . }}">{{ . }}</option>
-            {{ end }}
-          </select>
-        </label>
-      </div>
-      <div class="event-grid event-grid--archive events-archive__grid" data-event-list data-reveal>
-        {{ range $events }}
-          {{ partial "event-card.html" (dict "page" . "variant" "archive") }}
+    {{ partial "section-header.html" (dict "title" (i18n "past_events") "text" .Params.past_text) }}
+    {{ if gt (len $past) 0 }}
+      {{ $pastYears := slice }}
+      {{ range $past }}
+        {{ $year := (time.AsTime .Params.start).Format "2006" }}
+        {{ if not (in $pastYears $year) }}
+          {{ $pastYears = $pastYears | append $year }}
         {{ end }}
-      </div>
-      <div class="empty-state events-archive__empty" data-filter-empty hidden>
-        <p>{{ i18n "no_matching_events" }}</p>
-      </div>
+      {{ end }}
+      {{ $recentYears := first 2 $pastYears }}
+      {{ range $pastYears }}
+        {{ $year := . }}
+        <section class="events-archive__year stack-md" id="events-year-{{ $year }}">
+          <h3 class="events-archive__year-label">{{ $year }}</h3>
+          {{ if in $recentYears $year }}
+            <div class="event-grid event-grid--archive events-archive__grid">
+              {{ range $past }}
+                {{ if eq ((time.AsTime .Params.start).Format "2006") $year }}
+                  {{ partial "event-card.html" (dict "page" . "variant" "archive") }}
+                {{ end }}
+              {{ end }}
+            </div>
+          {{ else }}
+            <div class="blog-archive__year-list">
+              {{ range $past }}
+                {{ if eq ((time.AsTime .Params.start).Format "2006") $year }}
+                  <article class="blog-archive-item">
+                    <a class="blog-archive-item__link" href="{{ .RelPermalink }}">
+                      <div class="blog-archive-item__meta">
+                        <span class="blog-date">{{ (time.AsTime .Params.start) | time.Format ":date_long" }}</span>
+                      </div>
+                      <div class="blog-archive-item__body">
+                        <h4 class="blog-archive-item__title">{{ .Title }}</h4>
+                        <p class="blog-archive-item__summary">{{ .Params.summary | default .Params.description }}</p>
+                      </div>
+                    </a>
+                  </article>
+                {{ end }}
+              {{ end }}
+            </div>
+          {{ end }}
+        </section>
+      {{ end }}
     {{ else }}
       <div class="empty-state events-archive__empty" data-reveal>
         <p>{{ i18n "no_past_events" }}</p>
