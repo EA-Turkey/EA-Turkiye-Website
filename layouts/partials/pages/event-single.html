@@ -39,16 +39,18 @@
       {{ end }}
     </div>
 
-    {{ with .Params.featured_image }}
-      <div class="featured-media" data-reveal>
-        {{ partial "picture.html" (dict
-          "src" .
-          "alt" $.Title
-          "class" ""
-          "variant" "hero"
-          "sizes" "(min-width: 72rem) 72rem, 100vw"
-        ) }}
-      </div>
+    {{ if ne .Params.media_position "bottom" }}
+      {{ with .Params.featured_image }}
+        <div class="featured-media" data-reveal>
+          {{ partial "picture.html" (dict
+            "src" .
+            "alt" $.Title
+            "class" ""
+            "variant" "hero"
+            "sizes" "(min-width: 72rem) 72rem, 100vw"
+          ) }}
+        </div>
+      {{ end }}
     {{ end }}
 
     {{ if $sourceIsLuma }}
@@ -119,6 +121,20 @@
       {{ partial "helpers/lang-context.html" . }}
       {{ partial "button.html" (dict "url" (partial "helpers/section-root.html" (dict "lang" (.Scratch.Get "actualLang") "key" "events") | strings.TrimSpace) "label" (i18n "back_to_events") "variant" "ghost") }}
     </div>
+
+    {{ if eq .Params.media_position "bottom" }}
+      {{ with .Params.featured_image }}
+        <div class="featured-media" data-reveal>
+          {{ partial "picture.html" (dict
+            "src" .
+            "alt" $.Title
+            "class" ""
+            "variant" "hero"
+            "sizes" "(min-width: 72rem) 72rem, 100vw"
+          ) }}
+        </div>
+      {{ end }}
+    {{ end }}
   </div>
 </section>
 

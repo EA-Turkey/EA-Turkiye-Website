@@ -12,6 +12,7 @@ event_mode: "online"
 cause_area: "ai-safety"
 summary: "A free 4-week online reading and discussion program introducing AI safety and governance. Wednesday evenings 19:30–21:00, 23 September – 14 October 2026."
 featured_image: "events/yapay-zeka-guvenligi-ve-yonetisimi-programi-2026/cover.jpg"
+media_position: "bottom"
 luma_url: "https://luma.com/o0b3vk4x"
 source_url: "https://luma.com/o0b3vk4x"
 sessions:

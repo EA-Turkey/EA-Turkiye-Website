@@ -13,6 +13,7 @@ event_mode: "online"
 cause_area: "ai-safety"
 summary: "Yapay zekâ güvenliği ve yönetişimine giriş niteliğinde 4 haftalık ücretsiz çevrim içi okuma ve tartışma programı. 23 Eylül – 14 Ekim 2026, Çarşamba akşamları 19.30–21.00."
 featured_image: "events/yapay-zeka-guvenligi-ve-yonetisimi-programi-2026/cover.jpg"
+media_position: "bottom"
 luma_url: "https://luma.com/o0b3vk4x"
 source_url: "https://luma.com/o0b3vk4x"
 sessions:
