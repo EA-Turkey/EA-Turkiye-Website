@@ -7,18 +7,9 @@
 {{ $image := $page.Params.card_image | default $page.Params.featured_image }}
 {{ $displayDate := $page.Params.schedule_text | default ($start | time.Format ":date_long") }}
 {{ $dateLabel := cond $isHome $displayDate ($start | time.Format ":date_long") }}
-{{ $summary := "" }}
-{{ with $page.Params.summary }}
-  {{ $summary = . | plainify | replaceRE "\\s+" " " | strings.TrimSpace }}
-{{ end }}
-{{ if not $summary }}
-  {{ with ($page.Params.description | default $page.Summary) }}
-    {{ $summary = . | plainify | replaceRE "\\s+" " " | strings.TrimSpace }}
-  {{ end }}
-{{ end }}
-{{ $hasMeta := or $page.Params.city $page.Params.event_mode }}
+{{ $end := cond (isset $page.Params "end") (time.AsTime $page.Params.end) $start }}
 
-<article class="event-card event-card--{{ $variant }} {{ if $image }}event-card--has-image{{ else }}event-card--no-image{{ end }}">
+<article class="event-card event-card--{{ $variant }} {{ if $image }}event-card--has-image{{ else }}event-card--no-image{{ end }}" data-event-year="{{ $start.Format "2006" }}" data-event-end="{{ $end.Unix }}">
   <a class="event-card__link" href="{{ $page.RelPermalink }}">
     <div class="event-card__media{{ if not $image }} event-card__media--fallback{{ end }}" aria-hidden="true">
       {{ if $image }}
@@ -40,13 +31,9 @@
         <p class="event-card__date">{{ $dateLabel }}</p>
       </div>
       <h3 class="event-card__title">{{ $page.Title }}</h3>
-      {{ with $summary }}
-        <p class="event-card__summary">{{ . }}</p>
-      {{ end }}
-      {{ if $hasMeta }}
+      {{ with $page.Params.event_mode }}
         <div class="event-card__chips">
-          {{ with $page.Params.city }}{{ if ne . $modeLabel }}<span class="chip">{{ . }}</span>{{ end }}{{ end }}
-          {{ with $page.Params.event_mode }}<span class="chip">{{ $modeLabel }}</span>{{ end }}
+          <span class="chip">{{ $modeLabel }}</span>
         </div>
       {{ end }}
     </div>

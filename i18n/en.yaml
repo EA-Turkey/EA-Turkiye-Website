@@ -40,6 +40,24 @@
 - id: no_past_events
   translation: "Past events will be archived here."
 
+- id: all_events
+  translation: "All events"
+
+- id: events_filter_label
+  translation: "Filter events"
+
+- id: events_filter_all
+  translation: "All"
+
+- id: events_filter_upcoming
+  translation: "Upcoming"
+
+- id: events_filter_year
+  translation: "Year"
+
+- id: no_matching_events
+  translation: "No events match this filter."
+
 - id: featured_resources
   translation: "Featured resources"
 

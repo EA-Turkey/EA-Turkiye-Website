@@ -40,6 +40,24 @@
 - id: no_past_events
   translation: "Geçmiş etkinlikler burada arşivlenecek."
 
+- id: all_events
+  translation: "Tüm etkinlikler"
+
+- id: events_filter_label
+  translation: "Etkinlikleri filtrele"
+
+- id: events_filter_all
+  translation: "Tümü"
+
+- id: events_filter_upcoming
+  translation: "Gelecek"
+
+- id: events_filter_year
+  translation: "Yıl"
+
+- id: no_matching_events
+  translation: "Bu filtreyle eşleşen etkinlik bulunamadı."
+
 - id: featured_resources
   translation: "Öne çıkan kaynaklar"
 

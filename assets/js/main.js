@@ -165,6 +165,63 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
   }
 
+  const eventFilter = document.querySelector("[data-event-filter]");
+  const eventList = document.querySelector("[data-event-list]");
+
+  if (eventFilter && eventList) {
+    const modeButtons = Array.from(eventFilter.querySelectorAll("[data-filter-mode]"));
+    const yearSelect = eventFilter.querySelector("[data-filter-year]");
+    const emptyState = document.querySelector("[data-filter-empty]");
+    const cards = Array.from(eventList.querySelectorAll("[data-event-year]"));
+
+    const applyFilter = (mode, year) => {
+      const nowSeconds = Date.now() / 1000;
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        let isVisible = true;
+
+        if (year) {
+          isVisible = card.dataset.eventYear === year;
+        } else if (mode === "upcoming") {
+          isVisible = Number(card.dataset.eventEnd) >= nowSeconds;
+        }
+
+        card.hidden = !isVisible;
+
+        if (isVisible) {
+          visibleCount += 1;
+        }
+      });
+
+      modeButtons.forEach((button) => {
+        const isActive = !year && button.dataset.filterMode === mode;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      if (emptyState) {
+        emptyState.hidden = visibleCount > 0;
+      }
+    };
+
+    modeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        if (yearSelect) {
+          yearSelect.value = "";
+        }
+
+        applyFilter(button.dataset.filterMode, "");
+      });
+    });
+
+    if (yearSelect) {
+      yearSelect.addEventListener("change", () => {
+        applyFilter("all", yearSelect.value);
+      });
+    }
+  }
+
   const lumaFrames = document.querySelectorAll("iframe[data-luma-src]");
 
   if (lumaFrames.length) {
