@@ -100,7 +100,7 @@
             <article class="facilitator-card">
               <span class="facilitator-card__role">{{ .role }}</span>
               <h3>{{ .name }}</h3>
-              <p class="facilitator-card__bio">{{ .bio }}</p>
+              <p class="facilitator-card__bio">{{ .bio | markdownify }}</p>
               {{ with .url }}<a class="card-cta" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ i18n "learn_more" }} <span class="cta-arrow cta-arrow--up" aria-hidden="true">↗</span><span class="sr-only">{{ i18n "opens_in_new_tab" }}</span></a>{{ end }}
             </article>
           {{ end }}

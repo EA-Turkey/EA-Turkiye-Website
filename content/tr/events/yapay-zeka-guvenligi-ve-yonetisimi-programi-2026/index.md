@@ -58,7 +58,7 @@ facilitators:
     bio: "Doktorasını Warwick Üniversitesi Felsefe Bölümü'nde efektif altruizm üstüne tamamladı. Centre for the Governance of AI'da (GovAI) araştırmacıdır; daha önce Koç Üniversitesi'nde felsefe öğretim görevlisi olarak çalıştı, Oxford Global Priorities Fellow seçildi ve Future Impact Group'ta yapay zekâ deneyimi ve dijital zihinler üstüne araştırmalar yürüttü."
   - name: "Berke Çelik"
     role: "Kolaylaştırıcı"
-    bio: "Boğaziçi Üniversitesi Felsefe Bölümü mezunu olan Berke, AI Safety Türkiye'nin eş kurucusu ve direktörüdür. Global Policy Research Group'ta kalkınma programının direktörlüğünü yapan Berke'nin diğer ilgi alanları gelişmekte olan ülkelerdeki yapay zekâ politikaları ve karar teorisidir."
+    bio: "Berke Çelik, Türkiye'de yapay zekâ güvenliği alanında eğitim programları ve topluluk çalışmaları yürüten [AI Safety Türkiye](https://aisafetyturkiye.org/)'nin eş direktörüdür. Daha önce Global Policy Research Group'ta yapay zekâ yönetişimi çalışmalarına katkıda bulunmuş ve Kalkınma Programı'nı yürütmüş; ayrıca Lead Exposure Elimination Project ve Alliance for Reducing Microbial Resistance'ta çalışmıştır. Boğaziçi Üniversitesinde Felsefe okumuştur."
 ---
 Yapay Zekâ Güvenliği ve Yönetişimi Programı, 23 Eylül, 30 Eylül, 7 Ekim ve 14 Ekim Çarşamba akşamları 19.30–21.00 arasında gerçekleştirilecek. Giriş niteliğinde olan program, herkese açık ve ücretsiz.
 

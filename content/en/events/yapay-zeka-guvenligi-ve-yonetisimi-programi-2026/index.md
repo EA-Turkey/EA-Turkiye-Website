@@ -57,7 +57,7 @@ facilitators:
     bio: "Completed his PhD in Philosophy at the University of Warwick with a thesis on effective altruism. He is a researcher at the Centre for the Governance of AI (GovAI); previously he lectured in philosophy at Koç University, was an Oxford Global Priorities Fellow, and researched AI sentience and digital minds at Future Impact Group."
   - name: "Berke Çelik"
     role: "Facilitator"
-    bio: "A graduate of the Boğaziçi University Department of Philosophy, Berke is the co-founder and director of AI Safety Türkiye and directs the development program at the Global Policy Research Group. Berke's other interests include AI policy in developing countries and decision theory."
+    bio: "Berke Çelik is the co-director of [AI Safety Türkiye](https://aisafetyturkiye.org/), which runs education programs and community work on AI safety in Türkiye. Earlier work includes contributing to AI governance research and running the Development Program at the Global Policy Research Group, as well as roles at the Lead Exposure Elimination Project and the Alliance for Reducing Microbial Resistance. Berke studied Philosophy at Boğaziçi University."
 ---
 The AI Safety and Governance Program will take place on Wednesday evenings, 19:30–21:00, on 23 September, 30 September, 7 October and 14 October. The program is introductory in nature, open to everyone and free of charge.
 
