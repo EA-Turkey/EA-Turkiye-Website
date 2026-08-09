@@ -65,22 +65,33 @@
       <div class="stack-lg">
         {{ partial "section-header.html" (dict "eyebrow" (i18n "program_schedule")) }}
         <div class="session-list" data-reveal>
-          {{ range $i, $s := . }}
+          {{ range $s := . }}
+            {{ $dateParts := split $s.date " " }}
             <article class="session">
-              <span class="session__index" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
+              <div class="session__date">
+                {{ if ge (len $dateParts) 2 }}
+                  <span class="session__date-day" aria-hidden="true">{{ index $dateParts 0 }}</span>
+                  <span class="session__date-month" aria-hidden="true">{{ substr (index $dateParts 1) 0 3 }}</span>
+                  <span class="sr-only">{{ $s.date }}</span>
+                {{ else }}
+                  <span class="session__date-day">{{ $s.date }}</span>
+                {{ end }}
+              </div>
               <div class="session__body">
-                <div class="session__meta">
-                  <span class="chip chip--accent">{{ $s.date }}</span>
-                  {{ with $s.facilitator }}<span class="session__facilitator">{{ i18n "session_facilitator" }}: {{ . }}</span>{{ end }}
+                <div class="session__heading">
+                  <h3 class="session__title">{{ $s.title }}</h3>
+                  {{ with $s.facilitator }}<p class="session__facilitator">{{ i18n "session_facilitator" }}: {{ . }}</p>{{ end }}
                 </div>
-                <h3 class="session__title">{{ $s.title }}</h3>
                 {{ with $s.text }}<p class="session__text text-muted">{{ . }}</p>{{ end }}
                 {{ with $s.readings }}
                   <div class="session__readings">
                     <span class="session__readings-label">{{ i18n "session_readings" }}{{ with $s.readings_note }} · {{ . }}{{ end }}</span>
                     <div class="session__reading-links">
                       {{ range . }}
-                        <a class="card-cta" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title }} <span class="cta-arrow cta-arrow--up" aria-hidden="true">↗</span><span class="sr-only">{{ i18n "opens_in_new_tab" }}</span></a>
+                        {{ $words := split .title " " }}
+                        {{ $lastWord := index $words (sub (len $words) 1) }}
+                        {{ $head := strings.TrimSpace (strings.TrimSuffix $lastWord .title) }}
+                        <a class="session__reading" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ with $head }}{{ . }} {{ end }}<span class="session__reading-tail">{{ $lastWord }} <span class="cta-arrow cta-arrow--up" aria-hidden="true">↗</span></span><span class="sr-only">{{ i18n "opens_in_new_tab" }}</span></a>
                       {{ end }}
                     </div>
                   </div>

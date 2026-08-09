@@ -3900,7 +3900,7 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 
 .session {
   display: grid;
-  grid-template-columns: 4rem minmax(0, 1fr);
+  grid-template-columns: 5.25rem minmax(0, 1fr);
   gap: var(--space-24);
   padding: var(--space-24);
   border-top: 1px solid rgba(216, 229, 233, 0.86);
@@ -3910,39 +3910,54 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   border-top: 0;
 }
 
-.session__index {
+.session__date {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  row-gap: 0.2rem;
+  padding-block: 0.1rem var(--space-8);
+  padding-right: var(--space-16);
+  border-right: 1px solid rgba(216, 229, 233, 0.86);
+}
+
+.session__date-day {
   color: var(--color-brand-700);
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 1.55rem;
+  font-size: 1.85rem;
   line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: lining-nums;
+}
+
+.session__date-month {
+  color: var(--color-ink-500);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .session__body {
   display: grid;
-  gap: var(--space-12);
+  gap: var(--space-16);
 }
 
-.session__meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-8);
-}
-
-.chip--accent {
-  background: color-mix(in srgb, var(--card-accent, var(--color-brand-500)) 12%, var(--color-surface));
+.session__heading {
+  display: grid;
+  gap: var(--space-4);
 }
 
 .session__facilitator {
-  color: var(--color-ink-700);
+  margin: 0;
+  color: var(--color-ink-500);
   font-size: var(--text-small);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .session__title {
   font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 1.5vw, 1.45rem);
+  font-size: clamp(1.25rem, 1.6vw, 1.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -3968,9 +3983,42 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 }
 
 .session__reading-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-8);
+  display: grid;
+  justify-items: start;
+  gap: 0.35rem;
+}
+
+.session__reading {
+  display: inline-block;
+  padding-block: 0.25rem;
+  color: var(--color-brand-700);
+  font-size: var(--text-small);
+  font-weight: 600;
+  line-height: 1.45;
+  text-decoration: underline;
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.18em;
+  text-decoration-color: rgba(var(--color-brand-600-rgb), 0.35);
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.session__reading:hover,
+.session__reading:focus-visible {
+  color: var(--color-ink-950);
+  text-decoration-color: currentColor;
+}
+
+.session__reading-tail {
+  white-space: nowrap;
+}
+
+.session__reading .cta-arrow {
+  font-size: 0.85em;
+}
+
+.session__reading:hover .cta-arrow--up,
+.session__reading:focus-visible .cta-arrow--up {
+  transform: translate(2px, -2px);
 }
 
 /* Facilitators: light photo-less cards on the shared card surface. */
@@ -4023,9 +4071,17 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 
 @media (max-width: 560px) {
   .session {
-    grid-template-columns: 1fr;
-    gap: var(--space-12);
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    gap: var(--space-16);
     padding: var(--space-20);
+  }
+
+  .session__date {
+    padding-right: var(--space-12);
+  }
+
+  .session__date-day {
+    font-size: 1.4rem;
   }
 }
 
