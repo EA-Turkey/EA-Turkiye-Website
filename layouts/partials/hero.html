@@ -7,6 +7,8 @@
 {{ $primaryLabel := .primary_label }}
 {{ $secondaryURL := partial "helpers/resolve-url.html" .secondary_url | strings.TrimSpace }}
 {{ $secondaryLabel := .secondary_label }}
+{{ $tertiaryURL := partial "helpers/resolve-url.html" .tertiary_url | strings.TrimSpace }}
+{{ $tertiaryLabel := .tertiary_label }}
 {{ $stats := .stats }}
 {{ $featuredEvent := .featured_event }}
 {{ $heroClasses := slice "hero" (printf "hero--%s" $variant) }}
@@ -38,10 +40,11 @@
         {{ end }}
       </h1>
       {{ with $lead }}<p class="hero__lead">{{ . }}</p>{{ end }}
-      {{ if or $primaryURL $secondaryURL }}
+      {{ if or $primaryURL $secondaryURL $tertiaryURL }}
         <div class="hero__actions">
           {{ with $primaryURL }}{{ partial "button.html" (dict "url" . "label" $primaryLabel "variant" "primary" "size" "cta") }}{{ end }}
           {{ with $secondaryURL }}{{ partial "button.html" (dict "url" . "label" $secondaryLabel "variant" "secondary") }}{{ end }}
+          {{ with $tertiaryURL }}{{ partial "button.html" (dict "url" . "label" $tertiaryLabel "variant" "secondary") }}{{ end }}
         </div>
       {{ end }}
     </div>

@@ -5,10 +5,12 @@ description: A community looking for better ways to address the world's most urg
 hero_eyebrow: Effective Altruism · Turkey
 hero_title: A community looking for better ways to address the world's most urgent problems
 hero_lead: We use evidence, reasoning, and community to explore how to benefit others as much as possible.
-hero_primary_label: Join the community
-hero_primary_url: /en/get-involved/
-hero_secondary_label: What is EA?
-hero_secondary_url: /en/about/
+hero_primary_label: "EA Istanbul Summit"
+hero_primary_url: /en/events/effective-altruism-istanbul-summit-2025-applications-open/
+hero_secondary_label: Join the community
+hero_secondary_url: /en/get-involved/
+hero_tertiary_label: What is EA?
+hero_tertiary_url: /en/about/
 stats:
   - value: "2021"
     label: Founded

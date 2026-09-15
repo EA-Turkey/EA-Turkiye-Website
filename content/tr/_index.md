@@ -5,10 +5,12 @@ description: Kanıt, akıl yürütme ve topluluk aracılığıyla dünyanın en 
 hero_eyebrow: Efektif Altruizm · Türkiye
 hero_title: Başkalarına yardım etmenin en etkili yollarını bulun
 hero_lead: "Efektif Alturizm (Etkili İyilik) şu soruyu sorar: Zamanımızı, paramızı, yeteneklerimizi ve diğer kaynaklarımızı kullanarak en fazla iyiliği nasıl yapabiliriz?"
-hero_primary_label: Topluluğa katıl
-hero_primary_url: /katil/
-hero_secondary_label: EA nedir?
-hero_secondary_url: /hakkimizda/
+hero_primary_label: "Etkili İyilik İstanbul Zirvesi'ne başvurun"
+hero_primary_url: /etkinlikler/efektif-altruizm-istanbul-zirvesi/
+hero_secondary_label: Topluluğa katıl
+hero_secondary_url: /katil/
+hero_tertiary_label: EA nedir?
+hero_tertiary_url: /hakkimizda/
 stats:
   - value: "2021"
     label: Kuruluş
