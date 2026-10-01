@@ -1,8 +1,8 @@
 {{/* Time-based program for multi-track events, laid out as a time grid: one
      column per track (e.g. floor), one row per time boundary, so parallel
      sessions sit side by side. A break that every track lists with the same
-     time and title spans all columns. Cells are emitted in time order, which
-     is also the reading order of the one-column mobile layout.
+     time and title spans all columns. Cells are emitted in time order (the
+     screen-reader order). On phones the grid scrolls sideways.
      Reads `program_tracks` and an optional `program_note`; see content/CONTENT.md. */}}
 {{ with .Params.program_tracks }}
   {{ $tracks := . }}
@@ -55,37 +55,40 @@
 
   <div class="stack-lg" id="program">
     {{ partial "section-header.html" (dict "eyebrow" (i18n "program_schedule") "text" $.Params.program_note) }}
-    <div class="program-grid" style="--program-tracks: {{ len $tracks }}" data-reveal>
-      {{/* Column headers live outside the body grid so they can stay sticky
-           for the whole schedule (a sticky grid item is held to its own row). */}}
-      <div class="program-grid__head">
-        {{ range $ti, $track := $tracks }}
-          <div class="program-grid__track" style="grid-column: {{ add $ti 2 }}">
-            {{ with $track.name }}<span class="program-grid__floor">{{ . }}</span>{{ end }}
-            {{ with $track.level }}<span class="program-grid__level">{{ . }}</span>{{ end }}
-          </div>
-        {{ end }}
-      </div>
-      <div class="program-grid__body">
-        {{ range $bi, $b := $bounds }}
-          {{ if and (lt $bi (sub (len $bounds) 1)) (in $starts $b) }}
-            <span class="program-grid__time" style="grid-row: {{ add $bi 1 }}" aria-hidden="true">{{ $b }}</span>
+    <div class="program-schedule" data-reveal>
+      {{ if $multi }}<p class="program-schedule__hint" aria-hidden="true">{{ i18n "program_swipe_hint" }} <span class="cta-arrow">→</span></p>{{ end }}
+      <div class="program-grid" style="--program-tracks: {{ len $tracks }}">
+        {{/* Column headers live outside the body grid so they can stay sticky
+             for the whole schedule (a sticky grid item is held to its own row). */}}
+        <div class="program-grid__head">
+          {{ range $ti, $track := $tracks }}
+            <div class="program-grid__track" style="grid-column: {{ add $ti 2 }}">
+              {{ with $track.name }}<span class="program-grid__floor">{{ . }}</span>{{ end }}
+              {{ with $track.level }}<span class="program-grid__level">{{ . }}</span>{{ end }}
+            </div>
           {{ end }}
-        {{ end }}
-        <ol class="program-grid__sessions">
-          {{ range sort $cells "order" }}
-            {{ $item := .item }}
-            <li class="program-slot{{ with $item.type }} program-slot--{{ . }}{{ end }}{{ if .shared }} program-slot--shared{{ end }}" style="grid-row: {{ .rowStart }} / {{ .rowEnd }}; grid-column: {{ if .shared }}2 / -1{{ else }}{{ .column }}{{ end }}">
-              <p class="program-slot__meta">
-                <span class="program-slot__time">{{ $item.time }}</span>
-                {{ if not .shared }}{{ with .track.name }}<span class="program-slot__floor">{{ . }}</span>{{ end }}{{ end }}
-              </p>
-              <h3 class="program-slot__title">{{ $item.title }}</h3>
-              {{ with $item.speaker }}<p class="program-slot__speaker">{{ . }}</p>{{ end }}
-              {{ if eq $item.format "online" }}<span class="session__badge">{{ i18n "mode_online" }}</span>{{ end }}
-            </li>
+        </div>
+        <div class="program-grid__body">
+          {{ range $bi, $b := $bounds }}
+            {{ if and (lt $bi (sub (len $bounds) 1)) (in $starts $b) }}
+              <span class="program-grid__time" style="grid-row: {{ add $bi 1 }}" aria-hidden="true">{{ $b }}</span>
+            {{ end }}
           {{ end }}
-        </ol>
+          <ol class="program-grid__sessions">
+            {{ range sort $cells "order" }}
+              {{ $item := .item }}
+              <li class="program-slot{{ with $item.type }} program-slot--{{ . }}{{ end }}{{ if .shared }} program-slot--shared{{ end }}" style="grid-row: {{ .rowStart }} / {{ .rowEnd }}; grid-column: {{ if .shared }}2 / -1{{ else }}{{ .column }}{{ end }}">
+                <p class="program-slot__meta">
+                  <span class="program-slot__time">{{ $item.time }}</span>
+                  {{ if not .shared }}{{ with .track.name }}<span class="program-slot__floor">{{ . }}</span>{{ end }}{{ end }}
+                </p>
+                <h3 class="program-slot__title">{{ $item.title }}</h3>
+                {{ with $item.speaker }}<p class="program-slot__speaker">{{ . }}</p>{{ end }}
+                {{ if eq $item.format "online" }}<span class="session__badge">{{ i18n "mode_online" }}</span>{{ end }}
+              </li>
+            {{ end }}
+          </ol>
+        </div>
       </div>
     </div>
   </div>

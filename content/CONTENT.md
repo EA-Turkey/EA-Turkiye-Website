@@ -101,7 +101,7 @@ Recommended fields:
 Optional program fields (rendered by `layouts/partials/event-program.html`, after the page body):
 
 - `sessions[]` — dated sessions for multi-week programs (`date`, `title`, `facilitator`, `text`, `readings[]`)
-- `program_tracks[]` — time-based schedule for one-day, multi-track events, shown as a grid: one column per track, rows by time, so parallel sessions sit side by side (one chronological list on phones). Each track has `name` (e.g. floor), `level`, and `items[]`
+- `program_tracks[]` — time-based schedule for one-day, multi-track events, shown as a grid: one column per track, rows by time, so parallel sessions sit side by side (on phones the grid scrolls sideways). Each track has `name` (e.g. floor), `level`, and `items[]`
   - item fields: `time` (`"11.00–11.45"`: two-digit 24-hour times, en dash), `title`, `speaker`, `format: "online"` (adds a badge), `type: "break"` (quieter cell for breaks and meals)
   - a break listed in every track with the same `time` and `title` is shown once, across all columns
 - `program_note` — one line shown under the "Program" heading
