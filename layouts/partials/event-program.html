@@ -1,0 +1,34 @@
+{{/* Time-based program for multi-track events. Reads `program_tracks` (and an
+     optional `program_note`) from front matter; see content/CONTENT.md. */}}
+{{ with .Params.program_tracks }}
+  <div class="stack-lg" id="program">
+    {{ partial "section-header.html" (dict "eyebrow" (i18n "program_schedule") "text" $.Params.program_note) }}
+    {{ range $i, $track := . }}
+      <section class="program-track" aria-labelledby="program-track-{{ $i }}" data-reveal>
+        <header class="program-track__header">
+          {{ with $track.name }}<span class="program-track__floor">{{ . }}</span>{{ end }}
+          <h3 class="program-track__level" id="program-track-{{ $i }}">{{ $track.level }}</h3>
+        </header>
+        <ol class="session-list program-list">
+          {{ range $track.items }}
+            {{ $times := split .time "–" }}
+            <li class="session session--timed{{ with .type }} session--{{ . }}{{ end }}">
+              <div class="session__date session__time">
+                <span class="session__time-start" aria-hidden="true">{{ index $times 0 }}</span>
+                {{ if gt (len $times) 1 }}<span class="session__time-end" aria-hidden="true">{{ index $times 1 }}</span>{{ end }}
+                <span class="sr-only">{{ .time }}</span>
+              </div>
+              <div class="session__body">
+                <div class="session__heading">
+                  <h4 class="session__title">{{ .title }}</h4>
+                  {{ with .speaker }}<p class="session__facilitator">{{ . }}</p>{{ end }}
+                </div>
+                {{ if eq .format "online" }}<span class="session__badge">{{ i18n "mode_online" }}</span>{{ end }}
+              </div>
+            </li>
+          {{ end }}
+        </ol>
+      </section>
+    {{ end }}
+  </div>
+{{ end }}

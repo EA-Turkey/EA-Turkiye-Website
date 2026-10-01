@@ -98,6 +98,14 @@ Recommended fields:
 - `cause_area`
 - `featured`
 
+Optional program fields (rendered by `layouts/partials/event-program.html`, after the page body):
+
+- `sessions[]` — dated sessions for multi-week programs (`date`, `title`, `facilitator`, `text`, `readings[]`)
+- `program_tracks[]` — time-based schedule for one-day, multi-track events. Each track has `name` (e.g. floor), `level`, and `items[]`
+  - item fields: `time` (`"11.00–11.45"`, en dash), `title`, `speaker`, `format: "online"` (adds a badge), `type: "break"` (quieter row for breaks and meals)
+- `program_note` — one line shown under the "Program" heading
+- The section has `id="program"`; link to it from the body with `[program](#program)`
+
 ### 3. Blog posts
 
 Path:
