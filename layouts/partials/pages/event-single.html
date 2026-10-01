@@ -61,6 +61,8 @@
 
     <div class="prose" data-reveal>{{ .Content }}</div>
 
+    {{ partial "event-program.html" . }}
+
     {{ with .Params.sessions }}
       <div class="stack-lg">
         {{ partial "section-header.html" (dict "eyebrow" (i18n "program_schedule")) }}
