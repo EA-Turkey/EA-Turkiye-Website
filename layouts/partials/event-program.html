@@ -1,34 +1,92 @@
-{{/* Time-based program for multi-track events. Reads `program_tracks` (and an
-     optional `program_note`) from front matter; see content/CONTENT.md. */}}
+{{/* Time-based program for multi-track events, laid out as a time grid: one
+     column per track (e.g. floor), one row per time boundary, so parallel
+     sessions sit side by side. A break that every track lists with the same
+     time and title spans all columns. Cells are emitted in time order, which
+     is also the reading order of the one-column mobile layout.
+     Reads `program_tracks` and an optional `program_note`; see content/CONTENT.md. */}}
 {{ with .Params.program_tracks }}
+  {{ $tracks := . }}
+  {{ $multi := gt (len $tracks) 1 }}
+
+  {{/* Row boundaries: every distinct start and end time, sorted ("HH.MM"). */}}
+  {{ $bounds := slice }}
+  {{ $starts := slice }}
+  {{ range $tracks }}
+    {{ range .items }}
+      {{ $t := split .time "–" }}
+      {{ $starts = $starts | append (index $t 0) }}
+      {{ $bounds = $bounds | append $t }}
+    {{ end }}
+  {{ end }}
+  {{ $bounds = $bounds | uniq | sort }}
+
+  {{ $cells := slice }}
+  {{ range $ti, $track := $tracks }}
+    {{ range $track.items }}
+      {{ $item := . }}
+      {{ $shared := and $multi (eq .type "break") }}
+      {{ if $shared }}
+        {{ range $tracks }}
+          {{ if not (where (where .items "time" $item.time) "title" $item.title) }}{{ $shared = false }}{{ end }}
+        {{ end }}
+      {{ end }}
+      {{/* A shared break is rendered once, from the first track. */}}
+      {{ if not (and $shared (gt $ti 0)) }}
+        {{ $t := split .time "–" }}
+        {{ $rowStart := 0 }}
+        {{ $rowEnd := 0 }}
+        {{ range $bi, $b := $bounds }}
+          {{ if eq $b (index $t 0) }}{{ $rowStart = add $bi 1 }}{{ end }}
+          {{ if eq $b (index $t (sub (len $t) 1)) }}{{ $rowEnd = add $bi 1 }}{{ end }}
+        {{ end }}
+        {{ if le $rowEnd $rowStart }}{{ $rowEnd = add $rowStart 1 }}{{ end }}
+        {{ $cells = $cells | append (dict
+          "order" (printf "%s-%02d" (index $t 0) $ti)
+          "item" $item
+          "track" $track
+          "column" (add $ti 2)
+          "shared" $shared
+          "rowStart" $rowStart
+          "rowEnd" $rowEnd
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
   <div class="stack-lg" id="program">
     {{ partial "section-header.html" (dict "eyebrow" (i18n "program_schedule") "text" $.Params.program_note) }}
-    {{ range $i, $track := . }}
-      <section class="program-track" aria-labelledby="program-track-{{ $i }}" data-reveal>
-        <header class="program-track__header">
-          {{ with $track.name }}<span class="program-track__floor">{{ . }}</span>{{ end }}
-          <h3 class="program-track__level" id="program-track-{{ $i }}">{{ $track.level }}</h3>
-        </header>
-        <ol class="session-list program-list">
-          {{ range $track.items }}
-            {{ $times := split .time "–" }}
-            <li class="session session--timed{{ with .type }} session--{{ . }}{{ end }}">
-              <div class="session__date session__time">
-                <span class="session__time-start" aria-hidden="true">{{ index $times 0 }}</span>
-                {{ if gt (len $times) 1 }}<span class="session__time-end" aria-hidden="true">{{ index $times 1 }}</span>{{ end }}
-                <span class="sr-only">{{ .time }}</span>
-              </div>
-              <div class="session__body">
-                <div class="session__heading">
-                  <h4 class="session__title">{{ .title }}</h4>
-                  {{ with .speaker }}<p class="session__facilitator">{{ . }}</p>{{ end }}
-                </div>
-                {{ if eq .format "online" }}<span class="session__badge">{{ i18n "mode_online" }}</span>{{ end }}
-              </div>
+    <div class="program-grid" style="--program-tracks: {{ len $tracks }}" data-reveal>
+      {{/* Column headers live outside the body grid so they can stay sticky
+           for the whole schedule (a sticky grid item is held to its own row). */}}
+      <div class="program-grid__head">
+        {{ range $ti, $track := $tracks }}
+          <div class="program-grid__track" style="grid-column: {{ add $ti 2 }}">
+            {{ with $track.name }}<span class="program-grid__floor">{{ . }}</span>{{ end }}
+            {{ with $track.level }}<span class="program-grid__level">{{ . }}</span>{{ end }}
+          </div>
+        {{ end }}
+      </div>
+      <div class="program-grid__body">
+        {{ range $bi, $b := $bounds }}
+          {{ if and (lt $bi (sub (len $bounds) 1)) (in $starts $b) }}
+            <span class="program-grid__time" style="grid-row: {{ add $bi 1 }}" aria-hidden="true">{{ $b }}</span>
+          {{ end }}
+        {{ end }}
+        <ol class="program-grid__sessions">
+          {{ range sort $cells "order" }}
+            {{ $item := .item }}
+            <li class="program-slot{{ with $item.type }} program-slot--{{ . }}{{ end }}{{ if .shared }} program-slot--shared{{ end }}" style="grid-row: {{ .rowStart }} / {{ .rowEnd }}; grid-column: {{ if .shared }}2 / -1{{ else }}{{ .column }}{{ end }}">
+              <p class="program-slot__meta">
+                <span class="program-slot__time">{{ $item.time }}</span>
+                {{ if not .shared }}{{ with .track.name }}<span class="program-slot__floor">{{ . }}</span>{{ end }}{{ end }}
+              </p>
+              <h3 class="program-slot__title">{{ $item.title }}</h3>
+              {{ with $item.speaker }}<p class="program-slot__speaker">{{ . }}</p>{{ end }}
+              {{ if eq $item.format "online" }}<span class="session__badge">{{ i18n "mode_online" }}</span>{{ end }}
             </li>
           {{ end }}
         </ol>
-      </section>
-    {{ end }}
+      </div>
+    </div>
   </div>
 {{ end }}

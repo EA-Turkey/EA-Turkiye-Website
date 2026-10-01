@@ -4021,64 +4021,126 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   transform: translate(2px, -2px);
 }
 
-/* Timed program (multi-track events): reuses the .session-list shell with a
-   stacked start/end time in the rail instead of a calendar date. Breaks
-   and meals drop to a quieter, shorter row. */
-.program-track {
+/* Timed program (multi-track events): a time grid with one column per
+   track and one row per time boundary, so parallel sessions sit side by
+   side. Rows and columns are placed inline by event-program.html; breaks
+   shared by every track span all columns. Below 40rem the grid becomes
+   one chronological list and each card names its track. */
+.program-grid__head,
+.program-grid__body {
   display: grid;
-  gap: var(--space-16);
-}
-
-.program-track__header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  grid-template-columns: 3.75rem repeat(var(--program-tracks, 1), minmax(0, 1fr));
   gap: var(--space-8) var(--space-12);
 }
 
-.program-track__floor {
-  padding: 0.3rem 0.8rem;
-  border-radius: var(--radius-pill);
-  background: var(--color-brand-700);
-  color: var(--color-surface);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+/* Frosted band (as .site-header) so cards scroll cleanly under the sticky
+   column headers. */
+.program-grid__head {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 2;
+  padding-block: var(--space-8);
+  backdrop-filter: blur(18px);
+  background: rgba(247, 250, 251, 0.9);
 }
 
-.program-track__level {
-  font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 1.6vw, 1.5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-
-.program-list {
+.program-grid__sessions {
+  display: contents;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.session__time {
-  row-gap: 0.15rem;
+.program-grid__track {
+  display: grid;
+  align-content: center;
+  gap: var(--space-4);
+  padding: var(--space-12) var(--space-16);
+  border-radius: var(--radius-md);
+  background: var(--color-brand-700);
+  color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
 }
 
-.session__time-start {
+.program-grid__floor {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.program-grid__level {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.program-grid__time {
+  grid-column: 1;
+  padding-top: 0.85rem;
   color: var(--color-brand-700);
   font-family: var(--font-serif);
+  font-size: 1.05rem;
   font-weight: 700;
-  font-size: 1.2rem;
   line-height: 1;
-  letter-spacing: -0.01em;
   font-variant-numeric: lining-nums;
 }
 
-.session__time-end {
+.program-slot {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  padding: var(--space-12) var(--space-16);
+  border: 1px solid rgba(216, 229, 233, 0.86);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.program-slot__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-8);
+  margin: 0;
   color: var(--color-ink-500);
   font-size: var(--text-xs);
   font-weight: 600;
-  font-variant-numeric: lining-nums;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* The column header names the track on wide screens; keep it for screen
+   readers and show it as a chip in the one-column layout. */
+.program-slot__floor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.program-slot__title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.program-slot__speaker {
+  margin: 0;
+  color: var(--color-ink-500);
+  font-size: var(--text-small);
+  font-weight: 500;
+}
+
+.program-slot .session__badge {
+  margin-top: var(--space-4);
 }
 
 .session__badge {
@@ -4093,27 +4155,85 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   letter-spacing: 0.04em;
 }
 
-.session--break {
+.program-slot--break {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding-block: var(--space-12);
+  align-content: center;
+  gap: var(--space-4) var(--space-12);
+  padding-block: var(--space-8);
+  border-style: dashed;
+  border-color: var(--color-brand-stroke);
   background: var(--color-brand-wash-subtle);
 }
 
-.session--break .session__date {
-  align-content: center;
-  padding-block: 0;
-}
-
-.session--break .session__time-start {
-  font-size: 1rem;
-}
-
-.session--break .session__title {
+.program-slot--break .program-slot__title {
   color: var(--color-ink-700);
   font-family: var(--font-sans);
-  font-size: var(--text-body);
+  font-size: var(--text-small);
   font-weight: 600;
   letter-spacing: 0;
+}
+
+.program-slot--shared {
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 40rem) {
+  .program-grid__head,
+  .program-grid__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .program-grid__head {
+    position: static;
+    padding-block: 0 var(--space-8);
+  }
+
+  .program-grid__track {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-4) var(--space-8);
+    padding: var(--space-8) var(--space-12);
+    box-shadow: none;
+  }
+
+  .program-grid__level {
+    font-family: var(--font-sans);
+    font-size: var(--text-small);
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .program-grid__time {
+    display: none;
+  }
+
+  .program-grid__sessions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .program-slot__floor {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-brand-wash);
+    color: var(--color-brand-700);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
 }
 
 /* Facilitators: light photo-less cards on the shared card surface. */
@@ -4177,10 +4297,6 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 
   .session__date-day {
     font-size: 1.4rem;
-  }
-
-  .session__time-start {
-    font-size: 1rem;
   }
 }
 
