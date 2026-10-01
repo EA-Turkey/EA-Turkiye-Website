@@ -85,6 +85,9 @@
 - id: program_schedule
   translation: "Program akışı"
 
+- id: program_swipe_hint
+  translation: "Aynı saatteki diğer oturumlar için yana kaydırın"
+
 - id: session_readings
   translation: "Okumalar"
 

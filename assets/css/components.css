@@ -4024,8 +4024,8 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 /* Timed program (multi-track events): a time grid with one column per
    track and one row per time boundary, so parallel sessions sit side by
    side. Rows and columns are placed inline by event-program.html; breaks
-   shared by every track span all columns. Below 40rem the grid becomes
-   one chronological list and each card names its track. */
+   shared by every track span all columns. Below 40rem the grid scrolls
+   sideways (see the media query below). */
 .program-grid__head,
 .program-grid__body {
   display: grid;
@@ -4112,7 +4112,7 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
 }
 
 /* The column header names the track on wide screens; keep it for screen
-   readers and show it as a chip in the one-column layout. */
+   readers and show it as a chip on phones. */
 .program-slot__floor {
   position: absolute;
   width: 1px;
@@ -4180,43 +4180,77 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
   text-align: center;
 }
 
+.program-schedule__hint {
+  display: none;
+}
+
+/* Phones: keep the grid and let it scroll sideways edge to edge, snapping
+   so one track column fills the view. Column headers can't stick inside a
+   scroller, so each card names its track again. */
 @media (max-width: 40rem) {
+  .program-schedule__hint {
+    display: block;
+    margin: 0 0 var(--space-8);
+    color: var(--color-ink-500);
+    font-size: var(--text-xs);
+    font-weight: 600;
+  }
+
+  /* --program-bleed matches the .container gutter (layout.css). */
+  .program-grid {
+    --program-bleed: 1rem;
+    margin-inline: calc(-1 * var(--program-bleed));
+    padding-inline: var(--program-bleed);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--program-bleed);
+  }
+
   .program-grid__head,
   .program-grid__body {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
+    grid-template-columns: 2.75rem repeat(var(--program-tracks, 1), min(72vw, 18rem));
+    width: max-content;
   }
 
   .program-grid__head {
     position: static;
     padding-block: 0 var(--space-8);
+    backdrop-filter: none;
+    background: none;
   }
 
   .program-grid__track {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: var(--space-4) var(--space-8);
+    scroll-snap-align: end;
     padding: var(--space-8) var(--space-12);
     box-shadow: none;
   }
 
   .program-grid__level {
-    font-family: var(--font-sans);
-    font-size: var(--text-small);
-    font-weight: 600;
-    letter-spacing: 0;
+    font-size: 1rem;
   }
 
   .program-grid__time {
-    display: none;
+    padding-top: 0.8rem;
+    font-size: 0.95rem;
   }
 
-  .program-grid__sessions {
-    display: flex;
+  .program-slot__title {
+    font-size: 1rem;
+  }
+
+  /* Shared breaks span every column; keep their text in view while the
+     grid is scrolled. */
+  .program-slot--shared {
     flex-direction: column;
-    gap: var(--space-8);
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .program-slot--shared > * {
+    position: sticky;
+    left: calc(var(--program-bleed) + var(--space-16));
   }
 
   .program-slot__floor {
@@ -4233,6 +4267,12 @@ html[lang^="en"] .page-home .hero--text-only.hero--home .hero__title {
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: 560px) {
+  .program-grid {
+    --program-bleed: 0.625rem;
   }
 }
 
