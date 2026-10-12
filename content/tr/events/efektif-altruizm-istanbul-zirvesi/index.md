@@ -104,15 +104,9 @@ Etkinliğimiz ücretsizdir.
 
 ## Başvuru Süreci
 
-Etkinlik başvuruları açıldı ve süreç aşağıdaki şekilde ilerleyecek:
+Etkinlik başvuruları 11 Ekim itibarıyla kapandı. Tüm başvuruları dikkatlice inceliyoruz ve 5 iş günü içinde size olumlu ya da olumsuz dönüş yapacağız. Başvurunuz kabul edilirse etkinlik ayrıntılarını içeren bir e-posta göndereceğiz.
 
-1. Başvuru belgesinin doldurulması ([https://luma.com/hm8n2pnr](https://luma.com/hm8n2pnr)). Son başvuru tarihi 11 Ekim.
-2. Başvuru değerlendirmesi: Tüm başvuruları dikkatlice inceleyeceğiz ve 5 iş günü içinde size olumlu-olumsuz dönüş yapacağız.
-3. Etkinlik kaydının tamamlanması: Başvurunuzun kabul edilmesi durumunda size etkinlik ayrıntılarını içeren bir e-posta göndereceğiz.
-
-{{< button url="https://luma.com/hm8n2pnr" label="Hemen başvur" >}}
-
-### Kimler başvurabilir?
+### Etkinlik kimler için?
 
 - Dünyada anlamlı bir etki yaratmak isteyen ve bunu daha etkili yollarla nasıl gerçekleştirebileceğini öğrenmek isteyen motivasyonu yüksek öğrenciler, profesyoneller ve kariyer değişikliği sürecinde olan bireyler
 - Küresel yoksulluk, hayvan refahı, yapay zekâ ve uygarlığımızı tehdit eden diğer sorunlar üstüne düşünmeyi sevenler
@@ -130,7 +124,7 @@ Etkinlik başvuruları açıldı ve süreç aşağıdaki şekilde ilerleyecek:
 
 Program akışını [burada](#program) bulabilirsiniz.
 
-Etkinlik detaylarının tamamı konferans tarihine yakın bir zamanda Swapcard uygulamasında paylaşılacak. Swapcard, diğer katılımcılarla bağlantı kurmayı kolaylaştırır ve pek çok kişi için bu bağlantılar bu tür etkinliklerin en değerli kazanımlarından biridir. Etkinlik başlamadan bir-iki hafta önce diğer katılımcılarla mesajlaşmak ve bire bir görüşmeler ayarlamak için Swapcard'ı kullanmanızı öneriyoruz.
+Etkinlik detaylarının tamamına Swapcard uygulamasından ulaşabilirsiniz. Swapcard, diğer katılımcılarla bağlantı kurmayı kolaylaştırır ve pek çok kişi için bu bağlantılar bu tür etkinliklerin en değerli kazanımlarından biridir. Etkinlikten önce diğer katılımcılarla mesajlaşmak ve bire bir görüşmeler ayarlamak için Swapcard'ı kullanmanızı öneriyoruz.
 
 ## Ulaşım desteği
 
@@ -140,4 +134,4 @@ Seyahat desteği için çok sınırlı bir bütçemiz olduğunu belirtmek isteri
 
 Sorularınız için bizlere [bilgi@eaturkiye.org](mailto:bilgi@eaturkiye.org) adresinden ulaşabilirsiniz. Etkinliğe katılmayı düşünüyorsanız, ancak size uygun olup olmadığından emin değilseniz bize e-posta göndermeniz yeterli!
 
-Etkinliğe katılmak isteyebilecek birini tanıyorsanız lütfen bu etkinliği onlarla paylaşın ve başvurmalarını teşvik edin.
+Etkinliğe katılmak isteyebilecek birini tanıyorsanız lütfen bu etkinliği onlarla paylaşın.

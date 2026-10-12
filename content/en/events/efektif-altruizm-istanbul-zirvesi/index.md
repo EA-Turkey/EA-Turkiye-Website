@@ -103,13 +103,7 @@ Our event is free of charge.
 
 ## Application Process
 
-Applications for the event are now open, and the process will proceed as follows:
-
-1. Submitting your application ([https://luma.com/hm8n2pnr](https://luma.com/hm8n2pnr)). The deadline to apply is 11 October.
-2. Application review: We will carefully review all applications and respond with a positive or negative decision within 5 business days.
-3. Completing your registration: If your application is accepted, we will send you an email containing the event details.
-
-{{< button url="https://luma.com/hm8n2pnr" label="Apply now" >}}
+Applications closed on 11 October. We are carefully reviewing all applications and will get back to you with a decision within 5 business days. If your application is accepted, we will send you an email with the event details.
 
 ### Who is the event for?
 
@@ -129,7 +123,7 @@ Applications for the event are now open, and the process will proceed as follows
 
 You can find the event program [here](#program).
 
-Full event details will be available in the Swapcard app closer to the conference. Swapcard also makes it easy to connect with other attendees, and many find these connections to be one of the most rewarding outcomes of the conference. We recommend using Swapcard to message others and arrange 1-on-1 meetings a week or two before the event begins!
+Full event details are available in the Swapcard app. Swapcard also makes it easy to connect with other attendees, and many find these connections to be one of the most rewarding outcomes of the conference. We recommend using Swapcard to message others and arrange 1-on-1 meetings before the event begins!
 
 ## Travel assistance
 
@@ -141,4 +135,4 @@ If you have any questions, feel free to reach out to us at [bilgi@eaturkiye.org]
 
 If you're considering attending the event but aren't sure whether it's the right fit for you, just send us an email, we're happy to help!
 
-If you know someone who might be interested in attending, please share this event with them and encourage them to apply.
+If you know someone who might be interested in attending, please share this event with them.
